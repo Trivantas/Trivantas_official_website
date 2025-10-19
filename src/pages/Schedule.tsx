@@ -4,11 +4,30 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { CalendarDays, Clock, Users, CheckCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Schedule = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Meeting scheduled');
+
+    const form = e.currentTarget;
+
+    emailjs.sendForm(
+      'service_2amzjds',   
+      'template_v3k1c2o',  
+      form,
+      'MU7jAXxb5HHIYpQ3I'   
+    ).then(
+      (result) => {
+        console.log('Email successfully sent!', result.text);
+        alert('Meeting scheduled successfully!');
+        form.reset();
+      },
+      (error) => {
+        console.error('Email sending failed:', error.text);
+        alert('Failed to schedule meeting. Please try again.');
+      }
+    );
   };
 
   const meetingTypes = [
@@ -91,22 +110,22 @@ const Schedule = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Full Name *</label>
-                    <Input placeholder="John Doe" required />
+                    <Input name="fullName" placeholder="John Doe" required />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Company *</label>
-                    <Input placeholder="Your Company Name" required />
+                    <Input name="company" placeholder="Your Company Name" required />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Email Address *</label>
-                    <Input type="email" placeholder="john@company.com" required />
+                    <Input name="email" type="email" placeholder="john@company.com" required />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Phone Number *</label>
-                    <Input type="tel" placeholder="+91 98765 43210" required />
+                    <Input name="phone" type="tel" placeholder="+91 98765 43210" required />
                   </div>
                 </div>
 
@@ -114,23 +133,23 @@ const Schedule = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Meeting Type *</label>
-                    <select className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" required>
+                    <select name="meetingType" className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" required>
                       <option value="">Select meeting type</option>
-                      <option value="consultation">Product Consultation</option>
-                      <option value="demo">Technical Demonstration</option>
-                      <option value="assessment">Site Evaluation</option>
+                      <option value="Product Consultation">Product Consultation</option>
+                      <option value="Technical Demonstration">Technical Demonstration</option>
+                      <option value="Site Evaluation">Site Evaluation</option>
                     </select>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Preferred Date *</label>
-                    <Input type="date" required />
+                    <Input name="preferredDate" type="date" required />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Preferred Time *</label>
-                    <select className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" required>
+                    <select name="preferredTime" className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" required>
                       <option value="">Select time</option>
                       <option value="09:00">9:00 AM</option>
                       <option value="10:00">10:00 AM</option>
@@ -142,10 +161,10 @@ const Schedule = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Meeting Format</label>
-                    <select className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
-                      <option value="in-person">In-Person (Recommended)</option>
-                      <option value="video">Video Call</option>
-                      <option value="phone">Phone Call</option>
+                    <select name="meetingFormat" className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring">
+                      <option value="In-Person">In-Person (Recommended)</option>
+                      <option value="Video Call">Video Call</option>
+                      <option value="Phone Call">Phone Call</option>
                     </select>
                   </div>
                 </div>
@@ -154,7 +173,8 @@ const Schedule = () => {
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Project Requirements</label>
                   <Textarea 
-                    placeholder="Describe your project or the specific products you're interested in (e.g., sensors, filtration systems, material handling, or SPM machines)..."
+                    name="projectRequirements"
+                    placeholder="Describe your project or the specific products you're interested in..."
                     className="min-h-32"
                   />
                 </div>
@@ -162,6 +182,7 @@ const Schedule = () => {
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Additional Notes</label>
                   <Textarea 
+                    name="additionalNotes"
                     placeholder="Any additional details or questions you'd like to discuss during the meeting..."
                     className="min-h-20"
                   />
@@ -169,7 +190,7 @@ const Schedule = () => {
 
                 {/* Terms */}
                 <div className="flex items-start space-x-3">
-                  <input type="checkbox" id="terms" className="mt-1" required />
+                  <input type="checkbox" id="terms" name="terms" className="mt-1" required />
                   <label htmlFor="terms" className="text-sm text-muted-foreground">
                     I agree to be contacted by Trivantas regarding this meeting request and understand that my information will be handled according to the privacy policy.
                   </label>
