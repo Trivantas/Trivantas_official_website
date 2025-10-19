@@ -9,56 +9,88 @@ const ProductsSection = () => {
   const products = [
     {
       title: 'Smart Level Sensors',
-      description: 'Precision measurement solutions for accurate monitoring of liquids, solids, gases, and slurries across diverse industrial applications.',
+      description:
+        'Precision sensing for every application — our reliable level sensors deliver unmatched accuracy and performance for liquids, solids, moisture, and gas.',
       image: levelSensorImg,
       features: [
-        'High accuracy measurement',
-        'Digital display and controls',
-        'Multiple output options',
-        'Easy installation and calibration'
+        'High precision and durable designs for all environments',
+        'Waterproof, dust-proof, and high-temperature compatible',
+        'Custom-built sensors for your exact system requirements',
+        'Available for liquids, solids, moisture, and gas applications',
       ],
-      industries: ['Food & Dairy', 'Pharmaceuticals', 'Chemicals', 'Water Treatment'],
-      link: '/products#sensors'
+      industries: [
+        'Food & Dairy',
+        'Cement',
+        'Chemicals',
+        'Pharmaceuticals',
+        'Automation',
+        'Water Treatment',
+      ],
+      link: '/products#sensors',
     },
     {
-      title: 'Advanced Filtration Systems',
-      description: 'High-performance industrial filtration technology designed for superior water treatment and process optimization.',
+      title: 'Advanced Filtration Solutions',
+      description:
+        'Clean. Reliable. Recyclable. Engineered for durability and performance, our advanced filtration systems meet every industrial demand.',
       image: filtrationImg,
       features: [
-        'Multi-stage filtration',
-        'Automated backwash cycles',
-        'Corrosion-resistant materials',
-        'Energy-efficient operation'
+        'Multi-stage filtration and recyclable system options',
+        'Customizable for specific media and particle size',
+        'Heavy-duty performance under high temperature and pressure',
+        'Tailored to meet your process and environmental requirements',
       ],
-      industries: ['Water Treatment', 'Pharmaceuticals', 'Food Processing', 'Chemicals'],
-      link: '/products#filtration'
-    },
-    {
-      title: 'SPM (Special Purpose Machines)',
-      description: 'Custom-engineered machines designed for specific industrial tasks, enhancing productivity and operational efficiency.',
-      image: spmImg,
-      features: [
-        'Customized engineering solutions',
-        'Automated operation',
-        'Quality control integration',
-        'Scalable designs'
+      industries: [
+        'Cutting Tools',
+        'Aviation',
+        'Automobile',
+        'Machining',
+        'Oil & Bio-Diesel',
+        'Food & Beverage',
       ],
-      industries: ['Manufacturing', 'Automotive', 'Electronics', 'Packaging'],
-      link: '/products#spm'
+      link: '/products#filtration',
     },
     {
       title: 'Material Handling Equipment',
-      description: 'Comprehensive solutions for safe and efficient lifting, shifting, and transportation of heavy materials.',
+      description:
+        'Move smarter, save time — efficient systems for conveying, lifting, and transferring materials with automation-ready designs.',
       image: materialHandlingImg,
       features: [
-        'Heavy-duty construction',
-        'Safety interlocks',
-        'Variable speed controls',
-        'Minimal maintenance'
+        'End-to-end handling for lifting, shifting, and storage',
+        'Built for high-temperature and cooling operations',
+        'Automation-ready with robust and efficient layouts',
+        'Custom-engineered systems tailored to your facility',
       ],
-      industries: ['Warehousing', 'Manufacturing', 'Mining', 'Construction'],
-      link: '/products#handling'
-    }
+      industries: [
+        'Automotive',
+        'Steel & Heavy Engineering',
+        'Packaging',
+        'Warehousing',
+        'Construction',
+        'Food & Beverages',
+      ],
+      link: '/products#handling',
+    },
+    {
+      title: 'SPM Machines',
+      description:
+        'Your turnkey project partner — fully customized Special Purpose Machines, built from concept to commissioning.',
+      image: spmImg,
+      features: [
+        'Automation and productivity-focused engineering',
+        'Custom integration with existing equipment',
+        'Built for reliability and long service life',
+        'Tailor-made for your process, speed, and workflow',
+      ],
+      industries: [
+        'Manufacturing',
+        'Automotive',
+        'Electronics',
+        'Packaging',
+        'Pharma',
+        'Food & Dairy',
+      ],
+      link: '/products#spm',
+    },
   ];
 
   return (
@@ -70,15 +102,20 @@ const ProductsSection = () => {
             Our <span className="text-primary">Industrial Solutions</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Comprehensive hardware solutions engineered for precision, reliability, and performance. 
-            Each product is designed to meet the demanding requirements of modern industrial applications.
+            Trivantas delivers precision-engineered systems for sensing, filtration,
+            material handling, and automation — built to perform in the most demanding
+            industrial environments.
           </p>
         </div>
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {products.map((product, index) => (
-            <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
+            <div
+              key={index}
+              className="animate-fade-in"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               <ProductCard {...product} />
             </div>
           ))}
@@ -91,8 +128,9 @@ const ProductsSection = () => {
               Need a Custom Solution?
             </h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Our engineering team specializes in developing tailored solutions for unique industrial challenges. 
-              Let us help you find the perfect equipment for your specific requirements.
+              Can’t find exactly what you’re looking for? Our engineering team designs
+              tailor-made solutions to match your application, process, and performance
+              goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="inline-block">

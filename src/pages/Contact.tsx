@@ -15,10 +15,10 @@ const Contact = () => {
     if (form.current) {
       emailjs
         .sendForm(
-          'service_wc4fr1k',   // replace with your EmailJS service ID
-          'template_zty9wpq',  // replace with your EmailJS template ID
+          'service_i8s6s0m',   // replace with your EmailJS service ID
+          'template_szjcjqt',  // replace with your EmailJS template ID
           form.current,
-          'gKoMfAEQG-eJ8YLvY'    // replace with your EmailJS public key
+          'MU7jAXxb5HHIYpQ3I'    // replace with your EmailJS public key
         )
         .then(
           () => {

@@ -8,98 +8,155 @@ import filtrationImg from '@/assets/filtration-system.jpg';
 import spmImg from '@/assets/spm-machine.jpg';
 import materialHandlingImg from '@/assets/material-handling.jpg';
 
-const Products = () => {
+interface Product {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+  features: string[];
+  applications: string[];
+  industries: string[];
+}
+
+const Products: React.FC = () => {
   const navigate = useNavigate();
-  
-  const products = [
+
+  const products: Product[] = [
     {
       id: 'sensors',
-      title: 'Smart Level Sensors',
-      subtitle: 'Precision Measurement Technology',
-      description: 'Advanced sensor technology for accurate monitoring of liquids, solids, gases, and slurries across diverse industrial applications.',
+      title: 'Smart Level Sensors by Trivantas',
+      subtitle: 'Precision Monitoring for Liquids, Solids, Moisture & Gas',
+      description:
+        "Wherever precision sensing is essential, Trivantas delivers. Our smart level sensors are engineered for accuracy and durability—available in waterproof, dust-proof, high-temperature, and high-pressure designs. We also specialize in custom-built sensors tailored to your application's exact requirements.",
       image: levelSensorImg,
       features: [
-        'High accuracy measurement (±0.1% of reading)',
-        'Digital display with intuitive interface',
-        'Multiple output options (4-20mA, RS485, Ethernet)',
-        'Temperature compensation technology',
-        'Easy installation and calibration',
-        'Explosion-proof variants available'
+        'Robust performance in demanding environments',
+        'Waterproof, dust-proof, high-temperature & high-pressure options',
+        'Tailor-made outputs to match your system requirements',
+        'Application-specific modifications available',
       ],
       applications: [
-        'Tank level monitoring',
-        'Flow measurement',
-        'Interface detection',
-        'Pump control systems'
+        '💧 Liquid Level Sensors & Switches',
+        '🧱 Solid Level Sensors & Switches',
+        '💨 Moisture & Humidity Sensors',
+        '🧪 Gas Level & Detection Sensors',
       ],
-      industries: ['Food & Dairy', 'Pharmaceuticals', 'Chemicals', 'Water Treatment', 'Oil & Gas']
+      industries: [
+        '🍞 Food & Dairy',
+        '🏗️ Cement',
+        '🌾 Animal Feed',
+        '⚗️ Chemicals',
+        '📦 Packaging',
+        '⚙️ Automation',
+        '💊 Pharmaceuticals',
+        '🔌 Power',
+        '🧪 Polymers',
+        '🏭 Steel',
+        '💧 Water Treatment',
+        '🛢️ Oil & Bulk Handling',
+      ],
     },
     {
       id: 'filtration',
-      title: 'Advanced Filtration Systems',
-      subtitle: 'Superior Water Treatment Technology',
-      description: 'High-performance industrial filtration solutions designed for optimal water treatment and process optimization across multiple industries.',
+      title: 'Advanced Filtration Solutions by Trivantas',
+      subtitle: 'Clean. Reliable. Recyclable.',
+      description:
+        "Where clean separation is critical, Trivantas delivers advanced filtration systems engineered for performance, durability, and sustainability. Whether you're filtering liquids, oils, emulsions, or gases, our systems are designed for high-pressure, high-temperature, waterproof, and dust-proof operations—adapted to meet your specific industrial needs.",
       image: filtrationImg,
       features: [
-        'Multi-stage filtration process',
-        'Automated backwash cycles',
-        'Corrosion-resistant materials',
-        'Energy-efficient operation',
-        'Real-time monitoring systems',
-        'Customizable configurations'
+        'Multi-stage filtration options',
+        'Customizable for specific media & particle size',
+        'Recyclable filtration where applicable',
+        'Heavy-duty performance in industrial environments',
+        'Compact or large-scale systems tailored to your application',
       ],
       applications: [
-        'Water purification',
-        'Wastewater treatment',
-        'Process water recycling',
-        'Chemical separation'
+        '💧 Coolant Filtration Systems',
+        '🥫 Food-Grade Oil, Alcohol & Water Filtration',
+        '🌊 Environmental Filtration Systems',
+        '♻️ Recyclable Filtration Systems',
+        '⚙️ Custom Engineered Filtration Solutions',
       ],
-      industries: ['Water Treatment', 'Pharmaceuticals', 'Food Processing', 'Chemicals', 'Power Generation']
-    },
-    {
-      id: 'spm',
-      title: 'SPM (Special Purpose Machines)',
-      subtitle: 'Custom Engineering Solutions',
-      description: 'Tailor-made machines designed for specific industrial tasks, engineered to enhance productivity and operational efficiency.',
-      image: spmImg,
-      features: [
-        'Customized engineering solutions',
-        'Automated operation and controls',
-        'Quality control integration',
-        'Scalable modular designs',
-        'Advanced safety systems',
-        'Remote monitoring capabilities'
+      industries: [
+        '🛠️ Cutting Tools',
+        '✈️ Aviation',
+        '⚙️ Machining',
+        '🔩 Bearings',
+        '🚗 Automobile',
+        '🌱 Oil & Bio-Diesel',
+        '🏭 Rolling Mills',
+        '🍽️ Food & Beverage',
+        '🥂 Alcohol',
       ],
-      applications: [
-        'Assembly automation',
-        'Testing equipment',
-        'Packaging solutions',
-        'Material processing'
-      ],
-      industries: ['Manufacturing', 'Automotive', 'Electronics', 'Packaging', 'Aerospace']
     },
     {
       id: 'handling',
-      title: 'Material Handling Equipment',
-      subtitle: 'Efficient Material Transportation',
-      description: 'Comprehensive solutions for safe and efficient lifting, shifting, and transportation of heavy materials across industrial facilities.',
+      title: 'Material Handling Equipment by Trivantas',
+      subtitle: 'Move Smarter. Save Time.',
+      description:
+        'When you need to shift and transfer materials quickly while saving time, our efficient material handling equipment is the perfect solution. Built for high temperatures as well as cooling operations, our systems deliver reliable performance even in the most demanding environments. We also design and supply custom-built material handling solutions tailored to your specific requirements and automation needs.',
       image: materialHandlingImg,
       features: [
-        'Heavy-duty construction',
-        'Safety interlocks and sensors',
-        'Variable speed controls',
-        'Minimal maintenance requirements',
-        'Ergonomic operation design',
-        'Integration with existing systems'
+        'End-to-end solutions for conveying, lifting, shifting, and storage',
+        'Built for high-temperature & cooling operations',
+        'Automation-ready systems for efficiency and precision',
+        'Heavy-duty performance in industrial environments',
+        'Customized layouts and concepts designed around your facility',
       ],
       applications: [
-        'Conveyor systems',
-        'Lifting equipment',
-        'Storage solutions',
-        'Sorting systems'
+        '🔹 Conveyors & Chip Handling Systems',
+        '🔹 Auxiliary & Specialized Conveyors',
+        '🔹 Chip Processing & Advanced Solutions',
+        '⚙️ Custom Engineered Material Handling Systems',
       ],
-      industries: ['Warehousing', 'Manufacturing', 'Mining', 'Construction', 'Logistics']
-    }
+      industries: [
+        '🚗 Automotive',
+        '🏭 Steel & Heavy Engineering',
+        '📦 Packaging',
+        '🏢 Warehousing & Logistics',
+        '🍽️ Food & Beverages',
+        '🏗️ Cement & Construction',
+        '⚗️ Chemical & Pharma',
+        '🔌 Power & Energy',
+      ],
+    },
+    {
+      id: 'spm',
+      title: 'SPM (Special Purpose Machines) by Trivantas',
+      subtitle: 'Your Turnkey Project Partner',
+      description:
+        'Fully customized Special Purpose Machines (SPM) — from concept to commissioning. We design and build SPMs for productivity enhancement, automation, and precision engineering across industries.',
+      image: spmImg,
+      features: [
+        'End-to-end support: concept, design, manufacturing & commissioning',
+        'Built for productivity, reliability & long service life',
+        'Automation-ready & industry-compliant',
+        'Custom integration with your existing systems',
+        'Proven expertise across multiple industries',
+      ],
+      applications: [
+        '✔️ Assembly SPMs',
+        '✔️ Drilling & Tapping SPMs',
+        '✔️ Milling & Cutting SPMs',
+        '✔️ Welding & Riveting SPMs',
+        '✔️ Testing & Inspection SPMs',
+        '✔️ Packaging & Process-Specific SPMs',
+        '✔️ Fully Automated & Semi-Automated SPMs',
+      ],
+      industries: [
+        '🍞 Food & Dairy',
+        '🏗️ Cement',
+        '🌾 Animal Feed',
+        '⚗️ Chemicals',
+        '📦 Packaging',
+        '⚙️ Automation',
+        '💊 Pharmaceuticals',
+        '🔌 Power',
+        '🧪 Polymers',
+        '🏭 Steel',
+      ],
+    },
   ];
 
   return (
@@ -109,22 +166,24 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Products</h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-            Comprehensive industrial hardware solutions engineered for precision, reliability, and performance.
+            Industrial engineering solutions built for precision, durability, and performance — by Trivantas.
           </p>
         </div>
       </section>
 
-      {/* Products Sections */}
+      {/* Products Section */}
       {products.map((product, index) => (
-        <section 
-          key={product.id} 
+        <section
+          key={product.id}
           id={product.id}
           className={`py-20 ${index % 2 === 1 ? 'bg-accent/30' : ''}`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
-              index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-            }`}>
+            <div
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
+                index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+              }`}
+            >
               {/* Content */}
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <div className="mb-6">
@@ -140,7 +199,7 @@ const Products = () => {
 
                 {/* Features */}
                 <div className="mb-8">
-                  <h3 className="text-xl font-bold text-foreground mb-4">Key Features</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-4">Key Highlights</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {product.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start space-x-2">
@@ -156,7 +215,7 @@ const Products = () => {
                   <h3 className="text-xl font-bold text-foreground mb-4">Applications</h3>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {product.applications.map((app, idx) => (
-                      <span 
+                      <span
                         key={idx}
                         className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20"
                       >
@@ -171,7 +230,7 @@ const Products = () => {
                   <h3 className="text-xl font-bold text-foreground mb-4">Industries Served</h3>
                   <div className="flex flex-wrap gap-2">
                     {product.industries.map((industry, idx) => (
-                      <span 
+                      <span
                         key={idx}
                         className="px-3 py-1 bg-secondary/10 text-secondary-foreground text-sm rounded-full border border-secondary/20"
                       >
@@ -181,9 +240,9 @@ const Products = () => {
                   </div>
                 </div>
 
-                <Button 
-                  variant="default" 
-                  size="lg" 
+                <Button
+                  variant="default"
+                  size="lg"
                   className="group"
                   onClick={() => navigate(`/products/${product.id}`)}
                 >
@@ -222,7 +281,11 @@ const Products = () => {
             <Button variant="secondary" size="lg">
               Contact Our Engineers
             </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
+            <Button
+              variant="outline"
+              size="lg"
+              className="bg-white/10 border-white/20 text-white hover:bg-white/20"
+            >
               Request Custom Quote
             </Button>
           </div>
