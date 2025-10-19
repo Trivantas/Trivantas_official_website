@@ -13,10 +13,10 @@ const Schedule = () => {
     const form = e.currentTarget;
 
     emailjs.sendForm(
-      'service_2amzjds',   // Replace with your EmailJS service ID
-      'template_v3k1c2o',  // Replace with your EmailJS template ID
+      'service_2amzjds',   
+      'template_v3k1c2o',  
       form,
-      'MU7jAXxb5HHIYpQ3I'    // Replace with your EmailJS public key
+      'MU7jAXxb5HHIYpQ3I'   
     ).then(
       (result) => {
         console.log('Email successfully sent!', result.text);
