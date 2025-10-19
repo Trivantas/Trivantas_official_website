@@ -8,7 +8,6 @@ import { CalendarDays, Clock, Users, CheckCircle } from 'lucide-react';
 const Schedule = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic will go here
     console.log('Meeting scheduled');
   };
 
@@ -16,20 +15,20 @@ const Schedule = () => {
     {
       icon: <Users className="h-8 w-8 text-primary" />,
       title: 'Product Consultation',
-      description: 'Discuss your specific requirements and explore suitable product options.',
-      duration: '30-45 minutes'
+      description: 'Get expert guidance on choosing the right Trivantas solution for your specific industrial needs.',
+      duration: '30–45 minutes'
     },
     {
       icon: <CalendarDays className="h-8 w-8 text-primary" />,
-      title: 'Technical Demo',
-      description: 'See our products in action and understand their capabilities.',
-      duration: '45-60 minutes'
+      title: 'Technical Demonstration',
+      description: 'Experience a detailed demo of our products, including real-world performance insights.',
+      duration: '45–60 minutes'
     },
     {
       icon: <CheckCircle className="h-8 w-8 text-primary" />,
-      title: 'Site Assessment',
-      description: 'On-site evaluation of your facility and requirements.',
-      duration: '1-2 hours'
+      title: 'Site Evaluation',
+      description: 'An on-site or virtual assessment to understand your process and recommend tailored solutions.',
+      duration: '1–2 hours'
     }
   ];
 
@@ -40,7 +39,7 @@ const Schedule = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Schedule a Meeting</h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-            Let's discuss how Trivantas can help optimize your industrial operations.
+            Let’s discuss how Trivantas can help improve your efficiency with advanced sensing, filtration, and automation solutions.
           </p>
         </div>
       </section>
@@ -53,7 +52,7 @@ const Schedule = () => {
               Choose Your <span className="text-primary">Meeting Type</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Select the type of meeting that best suits your needs. Our experts are ready to provide personalized assistance.
+              Select a meeting type that fits your requirement. Our technical experts are ready to provide clear, practical guidance.
             </p>
           </div>
 
@@ -81,9 +80,9 @@ const Schedule = () => {
           <Card className="shadow-card">
             <CardContent className="p-8">
               <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-foreground mb-4">Book Your Meeting</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">Book Your Appointment</h2>
                 <p className="text-lg text-muted-foreground">
-                  Fill out the form below and our team will get back to you within 24 hours to confirm your meeting.
+                  Fill out the form below, and our team will get in touch within 24 hours to confirm your meeting schedule.
                 </p>
               </div>
 
@@ -118,8 +117,8 @@ const Schedule = () => {
                     <select className="w-full px-3 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring" required>
                       <option value="">Select meeting type</option>
                       <option value="consultation">Product Consultation</option>
-                      <option value="demo">Technical Demo</option>
-                      <option value="assessment">Site Assessment</option>
+                      <option value="demo">Technical Demonstration</option>
+                      <option value="assessment">Site Evaluation</option>
                     </select>
                   </div>
                   <div>
@@ -155,7 +154,7 @@ const Schedule = () => {
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Project Requirements</label>
                   <Textarea 
-                    placeholder="Please describe your project requirements, what products you're interested in, and any specific challenges you're facing..."
+                    placeholder="Describe your project or the specific products you're interested in (e.g., sensors, filtration systems, material handling, or SPM machines)..."
                     className="min-h-32"
                   />
                 </div>
@@ -163,7 +162,7 @@ const Schedule = () => {
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Additional Notes</label>
                   <Textarea 
-                    placeholder="Any additional information that would help us prepare for the meeting..."
+                    placeholder="Any additional details or questions you'd like to discuss during the meeting..."
                     className="min-h-20"
                   />
                 </div>
@@ -172,7 +171,7 @@ const Schedule = () => {
                 <div className="flex items-start space-x-3">
                   <input type="checkbox" id="terms" className="mt-1" required />
                   <label htmlFor="terms" className="text-sm text-muted-foreground">
-                    I agree to be contacted by Trivantas regarding this meeting request and understand that my information will be used in accordance with the privacy policy.
+                    I agree to be contacted by Trivantas regarding this meeting request and understand that my information will be handled according to the privacy policy.
                   </label>
                 </div>
 
@@ -205,27 +204,27 @@ const Schedule = () => {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">1</span>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Quick Response</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">Prompt Response</h3>
               <p className="text-muted-foreground">
-                Our team will contact you within 24 hours to confirm your meeting details and answer any preliminary questions.
+                Our team will reach out within 24 hours to confirm your meeting and discuss any initial details.
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">2</span>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Personalized Discussion</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">Focused Discussion</h3>
               <p className="text-muted-foreground">
-                We'll discuss your specific needs, challenges, and explore how our solutions can address your requirements.
+                We’ll review your requirements and show how Trivantas technology can enhance your operations.
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-primary">3</span>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">Detailed Proposal</h3>
+              <h3 className="text-xl font-bold text-foreground mb-3">Clear Next Steps</h3>
               <p className="text-muted-foreground">
-                After the meeting, you'll receive a comprehensive proposal with recommendations and next steps.
+                After the meeting, you’ll receive a clear proposal outlining solutions, timelines, and recommendations.
               </p>
             </div>
           </div>
