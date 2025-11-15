@@ -109,14 +109,7 @@ const Footer = () => {
           <p className="text-primary-foreground/60 text-sm">
             © 2024 Trivantas. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-primary-foreground/60 hover:text-secondary text-sm transition-colors">
-              Terms of Service
-            </a>
-          </div>
+         
         </div>
       </div>
     </footer>

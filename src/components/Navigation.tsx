@@ -22,11 +22,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primary">Trivantas</span>
-              <span className="text-sm text-muted-foreground ml-2 hidden sm:block">One Stop Solution</span>
+            <Link to="/" className="flex flex-col items-center sm:items-start">
+             <span className="text-2xl font-bold text-primary">Trivantas</span>
+             <span className="text-sm text-muted-foreground -mt-1">One Stop Solution</span>
             </Link>
           </div>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
