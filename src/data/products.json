@@ -1,0 +1,182 @@
+{
+  "categories": [
+    {
+      "id": "sensors",
+      "title": "Smart Level Sensors",
+      "sections": [
+        {
+          "title": "Liquid Level Sensors & Switches",
+          "items": [
+            "Float Type Level Sensors",
+            "Vibrating Fork Level Sensors",
+            "Conductivity Level Sensors",
+            "Capacitance Level Sensors",
+            "Fuel Level Transmitters",
+            "Ultrasonic Level Sensors",
+            "Radar Level Sensors",
+            "Mini Radar Level Sensors",
+            "Hydrostatic Level Sensors",
+            "Magnetic Level Switches",
+            "Side & Top Mounted Level Switches",
+            "Miniature Level Sensors",
+            "Level Transmitters",
+            "Electromagnetic Flow Level Sensors"
+          ]
+        },
+        {
+          "title": "Solid Level Sensors & Switches",
+          "items": [
+            "Vibrating Fork Level Sensors",
+            "Vibrating Rod Level Sensors",
+            "NRF / RF Admittance Probes",
+            "Rotating Paddle Level Sensors",
+            "Capacitance Level Probes",
+            "Microwave / Radar Solid Level Sensors",
+            "Weight Level Switches",
+            "Tilt Level Switches",
+            "Mini Level Sensors",
+            "Electromagnetic Flow Sensors"
+          ]
+        },
+        {
+          "title": "Moisture & Humidity Sensors",
+          "items": [
+            "Online Moisture Sensors for Hoppers & Conveyors",
+            "Bulk Material Moisture Measurement",
+            "Capacitance-Based Moisture Sensors",
+            "Infrared Moisture Analyzers",
+            "Microwave Moisture Sensors"
+          ]
+        },
+        {
+          "title": "Gas Level & Detection Sensors",
+          "items": [
+            "Gas Pressure Level Sensors",
+            "Ultrasonic Gas Flow & Level Sensors",
+            "Capacitance-Based Gas Detection Probes",
+            "Thermal Mass Flow Level Sensors"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "filtration",
+      "title": "Advanced Filtration Systems",
+      "sections": [
+        {
+          "title": "Coolant Filtration Systems",
+          "items": [
+            "Centralized Coolant Filtration Systems",
+            "Magnetic Separators",
+            "Paper Band Filters",
+            "Compact Band Filters",
+            "Coolant / Oil Sump Cleaners",
+            "Compact Pressure Bed Filters",
+            "Oil Skimmers",
+            "Individual Machine Coolant Filters",
+            "Mobile Type Filters",
+            "Compact Filters",
+            "Magnetic Candle & Gravity Filters",
+            "Cartridge, RBC & Bag-Based Filters",
+            "Oil Recovery Press Units",
+            "Chip Wringer Systems",
+            "Up-Flow Filters",
+            "Spare Parts"
+          ]
+        },
+        {
+          "title": "Food/Oil/Water Filtration",
+          "items": [
+            "Fine Mesh Oil Filters",
+            "Mineral Water Filtration Plants",
+            "Wastewater Treatment Plants",
+            "Water Purifiers",
+            "Reusable Food Oil Filters",
+            "High-Temperature Cooking Oil Filtration Units"
+          ]
+        },
+        {
+          "title": "Environmental Filtration",
+          "items": [
+            "Effluent Treatment Plants",
+            "Sewage Treatment Plants",
+            "CETP Systems",
+            "ZLD Systems",
+            "RO / UF / DM Plants",
+            "Sludge Dewatering Systems",
+            "Water Recycling Systems",
+            "Biogas Generation Systems",
+            "Desalination Systems"
+          ]
+        },
+        {
+          "title": "Recyclable Filtration Systems",
+          "items": [
+            "Backwashable Filter Units",
+            "Self-Cleaning Filters",
+            "Reusable Oil & Coolant Filters"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "handling",
+      "title": "Material Handling Equipment",
+      "sections": [
+        {
+          "title": "Conveyors",
+          "items": [
+            "Scraper Type Chip Conveyor",
+            "Slat Type Chip Conveyor",
+            "Screw Type Chip Conveyor",
+            "Magnetic Type Chip Conveyor",
+            "Roller Type Conveyor",
+            "Centralized Chip Handling System",
+            "All-Material Chip Handling System",
+            "Spare Parts for Chip Conveyors"
+          ]
+        },
+        {
+          "title": "Specialized Conveyors",
+          "items": [
+            "Food Conveyor",
+            "Pneumatic Conveyors",
+            "Vibrating Conveyors",
+            "Bucket Elevators",
+            "Gravity Conveyors",
+            "Aero-Mechanical Conveyors",
+            "Cooling Conveyors"
+          ]
+        },
+        {
+          "title": "Chip Processing & Automation",
+          "items": [
+            "Chip Shredder / Cutter",
+            "Chip Compacting & Briquetting",
+            "Automated Handling Systems",
+            "Custom Automation Solutions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spm",
+      "title": "Special Purpose Machines (SPM)",
+      "sections": [
+        {
+          "title": "SPM Types",
+          "items": [
+            "Assembly SPMs",
+            "Drilling & Tapping SPMs",
+            "Milling & Cutting SPMs",
+            "Welding & Riveting SPMs",
+            "Testing & Inspection SPMs",
+            "Packaging SPMs",
+            "Fully Automated SPMs",
+            "Semi-Automated SPMs"
+          ]
+        }
+      ]
+    }
+  ]
+}

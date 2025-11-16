@@ -35,8 +35,13 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Wherever sensing, filtration, handling, or automation is required, our reliable and 
+            Wherever sensing, filtration, handling, or automation is required, our reliable and
             advanced systems deliver precision, performance, and value built for your industry.
+          </p>
+
+          {/* Tiny inspirational tagline from content */}
+          <p className="text-sm text-white/80 mb-6 max-w-2xl mx-auto">
+            ✨ Every problem is an opportunity waiting to be solved — and we deliver the right solution for you.
           </p>
 
           {/* CTA Buttons */}
