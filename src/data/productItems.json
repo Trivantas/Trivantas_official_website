@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "id": "uls-300",
+      "name": "Ultrasonic Level Sensor ULS-300",
+      "image": "/src/assets/level-sensor.jpg",
+      "description": "Non-contact ultrasonic sensor for liquids — accurate long-range measurement and easy mounting.",
+      "price": 249.00,
+      "currency": "USD",
+      "category": "sensors"
+    },
+    {
+      "id": "rls-500",
+      "name": "Radar Level Sensor RLS-500",
+      "image": "/src/assets/level-sensor.jpg",
+      "description": "Microwave radar sensor built for high-temp and vapor environments, precise to ±1 mm.",
+      "price": 799.00,
+      "currency": "USD",
+      "category": "sensors"
+    },
+    {
+      "id": "mmf-1000",
+      "name": "Multi-Media Filter MMF-1000",
+      "image": "/src/assets/filtration-system.jpg",
+      "description": "Heavy-duty multi-media filter for process & water treatment — reliable turbidity removal.",
+      "price": 4999.00,
+      "currency": "USD",
+      "category": "filtration"
+    },
+    {
+      "id": "ro-2000",
+      "name": "RO System RO-2000",
+      "image": "/src/assets/filtration-system.jpg",
+      "description": "Compact reverse osmosis plant for industrial & commercial applications.",
+      "price": 12999.00,
+      "currency": "USD",
+      "category": "filtration"
+    },
+    {
+      "id": "cs-belt",
+      "name": "Conveyor System CS-Belt",
+      "image": "/src/assets/material-handling.jpg",
+      "description": "Modular belt conveyor for continuous material handling and automated lines.",
+      "price": 2199.00,
+      "currency": "USD",
+      "category": "handling"
+    },
+    {
+      "id": "ohc-50t",
+      "name": "Overhead Crane OHC-50T",
+      "image": "/src/assets/material-handling.jpg",
+      "description": "Heavy-duty overhead crane with variable speed, load monitoring and safety systems.",
+      "price": 45999.00,
+      "currency": "USD",
+      "category": "handling"
+    },
+    {
+      "id": "aal-x1",
+      "name": "Automated Assembly AAL-X1",
+      "image": "/src/assets/spm-machine.jpg",
+      "description": "Turnkey assembly automation for high-volume production with vision inspection.",
+      "price": 34999.00,
+      "currency": "USD",
+      "category": "spm"
+    },
+    {
+      "id": "pm-auto",
+      "name": "Packaging Machine PM-Auto",
+      "image": "/src/assets/spm-machine.jpg",
+      "description": "Versatile packaging solution for food & pharma — fast changeovers and servo drives.",
+      "price": 25999.00,
+      "currency": "USD",
+      "category": "spm"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "sensors": {
+    "heroTitle": "Smart Level Sensors by Trivantas",
+    "heroSubtitle": "Precision Monitoring for Liquids, Solids, Moisture & Gas",
+    "description": "Full description here...",
+    "groups": [
+      {
+        "title": "Liquid Level Sensors",
+        "items": [
+          "Float Type Level Sensors",
+          "Vibrating Fork Sensors",
+          "Radar Level Sensors"
+        ]
+      }
+    ]
+  }
+}
