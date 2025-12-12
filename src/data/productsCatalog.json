@@ -1,0 +1,83 @@
+{
+  "products": [
+    {
+      "id": "mmf-1000",
+      "categoryLabel": "Filtration",
+      "name": "Multi-Media Filter MMF-1000",
+      "capacity": "10-100 m³/hr",
+      "efficiency": "99.5% turbidity removal",
+      "features": ["Multi-layer media", "Automatic backwash", "Low maintenance"],
+      "icons": ["⚙️", "💧", "🔁"],
+      "image": "/src/assets/filtration-system.jpg"
+    },
+    {
+      "id": "ro-2000",
+      "categoryLabel": "Filtration",
+      "name": "Reverse Osmosis System RO-2000",
+      "capacity": "5-200 m³/day",
+      "efficiency": "99.7% salt rejection",
+      "features": ["Energy recovery", "PLC control", "CIP system"],
+      "icons": ["💧", "⚡", "🧪"],
+      "image": "/src/assets/filtration-system.jpg"
+    },
+    {
+      "id": "bfs-500",
+      "categoryLabel": "Filtration",
+      "name": "Bag Filter System BFS-500",
+      "capacity": "1-50 m³/hr",
+      "efficiency": "1-500 micron filtration",
+      "features": ["Quick-change bags", "Pressure monitoring", "Sanitary design"],
+      "icons": ["🧰", "📈", "🧼"],
+      "image": "/src/assets/filtration-system.jpg"
+    },
+    {
+      "id": "smart-level-sensors",
+      "categoryLabel": "Sensors",
+      "name": "Smart Level Sensors",
+      "capacity": "Varies by type",
+      "efficiency": "High precision & reliability",
+      "features": ["Waterproof & dustproof", "High-temp models", "Custom outputs available"],
+      "icons": ["💧", "🪨", "💨"],
+      "image": "/src/assets/level-sensor.jpg"
+    }
+  ],
+
+  "sensorGroups": [
+    {
+      "productId": "smart-level-sensors",
+      "title": "Liquid Level Sensors & Switches",
+      "items": [
+        "Float Type Level Sensors",
+        "Vibrating Fork Level Sensors",
+        "Conductivity Level Sensors",
+        "Capacitance Level Sensors",
+        "Fuel Level Transmitters",
+        "Ultrasonic Level Sensors",
+        "Radar Level Sensors",
+        "Mini Radar Level Sensors",
+        "Hydrostatic Level Sensors",
+        "Magnetic Level Switches",
+        "Side & Top Mounted Level Switches",
+        "Miniature Level Sensors",
+        "Level Transmitters",
+        "Electromagnetic Flow Level Sensors"
+      ]
+    },
+    {
+      "productId": "smart-level-sensors",
+      "title": "Solid Level Sensors & Switches",
+      "items": [
+        "Vibrating Fork Level Sensors",
+        "Vibrating Rod Level Sensors",
+        "NRF / RF Admittance Probes",
+        "Rotating Paddle Level Sensors",
+        "Capacitance Level Probes",
+        "Microwave / Radar Solid Level Sensors",
+        "Weight Level Switches",
+        "Tilt Level Switches",
+        "Mini Level Sensors",
+        "Electromagnetic Flow Sensors"
+      ]
+    }
+  ]
+}
