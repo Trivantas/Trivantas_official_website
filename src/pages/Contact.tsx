@@ -39,7 +39,7 @@ const Contact = () => {
         {/* Side Quick Links */}
       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
         <a
-          href="https://wa.me/+918983845428" // replace with your WhatsApp number
+          href="https://wa.me/+917028165428" // replace with your WhatsApp number
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
@@ -140,7 +140,7 @@ const Contact = () => {
                       <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                        <p className="text-muted-foreground">📞 8983845428</p>
+                        <p className="text-muted-foreground">📞 7028165428</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
