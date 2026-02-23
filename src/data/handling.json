@@ -1,21 +1,619 @@
 [
-  { "id": "scraper-type-chip-conveyor", "categoryLabel": "Material Handling Equipment", "name": "Scraper Type Chip Conveyor", "capacity": "Up to 300 kg/hr", "efficiency": "Efficient chip removal", "features": ["Heavy-duty scrapers","Low maintenance","Modular"], "icons": ["🔩"], "imageKey": "scraperConveyor", "type": "Chip Conveyor", "range": "N/A", "accuracy": "N/A", "applications": ["CNC shops"], "specifications": {"material":"SS"} },
-  { "id": "slat-type-chip-conveyor", "categoryLabel": "Material Handling Equipment", "name": "Slat Type Chip Conveyor", "capacity": "High throughput", "efficiency": "Handles bulky chips", "features": ["Slat chain","Robust","Custom lengths"], "icons": ["🧰"], "imageKey": "slatConveyor", "type": "Chip Conveyor", "range": "N/A", "accuracy": "N/A", "applications": ["Heavy machining"], "specifications": {"chain":"Heat treated"} },
-  { "id": "screw-type-chip-conveyor", "categoryLabel": "Material Handling Equipment", "name": "Screw Type Chip Conveyor", "capacity": "Moderate throughput", "efficiency": "Compact footprint", "features": ["Screw auger","Compact","Low maintenance"], "icons": ["🌀"], "imageKey": "screwConveyor", "type": "Chip Conveyor", "range": "N/A", "accuracy": "N/A", "applications": ["CNC cells"], "specifications": {"screwMaterial":"SS"} },
-  { "id": "magnetic-type-chip-conveyor", "categoryLabel": "Material Handling Equipment", "name": "Magnetic Type Chip Conveyor", "capacity": "Varies", "efficiency": "Removes ferrous debris", "features": ["Magnetic traps","Low maintenance","High durability"], "icons": ["🧲"], "imageKey": "magneticConveyor", "type": "Chip Conveyor", "range": "N/A", "accuracy": "N/A", "applications": ["Machine shops"], "specifications": {"magnet":"Rare earth"} },
-  { "id": "centralized-chip-handling-system", "categoryLabel": "Material Handling Equipment", "name": "Centralized Chip Handling System", "capacity": "Large", "efficiency": "Central collection & transport", "features": ["Centralized collection","Conveyors & conveyors","Automated"], "icons": ["🏭"], "imageKey": "centralHandling", "type": "Handling System", "range": "N/A", "accuracy": "N/A", "applications": ["Factory lines"], "specifications": {"layout":"Custom"} },
-  { "id": "roller-conveyor", "categoryLabel": "Material Handling Equipment", "name": "Roller Conveyor", "capacity": "Varies", "efficiency": "Fast product movement", "features": ["Modular","Low friction","Scalable"], "icons": ["🛞"], "imageKey": "rollerConveyor", "type": "Conveyor", "range": "N/A", "accuracy": "N/A", "applications": ["Warehousing"], "specifications": {"roller":"Steel"} },
-  { "id": "chip-conveyor-spare-parts", "categoryLabel": "Material Handling Equipment", "name": "Chip Conveyor Spare Parts", "capacity": "N/A", "efficiency": "Spares to keep conveyors running", "features": ["OEM parts","Quick delivery","High quality"], "icons": ["⚙️"], "imageKey": "sparePartsConveyor", "type": "Spare Parts", "range": "N/A", "accuracy": "N/A", "applications": ["Maintenance"], "specifications": {"parts":"Chains, screws"} },
-  { "id": "all-material-chip-handling-system", "categoryLabel": "Material Handling Equipment", "name": "All-Material Chip Handling System", "capacity": "Varies", "efficiency": "Handles mixed chip types", "features": ["Versatile","Robust","Customizable"], "icons": ["🔧"], "imageKey": "allMaterialHandling", "type": "Handling System", "range": "N/A", "accuracy": "N/A", "applications": ["Multi-machine setups"], "specifications": {"compatibility":"All chips"} },
-  { "id": "food-conveyor", "categoryLabel": "Material Handling Equipment", "name": "Food Conveyor", "capacity": "Food-grade handling", "efficiency": "Sanitary conveyors for food industry", "features": ["Food-grade materials","Easy cleaning","Belt options"], "icons": ["🍽️"], "imageKey": "foodConveyor", "type": "Conveyor", "range": "N/A", "accuracy": "N/A", "applications": ["Food processing"], "specifications": {"material":"SS304"} },
-  { "id": "pneumatic-conveyors", "categoryLabel": "Material Handling Equipment", "name": "Pneumatic Conveyors", "capacity": "Bulk solids transfer", "efficiency": "Enclosed transfer for powders", "features": ["Enclosed transfer","Vacuum/pressure options","Low contamination"], "icons": ["💨"], "imageKey": "pneumaticConveyor", "type": "Conveyor", "range": "Long runs", "accuracy": "N/A", "applications": ["Bulk powder handling"], "specifications": {"mode":"Vacuum/Pressure"} },
-  { "id": "vibrating-conveyors", "categoryLabel": "Material Handling Equipment", "name": "Vibrating Conveyors", "capacity": "Granular materials", "efficiency": "Gentle handling of fragile products", "features": ["Vibration control","Low maintenance","Custom trays"], "icons": ["🔊"], "imageKey": "vibratingConveyor", "type": "Conveyor", "range": "N/A", "accuracy": "N/A", "applications": ["Food, aggregates"], "specifications": {"drive":"Electromechanical"} },
-  { "id": "bucket-elevators-conveyors", "categoryLabel": "Material Handling Equipment", "name": "Bucket Elevators / Conveyors", "capacity": "High elevation product transfer", "efficiency": "Vertical lifting of bulk materials", "features": ["High lift","Enclosed buckets","Various sizes"], "icons": ["🪣"], "imageKey": "bucketElevator", "type": "Elevator", "range": "N/A", "accuracy": "N/A", "applications": ["Grain","Bulk solids"], "specifications": {"bucketType":"Standard"} },
-  { "id": "gravity-conveyors", "categoryLabel": "Material Handling Equipment", "name": "Gravity Conveyors", "capacity": "Passive product movement", "efficiency": "Cost effective for simple transfers", "features": ["No power required","Low cost","Simple maintenance"], "icons": ["⬇️"], "imageKey": "gravityConveyor", "type": "Conveyor", "range": "N/A", "accuracy": "N/A", "applications": ["Packing lines"], "specifications": {"material":"Steel"} },
-  { "id": "aero-mechanical-conveyors", "categoryLabel": "Material Handling Equipment", "name": "Aero-Mechanical Conveyors", "capacity": "Gentle product conveying", "efficiency": "Good for fragile items", "features": ["Low dust","Compact routing","Gentle handling"], "icons": ["✈️"], "imageKey": "aeroConveyor", "type": "Conveyor", "range": "Long runs", "accuracy": "N/A", "applications": ["Food, pharma"], "specifications": {"mode":"Aero-mechanical"} },
-  { "id": "cooling-conveyors", "categoryLabel": "Material Handling Equipment", "name": "Cooling Conveyors", "capacity": "Cooling process lines", "efficiency": "Integrated cooling for product lines", "features": ["Cooling zones","Controlled speed","Hygienic design"], "icons": ["❄️"], "imageKey": "coolingConveyor", "type": "Conveyor", "range": "N/A", "accuracy": "N/A", "applications": ["Food processing"], "specifications": {"zones":"Multiple"} },
-  { "id": "chips-shredder-cutter", "categoryLabel": "Material Handling Equipment", "name": "Chips Shredder / Cutter", "capacity": "Varies", "efficiency": "Reduces chip volume", "features": ["Shredding blades","Robust drive","Safety guards"], "icons": ["🔪"], "imageKey": "chipShredder", "type": "Shredder", "range": "N/A", "accuracy": "N/A", "applications": ["Chip processing"], "specifications": {"bladeMaterial":"Hardened steel"} },
-  { "id": "chips-compacting-briquetting", "categoryLabel": "Material Handling Equipment", "name": "Chips Compacting & Briquetting", "capacity": "Varies", "efficiency": "Compresses chips into briquettes", "features": ["High pressure","Oil recovery","Compact output"], "icons": ["🔩"], "imageKey": "briquetter", "type": "Compactor", "range": "N/A", "accuracy": "N/A", "applications": ["Waste reduction"], "specifications": {"pressType":"Hydraulic"} },
-  { "id": "automated-handling-systems", "categoryLabel": "Material Handling Equipment", "name": "Automated Handling Systems", "capacity": "Custom", "efficiency": "Reduces labor & increases throughput", "features": ["Robotics","Conveyors","Control systems"], "icons": ["🤖"], "imageKey": "automatedHandling", "type": "Automation", "range": "Custom", "accuracy": "Varies", "applications": ["Assembly lines"], "specifications": {"control":"PLC/robotics"} },
-  { "id": "customized-concepts-automation-solutions", "categoryLabel": "Material Handling Equipment", "name": "Customized Concepts & Automation Solutions", "capacity": "Tailored", "efficiency": "Designed per process", "features": ["Custom design","Integration","Support"], "icons": ["🧩"], "imageKey": "customAutomation", "type": "Custom Solution", "range": "Custom", "accuracy": "Varies", "applications": ["Multiple industries"], "specifications": {"service":"Design & build"} }
+  {
+    "id": "scraper-type-chip-conveyor",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Scraper Type Chip Conveyor",
+    "capacity": "Up to 300 kg/hr",
+    "efficiency": "Efficient chip removal",
+    "features": [
+      "Designed for continuous chip removal",
+      "Suitable for long, stringy, and mixed metal chips",
+      "Heavy-duty chain and scraper construction",
+      "Reliable operation in harsh machining environments",
+      "Low risk of chip jamming or blockage",
+      "Simple mechanical design for long service life",
+      "Compact layout for easy integration with machine tools"
+    ],
+    "icons": [
+      "🔩"
+    ],
+    "imageKey": "scraperConveyor",
+    "type": "Chip Conveyor",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers",
+      "Turning and milling machines",
+      "Automotive manufacturing plants",
+      "Heavy engineering workshops",
+      "Aerospace component machining",
+      "Metal fabrication industries"
+    ],
+    "specifications": {
+      "material": "SS"
+    }
+  },
+  {
+    "id": "slat-type-chip-conveyor",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Slat Type Chip Conveyor",
+    "capacity": "High throughput",
+    "efficiency": "Handles bulky chips",
+    "features": [
+      "Heavy-duty steel slat construction",
+      "Capable of handling long, stringy, and bulky chips",
+      "High load-bearing capacity",
+      "Smooth and continuous chip flow",
+      "Robust chain-driven mechanism",
+      "Low wear and long service life",
+      "Designed for harsh machining environments",
+      "Minimal risk of clogging or jamming"
+    ],
+    "icons": [
+      "🧰"
+    ],
+    "imageKey": "slatConveyor",
+    "type": "Chip Conveyor",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers",
+      "Automotive component manufacturing",
+      "Heavy engineering industries",
+      "Metal fabrication units",
+      "Foundries and casting shops",
+      "Tool rooms and production lines",
+      "Chip collection and centralized material handling systems"
+    ],
+    "specifications": {
+      "chain": "Heat treated"
+    }
+  },
+  {
+    "id": "screw-type-chip-conveyor",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Screw Type Chip Conveyor",
+    "capacity": "Moderate throughput",
+    "efficiency": "Compact footprint",
+    "features": [
+      "Compact and space-saving design",
+      "Continuous and smooth chip transportation",
+      "Ideal for short-distance conveying",
+      "Handles wet, dry, and mixed metal chips",
+      "Enclosed construction reduces spillage",
+      "Low maintenance and simple operation",
+      "Rugged design for industrial environments"
+    ],
+    "icons": [
+      "🌀"
+    ],
+    "imageKey": "screwConveyor",
+    "type": "Chip Conveyor",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC turning and milling machines",
+      "Machining centers",
+      "Automotive component manufacturing",
+      "Tool rooms and production workshops",
+      "Metal fabrication units",
+      "Small to medium chip handling applications"
+    ],
+    "specifications": {
+      "screwMaterial": "SS"
+    }
+  },
+  {
+    "id": "magnetic-type-chip-conveyor",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Magnetic Type Chip Conveyor",
+    "capacity": "Varies",
+    "efficiency": "Removes ferrous debris",
+    "features": [
+      "Designed exclusively for ferrous metal chips",
+      "Strong permanent magnets for consistent chip movement",
+      "No exposed moving parts on the chip-carrying surface",
+      "Handles fine, powdery, broken, and oily chips effectively",
+      "Smooth and silent operation",
+      "Compact and space-saving design",
+      "Rugged construction for harsh industrial environments",
+      "Continuous, jam-free chip removal"
+    ],
+    "icons": [
+      "🧲"
+    ],
+    "imageKey": "magneticConveyor",
+    "type": "Chip Conveyor",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers",
+      "Lathe and milling machines",
+      "Automotive component manufacturing",
+      "Heavy engineering workshops",
+      "Foundries and casting units",
+      "Gear and bearing manufacturing"
+    ],
+    "specifications": {
+      "magnet": "Rare earth"
+    }
+  },
+  {
+    "id": "centralized-chip-handling-system",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Centralized Chip Handling System",
+    "capacity": "Large",
+    "efficiency": "Central collection & transport",
+    "features": [
+      "Designed for centralized chip collection from multiple machines",
+      "Continuous and automated chip transportation",
+      "Integrated chip crushing for volume reduction",
+      "Efficient coolant separation and recovery",
+      "Heavy-duty construction for long service life",
+      "Low manual intervention and reduced housekeeping",
+      "Modular design for future expansion",
+      "Reliable performance in demanding industrial environments"
+    ],
+    "icons": [
+      "🏭"
+    ],
+    "imageKey": "centralHandling",
+    "type": "Handling System",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Automotive manufacturing plants",
+      "Aerospace machining facilities",
+      "Heavy engineering industries",
+      "Machine tool manufacturing units",
+      "Foundries and casting plants",
+      "High-volume CNC and transfer line operations"
+    ],
+    "specifications": {
+      "layout": "Custom"
+    }
+  },
+  {
+    "id": "roller-conveyor",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Roller Conveyor",
+    "capacity": "Varies",
+    "efficiency": "Fast product movement",
+    "features": [
+      "Modular",
+      "Low friction",
+      "Scalable"
+    ],
+    "icons": [
+      "🛞"
+    ],
+    "imageKey": "rollerConveyor",
+    "type": "Conveyor",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Warehousing"
+    ],
+    "specifications": {
+      "roller": "Steel"
+    }
+  },
+  {
+    "id": "chip-conveyor-spare-parts",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Chip Conveyor Spare Parts",
+    "capacity": "As per customer requirements",
+    "efficiency": "Spares to keep conveyors running",
+    "features": [
+      "OEM parts",
+      "Quick delivery",
+      "High quality"
+    ],
+    "icons": [
+      "⚙️"
+    ],
+    "imageKey": "sparePartsConveyor",
+    "type": "Spare Parts",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Maintenance"
+    ],
+    "specifications": {
+      "parts": "Chains, screws"
+    }
+  },
+  {
+    "id": "all-material-chip-handling-system",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "All-Material Chip Handling System",
+    "capacity": "Varies",
+    "efficiency": "Handles mixed chip types",
+    "features": [
+      "Designed to handle ferrous and non-ferrous material chips",
+      "Compatible with wet, dry, stringy, or broken chips",
+      "Robust construction for heavy-duty industrial operation",
+      "Continuous and automated chip removal",
+      "Low maintenance and long service life",
+      "Modular design for easy system expansion",
+      "Reliable operation in harsh shop floor environments"
+    ],
+    "icons": [
+      "🔧"
+    ],
+    "imageKey": "allMaterialHandling",
+    "type": "Handling System",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Automotive manufacturing plants",
+      "CNC machining shops",
+      "Aerospace component manufacturing",
+      "Heavy engineering industries",
+      "Foundries and casting units",
+      "Tool rooms and production workshops",
+      "Metal fabrication and precision machining facilities"
+    ],
+    "specifications": {
+      "compatibility": "All chips"
+    }
+  },
+  {
+    "id": "food-conveyor",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Food Conveyor",
+    "capacity": "Food-grade handling",
+    "efficiency": "Sanitary conveyors for food industry",
+    "features": [
+      "Designed for food-grade applications",
+      "Hygienic construction with easy-to-clean surfaces",
+      "Smooth and controlled material flow",
+      "Customizable belt types and widths",
+      "Low noise and vibration operation",
+      "Robust and corrosion-resistant design",
+      "Suitable for continuous industrial use"
+    ],
+    "icons": [
+      "🍽️"
+    ],
+    "imageKey": "foodConveyor",
+    "type": "Conveyor",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Food processing plants",
+      "Bakery and confectionery units",
+      "Dairy and beverage industries",
+      "Meat, poultry, and seafood processing",
+      "Snack and ready-to-eat food production",
+      "Packaging, sorting, and inspection lines",
+      "Cold storage and distribution facilities"
+    ],
+    "specifications": {
+      "material": "SS304"
+    }
+  },
+  {
+    "id": "pneumatic-conveyors",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Pneumatic Conveyors",
+    "capacity": "Bulk solids transfer",
+    "efficiency": "Enclosed transfer for powders",
+    "features": [
+      "Designed for enclosed and dust-free material transfer",
+      "Flexible routing with horizontal, vertical, or inclined conveying",
+      "No moving mechanical parts along the pipeline",
+      "Gentle handling to minimize material degradation",
+      "Scalable design for short or long-distance conveying",
+      "Compact system footprint",
+      "Reliable operation for continuous industrial processes"
+    ],
+    "icons": [
+      "💨"
+    ],
+    "imageKey": "pneumaticConveyor",
+    "type": "Conveyor",
+    "range": "Long runs",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Cement and construction materials industry",
+      "Food & beverage processing plants",
+      "Chemical and pharmaceutical industries",
+      "Plastic and polymer processing",
+      "Power plants and fly ash handling",
+      "Mineral processing and bulk material handling"
+    ],
+    "specifications": {
+      "mode": "Vacuum/Pressure"
+    }
+  },
+  {
+    "id": "vibrating-conveyors",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Vibrating Conveyors",
+    "capacity": "Granular materials",
+    "efficiency": "Gentle handling of fragile products",
+    "features": [
+      "Designed for bulk solids and granular materials",
+      "Gentle conveying action with minimal product damage",
+      "No belts, chains, or rollers",
+      "Low power consumption",
+      "Simple and rugged construction",
+      "Consistent and controlled material flow",
+      "Suitable for continuous industrial operation"
+    ],
+    "icons": [
+      "🔊"
+    ],
+    "imageKey": "vibratingConveyor",
+    "type": "Conveyor",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Mining and minerals processing",
+      "Cement and construction materials",
+      "Chemical and fertilizer plants",
+      "Food and grain processing",
+      "Foundries and metal processing",
+      "Pharmaceutical and bulk powder handling",
+      "Ash handling and recycling systems"
+    ],
+    "specifications": {
+      "drive": "Electromechanical"
+    }
+  },
+  {
+    "id": "bucket-elevators-conveyors",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Bucket Elevators / Conveyors",
+    "capacity": "High elevation product transfer",
+    "efficiency": "Vertical lifting of bulk materials",
+    "features": [
+      "Designed for vertical bulk material lifting",
+      "High lift capacity with stable operation",
+      "Enclosed design for dust-free handling",
+      "Heavy-duty belt or chain drive options",
+      "Low power consumption",
+      "Minimal spillage and product loss",
+      "Compact footprint for vertical routing",
+      "Suitable for high-temperature and abrasive materials"
+    ],
+    "icons": [
+      "🪣"
+    ],
+    "imageKey": "bucketElevator",
+    "type": "Elevator",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Cement plants",
+      "Food processing industries",
+      "Chemical manufacturing",
+      "Fertilizer plants",
+      "Mining & mineral processing"
+    ],
+    "specifications": {
+      "bucketType": "Standard"
+    }
+  },
+  {
+    "id": "gravity-conveyors",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Gravity Conveyors",
+    "capacity": "Passive product movement",
+    "efficiency": "Cost effective for simple transfers",
+    "features": [
+      "No power requirement",
+      "Cost-effective and low maintenance",
+      "Modular and easy to expand",
+      "Smooth roller-based transfer",
+      "Lightweight yet durable construction",
+      "Suitable for cartons, boxes, and components"
+    ],
+    "icons": [
+      "⬇️"
+    ],
+    "imageKey": "gravityConveyor",
+    "type": "Conveyor",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Warehouses",
+      "Logistics centers",
+      "Assembly lines",
+      "Packaging industries"
+    ],
+    "specifications": {
+      "material": "Steel"
+    }
+  },
+  {
+    "id": "aero-mechanical-conveyors",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Aero-Mechanical Conveyors",
+    "capacity": "Gentle product conveying",
+    "efficiency": "Good for fragile items",
+    "features": [
+      "Gentle handling of fragile materials",
+      "Low dust emission",
+      "High conveying efficiency",
+      "Compact and flexible routing",
+      "Sealed system for hygienic handling",
+      "Low maintenance design"
+    ],
+    "icons": [
+      "✈️"
+    ],
+    "imageKey": "aeroConveyor",
+    "type": "Conveyor",
+    "range": "Long runs",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Food processing",
+      "Pharmaceuticals",
+      "Chemical industries",
+      "Plastic manufacturing"
+    ],
+    "specifications": {
+      "mode": "Aero-mechanical"
+    }
+  },
+  {
+    "id": "cooling-conveyors",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Cooling Conveyors",
+    "capacity": "Cooling process lines",
+    "efficiency": "Integrated cooling for product lines",
+    "features": [
+      "Uniform and controlled cooling process",
+      "Continuous material transfer",
+      "Air-cooled or water-cooled design options",
+      "Heat-resistant conveyor belts or slats",
+      "Customizable length and cooling capacity",
+      "Heavy-duty industrial construction",
+      "Energy-efficient cooling system"
+    ],
+    "icons": [
+      "❄️"
+    ],
+    "imageKey": "coolingConveyor",
+    "type": "Conveyor",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Foundries and casting units",
+      "Automotive manufacturing",
+      "Plastic extrusion plants",
+      "Food processing industries",
+      "Heat treatment facilities",
+      "Metal fabrication units"
+    ],
+    "specifications": {
+      "zones": "Multiple"
+    }
+  },
+  {
+    "id": "chips-shredder-cutter",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Chips Shredder / Cutter",
+    "capacity": "Varies",
+    "efficiency": "Reduces chip volume",
+    "features": [
+      "Heavy-duty cutting blades",
+      "Handles long, stringy, and coiled chips",
+      "High torque gear motor drive",
+      "Compact and rugged construction",
+      "Continuous-duty operation",
+      "Low maintenance design"
+    ],
+    "icons": [
+      "🔪"
+    ],
+    "imageKey": "chipShredder",
+    "type": "Shredder",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers",
+      "Automotive component manufacturing",
+      "Heavy engineering industries",
+      "Metal fabrication workshops"
+    ],
+    "specifications": {
+      "bladeMaterial": "Hardened steel"
+    }
+  },
+  {
+    "id": "chips-compacting-briquetting",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Chips Compacting & Briquetting",
+    "capacity": "Varies",
+    "efficiency": "Compresses chips into briquettes",
+    "features": [
+      "High compression force",
+      "Efficient coolant recovery system",
+      "Automatic briquette discharge",
+      "Heavy-duty hydraulic system",
+      "Compact and space-saving design",
+      "Continuous operation capability"
+    ],
+    "icons": [
+      "🔩"
+    ],
+    "imageKey": "briquetter",
+    "type": "Compactor",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Automotive manufacturing",
+      "Machine shops",
+      "Foundries",
+      "Metal processing plants"
+    ],
+    "specifications": {
+      "pressType": "Hydraulic"
+    }
+  },
+  {
+    "id": "automated-handling-systems",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Automated Handling Systems",
+    "capacity": "Custom",
+    "efficiency": "Reduces labor & increases throughput",
+    "features": [
+      "PLC-based control systems",
+      "Sensor-based automation",
+      "Integration with CNC and production lines",
+      "Modular and scalable design",
+      "Real-time monitoring capability",
+      "Reduced manual handling"
+    ],
+    "icons": [
+      "🤖"
+    ],
+    "imageKey": "automatedHandling",
+    "type": "Automation",
+    "range": "Custom",
+    "accuracy": "Varies",
+    "applications": [
+      "Automotive manufacturing",
+      "Warehouse automation",
+      "Assembly lines",
+      "Heavy engineering industries"
+    ],
+    "specifications": {
+      "control": "PLC/robotics"
+    }
+  },
+  {
+    "id": "customized-concepts-automation-solutions",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Customized Concepts & Automation Solutions",
+    "capacity": "Tailored",
+    "efficiency": "Designed per process",
+    "features": [
+      "Application-specific design",
+      "Advanced engineering integration",
+      "High reliability and durability",
+      "Scalable and upgrade-ready systems",
+      "Industry-compliant safety standards"
+    ],
+    "icons": [
+      "🧩"
+    ],
+    "imageKey": "customAutomation",
+    "type": "Custom Solution",
+    "range": "Custom",
+    "accuracy": "Varies",
+    "applications": [
+      "Automotive",
+      "Aerospace",
+      "Heavy engineering",
+      "Food & processing industries",
+      "Custom manufacturing environments"
+    ],
+    "specifications": {
+      "service": "Design & build"
+    }
+  }
 ]

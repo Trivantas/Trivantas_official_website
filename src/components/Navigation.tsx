@@ -12,6 +12,7 @@ const Navigation = () => {
     { name: 'About Us', href: '/about' },
     { name: 'Products', href: '/products' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Flipbook', href: '/TRIVANTAS_Flipbook.pdf' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -22,9 +23,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex flex-col items-center sm:items-start">
-             <span className="text-2xl font-bold text-primary">Trivantas</span>
-             <span className="text-sm text-muted-foreground -mt-1">One Stop Solution</span>
+            <Link to="/" className="flex items-center space-x-2">
+              <img src="/images/Icon-Color.png" alt="Trivantas Logo" className="h-14 w-14 object-contain" />
+              <div className="flex flex-col items-start leading-tight">
+                <span className="text-2xl font-bold text-primary">Trivantas</span>
+                <span className="text-sm text-muted-foreground">One Stop Solution</span>
+              </div>
             </Link>
           </div>
 
@@ -33,17 +37,28 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-primary ${
-                    isActive(item.href)
+                (item.href.startsWith('/') && !item.href.endsWith('.pdf')) ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-primary ${isActive(item.href)
                       ? 'text-primary bg-accent'
                       : 'text-muted-foreground hover:bg-accent'
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                      }`}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 rounded-md text-sm font-medium transition-colors text-muted-foreground hover:text-primary hover:bg-accent"
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
             </div>
           </div>
@@ -73,18 +88,30 @@ const Navigation = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                    isActive(item.href)
+                (item.href.startsWith('/') && !item.href.endsWith('.pdf')) ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive(item.href)
                       ? 'text-primary bg-accent'
                       : 'text-muted-foreground hover:text-primary hover:bg-accent'
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                      }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-3 py-2 rounded-md text-base font-medium transition-colors text-muted-foreground hover:text-primary hover:bg-accent"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
               <div className="pt-2">
                 <Link to="/schedule">

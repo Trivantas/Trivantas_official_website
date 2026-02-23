@@ -6,8 +6,16 @@
       "name": "Multi-Media Filter MMF-1000",
       "capacity": "10-100 m³/hr",
       "efficiency": "99.5% turbidity removal",
-      "features": ["Multi-layer media", "Automatic backwash", "Low maintenance"],
-      "icons": ["⚙️", "💧", "🔁"],
+      "features": [
+        "Multi-layer media",
+        "Automatic backwash",
+        "Low maintenance"
+      ],
+      "icons": [
+        "⚙️",
+        "💧",
+        "🔁"
+      ],
       "image": "/src/assets/filtration-system.jpg"
     },
     {
@@ -16,8 +24,16 @@
       "name": "Reverse Osmosis System RO-2000",
       "capacity": "5-200 m³/day",
       "efficiency": "99.7% salt rejection",
-      "features": ["Energy recovery", "PLC control", "CIP system"],
-      "icons": ["💧", "⚡", "🧪"],
+      "features": [
+        "Energy recovery",
+        "PLC control",
+        "CIP system"
+      ],
+      "icons": [
+        "💧",
+        "⚡",
+        "🧪"
+      ],
       "image": "/src/assets/filtration-system.jpg"
     },
     {
@@ -26,8 +42,16 @@
       "name": "Bag Filter System BFS-500",
       "capacity": "1-50 m³/hr",
       "efficiency": "1-500 micron filtration",
-      "features": ["Quick-change bags", "Pressure monitoring", "Sanitary design"],
-      "icons": ["🧰", "📈", "🧼"],
+      "features": [
+        "Quick-change bags",
+        "Pressure monitoring",
+        "Sanitary design"
+      ],
+      "icons": [
+        "🧰",
+        "📈",
+        "🧼"
+      ],
       "image": "/src/assets/filtration-system.jpg"
     },
     {
@@ -36,47 +60,63 @@
       "name": "Smart Level Sensors",
       "capacity": "Varies by type",
       "efficiency": "High precision & reliability",
-      "features": ["Waterproof & dustproof", "High-temp models", "Custom outputs available"],
-      "icons": ["💧", "🪨", "💨"],
+      "features": [
+        "Waterproof & dustproof",
+        "High-temp models",
+        "Custom outputs available"
+      ],
+      "icons": [
+        "💧",
+        "🪨",
+        "💨"
+      ],
       "image": "/src/assets/level-sensor.jpg"
     }
   ],
-
   "sensorGroups": [
     {
       "productId": "smart-level-sensors",
       "title": "Liquid Level Sensors & Switches",
       "items": [
-        "Float Type Level Sensors",
-        "Vibrating Fork Level Sensors",
+        "High-Accuracy Level Indicator",
+        "Magnetic Float Level Switch",
+        "Vibrating Fork Level Switch Aquafork Swift",
         "Conductivity Level Sensors",
         "Capacitance Level Sensors",
         "Fuel Level Transmitters",
         "Ultrasonic Level Sensors",
         "Radar Level Sensors",
-        "Mini Radar Level Sensors",
         "Hydrostatic Level Sensors",
         "Magnetic Level Switches",
         "Side & Top Mounted Level Switches",
         "Miniature Level Sensors",
         "Level Transmitters",
-        "Electromagnetic Flow Level Sensors"
+        "Electromagnetic Flow Meter"
       ]
     },
     {
       "productId": "smart-level-sensors",
       "title": "Solid Level Sensors & Switches",
       "items": [
-        "Vibrating Fork Level Sensors",
-        "Vibrating Rod Level Sensors",
-        "NRF / RF Admittance Probes",
+        "Vibrating Fork Level Switch for Solid",
+        "Vibrating Rod Type Level Sensors",
+        "NRF / RF Admittance Level Sensors",
         "Rotating Paddle Level Sensors",
-        "Capacitance Level Probes",
-        "Microwave / Radar Solid Level Sensors",
-        "Weight Level Switches",
-        "Tilt Level Switches",
-        "Mini Level Sensors",
+        "Capacitance Level Sensors(Probes)",
+        "Radar Solid Level Sensors",
+        "Tilt Level Switch",
+        "Mini Level Switch",
         "Electromagnetic Flow Sensors"
+      ]
+    },
+    {
+      "productId": "smart-level-sensors",
+      "title": "Microwave Moisture Measurement Sensor",
+      "items": [
+        "Moisture Sensors",
+        "Hydro-Mix Microwave Moisture Measurement Sensors",
+        "Hydro-Probe BX",
+        "Hydro-Mix XT"
       ]
     }
   ]

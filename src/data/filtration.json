@@ -1,39 +1,1242 @@
 [
-  { "id": "centralized-coolant-filtration-systems", "categoryLabel": "Advanced Filtration Systems", "name": "Centralized Coolant Filtration Systems", "capacity": "Up to 2000 L/min", "efficiency": ">95% particle removal", "features": ["Multi-stage filtration","PLC control","Automated backwash"], "icons": ["🌀"], "imageKey": "centralCoolant", "type": "Coolant Filtration", "range": "Application dependent", "accuracy": "N/A", "applications": ["Central coolant systems","Machine tools"], "specifications": {"media":"Paper/Candle/Bag","power":"415V"} },
-  { "id": "magnetic-separators", "categoryLabel": "Advanced Filtration Systems", "name": "Magnetic Separators", "capacity": "Varies", "efficiency": "High ferrous removal", "features": ["Permanent magnets","Low maintenance","Compact"], "icons": ["🧲"], "imageKey": "magneticSeparator", "type": "Separator", "range": "N/A", "accuracy": "N/A", "applications": ["Coolant cleaning","Recycling"], "specifications": {"magnetType":"Rare earth"} },
-  { "id": "paper-band-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Paper Band Filters", "capacity": "Up to 500 L/min", "efficiency": "Fine particulate capture", "features": ["Continuous filtration","Auto winding","Replaceable rolls"], "icons": ["📜"], "imageKey": "paperBand", "type": "Band Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Coolant filtration"], "specifications": {"paper":"Special media"} },
-  { "id": "compact-band-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Compact Band Filters", "capacity": "Medium flow rates", "efficiency": "High filtration efficiency", "features": ["Compact design","Easy maintenance","Automatic operations"], "icons": ["📦"], "imageKey": "compactBand", "type": "Band Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Shop floor coolant"], "specifications": {"footprint":"Compact"} },
-  { "id": "coolant-oil-sump-cleaners", "categoryLabel": "Advanced Filtration Systems", "name": "Coolant / Oil Sump Cleaners", "capacity": "Varies", "efficiency": "Removes sludge & tramp oil", "features": ["Easy installation","Automatic skimming","Filtration stage"], "icons": ["🛢️"], "imageKey": "sumpCleaner", "type": "Sump Cleaner", "range": "N/A", "accuracy": "N/A", "applications": ["Machine sumps","Coolant tanks"], "specifications": {"drive":"Electric"} },
-  { "id": "compact-pressure-bed-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Compact Pressure Bed Filters", "capacity": "Small to medium flows", "efficiency": "Fine particle removal", "features": ["Pressure operation","Replaceable media","Compact"], "icons": ["⚙️"], "imageKey": "pressureBed", "type": "Pressure Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Process water","Coolant"], "specifications": {"maxPressure":"10 bar"} },
-  { "id": "oil-skimmers", "categoryLabel": "Advanced Filtration Systems", "name": "Oil Skimmers", "capacity": "Varies", "efficiency": "Efficient oil removal", "features": ["Continuous skimming","Low power draw","Easy maintenance"], "icons": ["🛢️"], "imageKey": "oilSkimmer", "type": "Skimmer", "range": "N/A", "accuracy": "N/A", "applications": ["Coolant tanks","Wastewater"], "specifications": {"belt":"PU"} },
-  { "id": "individual-machine-coolant-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Individual Machine Coolant Filters", "capacity": "Per-machine sizing", "efficiency": "Improves tool life", "features": ["Compact","Easy change","Integrated pump"], "icons": ["🧰"], "imageKey": "machineFilter", "type": "Machine Filter", "range": "N/A", "accuracy": "N/A", "applications": ["CNC machines"], "specifications": {"filterType":"Cartridge/Band"} },
-  { "id": "mobile-type-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Mobile Type Filters", "capacity": "Portable filtration", "efficiency": "Good for multiple machines", "features": ["Wheeled frame","Quick connect","Flexible use"], "icons": ["🚚"], "imageKey": "mobileFilter", "type": "Mobile Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Maintenance","Temporary setups"], "specifications": {"mobility":"Wheels"} },
-  { "id": "compact-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Compact Filters", "capacity": "Small flows", "efficiency": "Space-saving filtration", "features": ["Compact footprint","Low maintenance","High throughput for size"], "icons": ["📦"], "imageKey": "compactFilter", "type": "Compact Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Small machines"], "specifications": {"size":"Compact"} },
-  { "id": "magnetic-candle-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Magnetic Candle Filters", "capacity": "Varies", "efficiency": "Removes fine ferrous particles", "features": ["Candle design","High field strength","Easy cleaning"], "icons": ["🧲"], "imageKey": "magneticCandle", "type": "Candle Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Coolant systems"], "specifications": {"magnet":"Rare earth"} },
-  { "id": "gravity-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Gravity Filters", "capacity": "Medium flows", "efficiency": "Simple filtration for water", "features": ["Low energy","Simple design","Easy maintenance"], "icons": ["🌊"], "imageKey": "gravityFilter", "type": "Gravity Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Water treatment"], "specifications": {"material":"FRP/SS"} },
-  { "id": "cartridge-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Cartridge Filters", "capacity": "Wide range", "efficiency": "Micron-level options", "features": ["Easy cartridge change","Various micron ratings","Sanitary designs"], "icons": ["🔧"], "imageKey": "cartridgeFilter", "type": "Cartridge Filter", "range": "Depends on cartridge", "accuracy": "N/A", "applications": ["Process water","Chemicals"], "specifications": {"cartridgeMaterial":"PP/CF"} },
-  { "id": "rbc-filters", "categoryLabel": "Advanced Filtration Systems", "name": "RBC Filters", "capacity": "Medium to high flows", "efficiency": "High fine particle removal", "features": ["Rotary bed design","Automatic cleaning","Low downtime"], "icons": ["🔄"], "imageKey": "rbcFilter", "type": "RBC Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Industrial processes"], "specifications": {"drive":"Electric"} },
-  { "id": "bag-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Bag Filters", "capacity": "Varies", "efficiency": "Bulk particle capture", "features": ["Replaceable bags","Wide micron range","Simple operation"], "icons": ["🧵"], "imageKey": "bagFilter", "type": "Bag Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Paint filtration","Chemicals"], "specifications": {"bagType":"Polypropylene"} },
-  { "id": "oil-recovery-press-units", "categoryLabel": "Advanced Filtration Systems", "name": "Oil Recovery Press Units", "capacity": "Varies", "efficiency": "Extracts oil from sludge", "features": ["High-pressure pressing","Filtrate recovery","Skid mounted"], "icons": ["🔧"], "imageKey": "oilPress", "type": "Press Unit", "range": "N/A", "accuracy": "N/A", "applications": ["Oil recovery"], "specifications": {"pressType":"Hydraulic"} },
-  { "id": "chip-wringer-systems", "categoryLabel": "Advanced Filtration Systems", "name": "Chip Wringer Systems", "capacity": "Varies", "efficiency": "Recovers oil from chips", "features": ["Compact","High recovery","Simple operation"], "icons": ["🧰"], "imageKey": "chipWringer", "type": "Wringer", "range": "N/A", "accuracy": "N/A", "applications": ["Machine shops"], "specifications": {"drive":"Electric"} },
-  { "id": "up-flow-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Up-Flow Filters", "capacity": "Medium to large flows", "efficiency": "Effective solids separation", "features": ["Up-flow design","Low backpressure","Easy maintenance"], "icons": ["⬆️"], "imageKey": "upFlow", "type": "Up-Flow Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Water treatment"], "specifications": {"media":"Sand/GAC"} },
-  { "id": "spare-parts-filtration", "categoryLabel": "Advanced Filtration Systems", "name": "Spare Parts for Filtration Systems (Bags, Paper, Candle, etc.)", "capacity": "N/A", "efficiency": "Consumables for filtration", "features": ["Wide compatibility","OEM replacements","High quality"], "icons": ["⚙️"], "imageKey": "spareParts", "type": "Spare Parts", "range": "N/A", "accuracy": "N/A", "applications": ["All filtration systems"], "specifications": {"items":"Bags, paper, candles"} },
-  { "id": "fine-mesh-oil-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Fine Mesh Oil Filters", "capacity": "Varies", "efficiency": "Removes fine particulates from oil", "features": ["Fine mesh media","High throughput","Reusable options"], "icons": ["🪣"], "imageKey": "fineMesh", "type": "Oil Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Food oil","Industrial oil"], "specifications": {"meshSizes":"Various"} },
-  { "id": "mineral-water-filtration-plants", "categoryLabel": "Advanced Filtration Systems", "name": "Mineral Water Filtration Plants", "capacity": "Small to large", "efficiency": "Produces potable water", "features": ["Multi-stage purification","RO/UF stages","CIP"], "icons": ["💧"], "imageKey": "mineralWater", "type": "Water Treatment", "range": "N/A", "accuracy": "N/A", "applications": ["Bottling","Mineral water"], "specifications": {"stages":"RO/UF/UV"} },
-  { "id": "wastewater-treatment-plants", "categoryLabel": "Advanced Filtration Systems", "name": "Wastewater Treatment Plants", "capacity": "Large scale", "efficiency": "Removes organics and solids", "features": ["Biological treatment","Clarification","Sludge handling"], "icons": ["🏭"], "imageKey": "wwtp", "type": "WWTP", "range": "N/A", "accuracy": "N/A", "applications": ["Industrial effluent"], "specifications": {"process":"Activated sludge"} },
-  { "id": "water-purifiers", "categoryLabel": "Advanced Filtration Systems", "name": "Water Purifiers", "capacity": "Household to commercial", "efficiency": "Removes contaminants for drinking", "features": ["RO/UF","UV sterilization","TDS control"], "icons": ["🚰"], "imageKey": "waterPurifier", "type": "Purifier", "range": "N/A", "accuracy": "N/A", "applications": ["Residential","Commercial"], "specifications": {"stages":"3-6 stage"} },
-  { "id": "reusable-food-oil-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Reusable Food Oil Filters", "capacity": "Varies", "efficiency": "Extends fryer oil life", "features": ["Reusable media","Easy cleaning","Food-grade materials"], "icons": ["🍳"], "imageKey": "foodOilFilter", "type": "Food Oil Filter", "range": "N/A", "accuracy": "N/A", "applications": ["F&B industry"], "specifications": {"material":"Food grade stainless"} },
-  { "id": "high-temp-cooking-oil-filters", "categoryLabel": "Advanced Filtration Systems", "name": "High-Temperature Cooking Oil Filtration Units", "capacity": "High temp operation", "efficiency": "Removes char & particulates", "features": ["Heat resistant","Food-grade","Continuous filtration"], "icons": ["🔥"], "imageKey": "highTempOil", "type": "Oil Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Food processing"], "specifications": {"maxTemp":"200°C"} },
-  { "id": "effluent-treatment-plants-etp", "categoryLabel": "Advanced Filtration Systems", "name": "Effluent Treatment Plants (ETP)", "capacity": "Medium to large", "efficiency": "Treats industrial effluent", "features": ["Physical/chemical treatment","Biological stages","Sludge handling"], "icons": ["🏭"], "imageKey": "etp", "type": "ETP", "range": "N/A", "accuracy": "N/A", "applications": ["Industrial effluent"], "specifications": {"standards":"Local regulations"} },
-  { "id": "sewage-treatment-plants-stp", "categoryLabel": "Advanced Filtration Systems", "name": "Sewage Treatment Plants (STP)", "capacity": "Residential/commercial scale", "efficiency": "Treats sewage to reuse standards", "features": ["Biological treatment","Clarification","Odour control"], "icons": ["🚰"], "imageKey": "stp", "type": "STP", "range": "N/A", "accuracy": "N/A", "applications": ["Municipal","Commercial"], "specifications": {"process":"Activated sludge"} },
-  { "id": "cetp-systems", "categoryLabel": "Advanced Filtration Systems", "name": "CETP Systems", "capacity": "Cluster-level treatment", "efficiency": "Handles combined effluent", "features": ["Modular design","Centralized operation","Resource recovery"], "icons": ["🏭"], "imageKey": "cetp", "type": "CETP", "range": "N/A", "accuracy": "N/A", "applications": ["Industrial clusters"], "specifications": {"modules":"Scalable"} },
-  { "id": "zld-systems", "categoryLabel": "Advanced Filtration Systems", "name": "Zero Liquid Discharge (ZLD) Systems", "capacity": "Large plants", "efficiency": "Minimizes wastewater discharge", "features": ["Evaporation/crystallization","Recovery systems","High energy options"], "icons": ["♻️"], "imageKey": "zld", "type": "ZLD", "range": "N/A", "accuracy": "N/A", "applications": ["Textiles","Chemical plants"], "specifications": {"energy":"High"} },
-  { "id": "ro-uf-dm-plants", "categoryLabel": "Advanced Filtration Systems", "name": "RO, UF, DM Plants", "capacity": "Small to very large", "efficiency": "Removes salts and particulates", "features": ["Membrane stages","Pre-treatment","Post-treatment"], "icons": ["💧"], "imageKey": "membranePlants", "type": "Membrane Plant", "range": "N/A", "accuracy": "N/A", "applications": ["Process water","Drinking water"], "specifications": {"membranes":"RO/UF"} },
-  { "id": "sludge-dewatering-systems", "categoryLabel": "Advanced Filtration Systems", "name": "Sludge Dewatering Systems", "capacity": "Varies", "efficiency": "Reduces sludge volume", "features": ["Belt press","Centrifuge","Screw press"], "icons": ["🧻"], "imageKey": "dewatering", "type": "Dewatering", "range": "N/A", "accuracy": "N/A", "applications": ["STP/ETP"], "specifications": {"methods":"Belt/Centrifuge"} },
-  { "id": "water-recycling-reuse-systems", "categoryLabel": "Advanced Filtration Systems", "name": "Water Recycling & Reuse Systems", "capacity": "Varies", "efficiency": "Enables internal reuse", "features": ["Treatment trains","Modular design","Monitoring"], "icons": ["🔁"], "imageKey": "waterReuse", "type": "Recycling System", "range": "N/A", "accuracy": "N/A", "applications": ["Process reuse"], "specifications": {"modules":"Custom"} },
-  { "id": "biogas-pre-treatment-systems", "categoryLabel": "Advanced Filtration Systems", "name": "Biogas Pre-treatment Systems", "capacity": "Varies", "efficiency": "Removes contaminants before use", "features": ["Desulphurization","Moisture removal","Filtration"], "icons": ["🔋"], "imageKey": "biogas", "type": "Pre-treatment", "range": "N/A", "accuracy": "N/A", "applications": ["Biogas plants"], "specifications": {"process":"Desulphurization"} },
-  { "id": "desalination-process-water-solutions", "categoryLabel": "Advanced Filtration Systems", "name": "Desalination & Process Water Solutions", "capacity": "Large scale", "efficiency": "Removes salts and minerals", "features": ["RO stages","Energy recovery","Pre-treatment"], "icons": ["🌊"], "imageKey": "desalination", "type": "Desalination", "range": "N/A", "accuracy": "N/A", "applications": ["Sea water desalination"], "specifications": {"recovery":"Varies"} },
-  { "id": "backwashable-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Backwashable Filters", "capacity": "Medium to large", "efficiency": "Self-cleaning via backwash", "features": ["Automatic backwash","Long run times","Low maintenance"], "icons": ["🔁"], "imageKey": "backwashable", "type": "Backwashable", "range": "N/A", "accuracy": "N/A", "applications": ["Industrial water systems"], "specifications": {"backwash":"Automatic"} },
-  { "id": "self-cleaning-industrial-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Self-Cleaning Industrial Filters", "capacity": "Varies", "efficiency": "Continuous filtration with self-clean", "features": ["Self-cleaning","Low downtime","Automated"], "icons": ["🧼"], "imageKey": "selfCleaning", "type": "Self-Cleaning Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Process industries"], "specifications": {"cleaning":"Automatic"} },
-  { "id": "reusable-oil-coolant-filters", "categoryLabel": "Advanced Filtration Systems", "name": "Reusable Oil & Coolant Filters", "capacity": "Varies", "efficiency": "Reusable media reduces waste", "features": ["Washable media","Durable construction","Low cost over life"], "icons": ["🔁"], "imageKey": "reusableFilters", "type": "Reusable Filter", "range": "N/A", "accuracy": "N/A", "applications": ["Coolant systems"], "specifications": {"media":"Washable"} }
+  {
+    "id": "mag-band-filter",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Mag Band Filter",
+    "capacity": "As per application requirement",
+    "efficiency": "Up to 20–30 microns",
+    "features": [
+      "Powerful magnetic drum for efficient ferrous particle separation",
+      "Endless band filtration for fine sludge removal",
+      "Continuous automatic sludge discharge",
+      "Improves coolant life and machining accuracy",
+      "Reduces tool wear and maintenance costs",
+      "Heavy-duty industrial construction"
+    ],
+    "icons": [
+      "🧲",
+      "🔄"
+    ],
+    "imageKey": "magBandFilter",
+    "type": "Industrial Filter",
+    "range": "As per customer requirements",
+    "accuracy": "20-30 microns",
+    "applications": [
+      "CNC Machining Centers",
+      "Grinding Machines",
+      "Turning & Milling Operations",
+      "Automotive Manufacturing",
+      "Bearing & Gear Manufacturing",
+      "Heavy Engineering Industries",
+      "Centralized Coolant Filtration Systems"
+    ],
+    "specifications": {
+      "automation": "Continuous automatic operation",
+      "material": "Mild Steel / Stainless Steel",
+      "controlPanel": "Optional PLC-based automation",
+      "operatingMode": "Continuous Filtration",
+      "coolantCompatibility": "Water-based & Oil-based coolants",
+      "sludgeRemoval": "Automatic scraper mechanism",
+      "installationType": "Standalone or centralized system integration",
+      "powerSupply": "As per system configuration"
+    }
+  },
+  {
+    "id": "centralized-coolant-filtration-systems",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Centralized Coolant Filtration Systems",
+    "capacity": "Up to 2000 L/min",
+    "efficiency": ">95% particle removal",
+    "features": [
+      "Centralized coolant management for multiple machines",
+      "High-efficiency fine particle & sludge removal",
+      "Fully automatic filtration system",
+      "Modular & expandable design",
+      "Maintains consistent coolant quality",
+      "Reduces coolant wastage",
+      "Heavy-duty industrial construction"
+    ],
+    "icons": [
+      "🌀"
+    ],
+    "imageKey": "centralCoolant",
+    "type": "Coolant Filtration",
+    "range": "Application dependent",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Automotive manufacturing",
+      "CNC machining lines",
+      "Grinding & finishing operations",
+      "Aerospace component manufacturing",
+      "Heavy engineering workshops",
+      "High-volume production plants",
+      "Multi-machine machining cells"
+    ],
+    "specifications": {
+      "media": "Paper/Candle/Bag",
+      "power": "415V"
+    }
+  },
+  {
+    "id": "magnetic-separators",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Magnetic Separators",
+    "capacity": "Varies",
+    "efficiency": "High ferrous removal",
+    "features": [
+      "High-strength magnetic field for efficient metal capture",
+      "Continuous & reliable separation performance",
+      "No external power required (permanent magnet models)",
+      "Low maintenance & long operational life",
+      "Rugged design for harsh industrial environments",
+      "Suitable for dry & wet applications",
+      "Customizable for different flow rates & installations"
+    ],
+    "icons": [
+      "🧲"
+    ],
+    "imageKey": "magneticSeparator",
+    "type": "Separator",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Food & beverage processing",
+      "Pharmaceutical & chemical industries",
+      "Mining & minerals processing",
+      "Recycling & waste management",
+      "Cement & power plants",
+      "Plastic, rubber & polymer processing",
+      "Bulk material handling systems"
+    ],
+    "specifications": {
+      "magnetType": "Rare earth"
+    }
+  },
+  {
+    "id": "paper-band-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Paper Band Filters",
+    "capacity": "Up to 500 L/min",
+    "efficiency": "Fine particulate capture",
+    "features": [
+      "Continuous filtration without process interruption",
+      "Automatic filter paper advancement",
+      "Simple design with minimal moving parts",
+      "Consistent & reliable filtration performance",
+      "Compatible with various industrial fluids",
+      "Robust construction for long service life",
+      "Low operating & maintenance cost"
+    ],
+    "icons": [
+      "📜"
+    ],
+    "imageKey": "paperBand",
+    "type": "Band Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers",
+      "Grinding machines",
+      "Automotive component manufacturing",
+      "Steel & metal processing plants",
+      "Bearing & gear manufacturing",
+      "Central coolant filtration systems",
+      "Industrial washing & cleaning lines"
+    ],
+    "specifications": {
+      "paper": "Special media"
+    }
+  },
+  {
+    "id": "compact-band-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Compact Band Filters",
+    "capacity": "Medium flow rates",
+    "efficiency": "High filtration efficiency",
+    "features": [
+      "Compact & space-saving design",
+      "Continuous filtration without interruption",
+      "Automatic filter media advancement",
+      "High dirt-holding capacity",
+      "Low maintenance operation",
+      "Heavy-duty industrial construction",
+      "Compatible with various filter media grades",
+      "Reliable performance in demanding environments"
+    ],
+    "icons": [
+      "📦"
+    ],
+    "imageKey": "compactBand",
+    "type": "Band Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers",
+      "Grinding & honing machines",
+      "Automotive manufacturing",
+      "Metalworking industries",
+      "Component washing systems",
+      "Process fluid filtration setups",
+      "Centralized coolant filtration systems"
+    ],
+    "specifications": {
+      "footprint": "Compact"
+    }
+  },
+  {
+    "id": "coolant-oil-sump-cleaners",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Coolant / Oil Sump Cleaners",
+    "capacity": "Varies",
+    "efficiency": "Removes sludge & tramp oil",
+    "features": [
+      "Continuous tramp oil removal",
+      "Enhances coolant life & machining performance",
+      "Simple and easy mechanical operation",
+      "Low power consumption",
+      "Compact & space-saving design",
+      "Easy installation & user-friendly operation",
+      "Reliable in harsh shop-floor conditions",
+      "Compatible with various machine tools"
+    ],
+    "icons": [
+      "🛢️"
+    ],
+    "imageKey": "sumpCleaner",
+    "type": "Sump Cleaner",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers",
+      "Lathe & milling machines",
+      "Grinding machines",
+      "Automotive component manufacturing",
+      "Aerospace machining",
+      "General engineering workshops",
+      "Tool rooms & production units"
+    ],
+    "specifications": {
+      "drive": "Electric"
+    }
+  },
+  {
+    "id": "compact-pressure-bed-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Compact Pressure Bed Filters",
+    "capacity": "Small to medium flows",
+    "efficiency": "Fine particle removal",
+    "features": [
+      "Compact, space-saving pressure vessel design",
+      "High filtration efficiency for suspended solids",
+      "Handles higher flow rates than gravity filters",
+      "Durable construction for continuous industrial use",
+      "Uniform flow distribution for consistent performance",
+      "Easy backwash system for media regeneration",
+      "Long service life with stable filtration results"
+    ],
+    "icons": [
+      "⚙️"
+    ],
+    "imageKey": "pressureBed",
+    "type": "Pressure Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Water treatment & utility systems",
+      "Cooling tower & boiler feed pre-treatment",
+      "Chemical & process industries",
+      "Food & beverage processing",
+      "Power plants & infrastructure projects",
+      "Effluent treatment & water recycling plants"
+    ],
+    "specifications": {
+      "maxPressure": "10 bar"
+    }
+  },
+  {
+    "id": "oil-skimmers",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Oil Skimmers",
+    "capacity": "Varies",
+    "efficiency": "Efficient oil removal",
+    "features": [
+      "Continuous oil removal operation",
+      "High oil recovery with minimal water carryover",
+      "Simple & robust mechanical construction",
+      "Low power consumption",
+      "Minimal maintenance requirements",
+      "Compact & space-saving design",
+      "Reliable performance in harsh industrial environments"
+    ],
+    "icons": [
+      "🛢️"
+    ],
+    "imageKey": "oilSkimmer",
+    "type": "Skimmer",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers",
+      "Metalworking & cutting fluid tanks",
+      "Power plants & cooling systems",
+      "Chemical & process industries",
+      "Food processing plants",
+      "Wastewater treatment facilities",
+      "Automotive & manufacturing industries"
+    ],
+    "specifications": {
+      "belt": "PU"
+    }
+  },
+  {
+    "id": "individual-machine-coolant-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Individual Machine Coolant Filters",
+    "capacity": "Per-machine sizing",
+    "efficiency": "Improves tool life",
+    "features": [
+      "Designed for individual machine-level coolant filtration",
+      "Efficient removal of metal chips, fines & sludge",
+      "Compact & space-saving design",
+      "Continuous or batch filtration operation",
+      "Low pressure drop for steady coolant flow",
+      "Easy access for cleaning & maintenance",
+      "Rugged construction for shop-floor use",
+      "Customizable filtration media & configurations"
+    ],
+    "icons": [
+      "🧰"
+    ],
+    "imageKey": "machineFilter",
+    "type": "Machine Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers",
+      "Grinding machines",
+      "Lathes & milling machines",
+      "Automotive component manufacturing",
+      "Aerospace & precision engineering",
+      "Tool rooms & job shops",
+      "Metal cutting & forming operations"
+    ],
+    "specifications": {
+      "filterType": "Cartridge/Band"
+    }
+  },
+  {
+    "id": "mobile-type-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Mobile Type Filters",
+    "capacity": "Portable filtration",
+    "efficiency": "Good for multiple machines",
+    "features": [
+      "Portable & compact design for easy mobility",
+      "High-efficiency multi-stage filtration",
+      "Integrated pump for continuous circulation",
+      "Robust industrial-grade construction",
+      "Easy filter element replacement",
+      "User-friendly plug-and-play operation",
+      "Low maintenance requirements",
+      "Suitable for temporary or permanent filtration tasks"
+    ],
+    "icons": [
+      "🚚"
+    ],
+    "imageKey": "mobileFilter",
+    "type": "Mobile Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Hydraulic system maintenance",
+      "Machine tools & CNC machines",
+      "Power plants",
+      "Steel & metal processing industries",
+      "Oil & gas facilities",
+      "Automotive manufacturing",
+      "Process industries",
+      "Maintenance workshops"
+    ],
+    "specifications": {
+      "mobility": "Wheels"
+    }
+  },
+  {
+    "id": "compact-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Compact Filters",
+    "capacity": "Small flows",
+    "efficiency": "Space-saving filtration",
+    "features": [
+      "Compact & space-saving design",
+      "High filtration efficiency",
+      "Low pressure drop for energy efficiency",
+      "Robust industrial housing",
+      "Easy filter element replacement",
+      "Long service life",
+      "Reliable performance under continuous operation"
+    ],
+    "icons": [
+      "📦"
+    ],
+    "imageKey": "compactFilter",
+    "type": "Compact Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Manufacturing plants",
+      "Machine tools & CNC machines",
+      "HVAC & ventilation systems",
+      "Automotive & engineering industries",
+      "Food & beverage processing",
+      "Pharmaceutical & chemical industries",
+      "Compressed air & process air systems"
+    ],
+    "specifications": {
+      "size": "Compact"
+    }
+  },
+  {
+    "id": "magnetic-candle-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Magnetic Candle Filters",
+    "capacity": "Varies",
+    "efficiency": "Removes fine ferrous particles",
+    "features": [
+      "Candle design",
+      "High field strength",
+      "Easy cleaning"
+    ],
+    "icons": [
+      "🧲"
+    ],
+    "imageKey": "magneticCandle",
+    "type": "Candle Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Coolant systems"
+    ],
+    "specifications": {
+      "magnet": "Rare earth"
+    }
+  },
+  {
+    "id": "gravity-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Gravity Filters",
+    "capacity": "Medium flows",
+    "efficiency": "Simple filtration for water",
+    "features": [
+      "Low energy",
+      "Simple design",
+      "Easy maintenance"
+    ],
+    "icons": [
+      "🌊"
+    ],
+    "imageKey": "gravityFilter",
+    "type": "Gravity Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Water treatment"
+    ],
+    "specifications": {
+      "material": "FRP/SS"
+    }
+  },
+  {
+    "id": "cartridge-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Cartridge Filters",
+    "capacity": "Wide range",
+    "efficiency": "Micron-level options",
+    "features": [
+      "Easy cartridge change",
+      "Various micron ratings",
+      "Sanitary designs"
+    ],
+    "icons": [
+      "🔧"
+    ],
+    "imageKey": "cartridgeFilter",
+    "type": "Cartridge Filter",
+    "range": "Depends on cartridge",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Process water",
+      "Chemicals"
+    ],
+    "specifications": {
+      "cartridgeMaterial": "PP/CF"
+    }
+  },
+  {
+    "id": "rbc-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "RBC Filters",
+    "capacity": "Medium to high flows",
+    "efficiency": "High fine particle removal",
+    "features": [
+      "Rotary bed design",
+      "Automatic cleaning",
+      "Low downtime"
+    ],
+    "icons": [
+      "🔄"
+    ],
+    "imageKey": "rbcFilter",
+    "type": "RBC Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Industrial processes"
+    ],
+    "specifications": {
+      "drive": "Electric"
+    }
+  },
+  {
+    "id": "bag-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Bag Filters",
+    "capacity": "Varies",
+    "efficiency": "Bulk particle capture",
+    "features": [
+      "Replaceable bags",
+      "Wide micron range",
+      "Simple operation"
+    ],
+    "icons": [
+      "🧵"
+    ],
+    "imageKey": "bagFilter",
+    "type": "Bag Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Paint filtration",
+      "Chemicals"
+    ],
+    "specifications": {
+      "bagType": "Polypropylene"
+    }
+  },
+  {
+    "id": "oil-recovery-press-units",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Oil Recovery Press Units",
+    "capacity": "Varies",
+    "efficiency": "Extracts oil from sludge",
+    "features": [
+      "High oil recovery efficiency from waste materials",
+      "Heavy-duty construction for continuous operation",
+      "Robust screw / hydraulic pressing mechanism",
+      "Minimal oil loss with consistent output quality",
+      "Low maintenance & easy-access design",
+      "Compact footprint for space-saving installation",
+      "Suitable for various oil-bearing waste materials",
+      "Designed for harsh industrial environments"
+    ],
+    "icons": [
+      "🔧"
+    ],
+    "imageKey": "oilPress",
+    "type": "Press Unit",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Food processing industries",
+      "Chemical & petrochemical plants",
+      "Metalworking & machining units",
+      "Edible oil & biofuel industries",
+      "Waste management & recycling plants",
+      "Pharmaceutical & cosmetic manufacturing",
+      "Industrial oil recovery operations"
+    ],
+    "specifications": {
+      "pressType": "Hydraulic"
+    }
+  },
+  {
+    "id": "chip-wringer-systems",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Chip Wringer Systems",
+    "capacity": "Varies",
+    "efficiency": "Recovers oil from chips",
+    "features": [
+      "Efficient separation of coolant from metal chips",
+      "High-speed centrifugal operation for maximum fluid recovery",
+      "Heavy-duty industrial construction",
+      "Continuous or batch operation options",
+      "Low vibration & smooth running",
+      "Compact design for easy integration",
+      "Reliable performance in demanding environments"
+    ],
+    "icons": [
+      "🧰"
+    ],
+    "imageKey": "chipWringer",
+    "type": "Wringer",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers",
+      "Automotive component manufacturing",
+      "Aerospace machining units",
+      "Heavy engineering workshops",
+      "Foundries & metal processing plants"
+    ],
+    "specifications": {
+      "drive": "Electric"
+    }
+  },
+  {
+    "id": "up-flow-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Up-Flow Filters",
+    "capacity": "Medium to large flows",
+    "efficiency": "Effective solids separation",
+    "features": [
+      "High-efficiency filtration with upward flow design",
+      "Uniform media utilization with reduced channeling",
+      "Low pressure drop across filter bed",
+      "Efficient backwashing for extended media life",
+      "Simple design with minimal moving parts",
+      "Compact & rugged construction",
+      "Reliable performance in harsh industrial conditions"
+    ],
+    "icons": [
+      "⬆️"
+    ],
+    "imageKey": "upFlow",
+    "type": "Up-Flow Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Water treatment plants",
+      "Chemical & process industries",
+      "Power plants & utilities",
+      "Food & beverage processing",
+      "Pharmaceutical & biotech facilities",
+      "Cooling water & boiler feed systems",
+      "Effluent treatment & water recycling systems"
+    ],
+    "specifications": {
+      "media": "Sand/GAC"
+    }
+  },
+  {
+    "id": "spare-parts-filtration",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Spare Parts for Filtration Systems (Bags, Paper, Candle, etc.)",
+    "capacity": "As per customer requirements",
+    "efficiency": "Consumables for filtration",
+    "features": [
+      "Wide range of filtration spare parts available",
+      "Compatible with most standard filtration systems",
+      "High dirt-holding capacity & consistent efficiency",
+      "Accurate dimensions for easy replacement",
+      "Strong mechanical strength & chemical resistance",
+      "Suitable for high flow & pressure conditions",
+      "Reliable performance in continuous operations"
+    ],
+    "icons": [
+      "⚙️"
+    ],
+    "imageKey": "spareParts",
+    "type": "Spare Parts",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Water & wastewater treatment plants",
+      "Chemical & petrochemical industries",
+      "Food & beverage processing units",
+      "Pharmaceutical & biotech plants",
+      "Paint, coating & ink manufacturing",
+      "Oil & gas & lubricant processing",
+      "Power plants & general manufacturing industries"
+    ],
+    "specifications": {
+      "items": "Bags, paper, candles"
+    }
+  },
+  {
+    "id": "fine-mesh-oil-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Fine Mesh Oil Filters",
+    "capacity": "Varies",
+    "efficiency": "Removes fine particulates from oil",
+    "features": [
+      "High-efficiency fine mesh filtration",
+      "Accurate removal of micro-level contaminants",
+      "Reusable or replaceable mesh elements",
+      "Low pressure drop across the filter",
+      "Robust & corrosion-resistant construction",
+      "Compact design for easy integration",
+      "Suitable for continuous industrial operation"
+    ],
+    "icons": [
+      "🪣"
+    ],
+    "imageKey": "fineMesh",
+    "type": "Oil Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Hydraulic systems",
+      "Lubrication systems",
+      "Power plants",
+      "Manufacturing & machining units",
+      "Automotive & mobile equipment",
+      "Gearboxes & compressors",
+      "Oil circulation & conditioning systems"
+    ],
+    "specifications": {
+      "meshSizes": "Various"
+    }
+  },
+  {
+    "id": "mineral-water-filtration-plants",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Mineral Water Filtration Plants",
+    "capacity": "Small to large",
+    "efficiency": "Produces potable water",
+    "features": [
+      "Multi-stage filtration for complete purification",
+      "Removes physical, chemical & biological contaminants",
+      "Ensures consistent water quality & taste",
+      "Low operating & maintenance cost",
+      "Modular & scalable system design",
+      "Robust construction for long-term use",
+      "Energy-efficient & eco-friendly operation",
+      "Designed for continuous duty applications"
+    ],
+    "icons": [
+      "💧"
+    ],
+    "imageKey": "mineralWater",
+    "type": "Water Treatment",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Packaged drinking water plants",
+      "Hotels, resorts & restaurants",
+      "Hospitals & healthcare facilities",
+      "Educational institutions",
+      "Commercial complexes",
+      "Industrial drinking water supply",
+      "Residential societies"
+    ],
+    "specifications": {
+      "stages": "RO/UF/UV"
+    }
+  },
+  {
+    "id": "wastewater-treatment-plants",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Wastewater Treatment Plants",
+    "capacity": "Large scale",
+    "efficiency": "Removes organics and solids",
+    "features": [
+      "Designed for conductive wastewater & process liquids",
+      "Accurate and repeatable point-level detection",
+      "No moving parts for long service life",
+      "Fast response time for reliable switching",
+      "Simple design with easy commissioning",
+      "Compact & rugged construction",
+      "Performs reliably in corrosive environments",
+      "Compatible with PLC, pump & alarm systems"
+    ],
+    "icons": [
+      "🏭"
+    ],
+    "imageKey": "wwtp",
+    "type": "WWTP",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Wastewater treatment plants",
+      "Sewage pumping stations",
+      "Equalization & aeration tanks",
+      "Chemical dosing & neutralization systems",
+      "Sludge handling units",
+      "Pump control & dry-run protection",
+      "Overflow protection & level alarm systems"
+    ],
+    "specifications": {
+      "process": "Activated sludge"
+    }
+  },
+  {
+    "id": "water-purifiers",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Water Purifiers",
+    "capacity": "Household to commercial",
+    "efficiency": "Removes contaminants for drinking",
+    "features": [
+      "Multi-stage purification (RO / UV / UF based)",
+      "Removes physical, chemical & biological contaminants",
+      "Improves taste, odor & clarity of water",
+      "Compact & durable design",
+      "Energy-efficient operation",
+      "Low maintenance & easy servicing",
+      "Designed for continuous, reliable use"
+    ],
+    "icons": [
+      "🚰"
+    ],
+    "imageKey": "waterPurifier",
+    "type": "Purifier",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Residential homes",
+      "Offices & corporate buildings",
+      "Hospitals & clinics",
+      "Schools & colleges",
+      "Hotels & restaurants",
+      "Commercial kitchens & institutions"
+    ],
+    "specifications": {
+      "stages": "3-6 stage"
+    }
+  },
+  {
+    "id": "reusable-food-oil-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Reusable Food Oil Filters",
+    "capacity": "Varies",
+    "efficiency": "Extends fryer oil life",
+    "features": [
+      "Designed specifically for edible cooking oils",
+      "Reusable & washable construction",
+      "Effective removal of food debris & carbon particles",
+      "Maintains oil clarity, taste & cooking performance",
+      "Simple manual operation (no power required)",
+      "Durable, food-grade materials",
+      "Compact & kitchen-friendly design"
+    ],
+    "icons": [
+      "🍳"
+    ],
+    "imageKey": "foodOilFilter",
+    "type": "Food Oil Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Restaurants & commercial kitchens",
+      "Hotels & catering services",
+      "Fast food chains & cloud kitchens",
+      "Food processing & snack manufacturing units",
+      "Institutional kitchens & canteens",
+      "Frying & deep-frying operations"
+    ],
+    "specifications": {
+      "material": "Food grade stainless"
+    }
+  },
+  {
+    "id": "high-temp-cooking-oil-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "High-Temperature Cooking Oil Filtration Units",
+    "capacity": "High temp operation",
+    "efficiency": "Removes char & particulates",
+    "features": [
+      "Designed for filtration at frying temperatures",
+      "Removes food particles & carbon residues efficiently",
+      "High-temperature resistant filtration media",
+      "Compatible with batch or continuous filtration",
+      "Robust stainless steel, food-grade construction",
+      "Quick filtration cycle with minimal oil loss",
+      "Easy operation & cleaning",
+      "Leak-proof and safe hot oil handling"
+    ],
+    "icons": [
+      "🔥"
+    ],
+    "imageKey": "highTempOil",
+    "type": "Oil Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Commercial kitchens",
+      "Hotels & restaurants",
+      "Fast food chains (QSRs)",
+      "Food processing plants",
+      "Industrial frying units",
+      "Central kitchens & catering services"
+    ],
+    "specifications": {
+      "maxTemp": "200°C"
+    }
+  },
+  {
+    "id": "effluent-treatment-plants-etp",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Effluent Treatment Plants (ETP)",
+    "capacity": "Medium to large",
+    "efficiency": "Treats industrial effluent",
+    "features": [
+      "Multi-stage treatment for removal of physical, chemical & biological contaminants",
+      "Effective reduction of BOD, COD, TSS & harmful pollutants",
+      "Designed for industrial wastewater treatment",
+      "Modular & customizable system design",
+      "Energy-efficient operation",
+      "Automatic or semi-automatic control options",
+      "Robust construction for long-term use",
+      "Compliance with environmental discharge norms"
+    ],
+    "icons": [
+      "🏭"
+    ],
+    "imageKey": "etp",
+    "type": "ETP",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Chemical & pharmaceutical industries",
+      "Textile & dyeing units",
+      "Food & beverage processing plants",
+      "Automotive & engineering industries",
+      "Oil & gas facilities",
+      "Metal finishing & electroplating units",
+      "Manufacturing & processing industries"
+    ],
+    "specifications": {
+      "standards": "Local regulations"
+    }
+  },
+  {
+    "id": "sewage-treatment-plants-stp",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Sewage Treatment Plants (STP)",
+    "capacity": "Residential/commercial scale",
+    "efficiency": "Treats sewage to reuse standards",
+    "features": [
+      "Efficient treatment of domestic sewage & wastewater",
+      "Reduces BOD, COD, TSS & harmful pathogens",
+      "Advanced biological treatment processes (MBBR / SBR / ASP options)",
+      "Compact & modular design",
+      "Low operating & maintenance cost",
+      "Odor control & sludge management system",
+      "Automatic or PLC-based control systems",
+      "Designed for continuous operation & regulatory compliance"
+    ],
+    "icons": [
+      "🚰"
+    ],
+    "imageKey": "stp",
+    "type": "STP",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Residential societies & apartments",
+      "Commercial complexes & office buildings",
+      "Hotels & resorts",
+      "Hospitals & healthcare facilities",
+      "Educational institutions",
+      "Industrial campuses",
+      "Municipal sewage treatment systems"
+    ],
+    "specifications": {
+      "process": "Activated sludge"
+    }
+  },
+  {
+    "id": "cetp-systems",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "CETP Systems",
+    "capacity": "Cluster-level treatment",
+    "efficiency": "Handles combined effluent",
+    "features": [
+      "Modular design",
+      "Centralized operation",
+      "Resource recovery"
+    ],
+    "icons": [
+      "🏭"
+    ],
+    "imageKey": "cetp",
+    "type": "CETP",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Industrial clusters"
+    ],
+    "specifications": {
+      "modules": "Scalable"
+    }
+  },
+  {
+    "id": "zld-systems",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Zero Liquid Discharge (ZLD) Systems",
+    "capacity": "Large plants",
+    "efficiency": "Minimizes wastewater discharge",
+    "features": [
+      "Complete elimination of liquid waste discharge",
+      "Multi-stage treatment (ETP + RO + Evaporation / Crystallization)",
+      "Maximum water recovery & reuse",
+      "High-efficiency solid waste concentration",
+      "Automated & PLC-based control systems",
+      "Energy-optimized operation",
+      "Modular & scalable system design",
+      "Compliance with stringent environmental regulations"
+    ],
+    "icons": [
+      "♻️"
+    ],
+    "imageKey": "zld",
+    "type": "ZLD",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Chemical & petrochemical industries",
+      "Textile & dyeing units",
+      "Pharmaceutical manufacturing",
+      "Power plants",
+      "Metal finishing & electroplating industries",
+      "Food & beverage processing plants",
+      "Industrial wastewater-intensive operations"
+    ],
+    "specifications": {
+      "energy": "High"
+    }
+  },
+  {
+    "id": "ro-uf-dm-plants",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "RO, UF, DM Plants",
+    "capacity": "Small to very large",
+    "efficiency": "Removes salts and particulates",
+    "features": [
+      "Membrane stages",
+      "Pre-treatment",
+      "Post-treatment"
+    ],
+    "icons": [
+      "💧"
+    ],
+    "imageKey": "membranePlants",
+    "type": "Membrane Plant",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Process water",
+      "Drinking water"
+    ],
+    "specifications": {
+      "membranes": "RO/UF"
+    }
+  },
+  {
+    "id": "sludge-dewatering-systems",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Sludge Dewatering Systems",
+    "capacity": "Varies",
+    "efficiency": "Reduces sludge volume",
+    "features": [
+      "Belt press",
+      "Centrifuge",
+      "Screw press"
+    ],
+    "icons": [
+      "🧻"
+    ],
+    "imageKey": "dewatering",
+    "type": "Dewatering",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "STP/ETP"
+    ],
+    "specifications": {
+      "methods": "Belt/Centrifuge"
+    }
+  },
+  {
+    "id": "water-recycling-reuse-systems",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Water Recycling & Reuse Systems",
+    "capacity": "Varies",
+    "efficiency": "Enables internal reuse",
+    "features": [
+      "Treatment trains",
+      "Modular design",
+      "Monitoring"
+    ],
+    "icons": [
+      "🔁"
+    ],
+    "imageKey": "waterReuse",
+    "type": "Recycling System",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Process reuse"
+    ],
+    "specifications": {
+      "modules": "Custom"
+    }
+  },
+  {
+    "id": "biogas-pre-treatment-systems",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Biogas Pre-treatment Systems",
+    "capacity": "Varies",
+    "efficiency": "Removes contaminants before use",
+    "features": [
+      "Desulphurization",
+      "Moisture removal",
+      "Filtration"
+    ],
+    "icons": [
+      "🔋"
+    ],
+    "imageKey": "biogas",
+    "type": "Pre-treatment",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Biogas plants"
+    ],
+    "specifications": {
+      "process": "Desulphurization"
+    }
+  },
+  {
+    "id": "desalination-process-water-solutions",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Desalination & Process Water Solutions",
+    "capacity": "Large scale",
+    "efficiency": "Removes salts and minerals",
+    "features": [
+      "Advanced desalination using RO / membrane technologies",
+      "Efficient removal of salts, minerals & dissolved solids",
+      "High water recovery with optimized energy consumption",
+      "Modular & scalable plant design",
+      "Corrosion-resistant construction for long service life",
+      "Automated control & monitoring systems",
+      "Designed for continuous industrial operation",
+      "Customizable based on feed water quality"
+    ],
+    "icons": [
+      "🌊"
+    ],
+    "imageKey": "desalination",
+    "type": "Desalination",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Seawater & brackish water desalination plants",
+      "Power plants & utilities",
+      "Oil & gas industries",
+      "Chemical & petrochemical industries",
+      "Food & beverage processing",
+      "Pharmaceutical manufacturing",
+      "Industrial process water supply systems"
+    ],
+    "specifications": {
+      "recovery": "Varies"
+    }
+  },
+  {
+    "id": "backwashable-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Backwashable Filters",
+    "capacity": "Medium to large",
+    "efficiency": "Self-cleaning via backwash",
+    "features": [
+      "Automatic backwash",
+      "Long run times",
+      "Low maintenance"
+    ],
+    "icons": [
+      "🔁"
+    ],
+    "imageKey": "backwashable",
+    "type": "Backwashable",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Industrial water systems"
+    ],
+    "specifications": {
+      "backwash": "Automatic"
+    }
+  },
+  {
+    "id": "self-cleaning-industrial-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Self-Cleaning Industrial Filters",
+    "capacity": "Varies",
+    "efficiency": "Continuous filtration with self-clean",
+    "features": [
+      "Automatic self-cleaning mechanism",
+      "Continuous filtration without process interruption",
+      "High-efficiency removal of suspended solids",
+      "Low pressure drop across the filter",
+      "Reduced manual maintenance requirements",
+      "Durable & corrosion-resistant construction",
+      "Suitable for high flow rate applications",
+      "Long service life with consistent performance"
+    ],
+    "icons": [
+      "🧼"
+    ],
+    "imageKey": "selfCleaning",
+    "type": "Self-Cleaning Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Water & wastewater treatment plants",
+      "Cooling water systems",
+      "Power plants & utilities",
+      "Chemical & process industries",
+      "Food & beverage processing",
+      "Oil & gas industries",
+      "Irrigation & industrial water systems"
+    ],
+    "specifications": {
+      "cleaning": "Automatic"
+    }
+  },
+  {
+    "id": "reusable-oil-coolant-filters",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Reusable Oil & Coolant Filters",
+    "capacity": "Varies",
+    "efficiency": "Reusable media reduces waste",
+    "features": [
+      "Reusable & washable filtration elements",
+      "Efficient removal of metal particles & sludge",
+      "Maintains oil & coolant cleanliness",
+      "Low pressure drop for stable flow",
+      "Durable, corrosion-resistant construction",
+      "Cost-effective alternative to disposable filters",
+      "Easy cleaning & quick reinstallation",
+      "Suitable for continuous industrial operation"
+    ],
+    "icons": [
+      "🔁"
+    ],
+    "imageKey": "reusableFilters",
+    "type": "Reusable Filter",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers",
+      "Metalworking & cutting operations",
+      "Hydraulic systems",
+      "Lubrication systems",
+      "Automotive & engineering industries",
+      "Manufacturing & machining units",
+      "Coolant circulation & oil conditioning systems"
+    ],
+    "specifications": {
+      "media": "Washable"
+    }
+  }
 ]

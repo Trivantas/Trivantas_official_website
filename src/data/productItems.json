@@ -39,7 +39,7 @@
     {
       "id": "cs-belt",
       "name": "Conveyor System CS-Belt",
-      "image": "/src/assets/material-handling.jpg",
+      "image": "/src/assets/material-handling-v3.jpg",
       "description": "Modular belt conveyor for continuous material handling and automated lines.",
       "price": 2199.00,
       "currency": "USD",
@@ -48,7 +48,7 @@
     {
       "id": "ohc-50t",
       "name": "Overhead Crane OHC-50T",
-      "image": "/src/assets/material-handling.jpg",
+      "image": "/src/assets/material-handling-v3.jpg",
       "description": "Heavy-duty overhead crane with variable speed, load monitoring and safety systems.",
       "price": 45999.00,
       "currency": "USD",

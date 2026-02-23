@@ -1,8 +1,8 @@
 [
   {
     "id": "sensors",
-    "title": "Smart Level Sensors",
-    "subtitle": "Precision Measurement Technology",
+    "title": "Smart Level Sensors ",
+    "subtitle": "Precision Monitoring for Liquids, Solids, Moisture & Gas",
     "description": "Advanced sensor technology for accurate monitoring of liquids, solids, gases, and slurries across diverse industrial applications.",
     "imageKey": "levelSensor",
     "features": [
@@ -10,8 +10,19 @@
       "Multiple output options",
       "Robust industrial designs"
     ],
-    "applications": ["Tank level monitoring", "Flow measurement", "Interface detection", "Pump control systems"],
-    "industries": ["Food & Dairy", "Pharmaceuticals", "Chemicals", "Water Treatment", "Oil & Gas"]
+    "applications": [
+      "Tank level monitoring",
+      "Flow measurement",
+      "Interface detection",
+      "Pump control systems"
+    ],
+    "industries": [
+      "Food & Dairy",
+      "Pharmaceuticals",
+      "Chemicals",
+      "Water Treatment",
+      "Oil & Gas"
+    ]
   },
   {
     "id": "filtration",
@@ -19,19 +30,22 @@
     "subtitle": "Superior Water & Coolant Treatment",
     "description": "High-performance industrial filtration solutions designed for optimal water treatment, coolant cleaning and process optimization.",
     "imageKey": "filtration",
-    "features": ["Multi-stage filtration", "Automated backwash", "Energy efficient"],
-    "applications": ["Water purification", "Coolant filtration", "Wastewater treatment"],
-    "industries": ["Manufacturing", "Food Processing", "Pharmaceuticals", "Water Treatment"]
-  },
-  {
-    "id": "spm",
-    "title": "SPM (Special Purpose Machines)",
-    "subtitle": "Custom Engineering Solutions",
-    "description": "Tailor-made machines designed for specific industrial tasks, engineered to enhance productivity and operational efficiency.",
-    "imageKey": "spm",
-    "features": ["Custom automation", "High reliability", "Integrated controls"],
-    "applications": ["Assembly automation", "Testing equipment", "Packaging"],
-    "industries": ["Manufacturing", "Automotive", "Electronics"]
+    "features": [
+      "Multi-stage filtration",
+      "Automated backwash",
+      "Energy efficient"
+    ],
+    "applications": [
+      "Water purification",
+      "Coolant filtration",
+      "Wastewater treatment"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Food Processing",
+      "Pharmaceuticals",
+      "Water Treatment"
+    ]
   },
   {
     "id": "handling",
@@ -39,8 +53,42 @@
     "subtitle": "Efficient Material Transportation",
     "description": "Comprehensive solutions for safe and efficient lifting, shifting, and transportation of materials across industrial facilities.",
     "imageKey": "handling",
-    "features": ["Heavy-duty construction", "Safety interlocks", "Low maintenance"],
-    "applications": ["Conveyor systems", "Lifting equipment", "Storage solutions"],
-    "industries": ["Warehousing", "Manufacturing", "Logistics"]
+    "features": [
+      "Heavy-duty construction",
+      "Safety interlocks",
+      "Low maintenance"
+    ],
+    "applications": [
+      "Conveyor systems",
+      "Lifting equipment",
+      "Storage solutions"
+    ],
+    "industries": [
+      "Warehousing",
+      "Manufacturing",
+      "Logistics"
+    ]
+  },
+  {
+    "id": "spm",
+    "title": "SPM (Special Purpose Machines)",
+    "subtitle": "Custom Engineering Solutions",
+    "description": "Tailor-made machines designed for specific industrial tasks, engineered to enhance productivity and operational efficiency.",
+    "imageKey": "spm",
+    "features": [
+      "Custom automation",
+      "High reliability",
+      "Integrated controls"
+    ],
+    "applications": [
+      "Assembly automation",
+      "Testing equipment",
+      "Packaging"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Automotive",
+      "Electronics"
+    ]
   }
 ]

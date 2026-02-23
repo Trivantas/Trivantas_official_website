@@ -1,33 +1,130 @@
 [
   {
+    "id": "high-accuracy-level-indicator",
+    "categoryLabel": "Smart Level Sensors",
+    "name": "High-Accuracy Level Indicator",
+    "capacity": "Custom Height Available",
+    "efficiency": "Visual & Optional Sensor Integration",
+    "features": [
+      "High-Accuracy Level Monitoring",
+      "Robust Industrial Construction",
+      "Clear Visual Indication",
+      "Optional Sensor Integration",
+      "Custom Height Available",
+      "Corrosion-Resistant Design",
+      "Easy Installation",
+      "Low Maintenance"
+    ],
+    "icons": [
+      "📊",
+      "🔍"
+    ],
+    "imageKey": "levelIndicator",
+    "type": "Level Indicator",
+    "range": "Custom Sizes Available",
+    "accuracy": "High Accuracy",
+    "applications": [
+      "Coolant Tanks",
+      "Oil Sumps",
+      "Hydraulic Tanks",
+      "Lubrication Systems",
+      "CNC & VMC Machines",
+      "Chemical Storage Tanks",
+      "Industrial Process Equipment",
+      "Power Plants & Manufacturing Units"
+    ],
+    "specifications": {
+      "measurementType": "Visual Level Indication",
+      "mountingType": "Vertical Tank Mount",
+      "material": "Industrial-Grade Metal & Transparent Tube",
+      "optionalAccessories": "Float Sensor",
+      "customSizes": "Available on Request"
+    }
+  },
+  {
     "id": "float-type-level-sensors",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Float Type Level Sensors",
+    "name": "Magnetic Float Level Switch",
     "capacity": "Up to 10 m",
     "efficiency": "Reliable for most liquids",
-    "features": ["Simple mechanical design","Long service life","Side/top mounting options"],
-    "icons": ["💧","🏭"],
+    "features": [
+      "Reliable mechanical sensing with proven technology",
+      "High accuracy and repeatable switching performance",
+      "Maintenance-free operation with long service life",
+      "Flexible side or top mounting options",
+      "Performs reliably in vibration, turbulence, and foaming liquids"
+    ],
+    "icons": [
+      "💧",
+      "🏭"
+    ],
     "imageKey": "float",
     "type": "Liquid Level Sensor",
-    "range": "0–10 m",
-    "accuracy": "±1%",
-    "applications": ["Tank level monitoring","Reservoirs"],
-    "specifications": {"material":"SS304","protection":"IP65"}
+    "range": "150mm to 3000 mm",
+    "accuracy": "Contact Factory",
+    "applications": [
+      "Industrial tank level monitoring",
+      "Reservoir and storage systems",
+      "Water and wastewater treatment plants",
+      "Chemical, oil, and fuel storage tanks",
+      "Pump automation and overfill protection"
+    ],
+    "specifications": {
+      "insertionLength": "150mm to 3000 mm",
+      "moc": "SS304, PP or PVDF",
+      "maxTemp": "80° C",
+      "maxPressure": "10 Kg/cm2",
+      "contacts": "40VA (NO), 60VA(C/O)",
+      "options": "Intrinsically safe, Small /Large/Multiple Floats, In-Situ Test Device",
+      "liquidDensity": "≥0.6 g/cm3",
+      "enclosure": "IP66 or Ex-P Gr IIB or IIC"
+    }
   },
   {
     "id": "vibrating-fork-level-sensors-liquid",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Vibrating Fork Level Sensors",
+    "name": "Vibrating Fork Level Switch Aquafork Swift",
     "capacity": "Point detection",
     "efficiency": "Works with liquids and solids (liquid models)",
-    "features": ["No moving parts","Insensitive to viscosity","Reliable detection"],
-    "icons": ["🔔"],
+    "features": [
+      "Universal point-level detection for liquids and bulk solids",
+      "Unaffected by conductivity, dielectric constant, or pressure changes",
+      "No moving mechanical parts for long service life",
+      "Reliable switching in foam, bubbles, or turbulent media",
+      "Fast response with high repeatability",
+      "Compact, rugged, and maintenance-free design",
+      "Stable performance in harsh and hazardous environments"
+    ],
+    "icons": [
+      "🔔"
+    ],
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    },
     "imageKey": "vibratingFork",
     "type": "Point Level Sensor",
     "range": "Point",
-    "accuracy": "N/A",
-    "applications": ["Tanks","Sumps"],
-    "specifications": {"material":"SS316","output":"Relay / Analog"}
+    "accuracy": "Contact Factory",
+    "applications": [
+      "Chemical and petrochemical industries",
+      "Oil & gas processing",
+      "Pharmaceutical and biotech plants",
+      "Food & beverage processing",
+      "Power plants and utilities",
+      "Cement, mining, and bulk material handling",
+      "Storage tanks, silos, hoppers, and pipelines"
+    ],
+    "specifications": {
+      "powerSupply": "18–30 VDC or 85–265 VAC",
+      "output": "Relay (SPDT), PNP/NPN, or NAMUR",
+      "processConnection": "1½\" NPT, G1½\", or flange",
+      "probeMaterial": "SS316L",
+      "temperatureRange": "-40°C to +150°C (up to 250°C with extension)",
+      "pressureRange": "-1 to 10 bar (up to 40 bar optional)",
+      "ingressProtection": "IP66/IP67"
+    }
   },
   {
     "id": "conductivity-level-sensors",
@@ -35,14 +132,36 @@
     "name": "Conductivity Level Sensors",
     "capacity": "Point detection for conductive liquids",
     "efficiency": "Fast response in conductive media",
-    "features": ["Multiple electrode options","Simple calibration","Low cost"],
-    "icons": ["⚡"],
+    "features": [
+      "Designed exclusively for conductive liquids",
+      "Accurate and repeatable switching performance",
+      "No moving parts for extended service life",
+      "Simple construction with easy commissioning",
+      "Compact and rugged design",
+      "Reliable operation in harsh industrial environments"
+    ],
+    "icons": [
+      "⚡"
+    ],
     "imageKey": "conductivity",
-    "type": "Point Level Sensor",
+    "type": "Rope Sensor",
     "range": "Point",
-    "accuracy": "±2%",
-    "applications": ["Water treatment","Chemical tanks"],
-    "specifications": {"electrodes":"SS/Graphite","output":"Relay"}
+    "accuracy": "Contact Factory",
+    "applications": [
+      "Tank and sump level monitoring",
+      "Pump control and dry-run protection",
+      "Overfill and leakage alarms",
+      "Water and wastewater systems",
+      "Chemical and process liquid tanks"
+    ],
+    "specifications": {
+      "switchingUnit": "Micro controller Based",
+      "housing": "DIN RAIL, suitable for back panel mounting",
+      "mainsVoltage": "65-265 V AC, 50HZ / 18-36 V DC",
+      "output": "1 sets of potential free c/o contacts rated at 5 amps for each set point",
+      "ambientTemperature": "0° C to +60° C",
+      "powerConsumption": "2.5 VA"
+    }
   },
   {
     "id": "capacitance-level-sensors",
@@ -50,14 +169,45 @@
     "name": "Capacitance Level Sensors",
     "capacity": "Continuous measurement for various media",
     "efficiency": "Good for viscous and dielectric materials",
-    "features": ["Continuous output","Coating compensation","Wide temperature range"],
-    "icons": ["🧪"],
+    "features": [
+      "Accurate point-level or continuous level measurement",
+      "Suitable for liquids, slurries, powders, and bulk solids",
+      "Works with conductive and non-conductive media",
+      "No moving parts for long service life",
+      "High sensitivity to small level changes",
+      "Compact design for easy installation",
+      "Stable performance under pressure and temperature variations"
+    ],
+    "icons": [
+      "🧪"
+    ],
     "imageKey": "capacitance",
     "type": "Continuous Level Sensor",
-    "range": "0–20 m",
+    "range": "100mm to 20m",
     "accuracy": "±0.5%",
-    "applications": ["Slurries","Liquids","Interface detection"],
-    "specifications": {"output":"4-20mA","probeMaterial":"SS316"}
+    "applications": [
+      "Chemical storage and reaction vessels",
+      "Food & beverage tanks and silos",
+      "Pharmaceutical process equipment",
+      "Cement, fly ash, coal, and powder silos",
+      "Plastic granule and resin handling systems",
+      "Oil, fuel, and lubricant tanks",
+      "Level control, alarms, and overflow protection"
+    ],
+    "specifications": {
+      "probeLengthMeasurementRange": "100mm to 3m (Rod), 1 to 20m (Rope)",
+      "processLengthMeasurementRange": "As per Application",
+      "probeMaterial": "Stainless steel rod / Rope insulated partly or fully with PTFE",
+      "mediumTemp": "-20°C to 100°C",
+      "electronics": "-25°C to +65°C",
+      "supplyVoltage": "12-30 V DC",
+      "specialVersion": "Up to 200°C"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "fuel-level-transmitters",
@@ -65,14 +215,42 @@
     "name": "Fuel Level Transmitters",
     "capacity": "Designed for fuel tanks",
     "efficiency": "Low drift in hydrocarbon fluids",
-    "features": ["Fuel-grade wetted parts","Calibration options","Explosion-proof variants"],
-    "icons": ["⛽"],
+    "features": [
+      "Continuous and accurate fuel level monitoring",
+      "High-resolution output for precise measurement",
+      "Robust design for harsh and outdoor environments",
+      "Corrosion-resistant materials for long service life",
+      "Stable readings even with turbulence or foam",
+      "Easy integration with PLC, SCADA, and fuel gauges"
+    ],
+    "icons": [
+      "⛽"
+    ],
     "imageKey": "fuelTransmitter",
     "type": "Transmitter",
-    "range": "Application dependent",
-    "accuracy": "±0.5%",
-    "applications": ["Fuel storage","Vehicle tanks"],
-    "specifications": {"material":"SS316","output":"4-20mA"}
+    "range": "200mm to 3000 mm",
+    "accuracy": "1.5 mm",
+    "applications": [
+      "Industrial and refinery fuel storage tanks",
+      "Power plants and backup generator fuel systems",
+      "Marine fuel tanks for ships and vessels",
+      "Automotive and heavy machinery fuel monitoring",
+      "Aviation fuel storage and dispensing systems",
+      "Remote and unmanned fuel tank installations"
+    ],
+    "specifications": {
+      "accuracy": "1.5 mm",
+      "signalOutput": "0-5 VDC / RS485 / 4-20 mA DC",
+      "housing": "Cast Al, W/p",
+      "mains": "12 VDC to 30 VDC",
+      "responseTime": "Better Than 5 Sec",
+      "mounting": "Screwed – 3/4” BSP (standard) Or Flanged (optional)",
+      "grounding": "Pipe, SS304",
+      "currentConsumption": "20 mA (max)",
+      "operatingTemp": "70 °C for the integral unit (Standard)",
+      "sensePipeRod": "Stainless steel (SS304)",
+      "length": "200 (standard) up to 3000 mm"
+    }
   },
   {
     "id": "ultrasonic-level-sensors",
@@ -80,14 +258,46 @@
     "name": "Ultrasonic Level Sensors",
     "capacity": "Non-contact up to 15 m",
     "efficiency": "Cost-effective for many liquids",
-    "features": ["Non-contact","Easy mounting","Low maintenance"],
-    "icons": ["🔊"],
+    "features": [
+      "Non-contact measurement eliminates contamination and wear",
+      "Suitable for liquids, slurries, powders, and bulk solids",
+      "High accuracy with excellent repeatability",
+      "No moving parts for maintenance-free operation",
+      "Reliable performance in corrosive or abrasive environments",
+      "Easy integration with PLC, SCADA, and control systems",
+      "Compact and rugged industrial design"
+    ],
+    "icons": [
+      "🔊"
+    ],
     "imageKey": "ultrasonic",
     "type": "Non-contact Sensor",
     "range": "0.2–15 m",
     "accuracy": "±0.5%",
-    "applications": ["Open tanks","Channels"],
-    "specifications": {"frequency":"40 kHz","output":"4-20mA"}
+    "applications": [
+      "Water and wastewater treatment plants",
+      "Chemical and pharmaceutical tanks",
+      "Food & beverage processing vessels",
+      "Cement, grain, and powder silos",
+      "Fuel and oil storage tanks",
+      "Hazardous, corrosive, or high-temperature liquids",
+      "Process automation and overflow protection"
+    ],
+    "specifications": {
+      "powerSupply": "18–32 V DC (typical) or 24 V DC/AC options",
+      "output": "4–20 mA, 0–10 V, HART, RS485/Modbus RTU (configurable)",
+      "temperatureRange": "Standard: –30 °C to +80 °C (some models up to ~150 °C)",
+      "pressureRange": "Atmospheric to ~3–10 bar (model-dependent)",
+      "ingressProtection": "IP65 / IP66 / IP67 (industry standard)",
+      "measuringRange": "0.3 m up to ~15 m (typical)",
+      "accuracyResolution": "±0.25 % FS, ~1 mm resolution",
+      "beamAngleFrequency": "~5°–12° / ~50–200 kHz"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "radar-level-sensors",
@@ -95,29 +305,44 @@
     "name": "Radar Level Sensors",
     "capacity": "Contactless up to 70 m",
     "efficiency": "High accuracy in vapour/foam",
-    "features": ["Non-contact","HART compatible","High range"],
-    "icons": ["📡"],
+    "features": [
+      "Non-contact level measurement eliminates contamination and wear",
+      "High accuracy and excellent repeatability",
+      "Unaffected by foam, dust, vapor, or turbulence",
+      "Maintenance-free design with no moving parts",
+      "Reliable performance in harsh and aggressive environments",
+      "Easy integration with PLC, SCADA, and automation systems",
+      "Rugged industrial-grade construction"
+    ],
+    "icons": [
+      "📡"
+    ],
     "imageKey": "radar",
     "type": "Radar Sensor",
     "range": "0–70 m",
     "accuracy": "±0.1%",
-    "applications": ["Silos","Process vessels"],
-    "specifications": {"frequency":"80 GHz","output":"4-20mA / HART"}
-  },
-  {
-    "id": "mini-radar-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
-    "name": "Mini Radar Level Sensors",
-    "capacity": "Compact radar for small tanks",
-    "efficiency": "Low power, compact form factor",
-    "features": ["Compact","Easy integration","Low power"],
-    "icons": ["📡"],
-    "imageKey": "miniRadar",
-    "type": "Compact Radar",
-    "range": "0–10 m",
-    "accuracy": "±0.2%",
-    "applications": ["Small tanks","OEM use"],
-    "specifications": {"frequency":"26 GHz","output":"4-20mA"}
+    "applications": [
+      "Chemical and pharmaceutical process tanks",
+      "Oil & gas storage and transfer systems",
+      "Water and wastewater treatment tanks",
+      "Food & beverage silos and vessels",
+      "Cement, fly ash, and bulk material silos",
+      "Hazardous and corrosive liquid storage",
+      "Critical overflow and level control systems"
+    ],
+    "specifications": {
+      "frequency": "0-26Ghz",
+      "beamAngle": "8 Deg",
+      "processPressure": "0-0.5Mpa / 0.5-1Mpa",
+      "range": "0-30 Mtr",
+      "enclosure": "Aluminum",
+      "ingressProtection": "IP65"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "hydrostatic-level-sensors",
@@ -125,14 +350,49 @@
     "name": "Hydrostatic Level Sensors",
     "capacity": "Submersible measurement",
     "efficiency": "Robust in open water applications",
-    "features": ["Submersible","Direct pressure-to-level","Rugged housing"],
-    "icons": ["🌊"],
+    "features": [
+      "Continuous and accurate level measurement",
+      "Suitable for open tanks, closed vessels, wells, and sumps",
+      "No moving parts for long service life",
+      "High measurement stability over time",
+      "Compact and rugged industrial design",
+      "Resistant to vibration and turbulence",
+      "Reliable operation in submerged applications"
+    ],
+    "icons": [
+      "🌊"
+    ],
     "imageKey": "hydrostatic",
     "type": "Hydrostatic Sensor",
-    "range": "0–50 m",
-    "accuracy": "±0.2%",
-    "applications": ["Bore wells","Reservoirs"],
-    "specifications": {"material":"SS316","output":"4-20mA"}
+    "range": "1m to 200m H2O",
+    "accuracy": "±0.5%F.S. (Typical)",
+    "applications": [
+      "Water and wastewater treatment plants",
+      "Chemical and process industries",
+      "Oil & gas storage tanks",
+      "Power plants and utilities",
+      "Irrigation systems and water reservoirs",
+      "Wells, sumps, and borewells",
+      "Industrial storage tanks and vessels"
+    ],
+    "specifications": {
+      "pressureRange": "1m, 2m, 5m, 10m, 20m, 50m, 100m, 200m H2O",
+      "output": "4 to 20mA | 0.5 to 4.5V | 1 to 5V (any one)",
+      "accuracy": "±0.5%F.S. (Typical)",
+      "overpressure": "200%F.S.",
+      "excitation": "24V DC / 5V",
+      "compensatedTemp": "0-70°C",
+      "storageTemp": "-40-125°C",
+      "mediumTemp": "0-60°C",
+      "zeroTempCoefficient": "≤±0.03%F.S./°C",
+      "longTermStability": "0.2%F.S./year",
+      "weight": "245g (approx.)"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "magnetic-level-switches",
@@ -140,14 +400,46 @@
     "name": "Magnetic Level Switches",
     "capacity": "Point level switching",
     "efficiency": "No power switching options",
-    "features": ["Simple mounting","Reliable reed operation","Low maintenance"],
-    "icons": ["🧲"],
+    "features": [
+      "Suitable for a wide range of liquid applications",
+      "Accurate and repeatable point-level switching",
+      "No direct electrical contact with process media",
+      "Hermetically sealed reed switch for long operational life",
+      "Maintenance-free operation",
+      "Compact, rugged, industrial-grade construction",
+      "Stable switching unaffected by foam or vapor"
+    ],
+    "icons": [
+      "🧲"
+    ],
     "imageKey": "magneticSwitch",
     "type": "Point Switch",
-    "range": "Point",
-    "accuracy": "N/A",
-    "applications": ["Tanks","Overfill protection"],
-    "specifications": {"output":"Reed / Switch","material":"PP / PVDF"}
+    "range": "150mm to 3000 mm",
+    "accuracy": "Contact Factory",
+    "applications": [
+      "Water and wastewater treatment plants",
+      "Chemical and petrochemical industries",
+      "Oil & gas applications",
+      "Power plants and utilities",
+      "Food & beverage processing",
+      "Storage tanks and process vessels",
+      "Pump control and alarm systems"
+    ],
+    "specifications": {
+      "insertionLength": "150mm to 3000 mm",
+      "moc": "SS304, PP or PVDF",
+      "maxTemp": "80° C",
+      "maxPressure": "10 Kg/cm2",
+      "contacts": "40VA (NO), 60VA(C/O)",
+      "options": "Intrinsically safe, Small /Large/Multiple Floats, In-Situ Test Device",
+      "liquidDensity": "≥0.6 g/cm3",
+      "enclosure": "IP66 or Ex-P Gr IIB or IIC"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "side-mounted-level-switch",
@@ -155,14 +447,26 @@
     "name": "Side Mounted Level Switch",
     "capacity": "Local point detection",
     "efficiency": "Good for confined tanks",
-    "features": ["Side entry","Compact","Multiple outputs"],
-    "icons": ["↔️"],
+    "features": [
+      "Side entry",
+      "Compact",
+      "Multiple outputs"
+    ],
+    "icons": [
+      "↔️"
+    ],
     "imageKey": "sideMount",
     "type": "Point Switch",
     "range": "Point",
-    "accuracy": "N/A",
-    "applications": ["Process vessels","Small tanks"],
-    "specifications": {"material":"SS316","output":"SPDT"}
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Process vessels",
+      "Small tanks"
+    ],
+    "specifications": {
+      "material": "SS316",
+      "output": "SPDT"
+    }
   },
   {
     "id": "top-mounted-level-switch",
@@ -170,29 +474,67 @@
     "name": "Top Mounted Level Switch",
     "capacity": "Top-entry switching",
     "efficiency": "Ideal for hoppers and silos",
-    "features": ["Top mount","Adjustable sensitivity","Robust"],
-    "icons": ["🔝"],
+    "features": [
+      "Top mount",
+      "Adjustable sensitivity",
+      "Robust"
+    ],
+    "icons": [
+      "🔝"
+    ],
     "imageKey": "topMount",
     "type": "Point Switch",
     "range": "Point",
-    "accuracy": "N/A",
-    "applications": ["Silos","Hoppers"],
-    "specifications": {"material":"SS316","temperature":"-20°C to 80°C"}
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Silos",
+      "Hoppers"
+    ],
+    "specifications": {
+      "material": "SS316",
+      "temperature": "-20°C to 80°C"
+    }
   },
   {
     "id": "mini-level-sensors",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Mini Level Sensors",
+    "name": "Mini Level Switch",
     "capacity": "Small tanks and OEM integrations",
     "efficiency": "Compact, low-cost solutions",
-    "features": ["Compact size","Easy integration","Affordable"],
-    "icons": ["🔹"],
+    "features": [
+      "Compact design for tight spaces and small vessels",
+      "Designed exclusively for conductive liquids",
+      "Accurate and repeatable point-level detection",
+      "No moving parts for long service life",
+      "Fast switching response",
+      "Simple construction with easy commissioning",
+      "Rugged and corrosion-resistant design",
+      "Optional multi-electrode configuration for multi-level detection"
+    ],
+    "icons": [
+      "🔹"
+    ],
     "imageKey": "miniSensor",
     "type": "Compact Sensor",
     "range": "0–5 m",
     "accuracy": "±1%",
-    "applications": ["OEM","Small vessels"],
-    "specifications": {"power":"12-24VDC","output":"Analog"}
+    "applications": [
+      "Water and wastewater treatment plants",
+      "Chemical and process industries",
+      "Pharmaceutical and biotech plants",
+      "Food & beverage CIP / SIP systems",
+      "Boiler feedwater and cooling systems",
+      "Compact storage tanks and process vessels"
+    ],
+    "specifications": {
+      "power": "12-24VDC",
+      "output": "Analog"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "level-transmitters",
@@ -200,74 +542,213 @@
     "name": "Level Transmitters",
     "capacity": "Continuous transmitters for tank level",
     "efficiency": "Industrial-grade outputs and diagnostics",
-    "features": ["4-20mA output","Local display","HART option"],
-    "icons": ["📶"],
+    "features": [
+      "4-20mA output",
+      "Local display",
+      "HART option"
+    ],
+    "icons": [
+      "📶"
+    ],
     "imageKey": "levelTransmitter",
     "type": "Transmitter",
-    "range": "Application dependent",
-    "accuracy": "±0.1–1%",
-    "applications": ["Process control","Tank monitoring"],
-    "specifications": {"output":"4-20mA / HART","power":"24VDC"}
+    "range": "200mm to 3000 mm",
+    "accuracy": "1.5 mm",
+    "applications": [
+      "Process control",
+      "Tank monitoring"
+    ],
+    "specifications": {
+      "accuracy": "1.5 mm",
+      "signalOutput": "0-5 VDC / RS485 / 4-20 mA DC",
+      "housing": "Cast Al, W/p",
+      "mains": "12 VDC to 30 VDC",
+      "responseTime": "Better Than 5 Sec",
+      "mounting": "Screwed – 3/4” BSP (standard) Or Flanged (optional)",
+      "grounding": "Pipe, SS304",
+      "currentConsumption": "20 mA (max)",
+      "operatingTemp": "70 °C for the integral unit (Standard)",
+      "sensePipeRod": "Stainless steel (SS304)",
+      "length": "200 (standard) up to 3000 mm"
+    }
   },
   {
     "id": "electromagnetic-flow-level-sensors",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Electromagnetic Flow Level Sensors",
+    "name": "Electromagnetic Flow Meter",
     "capacity": "Flow measurement for conductive fluids",
     "efficiency": "Accurate flow & level readings",
-    "features": ["No moving parts","Wide diameter range","Low maintenance"],
-    "icons": ["🔄"],
+    "features": [
+      "Designed exclusively for conductive liquids",
+      "Accurate and repeatable point-level detection",
+      "No moving parts, eliminating mechanical wear",
+      "Fast switching response for real-time control",
+      "Compact and rugged industrial design",
+      "High immunity to vibration and process noise",
+      "Long-term stability with minimal drift"
+    ],
+    "icons": [
+      "🔄"
+    ],
     "imageKey": "electromagneticFlow",
     "type": "Flow Sensor",
-    "range": "Depends on pipe size",
-    "accuracy": "±0.5%",
-    "applications": ["Water treatment","Chemical dosing"],
-    "specifications": {"lining":"PTFE","output":"4-20mA"}
+    "range": "0.2 mtr/sec to 12 mtr/sec",
+    "accuracy": "0.5% of measured value",
+    "applications": [
+      "Water and wastewater treatment plants",
+      "Chemical and process industries",
+      "Pharmaceutical and biotech facilities",
+      "Food & beverage CIP / SIP systems",
+      "Boiler feedwater and cooling systems",
+      "Storage tanks, sumps, and process vessels"
+    ],
+    "specifications": {
+      "nominalDiameter": "15 TO 2000 mm",
+      "workingPressure": "10 to 40 kg/cm",
+      "electrodeMaterial": "SS 316 standard",
+      "sensorLining": "Hard Rubber / PTFE",
+      "measuringTubeMaterial": "SS304 Non Magnetic",
+      "endConnection": "Flanged / Wafer / SMS",
+      "measuringRange": "0.2 mtr/sec to 12 mtr/sec",
+      "repeatability": "0.2 of Span",
+      "output": "4 to 20 m ADC / RS485, HART",
+      "cableLengthForRemote": "10 Mtr",
+      "displayVersion": "Integral / Remote",
+      "sensorHousingMaterial": "CS",
+      "flange": "Standard",
+      "accuracy": "0.5% of measured value"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "vibrating-fork-level-sensors-solid",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Vibrating Fork Level Sensors (Solid)",
+    "name": "Vibrating Fork Level Switch for Solid",
     "capacity": "Point detection for solids",
     "efficiency": "Reliable in powders and granules",
-    "features": ["High sensitivity","Robust probe","Minimal maintenance"],
-    "icons": ["⛏️"],
-    "imageKey": "vibratingFork",
+    "features": [
+      "High sensitivity",
+      "Robust probe",
+      "Minimal maintenance"
+    ],
+    "icons": [
+      "⛏️"
+    ],
+    "imageKey": "vibratingForkSolid",
     "type": "Point Level Sensor",
     "range": "Point",
-    "accuracy": "N/A",
-    "applications": ["Bins","Hoppers"],
-    "specifications": {"material":"SS316","protection":"IP67"}
+    "accuracy": "Contact Factory",
+    "applications": [
+      "Bins",
+      "Hoppers"
+    ],
+    "specifications": {
+      "housing": "Steel/Aluminum, weather proof, powder coated. Integral with the probe",
+      "cableEntry": "1 nos. (standard)",
+      "ambientTemperature": "0°C to +60°C",
+      "powerConsumption": "0.3VA",
+      "mainsVoltage": "18 to 36V DC",
+      "output": "PNP or NPN DC output"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "vibrating-rod-level-sensors",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Vibrating Rod Level Sensors",
+    "name": "Vibrating Rod Type Level Sensors",
     "capacity": "Point/short-span detection",
     "efficiency": "Good for cohesive solids",
-    "features": ["Long probes","Coating resistant","High reliability"],
-    "icons": ["🪵"],
+    "features": [
+      "Designed exclusively for bulk solids and powders",
+      "Accurate and repeatable point-level switching",
+      "No moving mechanical parts exposed to wear",
+      "Immune to dust, vibration, and material buildup",
+      "Fast and reliable switching response",
+      "Compact, rugged, industrial-grade construction",
+      "Stable operation in harsh process conditions"
+    ],
+    "icons": [
+      "🪵"
+    ],
     "imageKey": "vibratingRod",
     "type": "Probe Sensor",
     "range": "Point",
-    "accuracy": "N/A",
-    "applications": ["Silos","Powder handling"],
-    "specifications": {"material":"SS316","mount":"Flange"}
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Cement and construction material plants",
+      "Chemical and process industries",
+      "Food & beverage processing",
+      "Pharmaceutical manufacturing",
+      "Plastic and polymer industries",
+      "Power plants (ash handling systems)",
+      "Storage silos, bins, and hoppers"
+    ],
+    "specifications": {
+      "insertionLength": "125-3000 mm",
+      "wettedParts": "SS304/316",
+      "maxTemp": "150° C",
+      "maxPressure": "Upto 40KG/cm2",
+      "bulkDensity": "> 0.5KG/cm3",
+      "enclosure": "Cast AI x IP66 or Ex-P IIB"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "nrf-rf-admittance-probes",
     "categoryLabel": "Smart Level Sensors",
-    "name": "NRF / RF Admittance Probes",
+    "name": "NRF / RF Admittance Level Sensors",
     "capacity": "Interface and solid detection",
     "efficiency": "Works with conductive/adhesive materials",
-    "features": ["High sensitivity","Coating compensation","Robust electronics"],
-    "icons": ["📡"],
+    "features": [
+      "Active coating and buildup compensation",
+      "Reliable switching with changing process conditions",
+      "Suitable for conductive, semi-conductive, and coating liquids",
+      "No moving parts for long operational life",
+      "Fast response with high repeatability",
+      "Rugged probe design for harsh environments",
+      "Unaffected by foam, turbulence, or vapor"
+    ],
+    "icons": [
+      "📡"
+    ],
     "imageKey": "nrfProbe",
     "type": "Admittance Probe",
     "range": "Application dependent",
-    "accuracy": "±1%",
-    "applications": ["Powders","Slurries"],
-    "specifications": {"output":"4-20mA","material":"PTFE coated"}
+    "accuracy": "Digitally settable",
+    "applications": [
+      "Chemical and petrochemical plants",
+      "Water and wastewater treatment",
+      "Pharmaceutical and biotech industries",
+      "Food & beverage processing (coating and CIP processes)",
+      "Pulp & paper industry",
+      "Power plants and utility systems",
+      "Storage tanks with sticky, scaling, or contaminated liquids"
+    ],
+    "specifications": {
+      "housing": "Steel / Aluminum, weather proof, powder coated. Integral with the probe",
+      "cableEntry": "1 nos. (Standard)",
+      "ambientTemperature": "0°C to +60°C",
+      "powerConsumption": "0.3 VA",
+      "mainsVoltage": "18 to 30 V DC or 65 to 265 (In cast Al. Housing)",
+      "outputHousing": "PNP or relay output in cast Al.",
+      "switchingDelay": "Continuously adjustable From 1 to 20 sec. probe free or probe covered (in cast Al Version)",
+      "safetyOperation": "Field selected switch over for min. or max. (In Cast Al Version)",
+      "switchStatusDisplay": "Green LED shows Normal, Red LED shows alarm",
+      "operatingFrequency": "6 Khz",
+      "sensitivitySetting": "Digitally settable"
+    }
   },
   {
     "id": "rotating-paddle-level-sensors",
@@ -275,74 +756,161 @@
     "name": "Rotating Paddle Level Sensors",
     "capacity": "Point detection for solids",
     "efficiency": "Simple mechanical operation",
-    "features": ["Adjustable sensitivity","Replaceable paddle","Robust motor"],
-    "icons": ["🧭"],
+    "features": [
+      "Designed exclusively for bulk solids and powders",
+      "Reliable level detection in bins and silos",
+      "Simple and proven electro-mechanical working principle",
+      "Stable operation in dusty environments",
+      "Adjustable sensitivity for different material densities",
+      "Long service life with minimal maintenance",
+      "Compact, rugged industrial-grade construction"
+    ],
+    "icons": [
+      "🧭"
+    ],
     "imageKey": "rotatingPaddle",
     "type": "Point Switch",
     "range": "Point",
-    "accuracy": "N/A",
-    "applications": ["Silos","Bins"],
-    "specifications": {"power":"24VDC","material":"SS"}
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Cement and construction material plants",
+      "Power plants and ash handling systems",
+      "Food and grain processing industries",
+      "Plastic and polymer industries",
+      "Chemical and fertilizer plants",
+      "Mining and mineral processing"
+    ],
+    "specifications": {
+      "sensorType": "Motor driven rotating paddle for solids.",
+      "powerSupply": "230 V AC.",
+      "output": "SPDT relay contact."
+    },
+    "imageStyle": {
+      "maxHeight": "550px"
+    }
   },
   {
     "id": "capacitance-level-probes",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Capacitance Level Probes",
+    "name": "Capacitance Level Sensors(Probes)",
     "capacity": "Continuous probes for solids & liquids",
     "efficiency": "Good for interface detection",
-    "features": ["Probe lengths to 10m","Coating resistant","High temperature options"],
-    "icons": ["🧪"],
+    "features": [
+      "Suitable for both conductive and non-conductive media",
+      "Accurate and repeatable point-level detection",
+      "No moving parts for long operational life",
+      "High sensitivity with adjustable switching threshold",
+      "Compact probe design with robust electronics",
+      "Resistant to coating and buildup with proper probe selection",
+      "Reliable performance in harsh industrial environments"
+    ],
+    "icons": [
+      "🧪"
+    ],
     "imageKey": "capacitanceProbe",
     "type": "Probe Sensor",
     "range": "0–10 m",
     "accuracy": "±0.5%",
-    "applications": ["Interface measurement","Slurries"],
-    "specifications": {"coating":"PTFE","output":"4-20mA"}
+    "applications": [
+      "Chemical and petrochemical industries",
+      "Oil & gas and fuel storage",
+      "Water and wastewater treatment",
+      "Food & beverage processing",
+      "Pharmaceutical and biotech plants",
+      "Cement, plastics, and bulk material handling",
+      "Storage tanks, silos, hoppers, and vessels"
+    ],
+    "specifications": {
+      "coating": "PTFE",
+      "output": "4-20mA"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "microwave-radar-solid-level-sensors",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Microwave / Radar Solid Level Sensors",
+    "name": "Radar Solid Level Sensors",
     "capacity": "Bulk solids measurement",
     "efficiency": "Reliable in dusty/foamy conditions",
-    "features": ["Non-contact","High frequency options","Long range"],
-    "icons": ["📡"],
+    "features": [
+      "Non-contact level measurement for bulk solids",
+      "High accuracy and excellent repeatability",
+      "Unaffected by dust, noise, temperature, or pressure",
+      "No moving parts for maintenance-free operation",
+      "Suitable for high silos and large storage vessels",
+      "Narrow beam angle for precise material targeting",
+      "Rugged industrial design for long-term reliability"
+    ],
+    "icons": [
+      "📡"
+    ],
     "imageKey": "microwaveRadarSolid",
     "type": "Solid Level Sensor",
     "range": "0–50 m",
     "accuracy": "±0.2%",
-    "applications": ["Silos","Dusty bins"],
-    "specifications": {"frequency":"80 GHz","output":"4-20mA"}
-  },
-  {
-    "id": "weight-level-switches",
-    "categoryLabel": "Smart Level Sensors",
-    "name": "Weight Level Switches",
-    "capacity": "Mechanical weight-based detection",
-    "efficiency": "Simple & rugged",
-    "features": ["Low maintenance","Mechanical operation","Reliable"],
-    "icons": ["⚖️"],
-    "imageKey": "weightSwitch",
-    "type": "Mechanical Switch",
-    "range": "Point",
-    "accuracy": "N/A",
-    "applications": ["Bins","Hoppers"],
-    "specifications": {"material":"Steel","output":"Switch"}
+    "applications": [
+      "Cement and building material plants",
+      "Power plants (coal and fly ash silos)",
+      "Chemical and petrochemical industries",
+      "Food and grain storage facilities",
+      "Mining and mineral processing",
+      "Plastic and polymer industries",
+      "Bulk material handling systems"
+    ],
+    "specifications": {
+      "frequency": "80 GHz",
+      "output": "4-20mA"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "tilt-level-switches",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Tilt Level Switches",
+    "name": "Tilt Level Switch",
     "capacity": "Angular/presence detection",
     "efficiency": "Simple robust sensing",
-    "features": ["No electronics at head","Durable","Low cost"],
-    "icons": ["📐"],
+    "features": [
+      "Simple gravity-operated working principle",
+      "Suitable for liquids and bulk solids",
+      "No calibration or fine-tuning required",
+      "No complex electronics",
+      "Rugged and impact-resistant construction",
+      "Stable switching performance",
+      "Low power consumption",
+      "Maintenance-free operation"
+    ],
+    "icons": [
+      "📐"
+    ],
     "imageKey": "tiltSwitch",
     "type": "Tilt Switch",
     "range": "Point",
-    "accuracy": "N/A",
-    "applications": ["Conveyors","Bins"],
-    "specifications": {"material":"SS","output":"Switch"}
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Water and wastewater treatment plants",
+      "Chemical and process industries",
+      "Mining and cement plants",
+      "Food and grain storage facilities",
+      "Power plants and ash handling systems",
+      "Bulk material silos and hoppers"
+    ],
+    "specifications": {
+      "switchType": "Tilt based level switch for solids.",
+      "output": "NO/NC contact."
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "online-moisture-sensors",
@@ -350,14 +918,26 @@
     "name": "Online Moisture Sensors (Hoppers & Conveyors)",
     "capacity": "Real-time moisture monitoring",
     "efficiency": "Continuous online measurement",
-    "features": ["Fast response","Non-destructive","Process integration"],
-    "icons": ["💧"],
+    "features": [
+      "Fast response",
+      "Non-destructive",
+      "Process integration"
+    ],
+    "icons": [
+      "💧"
+    ],
     "imageKey": "onlineMoisture",
     "type": "Moisture Sensor",
     "range": "0–100%",
     "accuracy": "±0.5%",
-    "applications": ["Hoppers","Conveyors"],
-    "specifications": {"output":"4-20mA","power":"24VDC"}
+    "applications": [
+      "Hoppers",
+      "Conveyors"
+    ],
+    "specifications": {
+      "output": "4-20mA",
+      "power": "24VDC"
+    }
   },
   {
     "id": "bulk-material-moisture-measurement-sensors",
@@ -365,14 +945,26 @@
     "name": "Bulk Material Moisture Measurement Sensors",
     "capacity": "In-line moisture for bulk solids",
     "efficiency": "Robust for powders and granules",
-    "features": ["Calibration","High stability","Rugged housing"],
-    "icons": ["🌾"],
+    "features": [
+      "Calibration",
+      "High stability",
+      "Rugged housing"
+    ],
+    "icons": [
+      "🌾"
+    ],
     "imageKey": "bulkMoisture",
     "type": "Moisture Sensor",
     "range": "0–50%",
     "accuracy": "±1%",
-    "applications": ["Food processing","Feed mills"],
-    "specifications": {"output":"Analog / Digital","mount":"Inline"}
+    "applications": [
+      "Food processing",
+      "Feed mills"
+    ],
+    "specifications": {
+      "output": "Analog / Digital",
+      "mount": "Inline"
+    }
   },
   {
     "id": "capacitance-moisture-sensors",
@@ -380,59 +972,102 @@
     "name": "Capacitance Moisture Sensors",
     "capacity": "Moisture percentage measurement",
     "efficiency": "Sensitive and stable",
-    "features": ["Low drift","Easy integration","Calibration"],
-    "icons": ["🧪"],
+    "features": [
+      "Low drift",
+      "Easy integration",
+      "Calibration"
+    ],
+    "icons": [
+      "🧪"
+    ],
     "imageKey": "capacitanceMoisture",
     "type": "Moisture Sensor",
     "range": "0–100%",
     "accuracy": "±1%",
-    "applications": ["Process control","Hoppers"],
-    "specifications": {"output":"4-20mA","power":"24VDC"}
-  },
-  {
-    "id": "infrared-moisture-analyzers",
-    "categoryLabel": "Smart Level Sensors",
-    "name": "Infrared Moisture Analyzers",
-    "capacity": "Lab & process moisture analysis",
-    "efficiency": "Fast non-contact measurement",
-    "features": ["Rapid results","High repeatability","Non-destructive"],
-    "icons": ["🔬"],
-    "imageKey": "infraredMoisture",
-    "type": "IR Analyzer",
-    "range": "0–100%",
-    "accuracy": "±0.2%",
-    "applications": ["Lab analysis","Process control"],
-    "specifications": {"power":"230VAC","output":"Digital"}
+    "applications": [
+      "Process control",
+      "Hoppers"
+    ],
+    "specifications": {
+      "output": "4-20mA",
+      "power": "24VDC"
+    }
   },
   {
     "id": "microwave-moisture-sensors",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Microwave Moisture Sensors",
+    "name": "Hydro-Probe Microwave Moisture Measurement Sensor",
     "capacity": "Non-contact bulk moisture",
     "efficiency": "Good in dusty environments",
-    "features": ["Non-contact","Robust calibration","High penetration"],
-    "icons": ["📡"],
+    "features": [
+      "Non-contact or inline moisture measurement",
+      "Accurate and highly repeatable results",
+      "Unaffected by dust, color, or surface conditions",
+      "Fast response for real-time process control",
+      "No radioactive source – completely safe technology",
+      "No moving parts for minimal maintenance",
+      "Robust industrial design for harsh environments"
+    ],
+    "icons": [
+      "📡"
+    ],
     "imageKey": "microwaveMoisture",
     "type": "Microwave Sensor",
     "range": "0–50%",
     "accuracy": "±0.5%",
-    "applications": ["Cement","Food processing"],
-    "specifications": {"frequency":"2.45 GHz","output":"RS485"}
+    "applications": [
+      "Cement and building material industries",
+      "Food and grain processing",
+      "Chemical and fertilizer plants",
+      "Mining and mineral processing",
+      "Power plants and coal handling systems",
+      "Paper, pulp, and biomass industries",
+      "Drying, mixing, and blending processes"
+    ],
+    "specifications": {
+      "frequency": "2.45 GHz",
+      "output": "RS485"
+    }
   },
   {
     "id": "gas-pressure-level-sensors",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Gas Pressure Level Sensors",
+    "name": "Gas Sensors",
     "capacity": "Pressure-based level detection",
     "efficiency": "Suitable for gas/vapour systems",
-    "features": ["High sensitivity","Stable readings","Process integration"],
-    "icons": ["🛢️"],
+    "features": [
+      "Indirect, non-contact level measurement",
+      "Ideal for sealed and pressurized vessels",
+      "High accuracy with excellent repeatability",
+      "No moving parts for long operational life",
+      "Stable output under varying process conditions",
+      "Low maintenance with rugged industrial construction",
+      "Reliable performance in harsh environments"
+    ],
+    "icons": [
+      "🛢️"
+    ],
     "imageKey": "gasPressure",
     "type": "Gas Sensor",
     "range": "Application dependent",
     "accuracy": "±1%",
-    "applications": ["Gas tanks","Process control"],
-    "specifications": {"output":"4-20mA","material":"SS316"}
+    "applications": [
+      "Chemical and petrochemical industries",
+      "Oil & gas storage and processing systems",
+      "Pharmaceutical manufacturing",
+      "Power plants and utilities",
+      "Fuel tanks and pressurized vessels",
+      "Sealed process tanks and reactors"
+    ],
+    "specifications": {
+      "output": "4-20mA",
+      "material": "SS316"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   },
   {
     "id": "ultrasonic-gas-flow-level-sensors",
@@ -440,14 +1075,26 @@
     "name": "Ultrasonic Gas Flow / Level Sensors",
     "capacity": "Gas flow and level estimations",
     "efficiency": "Non-intrusive measurement",
-    "features": ["Clamp-on options","No pressure drop","Versatile"],
-    "icons": ["🔊"],
+    "features": [
+      "Clamp-on options",
+      "No pressure drop",
+      "Versatile"
+    ],
+    "icons": [
+      "🔊"
+    ],
     "imageKey": "ultrasonicGas",
     "type": "Ultrasonic Sensor",
     "range": "Application dependent",
     "accuracy": "±1%",
-    "applications": ["Gas flow measurement","Process monitoring"],
-    "specifications": {"output":"Pulse / Analog","power":"24VDC"}
+    "applications": [
+      "Gas flow measurement",
+      "Process monitoring"
+    ],
+    "specifications": {
+      "output": "Pulse / Analog",
+      "power": "24VDC"
+    }
   },
   {
     "id": "capacitance-gas-detection-probes",
@@ -455,28 +1102,309 @@
     "name": "Capacitance Gas Detection Probes",
     "capacity": "Gas detection and level estimation",
     "efficiency": "Sensitive to dielectric changes",
-    "features": ["Durable probe","Low drift","High sensitivity"],
-    "icons": ["🧪"],
+    "features": [
+      "Durable probe",
+      "Low drift",
+      "High sensitivity"
+    ],
+    "icons": [
+      "🧪"
+    ],
     "imageKey": "capacitanceGas",
     "type": "Gas Probe",
     "range": "Application dependent",
     "accuracy": "±1%",
-    "applications": ["Gas detection","Safety systems"],
-    "specifications": {"material":"PTFE","output":"Digital"}
+    "applications": [
+      "Gas detection",
+      "Safety systems"
+    ],
+    "specifications": {
+      "material": "PTFE",
+      "output": "Digital"
+    }
   },
   {
-    "id": "thermal-mass-flow-level-sensors",
+    "id": "ultrasonic-flow-meters",
     "categoryLabel": "Smart Level Sensors",
-    "name": "Thermal Mass Flow Level Sensors",
-    "capacity": "Mass flow for gases",
-    "efficiency": "Sensitive at low flows",
-    "features": ["No moving parts","Fast response","Wide turndown"],
-    "icons": ["🌡️"],
-    "imageKey": "thermalMassFlow",
-    "type": "Flow Sensor",
-    "range": "Application dependent",
-    "accuracy": "±0.5%",
-    "applications": ["Combustion control","Process gases"],
-    "specifications": {"output":"4-20mA","power":"24VDC"}
+    "name": "Ultrasonic Flow Meters",
+    "capacity": "Liquid Flow Meter",
+    "efficiency": "Non-contact flow measurement",
+    "features": [
+      "Non-contact and obstruction-free flow measurement",
+      "Zero pressure drop in the pipeline",
+      "No moving parts for wear-free operation",
+      "Maintenance-free and long service life",
+      "Clamp-on option for installation without pipe cutting",
+      "Inline mounting option for permanent applications",
+      "Digital display with flow and totalizer indication"
+    ],
+    "icons": [
+      "🌊",
+      "📟"
+    ],
+    "imageKey": "ultrasonicFlow",
+    "type": "Liquid Flow Meter",
+    "range": "105 ft/s",
+    "accuracy": "±1.0%",
+    "applications": [
+      "Water and wastewater treatment plants",
+      "Chemical and process industries",
+      "Food and beverage manufacturing units",
+      "HVAC, cooling water, and chilled water systems",
+      "Boiler feedwater and utility lines",
+      "Oil and gas liquid flow monitoring",
+      "Power plants and industrial utilities"
+    ],
+    "specifications": {
+      "material": "Stainless Steel",
+      "display": "Digital",
+      "frequency": "50 Hz",
+      "voltage": "230 V",
+      "countryOfOrigin": "Made in India",
+      "dimension": "220 * 120 * 80 mm",
+      "wideFlowMeasurementRange": "105 ft/s"
+    },
+    "installationSupport": [
+      "Clamp-on installation without process shutdown",
+      "Inline flanged mounting option available",
+      "Suitable for horizontal and vertical pipelines",
+      "Complete installation support by trained technicians",
+      "Commissioning and configuration assistance",
+      "Operational guidance and technical training",
+      "Reliable after-sales and technical support"
+    ],
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
+  },
+  {
+    "id": "rf-admittance-level-switch",
+    "categoryLabel": "Smart Level Sensors",
+    "name": "RF Admittance Level Switch",
+    "capacity": "Point level detection",
+    "efficiency": "Immune to coating",
+    "features": [
+      "Immune to coating and material buildup",
+      "Reliable detection for sticky and viscous media",
+      "Works with conductive and non-conductive materials",
+      "No moving parts for long service life",
+      "Stable switching in dusty environments"
+    ],
+    "icons": [
+      "📡",
+      "🛑"
+    ],
+    "imageKey": "rfAdmittanceSwitch",
+    "type": "Level Sensor",
+    "range": "Point",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Silos and hoppers",
+      "Cement, fly ash, and powder handling",
+      "Chemical and slurry tanks",
+      "Grain and food storage",
+      "Plastic granules and bulk solids"
+    ],
+    "specifications": {
+      "dielectricConstant": "0.1 – 10 εr",
+      "probeMaterial": "SS304 / SS316 (optional coating)",
+      "protection": "IP65 / IP67"
+    },
+    "installationSupport": [
+      "Threaded or flanged mounting options",
+      "Top or side mounting supported",
+      "Application-based probe length selection",
+      "Complete installation support",
+      "Operation and maintenance guidance",
+      "24/7 technical support availability",
+      "Standard warranty with extended options"
+    ],
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
+  },
+  {
+    "id": "hydro-mix-moisture-sensor",
+    "categoryLabel": "Smart Level Sensors",
+    "name": "Hydro-Mix Microwave Moisture Measurement Sensors",
+    "capacity": "Up to saturation",
+    "efficiency": "Real-time process optimization",
+    "features": [
+      "Flush-mount digital microwave moisture sensor",
+      "Advanced digital technology for easy and accurate operation",
+      "Fully temperature-compensated measurement for stable performance",
+      "Multiple measurement modes for temperature and accuracy",
+      "User-friendly interface with standard power requirements",
+      "Influence calibration with extended wear life",
+      "Replaceable ceramic faceplate to reduce replacement cost"
+    ],
+    "icons": [
+      "💧"
+    ],
+    "imageKey": "hydroMixNew",
+    "type": "Moisture Sensor",
+    "range": "Up to Saturation of Material",
+    "accuracy": "Contact Factory",
+    "applications": [
+      "Fully Temperature Compensated Measurement",
+      "Advanced Digital Technology",
+      "Easy to Interface",
+      "Replaceable Ceramic Faceplate",
+      "Measurement Modes",
+      "Wear Life",
+      "Sensor Configuration",
+      "Simple Power Requirements",
+      "Temperature Measurement",
+      "Measuring in the Mix",
+      "Calibration",
+      "Accuracy of Measurement"
+    ],
+    "specifications": {
+      "body": "Stainless Steel",
+      "protectionRing": "Hardened Steel",
+      "faceplate": "Ceramic",
+      "moistureRange": "The Sensor Will Measure Up to Saturation of Material",
+      "materialPenetration": "Approximately 75-100mm dependent on material",
+      "fixing": "Secured to a fixing plate by a clamp ring (adjustable height)",
+      "operatingTemperature": "0-60°C (Note: will not measure in ice)",
+      "analogueOutputs": "2 Configurable 0-20mA or 4-20mA (Moisture & Temp), can be converted to 0-10V DC",
+      "digitalIO": "2 configurable digital signals for batch average start/stop or multiplexing",
+      "connections": "10-way MIL-SPEC connector with various cable length options",
+      "powerSupply": "+15Vdc to +30Vdc, 4W",
+      "ingressProtection": "IP65"
+    }
+  },
+  {
+    "id": "hydro-probe-bx-sensor",
+    "categoryLabel": "Smart Level Sensors",
+    "name": "Hydro-Probe BX",
+    "capacity": "Up to 25 readings per second",
+    "efficiency": "Brix & concentration control",
+    "features": [
+      "Designed for pressurised environments",
+      "Digital moisture measurement",
+      "Advanced signal processing",
+      "Configurable digital I/O",
+      "Fast response (25 readings/sec)",
+      "Minimal recalibration",
+      "Self-cleaning option"
+    ],
+    "icons": [
+      "🧪"
+    ],
+    "imageKey": "microwaveMoisture",
+    "type": "Moisture / Brix Sensor",
+    "range": "Up to saturation",
+    "accuracy": "Digital precision",
+    "applications": [
+      "Sugar industry – Brix measurement",
+      "Syrup & liquid concentration control",
+      "Food & beverage processing",
+      "Chemical solution monitoring",
+      "Inline pipeline and vessel measurement",
+      "Automated process control (PLC / SCADA integration)"
+    ],
+    "specifications": {
+      "body": "Stainless steel body with ceramic faceplate",
+      "measurementRate": "Up to 25 readings per second",
+      "temperatureCompensation": "Fully temperature compensated",
+      "operatingTemp": "Up to 120°C (faceplate)",
+      "powerSupply": "15–30 V DC",
+      "outputs": "4–20 mA, 0–10 V, RS485 (Modbus)",
+      "environment": "Suitable for high-temperature and pressurised process applications"
+    }
+  },
+  {
+    "id": "hydro-mix-xt-sensor",
+    "categoryLabel": "Smart Level Sensors",
+    "name": "Hydro-Mix XT",
+    "capacity": "Up to 25 readings per second",
+    "efficiency": "High precision measurement",
+    "features": [
+      "Flush-mount digital microwave moisture sensor",
+      "High-speed measurement (up to 25 readings per second)",
+      "Advanced digital signal processing for stable output",
+      "Fully temperature-compensated measurement",
+      "316 stainless steel body with durable ceramic faceplate"
+    ],
+    "icons": [
+      "💧"
+    ],
+    "imageKey": "hydroMixXT",
+    "type": "Moisture Sensor",
+    "range": "0–100 % (material dependent)",
+    "accuracy": "High precision digital",
+    "applications": [
+      "Moisture measurement in continuous mixers",
+      "Installation in conveyor belts and screw conveyors",
+      "Grain, rice, pulses and cereal processing",
+      "Animal feed production plants",
+      "Biomass and pellet manufacturing",
+      "Food ingredient moisture control",
+      "Bulk solids monitoring in silos and hoppers",
+      "Real-time moisture control for automated batching systems",
+      "Integration with PLC / SCADA for process automation"
+    ],
+    "specifications": {
+      "body": "316 stainless steel body with ceramic faceplate (food-safe materials)",
+      "measurementRate": "Up to 25 readings per second",
+      "digitalSignalProcessing": "Advanced processing for clear output and rapid response",
+      "temperatureCompensation": "Fully temperature compensated",
+      "outputs": "Analogue (4–20 mA / 0–10 V) and Digital (RS485 / Modbus)",
+      "power": "15–30 V DC; power ~4 W",
+      "moistureRange": "0–100 % (material dependent)",
+      "penetrationDepth": "~75–100 mm depending on material",
+      "operatingTemperature": "0–60 °C"
+    }
+  },
+  {
+    "id": "moisture-sensors",
+    "categoryLabel": "Smart Level Sensors",
+    "name": "Moisture Sensors",
+    "capacity": "Real-time moisture measurement",
+    "efficiency": "Process optimization & Quality control",
+    "features": [
+      "Flush mount, digital, microwave moisture sensor",
+      "Advanced digital technology for least possible variations",
+      "Fully temperature compensated measurement",
+      "Multiple measurement modes for temperature and accuracy",
+      "Sensor configuration and easy interface",
+      "Normal power requirements"
+    ],
+    "icons": [
+      "💧",
+      "📊"
+    ],
+    "imageKey": "moistureSensorGeneric",
+    "type": "Moisture Sensor",
+    "range": "Saturation of Material",
+    "accuracy": "High Accuracy",
+    "applications": [
+      "Real-time moisture measurement (25 readings/sec)",
+      "Advanced digital signal processing",
+      "Built-in calibration data storage",
+      "‘Bin Empty’ and ‘High Moisture’ alarm system",
+      "No frequent recalibration required",
+      "Suitable for standalone or integration",
+      "Ensures smooth and reliable industrial operations"
+    ],
+    "specifications": {
+      "body": "Stainless Steel",
+      "protectionRing": "Hardened Steel",
+      "faceplate": "Ceramic",
+      "moistureRange": "Up to Saturation of Material",
+      "materialPenetration": "Approximately 75-100mm dependent on material",
+      "operatingTemperature": "0-60°C (Note: will not measure in ice)",
+      "analogueOutputs": "Sensor - 20~+8O"
+    },
+    "imageStyle": {
+      "maxHeight": "500px",
+      "width": "80%",
+      "objectFit": "contain"
+    }
   }
 ]

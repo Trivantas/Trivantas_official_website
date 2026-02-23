@@ -9,36 +9,36 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 150 20% 15%;
+    --foreground: 210 10% 23%;
 
     --card: 0 0% 100%;
-    --card-foreground: 150 20% 15%;
+    --card-foreground: 210 10% 23%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 150 20% 15%;
+    --popover-foreground: 210 10% 23%;
 
-    /* Deep Green Primary */
-    --primary: 150 55% 18%;
+    /* Trivantas Orange Primary */
+    --primary: 28 90% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 150 55% 22%;
+    --primary-hover: 28 90% 45%;
 
-    /* Gold Accent */
-    --secondary: 48 100% 50%;
-    --secondary-foreground: 150 55% 18%;
-    --secondary-hover: 48 100% 45%;
+    /* Dark Grey Secondary/Accent */
+    --secondary: 210 10% 23%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 210 10% 20%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 150 25% 85%;
-    --accent-foreground: 150 55% 18%;
+    --accent: 28 50% 95%;
+    --accent-foreground: 210 10% 23%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 150 55% 18%;
+    --ring: 28 90% 50%;
 
     /* Custom Design Tokens */
     --industrial-blue: 210 45% 25%;
@@ -47,8 +47,8 @@ All colors MUST be HSL.
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--industrial-blue)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(150 25% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(28 20% 98%) 100%);
     
     /* Shadows */
     --shadow-card: 0 4px 6px -1px hsl(var(--primary) / 0.1), 0 2px 4px -1px hsl(var(--primary) / 0.06);
