@@ -5,6 +5,7 @@ import filtrationImg from '@/assets/filtration-main-page.png';
 import spmImg from '@/assets/spm-machine.jpg';
 import materialHandlingImg from '@/assets/material-handling-v3.jpg';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const ProductsSection = () => {
   const products = [
@@ -113,16 +114,16 @@ const ProductsSection = () => {
               Let us help you find the perfect equipment for your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact">
+              <Link to="/contact">
                 <button className="bg-white text-primary hover:bg-white/90 px-8 py-3 rounded-md font-bold shadow-lg transition-all duration-300">
                   Contact Our Engineers
                 </button>
-              </a>
-              <a href="/products">
+              </Link>
+              <Link to="/products">
                 <button className="bg-white/10 border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-md font-bold shadow-lg transition-all duration-300">
                   View All Products
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
           {/* Decorative background shapes */}
