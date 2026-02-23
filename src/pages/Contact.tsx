@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -9,6 +10,7 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,7 +38,7 @@ const Contact = () => {
   return (
 
     <div className="min-h-screen bg-background">
-        {/* Side Quick Links */}
+      {/* Side Quick Links */}
       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
         <a
           href="https://wa.me/+917028165428" // replace with your WhatsApp number
@@ -131,7 +133,7 @@ const Contact = () => {
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">Address</h4>
                         <p className="text-muted-foreground">
-                          A-002, Utpal Classic, Bhukum,<br /> Pune. 412115.<br />
+                          Trivantas, A-002, Utpal Classic, Bhukum,<br /> Pune. 412115.<br />
                           India
                         </p>
                       </div>
@@ -186,12 +188,25 @@ const Contact = () => {
                     <Button variant="outline" className="w-full justify-start">
                       Download Product Catalog
                     </Button>
-                    <Button variant="outline" className="w-full justify-start">
+                    <Button
+                      variant="outline"
+                      className="w-full justify-start"
+                      onClick={() => navigate('/contact')}
+                    >
                       Request Technical Specifications
                     </Button>
-                    <Button variant="outline" className="w-full justify-start">
+                    <Button
+                      variant="outline"
+                      className="w-full justify-start"
+                      onClick={() => navigate('/schedule')}
+                    >
                       Schedule Site Visit
                     </Button>
+                    <a href="/TRIVANTAS_Flipbook.pdf" target="_blank" rel="noopener noreferrer" className="w-full block">
+                      <Button variant="outline" className="w-full justify-start">
+                        View Flipbook
+                      </Button>
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -200,29 +215,23 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Map Section (Placeholder) */}
-      <section className="py-20 bg-accent/30">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Visit Our <span className="text-primary">Facility</span>
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Located in the heart of Mumbai's industrial district, our facility showcases
-              our complete range of products and capabilities.
-            </p>
-          </div>
-          {/* <Card className="overflow-hidden shadow-card">
-            <CardContent className="p-0">
-              <div className="h-96 bg-gradient-to-r from-primary/10 to-secondary/10 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
-                  <p className="text-lg font-semibold text-foreground">Interactive Map</p>
-                  <p className="text-muted-foreground">Coming Soon</p>
-                </div>
+          <Card className="bg-primary text-primary-foreground max-w-4xl mx-auto overflow-hidden shadow-2xl border-none">
+            <CardContent className="p-12 md:p-16 text-center relative overflow-hidden">
+              <div className="relative z-10">
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                  Visit Our Facility
+                </h2>
+                <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed max-w-3xl mx-auto">
+                  Located in the heart of Mumbai's industrial district, our facility showcases our complete range of products and capabilities.
+                </p>
               </div>
+              {/* Decorative background shapes */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32 blur-3xl"></div>
             </CardContent>
-          </Card> */}
+          </Card>
         </div>
       </section>
     </div>

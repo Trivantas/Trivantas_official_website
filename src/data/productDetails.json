@@ -1,14 +1,14 @@
 {
   "sensors": {
-    "heroTitle": "Smart Level Sensors by Trivantas",
+    "heroTitle": "Smart Level Sensors ",
     "heroSubtitle": "Precision Monitoring for Liquids, Solids, Moisture & Gas",
     "description": "Full description here...",
     "groups": [
       {
         "title": "Liquid Level Sensors",
         "items": [
-          "Float Type Level Sensors",
-          "Vibrating Fork Sensors",
+          "Magnetic Float Level Switch",
+          "Vibrating Fork Level Switch Aquafork Swift",
           "Radar Level Sensors"
         ]
       }
