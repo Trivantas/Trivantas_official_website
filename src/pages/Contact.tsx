@@ -1,6 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import emailjs from 'emailjs-com';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -11,6 +11,22 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const [message, setMessage] = React.useState('');
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const product = searchParams.get('product');
+    const type = searchParams.get('type');
+
+    if (product) {
+      if (type === 'datasheet') {
+        setMessage(`I am interested in downloading the technical datasheet for: ${product}. Please provide more information.`);
+      } else {
+        setMessage(`I am interested in requesting a detailed quote for: ${product}. Please provide more information.`);
+      }
+    }
+  }, [location]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,17 +103,16 @@ const Contact = () => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">Email *</label>
+                        <label className="block text-sm font-medium text-foreground mb-2">Email</label>
                         <Input
                           name="reply_to"
                           type="email"
                           placeholder="your.email@company.com"
-                          required
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">Phone</label>
-                        <Input name="phone" type="tel" placeholder="+91 98765 43210" />
+                        <label className="block text-sm font-medium text-foreground mb-2">Phone *</label>
+                        <Input name="phone" type="tel" placeholder="+91 98765 43210" required />
                       </div>
                     </div>
                     <div>
@@ -105,12 +120,13 @@ const Contact = () => {
                       <Input name="subject" placeholder="What can we help you with?" />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Message *</label>
+                      <label className="block text-sm font-medium text-foreground mb-2">Message</label>
                       <Textarea
                         name="message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                         placeholder="Tell us about your requirements, project details, or any questions you have..."
                         className="min-h-32"
-                        required
                       />
                     </div>
                     <Button type="submit" variant="default" size="lg" className="w-full md:w-auto">
@@ -131,10 +147,18 @@ const Contact = () => {
                     <div className="flex items-start space-x-4">
                       <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1">Address</h4>
+                        <h4 className="font-semibold text-foreground mb-1">Pune Office</h4>
                         <p className="text-muted-foreground">
-                          Trivantas, A-002, Utpal Classic, Bhukum,<br /> Pune. 412115.<br />
-                          India
+                          A-002, Utpal Classic, Bhukum,<br /> Pune - 412115
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-1">Reg. Address</h4>
+                        <p className="text-muted-foreground">
+                          01, Dabhade Garage, Parola Road,<br /> Bhadgaon, Jalgaon - 424105
                         </p>
                       </div>
                     </div>
@@ -224,7 +248,7 @@ const Contact = () => {
                   Visit Our Facility
                 </h2>
                 <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed max-w-3xl mx-auto">
-                  Located in the heart of Mumbai's industrial district, our facility showcases our complete range of products and capabilities.
+                  At our dedicated facility, we provide a hands-on experience of our advanced industrial solutions and technical expertise.
                 </p>
               </div>
               {/* Decorative background shapes */}

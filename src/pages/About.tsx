@@ -3,8 +3,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Users, Award, Target, Heart, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+  const navigate = useNavigate();
   const values = [
     {
       icon: <Award className="h-8 w-8 text-secondary" />,
@@ -77,7 +79,12 @@ const About = () => {
                 and reliability that our clients depend on for their critical operations.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button variant="default" size="lg" className="group">
+                <Button
+                  variant="default"
+                  size="lg"
+                  className="group"
+                  onClick={() => navigate('/products')}
+                >
                   Our Solutions
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
@@ -239,10 +246,20 @@ const About = () => {
               Let's discuss how Trivantas can help transform your industrial operations with our comprehensive solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary" size="lg" className="shadow-lg hover:shadow-secondary/20 transition-all duration-300">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="shadow-lg hover:shadow-secondary/20 transition-all duration-300"
+                onClick={() => navigate('/contact')}
+              >
                 Contact Our Team
               </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20 shadow-lg transition-all duration-300">
+              <Button
+                variant="outline"
+                size="lg"
+                className="bg-white/10 border-white/20 text-white hover:bg-white/20 shadow-lg transition-all duration-300"
+                onClick={() => navigate('/schedule')}
+              >
                 Schedule a Consultation
               </Button>
             </div>
