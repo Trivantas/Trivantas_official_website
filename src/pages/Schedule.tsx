@@ -67,36 +67,6 @@ const Schedule = () => {
         </div>
       </section>
 
-      {/* Meeting Types */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Choose Your <span className="text-primary">Meeting Type</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Select a meeting type that fits your requirement. Our technical experts are ready to provide clear, practical guidance.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {meetingTypes.map((type, index) => (
-              <Card key={index} className="text-center shadow-card hover:shadow-hover transition-shadow duration-300">
-                <CardContent className="p-8">
-                  <div className="mb-4 flex justify-center">{type.icon}</div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{type.title}</h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">{type.description}</p>
-                  <div className="flex items-center justify-center space-x-2 text-sm text-primary font-semibold">
-                    <Clock className="h-4 w-4" />
-                    <span>{type.duration}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Scheduling Form */}
       <section className="py-20 bg-accent/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -226,6 +196,36 @@ const Schedule = () => {
               </form>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Meeting Types */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Choose Your <span className="text-primary">Meeting Type</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Select a meeting type that fits your requirement. Our technical experts are ready to provide clear, practical guidance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {meetingTypes.map((type, index) => (
+              <Card key={index} className="text-center shadow-card hover:shadow-hover transition-shadow duration-300">
+                <CardContent className="p-8">
+                  <div className="mb-4 flex justify-center">{type.icon}</div>
+                  <h3 className="text-xl font-bold text-foreground mb-3">{type.title}</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed">{type.description}</p>
+                  <div className="flex items-center justify-center space-x-2 text-sm text-primary font-semibold">
+                    <Clock className="h-4 w-4" />
+                    <span>{type.duration}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 

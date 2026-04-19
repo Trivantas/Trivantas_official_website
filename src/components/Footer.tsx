@@ -101,16 +101,30 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Utpal+Classic+Bhukum+Pune+412115"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary-foreground/80 text-sm hover:text-primary transition-colors"
-                >
-                  Trivantas, A-002, Utpal Classic, Bhukum, <br /> Pune. 412115.
-                </a>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Pune Office</h5>
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Utpal+Classic+Bhukum+Pune+412115"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-foreground/80 text-sm hover:text-primary transition-colors block"
+                    >
+                      Trivantas,A-002, Utpal Classic, Bhukum, <br /> Pune - 412115
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Reg. Address</h5>
+                    <p className="text-primary-foreground/80 text-sm">
+                      Trivantas, 01, Dabhade Garage, Parola Road, Bhadgaon, Jalgaon - 424105
+                    </p>
+                  </div>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />

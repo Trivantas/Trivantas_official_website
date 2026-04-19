@@ -153,7 +153,7 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
                   size="lg"
                   onClick={() => {
                     onClose();
-                    navigate('/contact');
+                    navigate(`/contact?product=${encodeURIComponent(product.name)}`);
                   }}
                 >
                   Request Detailed Quote
@@ -164,7 +164,7 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
                   size="lg"
                   onClick={() => {
                     onClose();
-                    navigate('/contact');
+                    navigate(`/contact?product=${encodeURIComponent(product.name)}&type=datasheet`);
                   }}
                 >
                   Download Technical Datasheet
@@ -304,7 +304,7 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
                   size="lg"
                   onClick={() => {
                     onClose();
-                    navigate('/contact');
+                    navigate(`/contact?product=${encodeURIComponent(product.name)}`);
                   }}
                 >
                   Request Detailed Quote
@@ -315,7 +315,7 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
                   size="lg"
                   onClick={() => {
                     onClose();
-                    navigate('/contact');
+                    navigate(`/contact?product=${encodeURIComponent(product.name)}&type=datasheet`);
                   }}
                 >
                   Download Technical Datasheet

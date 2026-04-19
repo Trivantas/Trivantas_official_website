@@ -12,7 +12,7 @@ import handlingData from '@/data/handling.json';
 import spmData from '@/data/spm.json';
 
 // Import images
-import levelSensorImg from '@/assets/smart-level-sensors-new.png';
+import levelSensorImg from '@/assets/smart-level-sensors-new.jpg';
 import filtrationImg from '@/assets/filtration-system.jpg';
 import spmImg from '@/assets/spm-machine.jpg';
 import materialHandlingImg from '@/assets/material-handling-v3.jpg';

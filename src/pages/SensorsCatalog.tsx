@@ -3,7 +3,7 @@ import sensorsData from '@/data/sensors.json';
 import { Card, CardContent } from '@/components/ui/card';
 import ProductCatalogCard from '@/components/ProductCatalogCard';
 import ProductDetailModal from '@/components/ProductDetailModal';
-import levelSensorImg from '../assets/smart-level-sensors-new.png';
+import levelSensorImg from '../assets/smart-level-sensors-new.jpg';
 import vibratingForkImg from '../assets/vibrating-fork-v2.jpg';
 import vibratingRodImg from '../assets/rod-sensor.jpg';
 import capacitanceSensorImg from '../assets/capacitance-level-sensor.jpg';
