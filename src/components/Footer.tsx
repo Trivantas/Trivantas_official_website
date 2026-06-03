@@ -26,9 +26,6 @@ const Footer = () => {
               <a href="https://www.instagram.com/_trivantas_?igsh=MWVxaG53b3hleXBieg==" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">
-                <Youtube className="h-5 w-5" />
-              </a>
             </div>
           </div>
           {/* Quick Links */}
@@ -36,7 +33,11 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                <Link 
+                  to="/" 
+                  className="text-primary-foreground/80 hover:text-primary transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                >
                   Home
                 </Link>
               </li>
@@ -118,18 +119,21 @@ const Footer = () => {
                   <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <div>
                     <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Reg. Address</h5>
-                    <p className="text-primary-foreground/80 text-sm">
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Trivantas,+01,+Dabhade+Garage,+Parola+Road,+Bhadgaon,+Jalgaon+-+424105"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-foreground/80 text-sm hover:text-primary transition-colors block"
+                    >
                       Trivantas, 01, Dabhade Garage, Parola Road, Bhadgaon, Jalgaon - 424105
-                    </p>
+                    </a>
                   </div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
                 <a
-                  href="https://wa.me/917028165428"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="tel:+917028165428"
                   className="text-primary-foreground/80 text-sm hover:text-primary transition-colors"
                 >
                   7028165428
@@ -150,11 +154,10 @@ const Footer = () => {
           </div>
         </div>
         {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-primary-foreground/60 text-sm">
-            © 2024 Trivantas. All rights reserved.
+        <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-center items-center">
+          <p className="text-primary-foreground/60 text-sm text-center w-full">
+            © {new Date().getFullYear()} Trivantas. All rights reserved.
           </p>
-
         </div>
       </div>
     </footer>
