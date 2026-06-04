@@ -65,7 +65,7 @@ const Contact = () => {
           <Phone className="w-6 h-6" />
         </a>
         <a
-          href="mailto:info@trivantas.com" // replace with your email
+          href="mailto:sales@trivantas.com" // replace with your email
           className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
         >
           <Mail className="w-6 h-6" />
