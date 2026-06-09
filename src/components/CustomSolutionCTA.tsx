@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const CustomSolutionCTA = () => {
     return (
-        <section className="pt-32 pb-20 bg-background">
+        <section className="pt-12 md:pt-32 pb-20 bg-background">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
