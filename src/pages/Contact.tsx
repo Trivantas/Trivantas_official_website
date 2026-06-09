@@ -57,15 +57,13 @@ const Contact = () => {
       {/* Side Quick Links */}
       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
         <a
-          href="https://wa.me/+917028165428" // replace with your WhatsApp number
-          target="_blank"
-          rel="noopener noreferrer"
+          href="tel:+917028165428"
           className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
         >
           <Phone className="w-6 h-6" />
         </a>
         <a
-          href="mailto:info@trivantas.com" // replace with your email
+          href="mailto:sales@trivantas.com" // replace with your email
           className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
         >
           <Mail className="w-6 h-6" />
@@ -148,32 +146,42 @@ const Contact = () => {
                       <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">Pune Office</h4>
-                        <p className="text-muted-foreground">
+                        <a
+                          href="https://www.google.com/maps/search/?api=1&query=Utpal+Classic+Bhukum+Pune+412115"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
                           A-002, Utpal Classic, Bhukum,<br /> Pune - 412115
-                        </p>
+                        </a>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">Reg. Address</h4>
-                        <p className="text-muted-foreground">
+                        <a
+                          href="https://www.google.com/maps/search/?api=1&query=Trivantas,+01,+Dabhade+Garage,+Parola+Road,+Bhadgaon,+Jalgaon+-+424105"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
                           01, Dabhade Garage, Parola Road,<br /> Bhadgaon, Jalgaon - 424105
-                        </p>
+                        </a>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                        <p className="text-muted-foreground">📞 7028165428</p>
+                        <p className="text-muted-foreground">7028165428</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                        <p className="text-muted-foreground">📧 sales@trivantas.com</p>
+                        <p className="text-muted-foreground">sales@trivantas.com</p>
                       </div>
                     </div>
                   </div>
@@ -236,26 +244,6 @@ const Contact = () => {
               </Card>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="bg-primary text-primary-foreground max-w-4xl mx-auto overflow-hidden shadow-2xl border-none">
-            <CardContent className="p-12 md:p-16 text-center relative overflow-hidden">
-              <div className="relative z-10">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                  Visit Our Facility
-                </h2>
-                <p className="text-xl md:text-2xl text-primary-foreground/90 leading-relaxed max-w-3xl mx-auto">
-                  At our dedicated facility, we provide a hands-on experience of our advanced industrial solutions and technical expertise.
-                </p>
-              </div>
-              {/* Decorative background shapes */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32 blur-3xl"></div>
-            </CardContent>
-          </Card>
         </div>
       </section>
     </div>
