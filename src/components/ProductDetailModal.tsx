@@ -6,8 +6,26 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { CheckCircle, Wrench, BarChart3, Users, X } from 'lucide-react';
 
+export interface ProductType {
+  id?: string;
+  name: string;
+  type?: string;
+  capacity?: string;
+  efficiency?: string;
+  description?: string;
+  range?: string;
+  accuracy?: string;
+  features?: string[];
+  applications?: string[];
+  specifications?: Record<string, string | number>;
+  image?: string;
+  imageKey?: string;
+  imageStyle?: React.CSSProperties;
+  [key: string]: unknown;
+}
+
 interface ProductDetailModalProps {
-  product: any;
+  product: ProductType | null;
   onClose: () => void;
   category?: string;
 }
@@ -17,8 +35,26 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
 
   if (!product) return null;
 
+  const productsWithoutImages = [
+    "Fine Mesh Oil Filters",
+    "Mineral Water Filtration Plants",
+    "Wastewater Treatment Plants",
+    "Water Purifiers",
+    "Reusable Food Oil Filters",
+    "High-Temperature Cooking Oil Filtration Units",
+    "Compact Band Filters",
+    "Individual Machine Coolant Filters",
+    "Compact Filters",
+    "Oil Recovery Press Units",
+    "Chip Wringer Systems",
+    "Up-Flow Filters",
+    "Self-Cleaning Industrial Filters",
+    "Reusable Oil & Coolant Filters",
+    "Spare Parts for Filtration Systems (Bags, Paper, Candle, etc.)"
+  ];
+
   // Check if we should use the new text-heavy layout (no image)
-  const isTextLayout = category === 'filtration' || category === 'spm' || category === 'handling';
+  const isTextLayout = category === 'spm' || category === 'handling' || productsWithoutImages.includes(product?.name);
 
   return (
     <Dialog open={!!product} onOpenChange={onClose}>

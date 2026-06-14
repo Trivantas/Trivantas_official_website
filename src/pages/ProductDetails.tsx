@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Info, CheckCircle, ArrowRight } from 'lucide-react';
-import ProductDetailModal from '@/components/ProductDetailModal';
+import ProductDetailModal, { ProductType } from '@/components/ProductDetailModal';
 import { pageContent } from '@/data/pageContent';
 import sensorsData from '@/data/sensors.json';
 import filtrationData from '@/data/filtration.json';
@@ -33,9 +33,9 @@ import microwaveMoistureImg from '@/assets/microwave-moisture-sensor.jpg';
 import hydroMixNewImg from '@/assets/hydro-mix-moisture-sensor-new.jpg';
 import hydroMixXTImg from '@/assets/hydro-mix-xt-sensor.png';
 import moistureSensorGenericImg from '@/assets/moisture-sensor-generic.png';
-import paperBandFilterImg from '@/assets/paper-band-filter.jpg';
-import oilSkimmerImg from '@/assets/oil-skimmer.jpg';
-import magneticSeparatorImg from '@/assets/magnetic-separator.jpg';
+import paperBandFilterImg from '@/assets/paper-band-filter-new.jpeg';
+import oilSkimmerImg from '@/assets/oil-skimmer.jpeg';
+import magneticSeparatorImg from '@/assets/magnetic-separators-new.jpeg';
 import ultrasonicLevelSensorImgV2 from '@/assets/ultrasonic-level-sensor-v2.png';
 import capacitanceLevelSensorImgV2 from '@/assets/capacitance-level-sensor-v2.png';
 import electromagneticFlowMeterImg from '@/assets/electromagnetic-flow-meter.png';
@@ -51,18 +51,28 @@ import vibratingForkSolidSensorImg from '@/assets/vibrating-fork-solid-sensor.pn
 import ultrasonicFlowMeterImg from '@/assets/ultrasonic-flow-meter.jpg';
 import rfAdmittanceLevelSwitchImg from '@/assets/rf-admittance-level-switch.png';
 
+import zldImg from '@/assets/ZLD.jpeg';
+import stpImg from '@/assets/sewage-treatment-plant.jpg';
+import etpImg from '@/assets/effluent-treatment-plants.jpeg';
+import desalinationImg from '@/assets/desalination.jpeg';
+import sumpCleanerImg from '@/assets/sump-cleaner.jpeg';
+import magBandFilterImg from '@/assets/Mag Band Filter.png';
+
 import highAccuracyLevelIndicatorImg from '@/assets/high-accuracy-level-indicator.jpeg';
+import centralCoolantImg from '@/assets/central-coolant-filtration.jpeg';
+import mobileFilterImg from '@/assets/mobile-type-filters.jpeg';
+import pressureBedImg from '@/assets/compact-pressure-bed-filters.png';
 
 const ProductDetails = () => {
   const { category } = useParams();
   const navigate = useNavigate();
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [selectedProduct, setSelectedProduct] = useState<ProductType | null>(null);
 
-  const productDataMap: Record<string, any[]> = {
-    sensors: sensorsData,
-    filtration: filtrationData,
-    spm: spmData,
-    handling: handlingData
+  const productDataMap: Record<string, ProductType[]> = {
+    sensors: sensorsData as ProductType[],
+    filtration: filtrationData as ProductType[],
+    spm: spmData as ProductType[],
+    handling: handlingData as ProductType[]
   };
 
   // Image mapping for specific products
@@ -111,6 +121,15 @@ const ProductDetails = () => {
     paperBand: paperBandFilterImg,
     oilSkimmer: oilSkimmerImg,
     magneticSeparator: magneticSeparatorImg,
+    zld: zldImg,
+    stp: stpImg,
+    etp: etpImg,
+    desalination: desalinationImg,
+    sumpCleaner: sumpCleanerImg,
+    magBandFilter: magBandFilterImg,
+    centralCoolant: centralCoolantImg,
+    mobileFilter: mobileFilterImg,
+    pressureBed: pressureBedImg,
 
     // Defaults/Fallbacks
     electromagneticFlow: electromagneticFlowMeterImg,
@@ -149,7 +168,7 @@ const ProductDetails = () => {
   };
 
   // Helper to get image for product
-  const getProductImage = (product: any) => {
+  const getProductImage = (product: ProductType) => {
     if (product.imageKey && imageMap[product.imageKey]) {
       return imageMap[product.imageKey];
     }
@@ -214,7 +233,7 @@ const ProductDetails = () => {
 
                 {groupProducts.length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {groupProducts.map((product: any) => (
+                    {groupProducts.map((product: ProductType) => (
                       <Card
                         key={product.id}
                         className="group cursor-pointer hover:shadow-hover transition-all duration-300 hover:-translate-y-2 flex flex-col h-full"
