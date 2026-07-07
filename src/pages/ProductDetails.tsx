@@ -62,6 +62,23 @@ import highAccuracyLevelIndicatorImg from '@/assets/high-accuracy-level-indicato
 import centralCoolantImg from '@/assets/central-coolant-filtration.jpeg';
 import mobileFilterImg from '@/assets/mobile-type-filters.jpeg';
 import pressureBedImg from '@/assets/compact-pressure-bed-filters.png';
+const productsWithoutImages = [
+  "Fine Mesh Oil Filters",
+  "Mineral Water Filtration Plants",
+  "Wastewater Treatment Plants",
+  "Water Purifiers",
+  "Reusable Food Oil Filters",
+  "High-Temperature Cooking Oil Filtration Units",
+  "Compact Band Filters",
+  "Individual Machine Coolant Filters",
+  "Compact Filters",
+  "Oil Recovery Press Units",
+  "Chip Wringer Systems",
+  "Up-Flow Filters",
+  "Self-Cleaning Industrial Filters",
+  "Reusable Oil & Coolant Filters",
+  "Spare Parts for Filtration Systems (Bags, Paper, Candle, etc.)"
+];
 
 const ProductDetails = () => {
   const { category } = useParams();
@@ -242,7 +259,7 @@ const ProductDetails = () => {
                           image: getProductImage(product)
                         })}
                       >
-                        {category === 'sensors' ? (
+                        {category === 'sensors' || (category === 'filtration' && !productsWithoutImages.includes(product.name)) ? (
                           <div className="group relative flex flex-col h-full bg-white/40 dark:bg-slate-900/40 backdrop-blur-2xl overflow-hidden rounded-2xl border border-white/60 dark:border-slate-700/50 hover:border-primary/50 dark:hover:border-cyan-500/50 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]">
                             {/* High-Tech Grid Overlay */}
                             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[linear-gradient(rgba(0,0,0,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,1)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
