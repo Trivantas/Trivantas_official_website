@@ -236,46 +236,101 @@ const ProductDetails = () => {
                     {groupProducts.map((product: ProductType) => (
                       <Card
                         key={product.id}
-                        className="group cursor-pointer hover:shadow-hover transition-all duration-300 hover:-translate-y-2 flex flex-col h-full"
+                        className="group cursor-pointer hover:shadow-hover transition-all duration-300 hover:-translate-y-2 flex flex-col h-full overflow-hidden"
                         onClick={() => setSelectedProduct({
                           ...product,
                           image: getProductImage(product)
                         })}
                       >
-                        <CardContent className="p-6 flex flex-col h-full">
-                          <div className="flex items-center justify-between mb-4">
-                            <Badge variant="secondary" className="bg-secondary/10 text-orange-600 border-secondary/20">
-                              {product.type || 'Product'}
-                            </Badge>
-                            <Info className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                          </div>
+                        {category === 'sensors' ? (
+                          <div className="group relative flex flex-col h-full bg-white/40 dark:bg-slate-900/40 backdrop-blur-2xl overflow-hidden rounded-2xl border border-white/60 dark:border-slate-700/50 hover:border-primary/50 dark:hover:border-cyan-500/50 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]">
+                            {/* High-Tech Grid Overlay */}
+                            <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[linear-gradient(rgba(0,0,0,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,1)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
+                            
+                            {/* Futuristic Glowing Orbs */}
+                            <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/20 dark:bg-cyan-500/20 rounded-full blur-[60px] group-hover:bg-primary/30 dark:group-hover:bg-cyan-500/30 group-hover:scale-110 transition-all duration-700 pointer-events-none"></div>
+                            <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-blue-500/15 dark:bg-blue-600/20 rounded-full blur-[60px] group-hover:bg-blue-500/25 dark:group-hover:bg-blue-500/30 group-hover:scale-110 transition-all duration-700 pointer-events-none"></div>
 
-                          <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                            {product.name}
-                          </h3>
-
-                          <div className="space-y-2 mb-6 flex-grow">
-                            {/* Category specific specs preview could go here if needed, keeping it simple for now */}
-                            <p className="text-sm text-muted-foreground line-clamp-3">
-                              {product.efficiency || product.description || "High performance industrial solution."}
-                            </p>
-                          </div>
-
-                          <div className="mt-auto">
-                            <div className="flex flex-wrap gap-2 mb-4">
-                              {(product.features || []).slice(0, 2).map((feature: string, idx: number) => (
-                                <span key={idx} className="text-xs bg-accent text-accent-foreground px-2 py-1 rounded">
-                                  {feature}
+                            {/* Tech Reticle Corners */}
+                            <div className="absolute top-5 left-5 w-4 h-4 border-t-2 border-l-2 border-primary/30 dark:border-cyan-500/30 group-hover:border-primary dark:group-hover:border-cyan-400 group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all duration-500 z-10 pointer-events-none"></div>
+                            <div className="absolute top-5 right-5 w-4 h-4 border-t-2 border-r-2 border-primary/30 dark:border-cyan-500/30 group-hover:border-primary dark:group-hover:border-cyan-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500 z-10 pointer-events-none"></div>
+                            
+                            {/* Holographic Badge */}
+                            <div className="absolute top-6 left-8 z-20">
+                              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-primary/10 dark:border-cyan-500/20 text-[10px] font-mono tracking-widest text-primary dark:text-cyan-400 group-hover:border-primary/40 dark:group-hover:border-cyan-400/50 shadow-sm transition-all duration-300">
+                                <span className="relative flex h-1.5 w-1.5">
+                                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary dark:bg-cyan-400 opacity-75"></span>
+                                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary dark:bg-cyan-500"></span>
                                 </span>
-                              ))}
+                                {product.type?.toUpperCase() || 'SMART SENSOR'}
+                              </div>
                             </div>
+                            
+                            {/* Main Image Container */}
+                            <div className="relative h-64 w-full flex items-center justify-center p-12 z-10 mt-6 group-hover:p-8 transition-all duration-700">
+                              <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent dark:from-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                              <img
+                                src={getProductImage(product)}
+                                alt={product.name}
+                                className="max-h-full max-w-full object-contain filter drop-shadow-xl group-hover:drop-shadow-[0_20px_30px_rgba(0,0,0,0.15)] dark:group-hover:drop-shadow-[0_20px_30px_rgba(34,211,238,0.2)] group-hover:scale-110 group-hover:-translate-y-4 transition-all duration-700 ease-out relative z-10"
+                              />
+                            </div>
+                            
 
-                            <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                              <span className="text-sm text-muted-foreground">View Specifications</span>
-                              <ArrowRight className="h-4 w-4 text-primary transform group-hover:translate-x-1 transition-transform" />
+                            {/* Bottom Info Console */}
+                            <div className="relative z-20 mt-auto p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border-t border-white/80 dark:border-slate-700/80 group-hover:border-primary/30 dark:group-hover:border-cyan-500/30 transition-colors duration-500">
+                              {/* Scanning line effect on border */}
+                              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary dark:via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                              
+                              <div className="flex items-center justify-between gap-4">
+                                <div className="flex flex-col">
+
+                                  <h3 className="text-lg font-bold text-foreground leading-snug group-hover:text-primary dark:group-hover:text-cyan-400 transition-colors duration-300">
+                                    {product.name}
+                                  </h3>
+                                </div>
+                                <div className="flex-shrink-0 w-11 h-11 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground group-hover:bg-primary dark:group-hover:bg-cyan-500 group-hover:text-primary-foreground dark:group-hover:text-slate-900 group-hover:border-transparent shadow-sm group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] dark:group-hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-500 transform group-hover:rotate-90">
+                                  <ArrowRight className="h-5 w-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </CardContent>
+                        ) : (
+                          <CardContent className="p-6 flex flex-col h-full">
+                            <div className="flex items-center justify-between mb-4">
+                              <Badge variant="secondary" className="bg-secondary/10 text-orange-600 border-secondary/20">
+                                {product.type || 'Product'}
+                              </Badge>
+                              <Info className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                            </div>
+
+                            <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                              {product.name}
+                            </h3>
+
+                            <div className="space-y-2 mb-6 flex-grow">
+                              {/* Category specific specs preview could go here if needed, keeping it simple for now */}
+                              <p className="text-sm text-muted-foreground line-clamp-3">
+                                {product.efficiency || product.description || "High performance industrial solution."}
+                              </p>
+                            </div>
+
+                            <div className="mt-auto">
+                              <div className="flex flex-wrap gap-2 mb-4">
+                                {(product.features || []).slice(0, 2).map((feature: string, idx: number) => (
+                                  <span key={idx} className="text-xs bg-accent text-accent-foreground px-2 py-1 rounded">
+                                    {feature}
+                                  </span>
+                                ))}
+                              </div>
+
+                              <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                                <span className="text-sm text-muted-foreground">View Specifications</span>
+                                <ArrowRight className="h-4 w-4 text-primary transform group-hover:translate-x-1 transition-transform" />
+                              </div>
+                            </div>
+                          </CardContent>
+                        )}
                       </Card>
                     ))}
                   </div>
