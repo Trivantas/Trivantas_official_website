@@ -119,11 +119,11 @@ const Products = () => {
                 <Button
                   variant="default"
                   size="lg"
-                  className="group"
+                  className="group w-full sm:w-auto min-h-12 h-auto sm:h-11 py-3 sm:py-2 px-6 sm:px-8 whitespace-normal sm:whitespace-nowrap flex items-center justify-center gap-2 text-center"
                   onClick={() => navigate(`/products/${product.id}`)}
                 >
-                  Get Quote for {product.title}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  <span className="flex-1 text-center">Get Quote for {product.title}</span>
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 shrink-0" />
                 </Button>
               </div>
 

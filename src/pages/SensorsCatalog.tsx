@@ -2,7 +2,17 @@ import React, { useState } from 'react';
 import sensorsData from '@/data/sensors.json';
 import { Card, CardContent } from '@/components/ui/card';
 import ProductCatalogCard from '@/components/ProductCatalogCard';
-import ProductDetailModal from '@/components/ProductDetailModal';
+import ProductDetailModal, { ProductType } from '@/components/ProductDetailModal';
+
+interface SensorProduct extends ProductType {
+  id: string;
+  categoryLabel: string;
+  name: string;
+  capacity: string;
+  efficiency: string;
+  features: string[];
+  icons: string[];
+}
 import levelSensorImg from '../assets/smart-level-sensors-new.jpg';
 import vibratingForkImg from '../assets/vibrating-fork-v2.jpg';
 import vibratingRodImg from '../assets/rod-sensor.jpg';
@@ -63,7 +73,7 @@ const SensorsCatalog: React.FC = () => {
     thermalMassFlow: levelSensorImg
   };
 
-  const products = sensorsData as any[];
+  const products = sensorsData as SensorProduct[];
 
   const selectedProduct = selectedId ? products.find(p => p.id === selectedId) : null;
 
