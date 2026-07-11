@@ -11,6 +11,7 @@ import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";
 import Schedule from "./pages/Schedule";
+import Blogs from "./pages/Blogs";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
 
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/products" element={<Products />} />
               <Route path="/products/:category" element={<ProductDetails />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/blogs" element={<Blogs />} />
               <Route path="/schedule" element={<Schedule />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
