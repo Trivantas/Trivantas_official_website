@@ -8,6 +8,17 @@ const Navigation = () => {
   const [isProductsOpen, setIsProductsOpen] = React.useState(false);
   const location = useLocation();
 
+  React.useEffect(() => {
+    setIsOpen(false);
+    setIsProductsOpen(false);
+  }, [location]);
+
+  React.useEffect(() => {
+    if (!isOpen) {
+      setIsProductsOpen(false);
+    }
+  }, [isOpen]);
+
   const productMegaMenu = [
     {
       title: 'Smart Level Sensors',
@@ -52,6 +63,7 @@ const Navigation = () => {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Products', href: '/products', hasDropdown: true },
+    { name: 'Blogs', href: '/blogs' },
     { name: 'Contact', href: '/contact' },
     { name: 'Flipbook', href: '/TRIVANTAS_Flipbook.pdf' },
   ];
@@ -175,9 +187,8 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden max-h-[calc(100vh-4rem)] overflow-y-auto">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-border">
               {navigation.map((item) => (
                 item.hasDropdown ? (
