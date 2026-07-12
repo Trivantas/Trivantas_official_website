@@ -12,6 +12,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Contact from "./pages/Contact";
 import Schedule from "./pages/Schedule";
 import Blogs from "./pages/Blogs";
+import Flipbook from "./pages/Flipbook";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
 
@@ -35,6 +36,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/schedule" element={<Schedule />} />
+              <Route path="/flipbook" element={<Flipbook />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
