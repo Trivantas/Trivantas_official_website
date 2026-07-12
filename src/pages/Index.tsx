@@ -7,7 +7,7 @@ import CustomSolutionCTA from '../components/CustomSolutionCTA';
 
 const Index = () => {
   return (
-    <div className="pb-12">
+    <div>
       <HeroSection />
       <ProductsSection />
       <Features />

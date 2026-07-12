@@ -1,25 +1,26 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Instagram } from 'lucide-react';
+
 const Footer = () => {
   return (
     <footer className="bg-secondary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="mb-4 flex items-center space-x-2">
+          <div className="lg:col-span-1 text-center md:text-left flex flex-col items-center md:items-start">
+            <div className="mb-4 flex items-center justify-center md:justify-start space-x-2">
               <img src="/images/Icon-Color.png" alt="Trivantas Logo" className="h-12 w-12 object-contain" />
-              <div>
+              <div className="text-left">
                 <h3 className="text-2xl font-bold mb-0 leading-none">Trivantas</h3>
                 <p className="text-primary-foreground/80 text-sm mt-1">One Stop Solution</p>
               </div>
             </div>
-            <p className="text-primary-foreground/80 mb-6 leading-relaxed">
+            <p className="text-primary-foreground/80 mb-6 leading-relaxed max-w-sm">
               Your trusted partner for comprehensive industrial hardware solutions.
               Building reliable partnerships that go beyond business.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex justify-center md:justify-start space-x-4 w-full">
               <a href="https://www.linkedin.com/company/trivantas/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/60 hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
@@ -28,8 +29,9 @@ const Footer = () => {
               </a>
             </div>
           </div>
+
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
@@ -70,7 +72,7 @@ const Footer = () => {
           </div>
 
           {/* Products */}
-          <div>
+          <div className="text-center md:text-left">
             <h4 className="text-lg font-semibold mb-4">Solutions</h4>
             <ul className="space-y-2">
               <li>
@@ -97,40 +99,41 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="text-center md:text-left flex flex-col items-center md:items-start">
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <div className="space-y-3">
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Pune Office</h5>
-                    <a
-                      href="https://www.google.com/maps/search/?api=1&query=Utpal+Classic+Bhukum+Pune+412115"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary-foreground/80 text-sm hover:text-primary transition-colors block"
-                    >
-                      Trivantas,A-002, Utpal Classic, Bhukum, <br /> Pune - 412115
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Reg. Address</h5>
-                    <a
-                      href="https://www.google.com/maps/search/?api=1&query=Trivantas,+01,+Dabhade+Garage,+Parola+Road,+Bhadgaon,+Jalgaon+-+424105"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary-foreground/80 text-sm hover:text-primary transition-colors block"
-                    >
-                      Trivantas, 01, Dabhade Garage, Parola Road, Bhadgaon, Jalgaon - 424105
-                    </a>
-                  </div>
+            <div className="space-y-4 w-full flex flex-col items-center md:items-start">
+              
+              <div className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 text-center md:text-left">
+                <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
+                <div className="flex flex-col items-center md:items-start">
+                  <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Pune Office</h5>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Utpal+Classic+Bhukum+Pune+412115"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-foreground/80 text-sm hover:text-primary transition-colors block"
+                  >
+                    Trivantas,A-002, Utpal Classic, Bhukum, <br /> Pune - 412115
+                  </a>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
+
+              <div className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 text-center md:text-left">
+                <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
+                <div className="flex flex-col items-center md:items-start">
+                  <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Reg. Address</h5>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Trivantas,+01,+Dabhade+Garage,+Parola+Road,+Bhadgaon,+Jalgaon+-+424105"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-foreground/80 text-sm hover:text-primary transition-colors block max-w-xs"
+                  >
+                    Trivantas, 01, Dabhade Garage, Parola Road, Bhadgaon, Jalgaon - 424105
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center md:justify-start space-x-3 w-full">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
                 <a
                   href="tel:+917028165428"
@@ -139,7 +142,8 @@ const Footer = () => {
                   7028165428
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
+
+              <div className="flex items-center justify-center md:justify-start space-x-3 w-full">
                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@trivantas.com"
@@ -150,9 +154,12 @@ const Footer = () => {
                   sales@trivantas.com
                 </a>
               </div>
+
             </div>
           </div>
+
         </div>
+
         {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-center items-center">
           <p className="text-primary-foreground/60 text-sm text-center w-full">

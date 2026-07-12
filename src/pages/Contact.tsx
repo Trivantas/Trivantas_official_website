@@ -234,11 +234,13 @@ const Contact = () => {
                     >
                       Schedule Site Visit
                     </Button>
-                    <a href="/TRIVANTAS_Flipbook.pdf" target="_blank" rel="noopener noreferrer" className="w-full block">
-                      <Button variant="outline" className="w-full justify-start">
-                        View Flipbook
-                      </Button>
-                    </a>
+                    <Button
+                      variant="outline"
+                      className="w-full justify-start"
+                      onClick={() => window.open('/TRIVANTAS_Flipbook.pdf', '_blank')}
+                    >
+                      View Flipbook
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
