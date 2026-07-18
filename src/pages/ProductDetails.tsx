@@ -10,6 +10,7 @@ import sensorsData from '@/data/sensors.json';
 import filtrationData from '@/data/filtration.json';
 import handlingData from '@/data/handling.json';
 import spmData from '@/data/spm.json';
+import waterTreatmentData from '@/data/water-treatment.json';
 
 // Import images
 import levelSensorImg from '@/assets/smart-level-sensors-new.jpg';
@@ -64,8 +65,9 @@ import mobileFilterImg from '@/assets/mobile-type-filters.jpeg';
 import pressureBedImg from '@/assets/compact-pressure-bed-filters.png';
 const productsWithoutImages = [
   "Fine Mesh Oil Filters",
+  "RO & UF System",
+  "Water Filtration System",
   "Mineral Water Filtration Plants",
-  "Wastewater Treatment Plants",
   "Water Purifiers",
   "Reusable Food Oil Filters",
   "High-Temperature Cooking Oil Filtration Units",
@@ -89,7 +91,8 @@ const ProductDetails = () => {
     sensors: sensorsData as ProductType[],
     filtration: filtrationData as ProductType[],
     spm: spmData as ProductType[],
-    handling: handlingData as ProductType[]
+    handling: handlingData as ProductType[],
+    "water-treatment": waterTreatmentData as ProductType[]
   };
 
   // Image mapping for specific products
@@ -193,6 +196,7 @@ const ProductDetails = () => {
     if (category === 'handling') return materialHandlingImg;
     if (category === 'filtration') return filtrationImg;
     if (category === 'spm') return spmImg;
+    if (category === 'water-treatment') return stpImg;
     return levelSensorImg;
   };
 
