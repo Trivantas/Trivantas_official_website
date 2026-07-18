@@ -140,12 +140,10 @@ export const pageContent: Record<string, PageContent> = {
                 ]
             },
             {
-                title: "Food-Grade Oil, Alcohol & Drinking Water Filtration",
-                description: "Hygienic and food-safe filtration systems for edible oils, alcohol, and water purification.",
+                title: "Food-Grade Oil & Alcohol Filtration",
+                description: "Hygienic and food-safe filtration systems for edible oils and alcohol purification.",
                 items: [
                     "Fine Mesh Oil Filters",
-                    "Mineral Water Filtration Plants",
-                    "Wastewater Treatment Plants",
                     "Water Purifiers",
                     "Reusable Food Oil Filters",
                     "High-Temperature Cooking Oil Filtration Units"
@@ -153,22 +151,50 @@ export const pageContent: Record<string, PageContent> = {
             },
             {
                 title: "Environmental Filtration Systems",
-                description: "Sustainable treatment and recycling systems for industrial and environmental applications.",
+                description: "Advanced solutions for industrial process water, desalination, and drinking water purification.",
                 items: [
-                    "Effluent Treatment Plants (ETP)",
-                    "Sewage Treatment Plants (STP)",
-                    "Common Effluent Treatment Plants (CETP)",
-                    "Zero Liquid Discharge (ZLD) Systems",
-                    "Reverse Osmosis (RO), Ultrafiltration (UF), and Demineralization (DM) Plants",
-                    "Sludge Management & Dewatering Systems",
-                    "Water Recycling & Reuse Technologies",
-                    "Biogas Generation & Pre-treatment Systems",
+                    "Mineral Water Filtration Plants",
                     "Desalination & Process Water Solutions"
                 ]
             },
         ],
         customSolutionText: "Can’t find what you’re looking for? Trivantas provides tailor-made filtration solutions, built to your exact specifications—based on fluid type, flow rate, filtration grade, environmental conditions, and operational layout.",
         contactText: "Interested in a custom quote or demo? Contact Trivantas to speak with a filtration expert today."
+    },
+    "water-treatment": {
+        id: "water-treatment",
+        title: "Water Treatment Plants",
+        subtitle: "Clean. Compliant. Sustainable.",
+        introPrefix: "Where sustainable water management is key, Trivantas delivers advanced water treatment systems engineered for environmental compliance and high efficiency.",
+        description: "From sewage and effluent treatment to high-purity industrial process water and desalination, our systems are designed to maximize water recovery, minimize waste, and ensure compliance with strict environmental regulations.",
+        whyChooseTitle: "Why Trivantas Water Treatment?",
+        whyChoosePoints: [
+            "Complete environmental & local regulatory compliance",
+            "Advanced resource recovery and water reuse technologies",
+            "Heavy-duty, long-life components for continuous operation",
+            "Custom-engineered layouts optimized for your facility footprint",
+            "Fully automated control options with PLC integration"
+        ],
+        productGroups: [
+            {
+                title: "Wastewater Treatment Systems",
+                description: "Custom-designed treatment systems for industrial effluents and municipal sewage.",
+                items: [
+                    "Sewage Treatment Plant",
+                    "Effluent treatment plant"
+                ]
+            },
+            {
+                title: "Water Purification Systems",
+                description: "Advanced membrane and filtration systems for high-purity water.",
+                items: [
+                    "RO & UF System",
+                    "Water Filtration System"
+                ]
+            }
+        ],
+        customSolutionText: "Need a custom treatment system? Trivantas provides bespoke engineering from concept to commissioning, customized to your raw water quality, required discharge standards, flow rate, and space limitations.",
+        contactText: "Interested in a custom quote or demo? Contact Trivantas today to speak with a water treatment expert."
     },
     handling: {
         id: "handling",
