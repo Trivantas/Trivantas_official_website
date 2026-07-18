@@ -698,112 +698,6 @@
     }
   },
   {
-    "id": "mineral-water-filtration-plants",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Mineral Water Filtration Plants",
-    "capacity": "Small to large",
-    "efficiency": "Produces potable water",
-    "features": [
-      "Multi-stage filtration for complete purification",
-      "Removes physical, chemical & biological contaminants",
-      "Ensures consistent water quality & taste",
-      "Low operating & maintenance cost",
-      "Modular & scalable system design",
-      "Robust construction for long-term use",
-      "Energy-efficient & eco-friendly operation",
-      "Designed for continuous duty applications"
-    ],
-    "icons": [
-      "💧"
-    ],
-    "imageKey": "mineralWater",
-    "type": "Water Treatment",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Packaged drinking water plants",
-      "Hotels, resorts & restaurants",
-      "Hospitals & healthcare facilities",
-      "Educational institutions",
-      "Commercial complexes",
-      "Industrial drinking water supply",
-      "Residential societies"
-    ],
-    "specifications": {
-      "stages": "RO/UF/UV"
-    }
-  },
-  {
-    "id": "wastewater-treatment-plants",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Wastewater Treatment Plants",
-    "capacity": "Large scale",
-    "efficiency": "Removes organics and solids",
-    "features": [
-      "Designed for conductive wastewater & process liquids",
-      "Accurate and repeatable point-level detection",
-      "No moving parts for long service life",
-      "Fast response time for reliable switching",
-      "Simple design with easy commissioning",
-      "Compact & rugged construction",
-      "Performs reliably in corrosive environments",
-      "Compatible with PLC, pump & alarm systems"
-    ],
-    "icons": [
-      "🏭"
-    ],
-    "imageKey": "wwtp",
-    "type": "WWTP",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Wastewater treatment plants",
-      "Sewage pumping stations",
-      "Equalization & aeration tanks",
-      "Chemical dosing & neutralization systems",
-      "Sludge handling units",
-      "Pump control & dry-run protection",
-      "Overflow protection & level alarm systems"
-    ],
-    "specifications": {
-      "process": "Activated sludge"
-    }
-  },
-  {
-    "id": "water-purifiers",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Water Purifiers",
-    "capacity": "Household to commercial",
-    "efficiency": "Removes contaminants for drinking",
-    "features": [
-      "Multi-stage purification (RO / UV / UF based)",
-      "Removes physical, chemical & biological contaminants",
-      "Improves taste, odor & clarity of water",
-      "Compact & durable design",
-      "Energy-efficient operation",
-      "Low maintenance & easy servicing",
-      "Designed for continuous, reliable use"
-    ],
-    "icons": [
-      "🚰"
-    ],
-    "imageKey": "waterPurifier",
-    "type": "Purifier",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Residential homes",
-      "Offices & corporate buildings",
-      "Hospitals & clinics",
-      "Schools & colleges",
-      "Hotels & restaurants",
-      "Commercial kitchens & institutions"
-    ],
-    "specifications": {
-      "stages": "3-6 stage"
-    }
-  },
-  {
     "id": "reusable-food-oil-filters",
     "categoryLabel": "Advanced Filtration Systems",
     "name": "Reusable Food Oil Filters",
@@ -872,276 +766,7 @@
       "maxTemp": "200°C"
     }
   },
-  {
-    "id": "effluent-treatment-plants-etp",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Effluent Treatment Plants (ETP)",
-    "capacity": "Medium to large",
-    "efficiency": "Treats industrial effluent",
-    "features": [
-      "Multi-stage treatment for removal of physical, chemical & biological contaminants",
-      "Effective reduction of BOD, COD, TSS & harmful pollutants",
-      "Designed for industrial wastewater treatment",
-      "Modular & customizable system design",
-      "Energy-efficient operation",
-      "Automatic or semi-automatic control options",
-      "Robust construction for long-term use",
-      "Compliance with environmental discharge norms"
-    ],
-    "icons": [
-      "🏭"
-    ],
-    "imageKey": "etp",
-    "type": "ETP",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Chemical & pharmaceutical industries",
-      "Textile & dyeing units",
-      "Food & beverage processing plants",
-      "Automotive & engineering industries",
-      "Oil & gas facilities",
-      "Metal finishing & electroplating units",
-      "Manufacturing & processing industries"
-    ],
-    "specifications": {
-      "standards": "Local regulations"
-    }
-  },
-  {
-    "id": "sewage-treatment-plants-stp",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Sewage Treatment Plants (STP)",
-    "capacity": "Residential/commercial scale",
-    "efficiency": "Treats sewage to reuse standards",
-    "features": [
-      "Efficient treatment of domestic sewage & wastewater",
-      "Reduces BOD, COD, TSS & harmful pathogens",
-      "Advanced biological treatment processes (MBBR / SBR / ASP options)",
-      "Compact & modular design",
-      "Low operating & maintenance cost",
-      "Odor control & sludge management system",
-      "Automatic or PLC-based control systems",
-      "Designed for continuous operation & regulatory compliance"
-    ],
-    "icons": [
-      "🚰"
-    ],
-    "imageKey": "stp",
-    "type": "STP",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Residential societies & apartments",
-      "Commercial complexes & office buildings",
-      "Hotels & resorts",
-      "Hospitals & healthcare facilities",
-      "Educational institutions",
-      "Industrial campuses",
-      "Municipal sewage treatment systems"
-    ],
-    "specifications": {
-      "process": "Activated sludge"
-    }
-  },
-  {
-    "id": "cetp-systems",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "CETP Systems",
-    "capacity": "Cluster-level treatment",
-    "efficiency": "Handles combined effluent",
-    "features": [
-      "Modular design",
-      "Centralized operation",
-      "Resource recovery"
-    ],
-    "icons": [
-      "🏭"
-    ],
-    "imageKey": "cetp",
-    "type": "CETP",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Industrial clusters"
-    ],
-    "specifications": {
-      "modules": "Scalable"
-    }
-  },
-  {
-    "id": "zld-systems",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Zero Liquid Discharge (ZLD) Systems",
-    "capacity": "Large plants",
-    "efficiency": "Minimizes wastewater discharge",
-    "features": [
-      "Complete elimination of liquid waste discharge",
-      "Multi-stage treatment (ETP + RO + Evaporation / Crystallization)",
-      "Maximum water recovery & reuse",
-      "High-efficiency solid waste concentration",
-      "Automated & PLC-based control systems",
-      "Energy-optimized operation",
-      "Modular & scalable system design",
-      "Compliance with stringent environmental regulations"
-    ],
-    "icons": [
-      "♻️"
-    ],
-    "imageKey": "zld",
-    "type": "ZLD",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Chemical & petrochemical industries",
-      "Textile & dyeing units",
-      "Pharmaceutical manufacturing",
-      "Power plants",
-      "Metal finishing & electroplating industries",
-      "Food & beverage processing plants",
-      "Industrial wastewater-intensive operations"
-    ],
-    "specifications": {
-      "energy": "High"
-    }
-  },
-  {
-    "id": "ro-uf-dm-plants",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "RO, UF, DM Plants",
-    "capacity": "Small to very large",
-    "efficiency": "Removes salts and particulates",
-    "features": [
-      "Membrane stages",
-      "Pre-treatment",
-      "Post-treatment"
-    ],
-    "icons": [
-      "💧"
-    ],
-    "imageKey": "membranePlants",
-    "type": "Membrane Plant",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Process water",
-      "Drinking water"
-    ],
-    "specifications": {
-      "membranes": "RO/UF"
-    }
-  },
-  {
-    "id": "sludge-dewatering-systems",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Sludge Dewatering Systems",
-    "capacity": "Varies",
-    "efficiency": "Reduces sludge volume",
-    "features": [
-      "Belt press",
-      "Centrifuge",
-      "Screw press"
-    ],
-    "icons": [
-      "🧻"
-    ],
-    "imageKey": "dewatering",
-    "type": "Dewatering",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "STP/ETP"
-    ],
-    "specifications": {
-      "methods": "Belt/Centrifuge"
-    }
-  },
-  {
-    "id": "water-recycling-reuse-systems",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Water Recycling & Reuse Systems",
-    "capacity": "Varies",
-    "efficiency": "Enables internal reuse",
-    "features": [
-      "Treatment trains",
-      "Modular design",
-      "Monitoring"
-    ],
-    "icons": [
-      "🔁"
-    ],
-    "imageKey": "waterReuse",
-    "type": "Recycling System",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Process reuse"
-    ],
-    "specifications": {
-      "modules": "Custom"
-    }
-  },
-  {
-    "id": "biogas-pre-treatment-systems",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Biogas Pre-treatment Systems",
-    "capacity": "Varies",
-    "efficiency": "Removes contaminants before use",
-    "features": [
-      "Desulphurization",
-      "Moisture removal",
-      "Filtration"
-    ],
-    "icons": [
-      "🔋"
-    ],
-    "imageKey": "biogas",
-    "type": "Pre-treatment",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Biogas plants"
-    ],
-    "specifications": {
-      "process": "Desulphurization"
-    }
-  },
-  {
-    "id": "desalination-process-water-solutions",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Desalination & Process Water Solutions",
-    "capacity": "Large scale",
-    "efficiency": "Removes salts and minerals",
-    "features": [
-      "Advanced desalination using RO / membrane technologies",
-      "Efficient removal of salts, minerals & dissolved solids",
-      "High water recovery with optimized energy consumption",
-      "Modular & scalable plant design",
-      "Corrosion-resistant construction for long service life",
-      "Automated control & monitoring systems",
-      "Designed for continuous industrial operation",
-      "Customizable based on feed water quality"
-    ],
-    "icons": [
-      "🌊"
-    ],
-    "imageKey": "desalination",
-    "type": "Desalination",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Seawater & brackish water desalination plants",
-      "Power plants & utilities",
-      "Oil & gas industries",
-      "Chemical & petrochemical industries",
-      "Food & beverage processing",
-      "Pharmaceutical manufacturing",
-      "Industrial process water supply systems"
-    ],
-    "specifications": {
-      "recovery": "Varies"
-    }
-  },
+
   {
     "id": "backwashable-filters",
     "categoryLabel": "Advanced Filtration Systems",
@@ -1237,6 +862,112 @@
     ],
     "specifications": {
       "media": "Washable"
+    }
+  },
+  {
+    "id": "desalination-process-water-solutions",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Desalination & Process Water Solutions",
+    "capacity": "Large scale",
+    "efficiency": "Removes salts and minerals",
+    "features": [
+      "Advanced desalination using RO / membrane technologies",
+      "Efficient removal of salts, minerals & dissolved solids",
+      "High water recovery with optimized energy consumption",
+      "Modular & scalable plant design",
+      "Corrosion-resistant construction for long service life",
+      "Automated control & monitoring systems",
+      "Designed for continuous industrial operation",
+      "Customizable based on feed water quality"
+    ],
+    "icons": [
+      "🌊"
+    ],
+    "imageKey": "desalination",
+    "type": "Desalination",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Seawater & brackish water desalination plants",
+      "Power plants & utilities",
+      "Oil & gas industries",
+      "Chemical & petrochemical industries",
+      "Food & beverage processing",
+      "Pharmaceutical manufacturing",
+      "Industrial process water supply systems"
+    ],
+    "specifications": {
+      "recovery": "Varies"
+    }
+  },
+  {
+    "id": "mineral-water-filtration-plants",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Mineral Water Filtration Plants",
+    "capacity": "Small to large",
+    "efficiency": "Produces potable water",
+    "features": [
+      "Multi-stage filtration for complete purification",
+      "Removes physical, chemical & biological contaminants",
+      "Ensures consistent water quality & taste",
+      "Low operating & maintenance cost",
+      "Modular & scalable system design",
+      "Robust construction for long-term use",
+      "Energy-efficient & eco-friendly operation",
+      "Designed for continuous duty applications"
+    ],
+    "icons": [
+      "💧"
+    ],
+    "imageKey": "mineralWater",
+    "type": "Water Treatment",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Packaged drinking water plants",
+      "Hotels, resorts & restaurants",
+      "Hospitals & healthcare facilities",
+      "Educational institutions",
+      "Commercial complexes",
+      "Industrial drinking water supply",
+      "Residential societies"
+    ],
+    "specifications": {
+      "stages": "RO/UF/UV"
+    }
+  },
+  {
+    "id": "water-purifiers",
+    "categoryLabel": "Advanced Filtration Systems",
+    "name": "Water Purifiers",
+    "capacity": "Household to commercial",
+    "efficiency": "Removes contaminants for drinking",
+    "features": [
+      "Multi-stage purification (RO / UV / UF based)",
+      "Removes physical, chemical & biological contaminants",
+      "Improves taste, odor & clarity of water",
+      "Compact & durable design",
+      "Energy-efficient operation",
+      "Low maintenance & easy servicing",
+      "Designed for continuous, reliable use"
+    ],
+    "icons": [
+      "🚰"
+    ],
+    "imageKey": "waterPurifier",
+    "type": "Purifier",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Residential homes",
+      "Offices & corporate buildings",
+      "Hospitals & clinics",
+      "Schools & colleges",
+      "Hotels & restaurants",
+      "Commercial kitchens & institutions"
+    ],
+    "specifications": {
+      "stages": "3-6 stage"
     }
   }
 ]

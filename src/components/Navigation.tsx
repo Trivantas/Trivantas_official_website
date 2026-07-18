@@ -35,8 +35,16 @@ const Navigation = () => {
       id: 'filtration',
       items: [
         { name: 'Coolant & Oil Filtration', href: '/products/filtration#group-0' },
-        { name: 'Food & Drinking Water', href: '/products/filtration#group-1' },
+        { name: 'Food & Alcohol', href: '/products/filtration#group-1' },
         { name: 'Environmental Systems', href: '/products/filtration#group-2' },
+      ]
+    },
+    {
+      title: 'Water Treatment',
+      id: 'water-treatment',
+      items: [
+        { name: 'Wastewater Systems', href: '/products/water-treatment#group-0' },
+        { name: 'Purification Systems', href: '/products/water-treatment#group-1' },
       ]
     },
     {
@@ -108,8 +116,8 @@ const Navigation = () => {
                     </Link>
 
                     {/* Mega Menu Dropdown */}
-                    <div className={`absolute left-1/2 -translate-x-1/2 mt-0 w-[800px] rounded-xl bg-background border border-border shadow-2xl transform transition-all duration-300 origin-top overflow-hidden ${isProductsOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'}`}>
-                      <div className="grid grid-cols-4 gap-6 p-8 bg-card">
+                    <div className={`absolute left-1/2 -translate-x-1/2 mt-0 w-[1000px] rounded-xl bg-background border border-border shadow-2xl transform transition-all duration-300 origin-top overflow-hidden ${isProductsOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'}`}>
+                      <div className="grid grid-cols-5 gap-6 p-8 bg-card">
                         {productMegaMenu.map((category) => (
                           <div key={category.title} className="space-y-4">
                             <Link

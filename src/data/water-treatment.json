@@ -1,0 +1,142 @@
+[
+  {
+    "id": "sewage-treatment-plant",
+    "categoryLabel": "Water Treatment Plants",
+    "name": "Sewage Treatment Plant",
+    "capacity": "Residential/commercial scale",
+    "efficiency": "Treats sewage to reuse standards",
+    "features": [
+      "Efficient treatment of domestic sewage & wastewater",
+      "Reduces BOD, COD, TSS & harmful pathogens",
+      "Advanced biological treatment processes (MBBR / SBR / ASP options)",
+      "Compact & modular design",
+      "Low operating & maintenance cost",
+      "Odor control & sludge management system",
+      "Automatic or PLC-based control systems",
+      "Designed for continuous operation & regulatory compliance"
+    ],
+    "icons": [
+      "🚰"
+    ],
+    "imageKey": "stp",
+    "type": "STP",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Residential societies & apartments",
+      "Commercial complexes & office buildings",
+      "Hotels & resorts",
+      "Hospitals & healthcare facilities",
+      "Educational institutions",
+      "Industrial campuses",
+      "Municipal sewage treatment systems"
+    ],
+    "specifications": {
+      "process": "Activated sludge"
+    }
+  },
+  {
+    "id": "effluent-treatment-plant",
+    "categoryLabel": "Water Treatment Plants",
+    "name": "Effluent treatment plant",
+    "capacity": "Medium to large",
+    "efficiency": "Treats industrial effluent",
+    "features": [
+      "Multi-stage treatment for removal of physical, chemical & biological contaminants",
+      "Effective reduction of BOD, COD, TSS & harmful pollutants",
+      "Designed for industrial wastewater treatment",
+      "Modular & customizable system design",
+      "Energy-efficient operation",
+      "Automatic or semi-automatic control options",
+      "Robust construction for long-term use",
+      "Compliance with environmental discharge norms"
+    ],
+    "icons": [
+      "🏭"
+    ],
+    "imageKey": "etp",
+    "type": "ETP",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Chemical & pharmaceutical industries",
+      "Textile & dyeing units",
+      "Food & beverage processing plants",
+      "Automotive & engineering industries",
+      "Oil & gas facilities",
+      "Metal finishing & electroplating units",
+      "Manufacturing & processing industries"
+    ],
+    "specifications": {
+      "standards": "Local regulations"
+    }
+  },
+  {
+    "id": "ro-uf-system",
+    "categoryLabel": "Water Treatment Plants",
+    "name": "RO & UF System",
+    "capacity": "Small to very large",
+    "efficiency": "Removes salts and particulates",
+    "features": [
+      "Advanced membrane separation technology",
+      "Removes suspended solids, colloids & micro-biological impurities",
+      "High dissolved solids (TDS) removal efficiency",
+      "Modular and scalable plant designs",
+      "Durable, corrosion-resistant membrane housings",
+      "Easy maintenance with automatic flushing options",
+      "Ideal for pre-treatment & high-purity water applications"
+    ],
+    "icons": [
+      "💧"
+    ],
+    "imageKey": "membranePlants",
+    "type": "RO & UF",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Industrial process water",
+      "Boiler feed water",
+      "Drinking water plants",
+      "Recycled water polishing"
+    ],
+    "specifications": {
+      "membranes": "RO/UF"
+    }
+  },
+  {
+    "id": "water-filtration-system",
+    "categoryLabel": "Water Treatment Plants",
+    "name": "Water Filtration System",
+    "capacity": "Varies",
+    "efficiency": "Produces potable water",
+    "features": [
+      "Multi-stage filtration for complete purification",
+      "Removes physical, chemical & biological contaminants",
+      "Ensures consistent water quality & taste",
+      "Low operating & maintenance cost",
+      "Modular & scalable system design",
+      "Robust construction for long-term use",
+      "Energy-efficient & eco-friendly operation",
+      "Designed for continuous duty applications"
+    ],
+    "icons": [
+      "💧"
+    ],
+    "imageKey": "mineralWater",
+    "type": "Water Filtration",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "Packaged drinking water plants",
+      "Hotels, resorts & restaurants",
+      "Hospitals & healthcare facilities",
+      "Educational institutions",
+      "Commercial complexes",
+      "Industrial drinking water supply",
+      "Residential societies"
+    ],
+    "specifications": {
+      "stages": "RO/UF/UV"
+    }
+  }
+]

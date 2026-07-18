@@ -48,6 +48,31 @@
     ]
   },
   {
+    "id": "water-treatment",
+    "title": "Water Treatment Plants",
+    "subtitle": "Environmental & Process Water Treatment",
+    "description": "Comprehensive industrial water treatment systems engineered for environmental compliance, resource recycling, and high-efficiency purification.",
+    "imageKey": "waterTreatment",
+    "features": [
+      "Modular & scalable plant design",
+      "Regulatory compliance & sustainability",
+      "Resource recovery & low operating costs"
+    ],
+    "applications": [
+      "Effluent & sewage treatment",
+      "Industrial process & recycling",
+      "Zero Liquid Discharge (ZLD)",
+      "Desalination & water softening"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Chemicals & Petrochemicals",
+      "Pharmaceuticals",
+      "Municipalities",
+      "Food & Beverage"
+    ]
+  },
+  {
     "id": "handling",
     "title": "Material Handling Equipment",
     "subtitle": "Efficient Material Transportation",

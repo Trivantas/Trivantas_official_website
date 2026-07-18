@@ -4,6 +4,7 @@ import levelSensorImg from '@/assets/smart-level-sensors-new.jpg';
 import filtrationImg from '@/assets/filtration-main-page.png';
 import spmImg from '@/assets/spm-machine.jpg';
 import materialHandlingImg from '@/assets/material-handling-v3.jpg';
+import stpImg from '@/assets/sewage-treatment-plant.jpg';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -36,6 +37,20 @@ const ProductsSection = () => {
       ],
       industries: ['Water Treatment', 'Pharmaceuticals', 'Food Processing', 'Chemicals'],
       link: '/products#filtration'
+    },
+    {
+      title: 'Water Treatment Plants',
+      description: 'Comprehensive systems for industrial, municipal, and commercial water purification and wastewater treatment.',
+      image: stpImg,
+      imageClassName: 'object-cover',
+      features: [
+        'Modular & custom plant design',
+        'Complete environmental regulatory compliance',
+        'High water recovery and recycling rate',
+        'Robust Construction for continuous operation'
+      ],
+      industries: ['Manufacturing', 'Chemicals', 'Municipalities', 'Food & Beverage'],
+      link: '/products#water-treatment'
     },
     {
       title: 'Material Handling Equipment',

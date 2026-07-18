@@ -37,8 +37,9 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
 
   const productsWithoutImages = [
     "Fine Mesh Oil Filters",
+    "RO & UF System",
+    "Water Filtration System",
     "Mineral Water Filtration Plants",
-    "Wastewater Treatment Plants",
     "Water Purifiers",
     "Reusable Food Oil Filters",
     "High-Temperature Cooking Oil Filtration Units",
