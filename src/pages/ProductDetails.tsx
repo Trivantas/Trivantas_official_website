@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Info, CheckCircle, ArrowRight } from 'lucide-react';
 import ProductDetailModal, { ProductType } from '@/components/ProductDetailModal';
+import { motion } from 'framer-motion';
 import { pageContent } from '@/data/pageContent';
 import sensorsData from '@/data/sensors.json';
 import filtrationData from '@/data/filtration.json';
@@ -63,10 +64,11 @@ import highAccuracyLevelIndicatorImg from '@/assets/high-accuracy-level-indicato
 import centralCoolantImg from '@/assets/central-coolant-filtration.jpeg';
 import mobileFilterImg from '@/assets/mobile-type-filters.jpeg';
 import pressureBedImg from '@/assets/compact-pressure-bed-filters.png';
+import chRoAndUfImg from '@/assets/ChROandUF.png';
+import waterFiltrationTreatmentsImg from '@/assets/waterfiltrationtreatments.png';
+
 const productsWithoutImages = [
   "Fine Mesh Oil Filters",
-  "RO & UF System",
-  "Water Filtration System",
   "Mineral Water Filtration Plants",
   "Water Purifiers",
   "Reusable Food Oil Filters",
@@ -150,6 +152,8 @@ const ProductDetails = () => {
     centralCoolant: centralCoolantImg,
     mobileFilter: mobileFilterImg,
     pressureBed: pressureBedImg,
+    membranePlants: chRoAndUfImg,
+    mineralWater: waterFiltrationTreatmentsImg,
 
     // Defaults/Fallbacks
     electromagneticFlow: electromagneticFlowMeterImg,
@@ -263,7 +267,7 @@ const ProductDetails = () => {
                           image: getProductImage(product)
                         })}
                       >
-                        {category === 'sensors' || (category === 'filtration' && !productsWithoutImages.includes(product.name)) ? (
+                        {category === 'sensors' || category === 'water-treatment' || (category === 'filtration' && !productsWithoutImages.includes(product.name)) ? (
                           <div className="group relative flex flex-col h-full bg-white/40 dark:bg-slate-900/40 backdrop-blur-2xl overflow-hidden rounded-2xl border border-white/60 dark:border-slate-700/50 hover:border-primary/50 dark:hover:border-cyan-500/50 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]">
                             {/* High-Tech Grid Overlay */}
                             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[linear-gradient(rgba(0,0,0,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,1)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
@@ -395,50 +399,48 @@ const ProductDetails = () => {
       )}
 
       {/* Custom Solution / CTA Section */}
-      <section className="py-20 bg-background">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary text-primary-foreground rounded-3xl shadow-2xl p-8 md:p-12 text-center overflow-hidden relative">
-            {/* Decorative background element */}
-            <div className="absolute top-0 left-0 w-full h-full bg-white/5 opacity-30 pointer-events-none">
-              <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-white/10 blur-3xl"></div>
-              <div className="absolute -bottom-24 -left-24 w-64 h-64 rounded-full bg-white/10 blur-3xl"></div>
+      <section className="bg-primary text-primary-foreground py-10 md:py-14 text-center relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              Custom Engineered Solutions
+            </h2>
+            <p className="text-lg md:text-xl text-primary-foreground/90 mb-6 max-w-3xl mx-auto leading-relaxed">
+              {content.customSolutionText}
+            </p>
+            {(content.contactText || "Interested in a custom quote or demo? Contact Trivantas today.") && (
+              <p className="text-base text-primary-foreground/85 mb-6 max-w-2xl mx-auto">
+                {content.contactText || "Interested in a custom quote or demo? Contact Trivantas today."}
+              </p>
+            )}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="shadow-lg hover:shadow-secondary/20 transition-all duration-300"
+                onClick={() => navigate('/contact')}
+              >
+                Get in Touch
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="bg-white/10 border-white/20 text-white hover:bg-white/20 shadow-lg transition-all duration-300"
+                onClick={() => navigate('/schedule')}
+              >
+                Schedule Consultation
+              </Button>
             </div>
-
-            <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Custom Engineered Solutions
-              </h2>
-              <div className="text-xl text-primary-foreground/90 mb-10 leading-relaxed whitespace-pre-line max-w-3xl mx-auto">
-                {content.customSolutionText}
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-10 max-w-2xl mx-auto shadow-inner">
-                <p className="text-lg font-medium mb-0">
-                  {content.contactText || "Interested in a custom quote or demo? Contact Trivantas today."}
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  onClick={() => navigate('/contact')}
-                  className="font-bold shadow-lg hover:shadow-xl transition-all min-w-[160px]"
-                >
-                  Get in Touch
-                </Button>
-                <Button
-                  variant="outline"
-                  onClick={() => navigate('/schedule')}
-                  size="lg"
-                  className="bg-transparent border-white text-white hover:bg-white hover:text-primary transition-all min-w-[160px]"
-                >
-                  Schedule Consultation
-                </Button>
-              </div>
-            </div>
-          </div>
+          </motion.div>
         </div>
+        {/* Decorative background shapes */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32 blur-3xl"></div>
       </section>
 
       {/* Product Detail Modal */}

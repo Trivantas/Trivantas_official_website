@@ -147,12 +147,26 @@ const Contact = () => {
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">Pune Office</h4>
                         <a
+                          href="https://www.google.com/maps/search/?api=1&query=Trivantas,+Kanjane+Nagar,+Ghar+society+Road,+677,+Tal,+Mulshi,+Uravade,+Maharashtra+412115"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                        >
+                          Trivantas, No. 677,<br />Ghar society Road, Tal Mulshi,<br />Uravade, Pune - 412115, Maharashtra
+                        </a>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-1">Pune Office</h4>
+                        <a
                           href="https://www.google.com/maps/search/?api=1&query=Utpal+Classic+Bhukum+Pune+412115"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-muted-foreground hover:text-primary transition-colors"
+                          className="text-muted-foreground hover:text-primary transition-colors text-sm"
                         >
-                          A-002, Utpal Classic, Bhukum,<br /> Pune - 412115
+                          Trivantas, A-002, Utpal Classic, Bhukum,<br /> Pune - 412115
                         </a>
                       </div>
                     </div>
