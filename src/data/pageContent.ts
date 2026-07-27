@@ -223,7 +223,7 @@ export const pageContent: Record<string, PageContent> = {
                     "Roller Type Conveyor",
                     "Spare Parts for Chip Conveyors",
                     "Centralized Chips Conveyor",
-                    "All-Material Chip Handling System"
+                    // "All-Material Chip Handling System"
                 ]
             },
             {

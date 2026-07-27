@@ -52,8 +52,23 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
     "Spare Parts for Filtration Systems (Bags, Paper, Candle, etc.)"
   ];
 
+  const productsWithImages = [
+    "Magnetic Type Chip Conveyor",
+    "Centralized Chip Handling System",
+    "Cooling Conveyors",
+    "Aero-Mechanical Conveyors",
+    "Bucket Elevators / Conveyors",
+    "Gravity Conveyors",
+    "Food Conveyor",
+    "Scraper Type Chip Conveyor",
+    "Slat Type Chip Conveyor",
+    "Screw Type Chip Conveyor",
+    "Pneumatic Conveyors",
+    "Vibrating Conveyors"
+  ];
+
   // Check if we should use the new text-heavy layout (no image)
-  const isTextLayout = category === 'spm' || category === 'handling' || productsWithoutImages.includes(product?.name);
+  const isTextLayout = category === 'spm' || (category === 'handling' && !productsWithImages.includes(product?.name)) || productsWithoutImages.includes(product?.name);
 
   return (
     <Dialog open={!!product} onOpenChange={onClose}>
