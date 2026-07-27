@@ -66,6 +66,17 @@ import mobileFilterImg from '@/assets/mobile-type-filters.jpeg';
 import pressureBedImg from '@/assets/compact-pressure-bed-filters.png';
 import chRoAndUfImg from '@/assets/ChROandUF.png';
 import waterFiltrationTreatmentsImg from '@/assets/waterfiltrationtreatments.png';
+import magneticTypeChipConveyorImg from '@/assets/Magnetic Type Chip Conveyor.jpg';
+import coolingConveyorsImg from '@/assets/Cooling Conveyors.jpg';
+import aeroMechanicalConveyorsImg from '@/assets/Aero-Mechanical Conveyors.jpg';
+import bucketElevatorsConveyorsImg from '@/assets/Bucket Elevators Conveyors.jpg';
+import gravityConveyorsImg from '@/assets/Gravity Conveyors.jpg';
+import foodConveyorImg from '@/assets/Food Conveyor.png';
+import scrapperConveyorImg from '@/assets/SCrapper Conveyor.png';
+import slatTypeChipConveyorImg from '@/assets/Slat Type Chip Conveyor.jpg';
+import screwTypeChipConveyorImg from '@/assets/Screw Type Chip Conveyor.jpg';
+import pneumaticConveyorsImg from '@/assets/Pneumatic Conveyors.jpg';
+import vibratingConveyorsImg from '@/assets/Vibrating Conveyors.jpg';
 
 const productsWithoutImages = [
   "Fine Mesh Oil Filters",
@@ -82,6 +93,21 @@ const productsWithoutImages = [
   "Self-Cleaning Industrial Filters",
   "Reusable Oil & Coolant Filters",
   "Spare Parts for Filtration Systems (Bags, Paper, Candle, etc.)"
+];
+
+const productsWithImages = [
+  "Magnetic Type Chip Conveyor",
+  "Centralized Chip Handling System",
+  "Cooling Conveyors",
+  "Aero-Mechanical Conveyors",
+  "Bucket Elevators / Conveyors",
+  "Gravity Conveyors",
+  "Food Conveyor",
+  "Scraper Type Chip Conveyor",
+  "Slat Type Chip Conveyor",
+  "Screw Type Chip Conveyor",
+  "Pneumatic Conveyors",
+  "Vibrating Conveyors"
 ];
 
 const ProductDetails = () => {
@@ -101,20 +127,20 @@ const ProductDetails = () => {
   const imageMap: Record<string, string> = {
     // Handling
     centralHandling: centralHandlingImg,
-    scraperConveyor: materialHandlingImg, // Fallback/Placeholder
-    slatConveyor: materialHandlingImg,
-    screwConveyor: materialHandlingImg,
-    magneticConveyor: materialHandlingImg,
+    scraperConveyor: scrapperConveyorImg,
+    slatConveyor: slatTypeChipConveyorImg,
+    screwConveyor: screwTypeChipConveyorImg,
+    magneticConveyor: magneticTypeChipConveyorImg,
     rollerConveyor: materialHandlingImg,
     sparePartsConveyor: materialHandlingImg,
     allMaterialHandling: materialHandlingImg,
-    foodConveyor: materialHandlingImg,
-    pneumaticConveyor: materialHandlingImg,
-    vibratingConveyor: materialHandlingImg,
-    bucketElevator: materialHandlingImg,
-    gravityConveyor: materialHandlingImg,
-    aeroConveyor: materialHandlingImg,
-    coolingConveyor: materialHandlingImg,
+    foodConveyor: foodConveyorImg,
+    pneumaticConveyor: pneumaticConveyorsImg,
+    vibratingConveyor: vibratingConveyorsImg,
+    bucketElevator: bucketElevatorsConveyorsImg,
+    gravityConveyor: gravityConveyorsImg,
+    aeroConveyor: aeroMechanicalConveyorsImg,
+    coolingConveyor: coolingConveyorsImg,
     chipShredder: materialHandlingImg,
     briquetter: materialHandlingImg,
     automatedHandling: materialHandlingImg,
@@ -267,7 +293,7 @@ const ProductDetails = () => {
                           image: getProductImage(product)
                         })}
                       >
-                        {category === 'sensors' || category === 'water-treatment' || (category === 'filtration' && !productsWithoutImages.includes(product.name)) ? (
+                        {category === 'sensors' || category === 'water-treatment' || (category === 'filtration' && !productsWithoutImages.includes(product.name)) || (category === 'handling' && productsWithImages.includes(product.name)) ? (
                           <div className="group relative flex flex-col h-full bg-white/40 dark:bg-slate-900/40 backdrop-blur-2xl overflow-hidden rounded-2xl border border-white/60 dark:border-slate-700/50 hover:border-primary/50 dark:hover:border-cyan-500/50 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]">
                             {/* High-Tech Grid Overlay */}
                             <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[linear-gradient(rgba(0,0,0,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,1)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
