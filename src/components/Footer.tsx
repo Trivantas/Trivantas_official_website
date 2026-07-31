@@ -126,21 +126,6 @@ const Footer = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 text-center md:text-left">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
                 <div className="flex flex-col items-center md:items-start">
-                  <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Pune Office</h5>
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=Utpal+Classic+Bhukum+Pune+412115"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-foreground/80 text-sm hover:text-primary transition-colors block text-center md:text-left"
-                  >
-                    Trivantas, A-002, Utpal Classic, Bhukum,<br /> Pune - 412115
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 text-center md:text-left">
-                <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
-                <div className="flex flex-col items-center md:items-start">
                   <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Reg. Address</h5>
                   <a
                     href="https://www.google.com/maps/search/?api=1&query=Trivantas,+01,+Dabhade+Garage,+Parola+Road,+Bhadgaon,+Jalgaon+-+424105"
