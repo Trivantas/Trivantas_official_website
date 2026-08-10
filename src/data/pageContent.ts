@@ -289,6 +289,62 @@ export const pageContent: Record<string, PageContent> = {
             }
         ],
         customSolutionText: "Can’t find exactly what you’re looking for? Trivantas provides tailor-made Special Purpose Machines, built to your exact specifications based on: Your production process & workflow, Required level of automation, Output, speed & cycle time targets, Integration with existing equipment & plant layout",
-        contactText: "Interested in a custom SPM solution? Contact Trivantas today and let’s build the machine that fits your needs perfectly."
+    },
+    "lubrication-systems": {
+        id: "lubrication-systems",
+        title: "Lubrication Systems",
+        subtitle: "Precision Lubrication & Fluid Management Solutions",
+        introPrefix: "Wherever reliable lubrication is critical to prevent machine wear and downtime, Trivantas delivers.",
+        description: "Our lubrication systems, pumps, and components are built to ensure consistent oil or grease delivery to all friction points, protecting your machinery and increasing its operational lifetime.",
+        whyChooseTitle: "Why Trivantas Lubrication Systems?",
+        whyChoosePoints: [
+            "Comprehensive range covering oil, grease, motorised, and manual systems",
+            "High pressure capability and precise volumetric dosing",
+            "Rugged components designed for harsh industrial environments",
+            "Real-time monitoring options with timers and controllers",
+            "Custom manifolds and tube routing designs"
+        ],
+        productGroups: [
+            {
+                title: "Lubrication Systems",
+                description: "Automated, motorised, and manual systems for oil, grease, and air-mist distribution.",
+                items: [
+                    "Oil Lubrication Systems",
+                    "Grease Lubrication Systems",
+                    "Motorised Lubrication Systems",
+                    "Pneumatic Lubrication Systems",
+                    "Air & Oil Mist Lubrication Systems",
+                    "Battery Operated Lubricators"
+                ]
+            },
+            {
+                title: "Lubrication Pumps",
+                description: "Pumps ranging from hand-operated piston devices to electric and pneumatic high-pressure equipment.",
+                items: [
+                    "Hand Operated Piston Oil Pumps",
+                    "Manual Grease Pumps",
+                    "Rotary Pumps",
+                    "Multiline Radial Lubricators",
+                    "Pneumatic Grease Pumps",
+                    "Miniature Electric Grease Pumps"
+                ]
+            },
+            {
+                title: "Lubrication Components",
+                description: "Essential components including controllers, injectors, progressive distributor blocks, and fittings.",
+                items: [
+                    "Electronic Timers & Controllers",
+                    "Metering Cartridges",
+                    "Metering Injectors",
+                    "Progressive Distributor Blocks",
+                    "Manifolds",
+                    "Hoses & Tubes",
+                    "Fittings",
+                    "Spares"
+                ]
+            }
+        ],
+        customSolutionText: "Need a customized lubrication layout or custom manifold configurations? Trivantas provides custom system design, tube selection, and component engineering tailored to your machinery's specific points and duty cycle.",
+        contactText: "Interested in a customized lubrication solution? Contact Trivantas today to consult with our lubrication engineers."
     }
 };

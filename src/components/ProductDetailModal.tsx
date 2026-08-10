@@ -68,7 +68,7 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
   ];
 
   // Check if we should use the new text-heavy layout (no image)
-  const isTextLayout = category === 'spm' || (category === 'handling' && !productsWithImages.includes(product?.name)) || productsWithoutImages.includes(product?.name);
+  const isTextLayout = category === 'spm' || category === 'lubrication-systems' || (category === 'handling' && !productsWithImages.includes(product?.name)) || productsWithoutImages.includes(product?.name);
 
   return (
     <Dialog open={!!product} onOpenChange={onClose}>

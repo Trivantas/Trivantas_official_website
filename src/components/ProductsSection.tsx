@@ -5,6 +5,7 @@ import filtrationImg from '@/assets/filtration-main-page.png';
 import spmImg from '@/assets/spm-machine.jpg';
 import materialHandlingImg from '@/assets/material-handling-v3.jpg';
 import stpImg from '@/assets/sewage-treatment-plant.jpg';
+import lubricationImg from '@/assets/lubrication-system.png';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -64,6 +65,19 @@ const ProductsSection = () => {
       ],
       industries: ['Warehousing', 'Manufacturing', 'Mining', 'Construction'],
       link: '/products#handling'
+    },
+    {
+      title: 'Lubrication Systems',
+      description: 'Precision lubrication systems, high-pressure pumps, and components designed for machine protection, downtime prevention, and operational longevity.',
+      image: lubricationImg,
+      features: [
+        'Automated & manual systems',
+        'Precise volumetric metering',
+        'Timers & controllers monitoring',
+        'Rugged industrial build'
+      ],
+      industries: ['Manufacturing', 'Automotive', 'Steel & Metal', 'Cement & Mining'],
+      link: '/products#lubrication-systems'
     },
     {
       title: 'SPM (Special Purpose Machines)',
