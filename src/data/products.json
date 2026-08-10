@@ -95,6 +95,31 @@
     ]
   },
   {
+    "id": "lubrication-systems",
+    "title": "Lubrication Systems",
+    "subtitle": "Precision Lubrication & Fluid Management",
+    "description": "High-performance automated, motorised, and manual lubrication systems, pumps, and components designed for machine protection and longevity.",
+    "imageKey": "lubrication",
+    "features": [
+      "Automated, motorised & manual systems",
+      "High reliability pumps & progressive blocks",
+      "Precise volumetric fluid metering"
+    ],
+    "applications": [
+      "Machine tool lubrication",
+      "Industrial manufacturing plant machinery",
+      "Heavy-duty gears & bearings",
+      "Chassis & conveyor systems"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Automotive",
+      "Steel & Metal",
+      "Cement & Mining",
+      "Food & Beverage"
+    ]
+  },
+  {
     "id": "spm",
     "title": "SPM (Special Purpose Machines)",
     "subtitle": "Custom Engineering Solutions",

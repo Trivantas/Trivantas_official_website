@@ -1,0 +1,622 @@
+[
+  {
+    "id": "oil-lubrication-systems",
+    "categoryLabel": "Lubrication Systems",
+    "name": "Oil Lubrication Systems",
+    "capacity": "0.5 to 20 Liters reservoir",
+    "efficiency": "Continuous oil film protection",
+    "features": [
+      "Consistent oil film delivery for friction reduction",
+      "Adjustable flow rates for varying machine speeds",
+      "Integrated level sensors for low fluid alerts",
+      "Transparent reservoir for easy level monitoring",
+      "Low power consumption operations"
+    ],
+    "icons": [
+      "🛢️"
+    ],
+    "imageKey": "oilLubrication",
+    "type": "Systems",
+    "range": "Up to 50 bar pressure",
+    "accuracy": "Precise metering per cycle",
+    "applications": [
+      "Machine tools",
+      "Textile machinery",
+      "Printing presses",
+      "Light duty industrial conveyors"
+    ],
+    "specifications": {
+      "lubricant": "Oil (viscosity 32 to 220 cSt)",
+      "operatingVoltage": "220V AC / 24V DC"
+    }
+  },
+  {
+    "id": "grease-lubrication-systems",
+    "categoryLabel": "Lubrication Systems",
+    "name": "Grease Lubrication Systems",
+    "capacity": "1 kg to 10 kg reservoir",
+    "efficiency": "High load protection & sealing",
+    "features": [
+      "Designed for high load and low speed bearings",
+      "Excellent sealing property to prevent contamination",
+      "Automatic or manual grease discharge options",
+      "Rugged metal reservoirs for harsh environments",
+      "High reliability under vibrations"
+    ],
+    "icons": [
+      "🧈"
+    ],
+    "imageKey": "greaseLubrication",
+    "type": "Systems",
+    "range": "Up to 150 bar pressure",
+    "accuracy": "Uniform grease distribution",
+    "applications": [
+      "Steel rolling mills",
+      "Cement plants",
+      "Heavy duty conveyor bearings",
+      "Construction machinery"
+    ],
+    "specifications": {
+      "lubricant": "Grease (NLGI class 000 to 2)",
+      "pumpType": "Piston Pump"
+    }
+  },
+  {
+    "id": "motorised-lubrication-systems",
+    "categoryLabel": "Lubrication Systems",
+    "name": "Motorised Lubrication Systems",
+    "capacity": "2 to 10 Liters",
+    "efficiency": "Fully automated cyclic lubrication",
+    "features": [
+      "Electric motor driven piston or gear pump",
+      "Configurable cycle times via built-in controllers",
+      "Dual line systems for larger installations",
+      "High pressure safety relief valves",
+      "Visual pressure gauges and indicators"
+    ],
+    "icons": [
+      "⚡"
+    ],
+    "imageKey": "motorisedLubrication",
+    "type": "Systems",
+    "range": "Up to 120 bar pressure",
+    "accuracy": "Microprocessor controlled accuracy",
+    "applications": [
+      "CNC machining centers",
+      "Injection molding machines",
+      "Packaging systems",
+      "Automotive assembly lines"
+    ],
+    "specifications": {
+      "motorPower": "0.1 kW to 0.5 kW",
+      "controlType": "PLC / Microcontroller"
+    }
+  },
+  {
+    "id": "pneumatic-lubrication-systems",
+    "categoryLabel": "Lubrication Systems",
+    "name": "Pneumatic Lubrication Systems",
+    "capacity": "0.5 to 5 Liters",
+    "efficiency": "Air-pressure driven lubrication",
+    "features": [
+      "Driven by shop compressed air supplies",
+      "Explosion-proof operation (no electrical sparks)",
+      "Synchronized with pneumatic machine cycles",
+      "Adjustable air pressure regulator",
+      "Compact design for local machine mounting"
+    ],
+    "icons": [
+      "💨"
+    ],
+    "imageKey": "pneumaticLubrication",
+    "type": "Systems",
+    "range": "4 to 8 bar air supply",
+    "accuracy": "Pulsed discharge synchronization",
+    "applications": [
+      "Pneumatic presses",
+      "Automated assembly stations",
+      "Mining drills",
+      "Hazardous chemical areas"
+    ],
+    "specifications": {
+      "airInlet": "1/4\" BSP",
+      "dischargeVolume": "0.1 to 1.5 cc per stroke"
+    }
+  },
+  {
+    "id": "air-oil-mist-lubrication-systems",
+    "categoryLabel": "Lubrication Systems",
+    "name": "Air & Oil Mist Lubrication Systems",
+    "capacity": "1 to 5 Liters",
+    "efficiency": "Ultra-fine continuous mist delivery",
+    "features": [
+      "Mixes compressed air and oil for fine mist output",
+      "Excellent cooling effect for high-speed bearings",
+      "Maintains positive pressure to keep out dust",
+      "Significant oil consumption reduction",
+      "Continuous monitoring of mist density"
+    ],
+    "icons": [
+      "🌫️"
+    ],
+    "imageKey": "airOilMist",
+    "type": "Systems",
+    "range": "High speed spindle coverage",
+    "accuracy": "Precise air-oil ratio regulation",
+    "applications": [
+      "High speed CNC spindles",
+      "Chain drives",
+      "Rolling mills",
+      "Gearboxes in hot environments"
+    ],
+    "specifications": {
+      "airConsumption": "50 to 200 Nl/min",
+      "noOfOutlets": "1 to 8 outlets"
+    }
+  },
+  {
+    "id": "battery-operated-lubricators",
+    "categoryLabel": "Lubrication Systems",
+    "name": "Battery Operated Lubricators",
+    "capacity": "120 cc to 500 cc",
+    "efficiency": "Standalone autonomous lubrication",
+    "features": [
+      "Completely wireless battery-powered operation",
+      "LCD display for runtime and level indicator",
+      "Remote mounting capability (up to 5 meters)",
+      "Replaceable lubricant cartridges",
+      "IP65 weather-proof rating"
+    ],
+    "icons": [
+      "🔋"
+    ],
+    "imageKey": "batteryLubricator",
+    "type": "Systems",
+    "range": "Up to 24 months operation per cell",
+    "accuracy": "Set discharge from 1 to 12 months",
+    "applications": [
+      "Wind turbines",
+      "Elevators & escalators",
+      "Remote water pumps",
+      "Exhaust fans & blowers"
+    ],
+    "specifications": {
+      "batteryType": "AA Lithium / Alkaline cells",
+      "maxPressure": "20 bar"
+    }
+  },
+  {
+    "id": "hand-operated-piston-oil-pumps",
+    "categoryLabel": "Lubrication Pumps",
+    "name": "Hand Operated Piston Oil Pumps",
+    "capacity": "0.3 to 1.0 Liter",
+    "efficiency": "Simple manual operation",
+    "features": [
+      "Easy handle pull operation",
+      "Spring-return piston stroke mechanism",
+      "Robust cast iron / steel housing",
+      "Built-in check valve to prevent backflow",
+      "Compact size fits into small spaces"
+    ],
+    "icons": [
+      "🔧"
+    ],
+    "imageKey": "handPistonPump",
+    "type": "Pumps",
+    "range": "Up to 15 bar pressure",
+    "accuracy": "Manual stroke control",
+    "applications": [
+      "Small lathes & milling machines",
+      "Punching machines",
+      "Woodworking machinery",
+      "Manual test benches"
+    ],
+    "specifications": {
+      "dischargeQuantity": "6 cc to 8 cc per stroke",
+      "outletConnection": "Ø4 mm or Ø6 mm tube"
+    }
+  },
+  {
+    "id": "manual-grease-pumps",
+    "categoryLabel": "Lubrication Pumps",
+    "name": "Manual Grease Pumps",
+    "capacity": "0.5 kg to 2.0 kg",
+    "efficiency": "High-pressure manual greasing",
+    "features": [
+      "Lever-operated high pressure discharge",
+      "Follower plate to assist grease suction",
+      "Rugged metal construction",
+      "Air vent valve to release air locks",
+      "Ergonomic handle grip"
+    ],
+    "icons": [
+      "💪"
+    ],
+    "imageKey": "manualGreasePump",
+    "type": "Pumps",
+    "range": "Up to 100 bar pressure",
+    "accuracy": "Consistent manual dosing",
+    "applications": [
+      "Agricultural equipment",
+      "Small workshop machinery",
+      "Pillow block bearings",
+      "Chassis lubrication points"
+    ],
+    "specifications": {
+      "lubricantSupport": "Grease up to NLGI 2",
+      "dischargeStroke": "2 cc per stroke"
+    }
+  },
+  {
+    "id": "rotary-pumps",
+    "categoryLabel": "Lubrication Pumps",
+    "name": "Rotary Pumps",
+    "capacity": "Continuous output",
+    "efficiency": "High volume continuous flow",
+    "features": [
+      "Reversible rotation option (bi-directional flow)",
+      "Quiet operations with minimal pulsations",
+      "Self-priming gear design",
+      "Hardened steel gears for long service life",
+      "Compact and direct motor-mountable"
+    ],
+    "icons": [
+      "🔄"
+    ],
+    "imageKey": "rotaryPump",
+    "type": "Pumps",
+    "range": "Flow rates up to 50 LPM",
+    "accuracy": "Volumetric continuous flow",
+    "applications": [
+      "Gearbox lubrication circuits",
+      "Coolant circulation",
+      "Hydraulic power packs",
+      "Fuel transfer systems"
+    ],
+    "specifications": {
+      "portSizes": "3/8\" to 1\" BSP",
+      "pressureRating": "Up to 25 bar"
+    }
+  },
+  {
+    "id": "multiline-radial-lubricators",
+    "categoryLabel": "Lubrication Pumps",
+    "name": "Multiline Radial Lubricators",
+    "capacity": "2 to 15 Liters",
+    "efficiency": "Simultaneous multi-point greasing",
+    "features": [
+      "Up to 24 independent outlets",
+      "Individually adjustable pumping elements",
+      "Driven by gear motor or machine shaft",
+      "Heavy duty stirrers in grease reservoir",
+      "High reliability for safety-critical bearings"
+    ],
+    "icons": [
+      "🔆"
+    ],
+    "imageKey": "radialLubricator",
+    "type": "Pumps",
+    "range": "Up to 400 bar working pressure",
+    "accuracy": "Independent point metering accuracy",
+    "applications": [
+      "Sugar mills",
+      "Cement kilns",
+      "Hydro power plants",
+      "Large industrial crushers"
+    ],
+    "specifications": {
+      "outletsCount": "6, 12, 18, or 24",
+      "driveRatio": "Various gear ratios available"
+    }
+  },
+  {
+    "id": "pneumatic-grease-pumps",
+    "categoryLabel": "Lubrication Pumps",
+    "name": "Pneumatic Grease Pumps",
+    "capacity": "10 kg to 180 kg drum fit",
+    "efficiency": "Effortless high-volume grease delivery",
+    "features": [
+      "Pneumatically operated piston pump",
+      "High pressure ratio (e.g. 50:1) for stiff grease",
+      "Ideal for bulk filling or direct line feeding",
+      "Supplied with air regulator and filter",
+      "Trolley mount options for easy mobility"
+    ],
+    "icons": [
+      "🛢️"
+    ],
+    "imageKey": "pneumaticGreasePump",
+    "type": "Pumps",
+    "range": "Up to 400 bar grease output",
+    "accuracy": "Continuous pressure maintenance",
+    "applications": [
+      "Automotive service stations",
+      "Heavy equipment maintenance yards",
+      "Centralized dual-line systems",
+      "Mining workshops"
+    ],
+    "specifications": {
+      "pressureRatio": "50:1 (others on request)",
+      "airInletPressure": "3 to 8 bar"
+    }
+  },
+  {
+    "id": "miniature-electric-grease-pumps",
+    "categoryLabel": "Lubrication Pumps",
+    "name": "Miniature Electric Grease Pumps",
+    "capacity": "1 to 2 Liters",
+    "efficiency": "Compact motorized grease dosing",
+    "features": [
+      "Ultra-compact footprint for tight machine frames",
+      "Low power 24V DC motor",
+      "Integrated timer/controller option",
+      "Durable transparent plastic reservoir",
+      "Built-in low level switches"
+    ],
+    "icons": [
+      "🔋"
+    ],
+    "imageKey": "miniElectricPump",
+    "type": "Pumps",
+    "range": "Up to 70 bar pressure",
+    "accuracy": "Repeatable small doses",
+    "applications": [
+      "Packaging machinery",
+      "Woodworking equipment",
+      "Automatic doors & lifts",
+      "Wind turbine pitch bearings"
+    ],
+    "specifications": {
+      "powerSupply": "24V DC",
+      "reservoirMaterial": "Polycarbonate"
+    }
+  },
+  {
+    "id": "electronic-timers-controllers",
+    "categoryLabel": "Lubrication Components",
+    "name": "Electronic Timers & Controllers",
+    "capacity": "Configurable",
+    "efficiency": "Precise lubrication timing control",
+    "features": [
+      "Programmable work and pause times",
+      "LED digital display for simple status reading",
+      "Inputs for pressure switch and level sensor monitoring",
+      "DIN-rail or panel mount configurations",
+      "Memory retention during power failure"
+    ],
+    "icons": [
+      "⏱️"
+    ],
+    "imageKey": "electronicTimer",
+    "type": "Components",
+    "range": "Seconds to hours settings",
+    "accuracy": "Microsecond clock precision",
+    "applications": [
+      "Lube pump cycle control",
+      "Retrofitting older machinery",
+      "System fault warning sirens",
+      "Test rigs"
+    ],
+    "specifications": {
+      "inputSignal": "Pressure, Flow, level",
+      "supplyVoltage": "110V/220V AC or 24V DC"
+    }
+  },
+  {
+    "id": "metering-cartridges",
+    "categoryLabel": "Lubrication Components",
+    "name": "Metering Cartridges",
+    "capacity": "0.01 cc to 1.5 cc per port",
+    "efficiency": "Accurate oil/grease distribution",
+    "features": [
+      "Precise volumetric output independent of viscosity",
+      "Visual indicator pins for operation checks",
+      "Easy replacement/upgrade of dosing capacity",
+      "High reliability and long lifecycle",
+      "Suitable for progressive or single-line injectors"
+    ],
+    "icons": [
+      "🧪"
+    ],
+    "imageKey": "meteringCartridge",
+    "type": "Components",
+    "range": "Wide range of dosage sizes",
+    "accuracy": "±5% dose consistency",
+    "applications": [
+      "Single-line resistive systems",
+      "Direct piston distributor blocks",
+      "Small machine slide-ways",
+      "Textile loom lubrication"
+    ],
+    "specifications": {
+      "material": "Brass / Nickel-plated steel",
+      "maxPressure": "45 bar"
+    }
+  },
+  {
+    "id": "metering-injectors",
+    "categoryLabel": "Lubrication Components",
+    "name": "Metering Injectors",
+    "capacity": "0.1 cc to 3.0 cc per stroke",
+    "efficiency": "High-pressure positive displacement",
+    "features": [
+      "Operates under single-line parallel systems",
+      "Adjustable output options on individual injectors",
+      "Indicator pin for immediate visual inspection",
+      "Manifold-mountable for easy service",
+      "Hardened steel piston for wear resistance"
+    ],
+    "icons": [
+      "💉"
+    ],
+    "imageKey": "meteringInjector",
+    "type": "Components",
+    "range": "Up to 100 bar pressure",
+    "accuracy": "Positive displacement accuracy",
+    "applications": [
+      "Paper mills",
+      "Automotive chassis lubrication",
+      "Heavy metal stamping presses",
+      "Cranes & hoists"
+    ],
+    "specifications": {
+      "inletThread": "1/8\" to 3/8\" NPT/BSP",
+      "outletThread": "M10x1 or tube fit"
+    }
+  },
+  {
+    "id": "progressive-distributor-blocks",
+    "categoryLabel": "Lubrication Components",
+    "name": "Progressive Distributor Blocks",
+    "capacity": "Up to 20 outlets",
+    "efficiency": "Sequential lubrication guarantee",
+    "features": [
+      "Ensures every point receives lubrication in sequence",
+      "Blockage at one point halts system for easy detection",
+      "Monitored electrically using proximity sensors",
+      "Corrosion resistant coating",
+      "Flexible sizing options"
+    ],
+    "icons": [
+      "🧱"
+    ],
+    "imageKey": "distributorBlock",
+    "type": "Components",
+    "range": "Operating pressure up to 300 bar",
+    "accuracy": "Volumetric splitting",
+    "applications": [
+      "Robotic arms",
+      "Construction equipment",
+      "Bottling & canning plants",
+      "Offshore wind turbines"
+    ],
+    "specifications": {
+      "material": "High tensile steel / Stainless steel",
+      "inletPort": "1/4\" BSP"
+    }
+  },
+  {
+    "id": "manifolds",
+    "categoryLabel": "Lubrication Components",
+    "name": "Manifolds",
+    "capacity": "2 to 12 stations",
+    "efficiency": "Centralized fluid distribution",
+    "features": [
+      "Streamlines multiple line connections",
+      "Anodized aluminum or steel construction",
+      "Pre-drilled mounting holes for easy installation",
+      "Leak-proof threaded ports",
+      "Saves space and reduces piping complexity"
+    ],
+    "icons": [
+      "🪵"
+    ],
+    "imageKey": "manifold",
+    "type": "Components",
+    "range": "Universal port configurations",
+    "accuracy": "Uniform pressure distribution",
+    "applications": [
+      "Lubrication panel builds",
+      "Pneumatic distribution",
+      "Oil manifolds",
+      "Grease line splitting"
+    ],
+    "specifications": {
+      "materialOptions": "Aluminum, Carbon Steel, Stainless Steel",
+      "operatingPressure": "Up to 350 bar"
+    }
+  },
+  {
+    "id": "hoses-tubes",
+    "categoryLabel": "Lubrication Components",
+    "name": "Hoses & Tubes",
+    "capacity": "High pressure options",
+    "efficiency": "Flexible & reliable fluid transport",
+    "features": [
+      "Available in Nylon, Copper, and Steel",
+      "High burst pressure rating for grease lines",
+      "Excellent UV and chemical resistance",
+      "Flexible high pressure hoses for moving parts",
+      "Pre-filled grease hose options available"
+    ],
+    "icons": [
+      "➰"
+    ],
+    "imageKey": "hosesTubes",
+    "type": "Components",
+    "range": "Ø4 mm to Ø12 mm diameters",
+    "accuracy": "No volumetric expansion under pressure",
+    "applications": [
+      "Moving joints & linkages",
+      "Main lubrication lines",
+      "High temperature zones",
+      "Heavy duty outdoor machines"
+    ],
+    "specifications": {
+      "operatingTemperature": "-40°C to +100°C",
+      "burstPressure": "Up to 800 bar (for steel-braided hoses)"
+    }
+  },
+  {
+    "id": "fittings",
+    "categoryLabel": "Lubrication Components",
+    "name": "Fittings",
+    "capacity": "Standard sizes",
+    "efficiency": "Leak-proof connections",
+    "features": [
+      "Wide variety: elbows, tees, unions, connectors",
+      "Push-in style or compression sleeve style fittings",
+      "High thread quality for positive sealing",
+      "Zinc-plated steel or brass materials",
+      "Vibration-resistant locking designs"
+    ],
+    "icons": [
+      "🔩"
+    ],
+    "imageKey": "fittings",
+    "type": "Components",
+    "range": "Metric & Imperial threads",
+    "accuracy": "Zero leak connections",
+    "applications": [
+      "Hose connections",
+      "Distributor block ports",
+      "Pump outlets",
+      "Bearing inlets"
+    ],
+    "specifications": {
+      "threads": "M8, M10, R1/8, R1/4, NPT, BSP",
+      "material": "Brass / Steel / Stainless steel"
+    }
+  },
+  {
+    "id": "spares",
+    "categoryLabel": "Lubrication Components",
+    "name": "Spares",
+    "capacity": "N/A",
+    "efficiency": "OEM quality parts replacement",
+    "features": [
+      "Includes replacement filters, o-rings, and seals",
+      "Pressure switches and level indicator units",
+      "Drive chains, gear wheels, and motor brushes",
+      "Easy maintenance kits for all pump models",
+      "Extends life of existing lubrication assets"
+    ],
+    "icons": [
+      "⚙️"
+    ],
+    "imageKey": "spares",
+    "type": "Components",
+    "range": "Various kits",
+    "accuracy": "Perfect compatibility match",
+    "applications": [
+      "Routine system maintenance",
+      "Emergency repairs",
+      "Upgrading old systems",
+      "Inventory parts stocking"
+    ],
+    "specifications": {
+      "certification": "OEM Standards",
+      "compatibility": "All Trivantas Lubrication Systems"
+    }
+  }
+]

@@ -57,6 +57,15 @@ const Navigation = () => {
       ]
     },
     {
+      title: 'Lubrication Systems',
+      id: 'lubrication-systems',
+      items: [
+        { name: 'Lubrication Systems', href: '/products/lubrication-systems#group-0' },
+        { name: 'Lubrication Pumps', href: '/products/lubrication-systems#group-1' },
+        { name: 'Lubrication Components', href: '/products/lubrication-systems#group-2' },
+      ]
+    },
+    {
       title: 'SPM Solutions',
       id: 'spm',
       items: [
@@ -116,8 +125,8 @@ const Navigation = () => {
                     </Link>
 
                     {/* Mega Menu Dropdown */}
-                    <div className={`absolute left-1/2 -translate-x-1/2 mt-0 w-[1000px] rounded-xl bg-background border border-border shadow-2xl transform transition-all duration-300 origin-top overflow-hidden ${isProductsOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'}`}>
-                      <div className="grid grid-cols-5 gap-6 p-8 bg-card">
+                    <div className={`absolute left-1/2 -translate-x-1/2 mt-0 w-[1200px] rounded-xl bg-background border border-border shadow-2xl transform transition-all duration-300 origin-top overflow-hidden ${isProductsOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'}`}>
+                      <div className="grid grid-cols-6 gap-6 p-8 bg-card">
                         {productMegaMenu.map((category) => (
                           <div key={category.title} className="space-y-4">
                             <Link

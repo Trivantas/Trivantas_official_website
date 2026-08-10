@@ -12,6 +12,8 @@ import filtrationData from '@/data/filtration.json';
 import handlingData from '@/data/handling.json';
 import spmData from '@/data/spm.json';
 import waterTreatmentData from '@/data/water-treatment.json';
+import lubricationData from '@/data/lubrication.json';
+
 
 // Import images
 import levelSensorImg from '@/assets/smart-level-sensors-new.jpg';
@@ -56,6 +58,8 @@ import rfAdmittanceLevelSwitchImg from '@/assets/rf-admittance-level-switch.png'
 import zldImg from '@/assets/ZLD.jpeg';
 import stpImg from '@/assets/sewage-treatment-plant.jpg';
 import etpImg from '@/assets/effluent-treatment-plants.jpeg';
+import lubricationImg from '@/assets/lubrication-system.png';
+
 import desalinationImg from '@/assets/desalination.jpeg';
 import sumpCleanerImg from '@/assets/sump-cleaner.jpeg';
 import magBandFilterImg from '@/assets/Mag Band Filter.png';
@@ -120,7 +124,8 @@ const ProductDetails = () => {
     filtration: filtrationData as ProductType[],
     spm: spmData as ProductType[],
     handling: handlingData as ProductType[],
-    "water-treatment": waterTreatmentData as ProductType[]
+    "water-treatment": waterTreatmentData as ProductType[],
+    "lubrication-systems": lubricationData as ProductType[]
   };
 
   // Image mapping for specific products
@@ -191,6 +196,7 @@ const ProductDetails = () => {
     microwaveRadarSolid: radarSolidLevelSensorImg,
     miniSensor: miniSensorImg,
     tiltSwitch: tiltSwitchImg,
+    lubrication: lubricationImg,
     default: levelSensorImg
   };
 
@@ -227,6 +233,7 @@ const ProductDetails = () => {
     if (category === 'filtration') return filtrationImg;
     if (category === 'spm') return spmImg;
     if (category === 'water-treatment') return stpImg;
+    if (category === 'lubrication-systems') return lubricationImg;
     return levelSensorImg;
   };
 

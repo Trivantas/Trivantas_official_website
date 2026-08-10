@@ -91,6 +91,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/products#lubrication-systems" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                  Lubrication Systems
+                </Link>
+              </li>
+              <li>
                 <Link to="/products#spm" className="text-primary-foreground/80 hover:text-primary transition-colors">
                   SPM Machines
                 </Link>
