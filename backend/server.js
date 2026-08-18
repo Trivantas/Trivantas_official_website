@@ -46,16 +46,17 @@ const seedAdminUser = async () => {
     }
 
     const existingAdmin = await Admin.findOne({ email: adminEmail.toLowerCase().trim() });
-    if (!existingAdmin) {
-      const hashedPassword = await bcrypt.hash(adminPassword, 10);
-      await Admin.create({
-        email: adminEmail.toLowerCase().trim(),
-        password: hashedPassword,
-      });
-      console.log(`[SEED] Created default admin user: ${adminEmail}`);
-    } else {
-      console.log(`[SEED] Admin user already exists: ${adminEmail}`);
+    if (existingAdmin) {
+      await Admin.deleteOne({ email: adminEmail.toLowerCase().trim() });
+      console.log(`[SEED] Deleted existing admin user to reset credentials: ${adminEmail}`);
     }
+
+    const hashedPassword = await bcrypt.hash(adminPassword, 10);
+    await Admin.create({
+      email: adminEmail.toLowerCase().trim(),
+      password: hashedPassword,
+    });
+    console.log(`[SEED] Created default admin user: ${adminEmail}`);
   } catch (error) {
     console.error('[SEED] Error seeding admin user:', error);
   }

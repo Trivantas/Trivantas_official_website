@@ -209,15 +209,15 @@ export default function CustomerChatbot() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end font-sans">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end font-sans">
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 50, scale: 0.9 }}
+            exit={{ opacity: 0, y: 50, scale: 0.95 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="mb-4 w-[360px] sm:w-[400px] h-[550px] bg-card text-card-foreground rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden"
+            className="fixed inset-0 sm:inset-auto sm:absolute sm:bottom-20 sm:right-0 z-50 w-full h-full sm:w-[400px] sm:h-[550px] bg-card text-card-foreground sm:rounded-2xl shadow-2xl border-0 sm:border border-border flex flex-col overflow-hidden"
           >
             {/* Header */}
             <div className="p-4 bg-gradient-hero text-white flex items-center justify-between">
@@ -232,7 +232,7 @@ export default function CustomerChatbot() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-white hover:text-white/85 transition-colors p-1 rounded-full hover:bg-white/10"
+                className="text-white hover:text-white/85 transition-colors p-2 -mr-2 rounded-full hover:bg-white/10"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -259,7 +259,7 @@ export default function CustomerChatbot() {
               
               {/* Product Options Step */}
               {step === 4 && (
-                <div className="grid grid-cols-2 gap-2 mt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
                   {productsData.map((prod) => (
                     <button
                       key={prod.id}
@@ -321,7 +321,7 @@ export default function CustomerChatbot() {
                         setName(e.target.value);
                         if (errorMsg) setErrorMsg('');
                       }}
-                      className="flex-grow rounded-xl bg-muted/40 border-border text-sm h-10"
+                      className="flex-grow rounded-xl bg-muted/40 border-border text-base sm:text-sm h-10"
                       autoFocus
                     />
                     <Button type="submit" size="icon" className="rounded-xl h-10 w-10 shrink-0">
@@ -340,7 +340,7 @@ export default function CustomerChatbot() {
                         setEmail(e.target.value);
                         if (errorMsg) setErrorMsg('');
                       }}
-                      className="flex-grow rounded-xl bg-muted/40 border-border text-sm h-10"
+                      className="flex-grow rounded-xl bg-muted/40 border-border text-base sm:text-sm h-10"
                       autoFocus
                     />
                     <Button type="submit" size="icon" className="rounded-xl h-10 w-10 shrink-0">
@@ -359,7 +359,7 @@ export default function CustomerChatbot() {
                         setPhone(e.target.value);
                         if (errorMsg) setErrorMsg('');
                       }}
-                      className="flex-grow rounded-xl bg-muted/40 border-border text-sm h-10"
+                      className="flex-grow rounded-xl bg-muted/40 border-border text-base sm:text-sm h-10"
                       autoFocus
                     />
                     <Button type="submit" size="icon" className="rounded-xl h-10 w-10 shrink-0">
@@ -377,7 +377,7 @@ export default function CustomerChatbot() {
                         setMessageText(e.target.value);
                         if (errorMsg) setErrorMsg('');
                       }}
-                      className="rounded-xl bg-muted/40 border-border text-sm resize-none min-h-[60px]"
+                      className="rounded-xl bg-muted/40 border-border text-base sm:text-sm resize-none min-h-[60px]"
                       autoFocus
                     />
                     <Button
@@ -412,7 +412,9 @@ export default function CustomerChatbot() {
           }
           setIsOpen(!isOpen);
         }}
-        className="w-14 h-14 bg-primary hover:bg-primary-hover text-white rounded-full flex items-center justify-center shadow-lg transition-colors"
+        className={`w-14 h-14 bg-primary hover:bg-primary-hover text-white rounded-full items-center justify-center shadow-lg transition-colors ${
+          isOpen ? 'hidden sm:flex' : 'flex'
+        }`}
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
