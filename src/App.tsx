@@ -15,6 +15,9 @@ import Blogs from "./pages/Blogs";
 import Flipbook from "./pages/Flipbook";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
+import CustomerChatbot from "./components/CustomerChatbot";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const queryClient = new QueryClient();
 
@@ -37,12 +40,15 @@ const App = () => (
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/schedule" element={<Schedule />} />
               <Route path="/flipbook" element={<Flipbook />} />
+              <Route path="/admin/login" element={<AdminLogin />} />
+              <Route path="/admin" element={<AdminDashboard />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />
         </div>
+        <CustomerChatbot />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
