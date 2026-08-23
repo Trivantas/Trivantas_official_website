@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-secondary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          
+
           {/* Company Info */}
           <div className="lg:col-span-1 text-center md:text-left flex flex-col items-center md:items-start">
             <div className="mb-4 flex items-center justify-center md:justify-start space-x-2">
@@ -35,8 +35,8 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  to="/" 
+                <Link
+                  to="/"
                   className="text-primary-foreground/80 hover:text-primary transition-colors"
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
@@ -112,18 +112,18 @@ const Footer = () => {
           <div className="text-center md:text-left flex flex-col items-center md:items-start">
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-4 w-full flex flex-col items-center md:items-start">
-              
+
               <div className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 text-center md:text-left">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
                 <div className="flex flex-col items-center md:items-start">
-                  <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Pune Office</h5>
+                  <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Pune Plant</h5>
                   <a
                     href="https://www.google.com/maps/search/?api=1&query=Trivantas,+Kanjane+Nagar,+Ghar+society+Road,+677,+Tal,+Mulshi,+Uravade,+Maharashtra+412115"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary-foreground/80 text-sm hover:text-primary transition-colors block text-center md:text-left"
                   >
-                    Trivantas, Kanjane Nagar,<br />Ghar society Road, 677, Tal, Mulshi,<br />Uravade, Maharashtra 412115
+                    Trivantas, 677, Kanjane Nagar,<br />Ghar society Road, Tal, Mulshi,<br />Uravade, Maharashtra 412115
                   </a>
                 </div>
               </div>
