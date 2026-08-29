@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Info, CheckCircle, ArrowRight } from 'lucide-react';
+import { ArrowLeft, Info, CheckCircle, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import ProductDetailModal, { ProductType } from '@/components/ProductDetailModal';
 import { motion } from 'framer-motion';
 import { pageContent } from '@/data/pageContent';
@@ -14,6 +14,35 @@ import spmData from '@/data/spm.json';
 import waterTreatmentData from '@/data/water-treatment.json';
 import lubricationData from '@/data/lubrication.json';
 
+// Hero slide images for Sensors category
+import sensorsHeroSlide1 from '@/assets/sensors-hero-slide1.png';
+import sensorsHeroSlide2 from '@/assets/sensors-hero-slide2.png';
+import sensorsHeroSlide3 from '@/assets/sensors-hero-slide3.png';
+
+// Hero slide images for Filtration category
+import filtrationHeroSlide1 from '@/assets/filtration-hero-slide1.png';
+import filtrationHeroSlide2 from '@/assets/filtration-hero-slide2.png';
+import filtrationHeroSlide3 from '@/assets/filtration-hero-slide3.png';
+
+// Hero slide images for Water Treatment category
+import waterTreatmentHeroSlide1 from '@/assets/water-treatment-hero-slide1.png';
+import waterTreatmentHeroSlide2 from '@/assets/water-treatment-hero-slide2.png';
+import waterTreatmentHeroSlide3 from '@/assets/water-treatment-hero-slide3.png';
+
+// Hero slide images for Handling category
+import handlingHeroSlide1 from '@/assets/handling-hero-slide1.png';
+import handlingHeroSlide2 from '@/assets/handling-hero-slide2.png';
+import handlingHeroSlide3 from '@/assets/handling-hero-slide3.png';
+
+// Hero slide images for Lubrication Systems category
+import lubricationHeroSlide1 from '@/assets/lubrication-hero-slide1.png';
+import lubricationHeroSlide2 from '@/assets/lubrication-hero-slide2.png';
+import lubricationHeroSlide3 from '@/assets/lubrication-hero-slide3.png';
+
+// Hero slide images for SPM Machines category
+import spmHeroSlide1 from '@/assets/spm-hero-slide1.png';
+import spmHeroSlide2 from '@/assets/spm-hero-slide2.png';
+import spmHeroSlide3 from '@/assets/spm-hero-slide3.png';
 
 // Import images
 import levelSensorImg from '@/assets/smart-level-sensors-new.jpg';
@@ -118,6 +147,28 @@ const ProductDetails = () => {
   const { category } = useParams();
   const navigate = useNavigate();
   const [selectedProduct, setSelectedProduct] = useState<ProductType | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const categoryHeroSlidesMap: Record<string, string[]> = {
+    sensors: [sensorsHeroSlide1, sensorsHeroSlide2, sensorsHeroSlide3],
+    filtration: [filtrationHeroSlide1, filtrationHeroSlide2, filtrationHeroSlide3],
+    "water-treatment": [waterTreatmentHeroSlide1, waterTreatmentHeroSlide2, waterTreatmentHeroSlide3],
+    handling: [handlingHeroSlide1, handlingHeroSlide2, handlingHeroSlide3],
+    "lubrication-systems": [lubricationHeroSlide1, lubricationHeroSlide2, lubricationHeroSlide3],
+    spm: [spmHeroSlide1, spmHeroSlide2, spmHeroSlide3]
+  };
+
+  const heroSlides = categoryHeroSlidesMap[category as string] || [];
+
+  useEffect(() => {
+    setCurrentSlide(0);
+    if (heroSlides.length > 0) {
+      const timer = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+      }, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [category, heroSlides.length]);
 
   const productDataMap: Record<string, ProductType[]> = {
     sensors: sensorsData as ProductType[],
@@ -240,25 +291,49 @@ const ProductDetails = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 md:py-28 overflow-hidden bg-gradient-hero text-white">
+        {heroSlides.length > 0 && (
+          <>
+            {/* Sliding background images */}
+            <div className="absolute inset-0 z-0">
+              {heroSlides.map((slideImg, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                    index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+                  } transition-transform duration-10000`}
+                >
+                  <img
+                    src={slideImg}
+                    alt={`${content.title} Hero Slide ${index + 1}`}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+              ))}
+              {/* Dark overlay for readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/80 to-slate-950/60 backdrop-blur-[2px]" />
+            </div>
+          </>
+        )}
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col items-center md:items-start w-full">
           <Button
             variant="ghost"
             onClick={() => navigate('/products')}
-            className="mb-8 text-white hover:bg-white/10"
+            className="mb-8 text-white hover:bg-white/10 self-start"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Products
           </Button>
-          <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          <div className="max-w-4xl mx-auto md:mx-0">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-md">
               {content.title}
             </h1>
-            <p className="text-2xl text-secondary font-light mb-6">
+            <p className="text-2xl text-white font-light mb-6 drop-shadow">
               {content.subtitle}
             </p>
             <div className="prose prose-lg prose-invert text-white/90 max-w-none">
-              <p className="text-lg leading-relaxed whitespace-pre-line">
+              <p className="text-lg leading-relaxed whitespace-pre-line drop-shadow">
                 <span className="font-semibold text-white">{content.introPrefix}</span> {content.description}
               </p>
             </div>
@@ -409,9 +484,11 @@ const ProductDetails = () => {
       {content.whyChoosePoints && (
         <section className="py-16 bg-background">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-secondary text-secondary-foreground rounded-3xl shadow-2xl p-8 md:p-12 relative overflow-hidden">
-              {/* Decorative background element */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none"></div>
+            <div className="relative bg-slate-950 text-slate-100 border border-slate-800/80 rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden">
+              {/* Background bluish ambient glows matching footer */}
+              <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-950 to-slate-950 pointer-events-none" />
 
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 text-center">
@@ -419,9 +496,9 @@ const ProductDetails = () => {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
                   {content.whyChoosePoints.map((point, idx) => (
-                    <div key={idx} className="flex items-start space-x-4 bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:bg-white/20 transition-colors">
+                    <div key={idx} className="flex items-start space-x-4 bg-slate-900/70 backdrop-blur-sm p-6 rounded-xl border border-slate-800 hover:border-blue-500/40 hover:bg-slate-900/90 transition-all duration-300">
                       <CheckCircle className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                      <span className="text-lg text-white/90 font-medium">{point}</span>
+                      <span className="text-lg text-slate-200 font-medium">{point}</span>
                     </div>
                   ))}
                 </div>

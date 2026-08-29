@@ -3,6 +3,7 @@ import { ArrowLeft, Tag, ChevronRight, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ultrasonicBlogImg from '@/assets/ultrasonic-sensor-blog.png';
 import fuelBlogImg from '@/assets/fuel-transmitter-blog.png';
+import recyclingBlogImg from '@/assets/industrial-recycling-blog.png';
 
 /* ─────────────────────────────────────────────
    Blog data
@@ -26,6 +27,117 @@ interface BlogPost {
 }
 
 const BLOG_POSTS: BlogPost[] = [
+  {
+    id: 'industrial-water-oil-coolant-recycling',
+    title: 'Industrial Water, Oil & Coolant Recycling: A Smarter Approach to Sustainable Manufacturing',
+    excerpt:
+      'Discover how recycling, filtration and resource recovery solutions for industrial water, oil and coolant enable more efficient and sustainable manufacturing operations.',
+    date: 'August 29, 2026',
+    readTime: '7 min read',
+    category: 'Sustainable Manufacturing',
+    tag: 'Recycling',
+    image: recyclingBlogImg,
+    sections: [
+      {
+        body: 'Industries today are under increasing pressure to reduce waste, conserve natural resources and improve operational efficiency. Water, oil and coolant are essential resources in many manufacturing and industrial processes, but contamination and frequent replacement can result in significant waste.\n\nInstead of following the traditional use-and-dispose approach, industries can adopt recycling, filtration and resource recovery solutions to make better use of these valuable fluids.\n\nAt Trivantas, we believe that smarter filtration and recycling technologies can help industries move toward more efficient and sustainable operations.',
+      },
+      {
+        heading: 'Why Is Industrial Fluid Recycling Important?',
+        body: 'Manufacturing processes can generate large quantities of contaminated water, used oil and spent coolant. If these fluids are simply discarded, industries lose valuable resources while increasing waste and disposal requirements.\n\nIndustrial fluid recycling provides an alternative approach:\n\nUse → Filter → Recover → Reuse\n\nDepending on the application and fluid quality requirements, appropriate filtration and treatment technologies can help recover usable resources and reduce unnecessary consumption.\n\nThis can support three important goals:',
+        bullets: [
+          { text: 'Reduce waste' },
+          { text: 'Conserve resources' },
+          { text: 'Improve process efficiency' },
+        ],
+      },
+      {
+        heading: '1. Industrial Water Recycling',
+        body: 'Water is an essential resource across manufacturing and industrial operations. It may be used for cooling, cleaning, processing and other applications.\n\nDuring these processes, water can become contaminated with suspended solids, oils, chemicals or other unwanted materials.\n\nWith appropriate industrial water filtration and recycling systems, water may be treated and reused where the required quality allows.\n\nBenefits of Industrial Water Recycling - Industrial water recycling can help businesses:',
+        bullets: [
+          { text: 'Reduce fresh water consumption' },
+          { text: 'Minimize wastewater generation' },
+          { text: 'Recover process water' },
+          { text: 'Reduce water-related operating costs' },
+          { text: 'Improve overall resource utilization' },
+          { text: 'Support sustainable manufacturing practices' },
+        ],
+      },
+      {
+        body: 'The right water recycling solution depends on factors such as water quality, contaminants, flow rate and the intended reuse application.',
+      },
+      {
+        heading: '2. Industrial Oil Recycling & Filtration',
+        body: 'Oil is widely used in manufacturing for lubrication, hydraulic applications and other industrial processes.\n\nDuring operation, oil can accumulate contaminants such as metal particles, dirt, sludge and other impurities. Continued use of contaminated oil can affect equipment performance and process efficiency.\n\nIndustrial oil filtration and recovery systems can help remove suitable contaminants and potentially extend the usable life of oil, depending on the application.\n\nBenefits of Oil Recycling - An effective oil filtration and recycling approach can help:',
+        bullets: [
+          { text: 'Reduce oil consumption' },
+          { text: 'Extend oil service life' },
+          { text: 'Recover valuable resources' },
+          { text: 'Reduce waste oil generation' },
+          { text: 'Reduce disposal requirements' },
+          { text: 'Improve fluid cleanliness' },
+          { text: 'Support efficient industrial operations' },
+        ],
+      },
+      {
+        body: 'Oil recycling should always be designed according to the oil type, contamination level, operating conditions and required quality for reuse.',
+      },
+      {
+        heading: '3. Coolant Recycling & Filtration',
+        body: 'Coolants are widely used in machining and metalworking applications to provide cooling, lubrication and chip removal.\n\nOver time, machining coolant can become contaminated with:',
+        bullets: [
+          { text: 'Metal fines' },
+          { text: 'Machining chips' },
+          { text: 'Dirt and suspended particles' },
+          { text: 'Tramp oil' },
+          { text: 'Other process contaminants' },
+        ],
+      },
+      {
+        body: 'Without effective filtration, contaminated coolant may require more frequent replacement.\n\nA coolant recycling and filtration system can help remove unwanted contaminants and maintain coolant quality, potentially extending its useful life.\n\nBenefits of Coolant Recycling - Coolant filtration and recycling can help industries:',
+        bullets: [
+          { text: 'Reduce coolant consumption' },
+          { text: 'Extend coolant life' },
+          { text: 'Minimize waste generation' },
+          { text: 'Improve coolant cleanliness' },
+          { text: 'Support consistent machining operations' },
+          { text: 'Reduce disposal requirements' },
+          { text: 'Improve overall process efficiency' },
+        ],
+      },
+      {
+        heading: 'From Waste Disposal to Resource Recovery',
+        body: 'Traditional industrial processes often follow a linear model:\n\nUse → Contaminate → Dispose → Replace\n\nA more resource-efficient approach is:\n\nUse → Filter → Recover → Reuse\n\nThis shift can help industries look at contaminated fluids not simply as waste, but as resources that may have recoverable value.\n\nThe objective is not to recycle everything regardless of application. Instead, the focus should be on understanding the process, identifying recoverable resources and selecting the appropriate filtration or treatment technology.',
+      },
+      {
+        heading: 'Key Benefits of Industrial Recycling Systems',
+        body: 'Implementing suitable industrial filtration and recycling solutions can provide both environmental and operational advantages.',
+        bullets: [
+          { label: '♻️ Reduced Waste', text: 'Recycling and recovery can reduce the quantity of fluids requiring disposal.' },
+          { label: '💧 Resource Conservation', text: 'Water, oil and coolant can potentially be used more efficiently.' },
+          { label: '⚙️ Improved Process Efficiency', text: 'Cleaner fluids can contribute to more consistent industrial processes.' },
+          { label: '💰 Potential Cost Reduction', text: 'Reduced consumption and disposal requirements can create opportunities for operational savings.' },
+          { label: '🌍 Sustainable Manufacturing', text: 'Resource recovery supports industries in developing more responsible manufacturing practices.' },
+        ],
+      },
+      {
+        heading: 'How Trivantas Supports Sustainable Industrial Operations',
+        body: 'At Trivantas, we understand that every industrial process has different requirements.\n\nOur approach focuses on developing intelligent filtration, recycling and resource-recovery solutions based on the specific application.\n\nFrom water filtration and recycling to oil and coolant filtration, the objective is to help industries improve fluid management while reducing unnecessary waste.\n\nOur engineering approach combines:',
+        bullets: [
+          { text: 'Industrial filtration technology' },
+          { text: 'Process understanding' },
+          { text: 'Customized system design' },
+          { text: 'Automation' },
+          { text: 'Resource recovery' },
+          { text: 'Performance-focused solutions' },
+        ],
+      },
+      {
+        body: 'The result is a smarter approach to industrial fluid management.',
+      },
+    ],
+    conclusion:
+      'Building a More Sustainable Industrial Future\n\nSustainability does not always require completely changing an existing manufacturing process.\n\nSometimes, meaningful improvement can begin with a simple question:\n\n“Can we recover and reuse what we currently throw away?”\n\nBy implementing suitable water recycling, oil filtration and coolant recycling systems, industries can take practical steps toward reducing waste and improving resource efficiency.\n\nThe future of manufacturing is not only about producing more. It is about producing smarter.\n\nRecycle. Recover. Reuse.\n\nEvery drop. Every litre. Every resource counts.\n\nAt Trivantas, we are committed to developing intelligent solutions that help industries operate smarter, cleaner and more sustainably.',
+  },
   {
     id: 'ultrasonic-level-sensors',
     title: 'How Ultrasonic Level Sensors Solve Modern Industrial Level Challenges',
@@ -210,7 +322,7 @@ const BLOG_POSTS: BlogPost[] = [
 
 const renderHeading = (heading: string) => {
   const parts = heading.split('. ');
-  if (parts.length > 1) {
+  if (parts.length > 1 && !isNaN(Number(parts[0]))) {
     return (
       <>
         <span className="text-primary font-extrabold">{parts[0]}.</span> {parts.slice(1).join('. ')}
@@ -221,7 +333,7 @@ const renderHeading = (heading: string) => {
 };
 
 const renderTitle = (title: string) => {
-  const targetWords = ["Ultrasonic Level Sensors", "Fuel Level Transmitters"];
+  const targetWords = ["Ultrasonic Level Sensors", "Fuel Level Transmitters", "Industrial Water, Oil & Coolant Recycling"];
   for (const word of targetWords) {
     if (title.includes(word)) {
       const parts = title.split(word);
@@ -291,7 +403,7 @@ const BlogDetail = ({ post, onBack }: { post: BlogPost; onBack: () => void }) =>
                 {renderHeading(sec.heading)}
               </h2>
             )}
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
               {sec.body}
               {sec.citation && (
                 <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-primary/10 text-primary border border-primary/20">

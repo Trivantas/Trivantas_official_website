@@ -21,6 +21,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://trivantas.com/products/water-treatment</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/lubrication-systems</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://trivantas.com/products/handling</loc>
     <priority>0.8</priority>
   </url>

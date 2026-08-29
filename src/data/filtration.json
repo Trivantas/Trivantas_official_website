@@ -362,41 +362,6 @@
     }
   },
   {
-    "id": "compact-filters",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Compact Filters",
-    "capacity": "Small flows",
-    "efficiency": "Space-saving filtration",
-    "features": [
-      "Compact & space-saving design",
-      "High filtration efficiency",
-      "Low pressure drop for energy efficiency",
-      "Robust industrial housing",
-      "Easy filter element replacement",
-      "Long service life",
-      "Reliable performance under continuous operation"
-    ],
-    "icons": [
-      "📦"
-    ],
-    "imageKey": "compactFilter",
-    "type": "Compact Filter",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Manufacturing plants",
-      "Machine tools & CNC machines",
-      "HVAC & ventilation systems",
-      "Automotive & engineering industries",
-      "Food & beverage processing",
-      "Pharmaceutical & chemical industries",
-      "Compressed air & process air systems"
-    ],
-    "specifications": {
-      "size": "Compact"
-    }
-  },
-  {
     "id": "magnetic-candle-filters",
     "categoryLabel": "Advanced Filtration Systems",
     "name": "Magnetic Candle Filters",
@@ -934,40 +899,6 @@
     ],
     "specifications": {
       "stages": "RO/UF/UV"
-    }
-  },
-  {
-    "id": "water-purifiers",
-    "categoryLabel": "Advanced Filtration Systems",
-    "name": "Water Purifiers",
-    "capacity": "Household to commercial",
-    "efficiency": "Removes contaminants for drinking",
-    "features": [
-      "Multi-stage purification (RO / UV / UF based)",
-      "Removes physical, chemical & biological contaminants",
-      "Improves taste, odor & clarity of water",
-      "Compact & durable design",
-      "Energy-efficient operation",
-      "Low maintenance & easy servicing",
-      "Designed for continuous, reliable use"
-    ],
-    "icons": [
-      "🚰"
-    ],
-    "imageKey": "waterPurifier",
-    "type": "Purifier",
-    "range": "As per customer requirements",
-    "accuracy": "As per customer requirements",
-    "applications": [
-      "Residential homes",
-      "Offices & corporate buildings",
-      "Hospitals & clinics",
-      "Schools & colleges",
-      "Hotels & restaurants",
-      "Commercial kitchens & institutions"
-    ],
-    "specifications": {
-      "stages": "3-6 stage"
     }
   }
 ]

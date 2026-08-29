@@ -288,7 +288,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-primary-foreground py-16 md:py-24 text-center relative overflow-hidden">
+      <section className="bg-primary text-primary-foreground py-10 md:py-14 text-center relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -296,10 +296,10 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">
               Ready to Partner with Us?
             </h2>
-            <p className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
               Let's discuss how Trivantas can help transform your industrial operations with our comprehensive solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
