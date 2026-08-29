@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CustomSolutionCTA = () => {
     return (
-        <section className="bg-primary text-primary-foreground py-12 md:py-16 text-center relative overflow-hidden">
+        <section className="bg-primary text-primary-foreground py-8 md:py-10 text-center relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -11,10 +11,10 @@ const CustomSolutionCTA = () => {
                     viewport={{ once: true }}
                 >
                     <div className="relative z-10">
-                        <h3 className="text-3xl md:text-5xl font-bold mb-4">
+                        <h3 className="text-3xl md:text-4xl font-bold mb-2">
                             Need a Custom Solution?
                         </h3>
-                        <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+                        <p className="text-base md:text-lg text-primary-foreground/90 mb-5 max-w-2xl mx-auto">
                             Our engineering team specializes in developing tailored solutions for unique industrial challenges.
                             Let us help you find the perfect equipment for your specific requirements.
                         </p>

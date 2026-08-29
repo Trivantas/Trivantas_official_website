@@ -3,8 +3,13 @@ import { Mail, Phone, MapPin, Linkedin, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary text-primary-foreground">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="relative bg-slate-950 text-slate-100 border-t border-slate-800/80 overflow-hidden">
+      {/* Background bluish ambient glows matching hero section */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/80 via-slate-950 to-slate-950 pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {/* Company Info */}
@@ -73,35 +78,35 @@ const Footer = () => {
 
           {/* Products */}
           <div className="text-center md:text-left">
-            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Solutions</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/products#sensors" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                <Link to="/products/sensors" className="text-slate-300 hover:text-primary transition-colors">
                   Smart Level Sensors
                 </Link>
               </li>
               <li>
-                <Link to="/products#filtration" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                <Link to="/products/filtration" className="text-slate-300 hover:text-primary transition-colors">
                   Filtration Systems
                 </Link>
               </li>
               <li>
-                <Link to="/products#water-treatment" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                <Link to="/products/water-treatment" className="text-slate-300 hover:text-primary transition-colors">
                   Water Treatment Plants
                 </Link>
               </li>
               <li>
-                <Link to="/products#lubrication-systems" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                <Link to="/products/lubrication-systems" className="text-slate-300 hover:text-primary transition-colors">
                   Lubrication Systems
                 </Link>
               </li>
               <li>
-                <Link to="/products#spm" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                <Link to="/products/spm" className="text-slate-300 hover:text-primary transition-colors">
                   SPM Machines
                 </Link>
               </li>
               <li>
-                <Link to="/products#handling" className="text-primary-foreground/80 hover:text-primary transition-colors">
+                <Link to="/products/handling" className="text-slate-300 hover:text-primary transition-colors">
                   Material Handling
                 </Link>
               </li>
@@ -110,18 +115,18 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="text-center md:text-left flex flex-col items-center md:items-start">
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <h4 className="text-lg font-semibold mb-4 text-white">Contact Info</h4>
             <div className="space-y-4 w-full flex flex-col items-center md:items-start">
 
               <div className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 text-center md:text-left">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
                 <div className="flex flex-col items-center md:items-start">
-                  <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Pune Plant</h5>
+                  <h5 className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-1">Pune Plant</h5>
                   <a
                     href="https://www.google.com/maps/search/?api=1&query=Trivantas,+Kanjane+Nagar,+Ghar+society+Road,+677,+Tal,+Mulshi,+Uravade,+Maharashtra+412115"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary-foreground/80 text-sm hover:text-primary transition-colors block text-center md:text-left"
+                    className="text-slate-300 text-sm hover:text-primary transition-colors block text-center md:text-left"
                   >
                     Trivantas, 677, Kanjane Nagar,<br />Ghar society Road, Tal, Mulshi,<br />Uravade, Maharashtra 412115
                   </a>
@@ -131,12 +136,12 @@ const Footer = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 text-center md:text-left">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
                 <div className="flex flex-col items-center md:items-start">
-                  <h5 className="text-xs font-semibold text-primary-foreground/90 uppercase tracking-wider mb-1">Reg. Address</h5>
+                  <h5 className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-1">Reg. Address</h5>
                   <a
                     href="https://www.google.com/maps/search/?api=1&query=Trivantas,+01,+Dabhade+Garage,+Parola+Road,+Bhadgaon,+Jalgaon+-+424105"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary-foreground/80 text-sm hover:text-primary transition-colors block max-w-xs"
+                    className="text-slate-300 text-sm hover:text-primary transition-colors block max-w-xs"
                   >
                     Trivantas, 01, Dabhade Garage, Parola Road, Bhadgaon, Jalgaon - 424105
                   </a>
