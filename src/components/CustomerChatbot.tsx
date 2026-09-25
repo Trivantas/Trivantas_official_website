@@ -16,7 +16,7 @@ interface Message {
 
 export default function CustomerChatbot() {
   const location = useLocation();
-  
+
   if (location.pathname.startsWith('/admin')) {
     return null;
   }
@@ -31,7 +31,7 @@ export default function CustomerChatbot() {
   const [errorMsg, setErrorMsg] = useState('');
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  
+
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 'init-1',
@@ -46,6 +46,7 @@ export default function CustomerChatbot() {
   ]);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const chatbotRef = useRef<HTMLDivElement>(null);
   const apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
   useEffect(() => {
@@ -53,6 +54,24 @@ export default function CustomerChatbot() {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages, isOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (chatbotRef.current && !chatbotRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('touchstart', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isOpen]);
 
   const handleNameSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -209,69 +228,67 @@ export default function CustomerChatbot() {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end font-sans">
+    <div ref={chatbotRef} className="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end font-sans">
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            initial={{ opacity: 0, y: 20, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 50, scale: 0.95 }}
-            transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="fixed inset-0 sm:inset-auto sm:absolute sm:bottom-20 sm:right-0 z-50 w-full h-full sm:w-[400px] sm:h-[550px] bg-card text-card-foreground sm:rounded-2xl shadow-2xl border-0 sm:border border-border flex flex-col overflow-hidden"
+            exit={{ opacity: 0, y: 20, scale: 0.96 }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+            className="absolute bottom-14 sm:bottom-16 right-0 z-50 w-[calc(100vw-24px)] max-w-[315px] sm:w-[335px] sm:max-w-none h-[400px] sm:h-[450px] max-h-[72vh] sm:max-h-[78vh] bg-card text-card-foreground rounded-2xl shadow-2xl border border-border flex flex-col overflow-hidden"
           >
             {/* Header */}
-            <div className="p-4 bg-gradient-hero text-white flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                  <MessageSquare className="w-5 h-5" />
+            <div className="px-3.5 py-2.5 bg-gradient-hero text-white flex items-center justify-between">
+              <div className="flex items-center space-x-2.5">
+                <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">
+                  <MessageSquare className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-base leading-tight">Customer Support</h3>
-                  <p className="text-xs text-white/80">Offline • We reply shortly</p>
+                  <h3 className="font-semibold text-sm leading-tight">Customer Support</h3>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-white hover:text-white/85 transition-colors p-2 -mr-2 rounded-full hover:bg-white/10"
+                className="text-white hover:text-white/85 transition-colors p-1.5 -mr-1 rounded-full hover:bg-white/10"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4" />
               </button>
             </div>
 
             {/* Chat Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-muted/30">
+            <div className="flex-1 overflow-y-auto p-3 space-y-2.5 bg-muted/30">
               {messages.map((msg) => (
                 <div
                   key={msg.id}
                   className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div
-                    className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm shadow-sm ${
-                      msg.sender === 'user'
+                    className={`max-w-[85%] rounded-xl px-3 py-2 text-xs sm:text-[13px] leading-relaxed shadow-xs ${msg.sender === 'user'
                         ? 'bg-primary text-white rounded-tr-none'
                         : 'bg-white text-foreground border border-border rounded-tl-none'
-                    }`}
+                      }`}
                   >
                     {msg.text}
                   </div>
                 </div>
               ))}
-              
+
               {/* Product Options Step */}
               {step === 4 && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
+                <div className="flex flex-col gap-1.5 mt-1.5">
                   {productsData.map((prod) => (
                     <button
                       key={prod.id}
                       onClick={() => handleProductSelect(prod.id, prod.title.trim())}
-                      className="bg-white hover:bg-accent border border-border text-left p-3 rounded-xl text-xs font-semibold text-foreground transition-all hover:shadow-sm"
+                      className="bg-white hover:bg-accent border border-border text-left px-3 py-2 rounded-lg text-xs font-medium text-foreground transition-all hover:shadow-xs"
                     >
                       {prod.title.trim()}
                     </button>
                   ))}
                   <button
                     onClick={() => handleProductSelect('other', 'Other Product / General')}
-                    className="bg-white hover:bg-accent border border-border text-left p-3 rounded-xl text-xs font-semibold text-foreground transition-all hover:shadow-sm"
+                    className="bg-white hover:bg-accent border border-border text-left px-3 py-2 rounded-lg text-xs font-medium text-foreground transition-all hover:shadow-xs"
                   >
                     Other Product / General
                   </button>
@@ -280,10 +297,10 @@ export default function CustomerChatbot() {
 
               {/* End success container */}
               {step === 6 && (
-                <div className="flex flex-col items-center justify-center p-6 text-center space-y-3 bg-green-50 border border-green-200 rounded-2xl mt-4">
-                  <CheckCircle2 className="w-10 h-10 text-emerald-600" />
-                  <h4 className="font-bold text-emerald-800 text-sm">Query Submitted Successfully</h4>
-                  <p className="text-xs text-emerald-700">
+                <div className="flex flex-col items-center justify-center p-4 text-center space-y-2.5 bg-green-50 border border-green-200 rounded-xl mt-2">
+                  <CheckCircle2 className="w-8 h-8 text-emerald-600" />
+                  <h4 className="font-semibold text-emerald-800 text-xs">Query Submitted Successfully</h4>
+                  <p className="text-[11px] text-emerald-700">
                     Our sales and support team will contact you shortly via email.
                   </p>
                   <Button
@@ -292,7 +309,7 @@ export default function CustomerChatbot() {
                       setTimeout(resetChat, 300);
                     }}
                     variant="outline"
-                    className="text-emerald-700 border-emerald-300 hover:bg-emerald-100 hover:text-emerald-800 text-xs py-1 h-8"
+                    className="text-emerald-700 border-emerald-300 hover:bg-emerald-100 hover:text-emerald-800 text-xs py-1 h-7"
                   >
                     Close Chat
                   </Button>
@@ -304,14 +321,14 @@ export default function CustomerChatbot() {
 
             {/* Error Message */}
             {errorMsg && (
-              <div className="px-4 py-2 bg-destructive/10 text-destructive text-xs border-t border-destructive/20 font-medium">
+              <div className="px-3 py-1.5 bg-destructive/10 text-destructive text-xs border-t border-destructive/20 font-medium">
                 {errorMsg}
               </div>
             )}
 
             {/* Sticky Input Footer */}
             {!submitted && step !== 4 && (
-              <div className="p-3 bg-white border-t border-border">
+              <div className="p-2.5 bg-white border-t border-border">
                 {step === 1 && (
                   <form onSubmit={handleNameSubmit} className="flex items-center space-x-2">
                     <Input
@@ -321,11 +338,11 @@ export default function CustomerChatbot() {
                         setName(e.target.value);
                         if (errorMsg) setErrorMsg('');
                       }}
-                      className="flex-grow rounded-xl bg-muted/40 border-border text-base sm:text-sm h-10"
+                      className="flex-grow rounded-lg bg-muted/40 border-border text-xs sm:text-xs h-8"
                       autoFocus
                     />
-                    <Button type="submit" size="icon" className="rounded-xl h-10 w-10 shrink-0">
-                      <ArrowRight className="w-4 h-4" />
+                    <Button type="submit" size="icon" className="rounded-lg h-8 w-8 shrink-0">
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </Button>
                   </form>
                 )}
@@ -340,11 +357,11 @@ export default function CustomerChatbot() {
                         setEmail(e.target.value);
                         if (errorMsg) setErrorMsg('');
                       }}
-                      className="flex-grow rounded-xl bg-muted/40 border-border text-base sm:text-sm h-10"
+                      className="flex-grow rounded-lg bg-muted/40 border-border text-xs sm:text-xs h-8"
                       autoFocus
                     />
-                    <Button type="submit" size="icon" className="rounded-xl h-10 w-10 shrink-0">
-                      <ArrowRight className="w-4 h-4" />
+                    <Button type="submit" size="icon" className="rounded-lg h-8 w-8 shrink-0">
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </Button>
                   </form>
                 )}
@@ -359,11 +376,11 @@ export default function CustomerChatbot() {
                         setPhone(e.target.value);
                         if (errorMsg) setErrorMsg('');
                       }}
-                      className="flex-grow rounded-xl bg-muted/40 border-border text-base sm:text-sm h-10"
+                      className="flex-grow rounded-lg bg-muted/40 border-border text-xs sm:text-xs h-8"
                       autoFocus
                     />
-                    <Button type="submit" size="icon" className="rounded-xl h-10 w-10 shrink-0">
-                      <ArrowRight className="w-4 h-4" />
+                    <Button type="submit" size="icon" className="rounded-lg h-8 w-8 shrink-0">
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </Button>
                   </form>
                 )}
@@ -377,20 +394,20 @@ export default function CustomerChatbot() {
                         setMessageText(e.target.value);
                         if (errorMsg) setErrorMsg('');
                       }}
-                      className="rounded-xl bg-muted/40 border-border text-base sm:text-sm resize-none min-h-[60px]"
+                      className="rounded-lg bg-muted/40 border-border text-xs sm:text-xs resize-none min-h-[50px] py-1.5"
                       autoFocus
                     />
                     <Button
                       type="submit"
                       disabled={loading}
-                      className="rounded-xl h-10 flex items-center justify-center space-x-2 text-sm"
+                      className="rounded-lg h-8 flex items-center justify-center space-x-1.5 text-xs"
                     >
                       {loading ? (
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                       ) : (
                         <>
                           <span>Submit Query</span>
-                          <Send className="w-4 h-4" />
+                          <Send className="w-3.5 h-3.5" />
                         </>
                       )}
                     </Button>
@@ -404,17 +421,16 @@ export default function CustomerChatbot() {
 
       {/* Floating Toggle Button */}
       <motion.button
-        whileHover={{ scale: 1.08 }}
-        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 1.06 }}
+        whileTap={{ scale: 0.94 }}
         onClick={() => {
           if (!isOpen && submitted) {
             resetChat();
           }
           setIsOpen(!isOpen);
         }}
-        className={`w-14 h-14 bg-primary hover:bg-primary-hover text-white rounded-full items-center justify-center shadow-lg transition-colors ${
-          isOpen ? 'hidden sm:flex' : 'flex'
-        }`}
+        aria-label={isOpen ? 'Close chat' : 'Open customer support chat'}
+        className="w-11 h-11 sm:w-12 sm:h-12 bg-primary hover:bg-primary-hover text-white rounded-full flex items-center justify-center shadow-lg transition-colors cursor-pointer"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -425,7 +441,7 @@ export default function CustomerChatbot() {
               exit={{ rotate: 45, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5" />
             </motion.div>
           ) : (
             <motion.div
@@ -435,7 +451,7 @@ export default function CustomerChatbot() {
               exit={{ rotate: -45, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <MessageSquare className="w-6 h-6" />
+              <MessageSquare className="w-5 h-5" />
             </motion.div>
           )}
         </AnimatePresence>
