@@ -17,10 +17,6 @@ interface Message {
 export default function CustomerChatbot() {
   const location = useLocation();
 
-  if (location.pathname.startsWith('/admin')) {
-    return null;
-  }
-
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
@@ -117,7 +113,7 @@ export default function CustomerChatbot() {
   const handlePhoneSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const trimmedPhone = phone.trim();
-    const phoneRegex = /^\+?[0-9\s\-]{10,15}$/;
+    const phoneRegex = /^\+?[0-9\s-]{10,15}$/;
     if (!trimmedPhone || !phoneRegex.test(trimmedPhone)) {
       setErrorMsg('Please enter a valid mobile number (10 to 15 digits).');
       return;
@@ -226,6 +222,10 @@ export default function CustomerChatbot() {
       },
     ]);
   };
+
+  if (location.pathname.startsWith('/admin')) {
+    return null;
+  }
 
   return (
     <div ref={chatbotRef} className="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end font-sans">
