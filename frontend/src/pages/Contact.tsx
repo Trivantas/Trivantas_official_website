@@ -160,14 +160,9 @@ const Contact = () => {
                       <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">Reg. Address</h4>
-                        <a
-                          href="https://www.google.com/maps/search/?api=1&query=Trivantas,+01,+Dabhade+Garage,+Parola+Road,+Bhadgaon,+Jalgaon+-+424105"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-muted-foreground hover:text-primary transition-colors"
-                        >
+                        <p className="text-muted-foreground text-sm">
                           01, Dabhade Garage, Parola Road,<br /> Bhadgaon, Jalgaon - 424105
-                        </a>
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">

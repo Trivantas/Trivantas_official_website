@@ -137,14 +137,9 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
                 <div className="flex flex-col items-center md:items-start">
                   <h5 className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-1">Reg. Address</h5>
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=Trivantas,+01,+Dabhade+Garage,+Parola+Road,+Bhadgaon,+Jalgaon+-+424105"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-slate-300 text-sm hover:text-primary transition-colors block max-w-xs"
-                  >
+                  <p className="text-slate-300 text-sm block max-w-xs">
                     Trivantas, 01, Dabhade Garage, Parola Road, Bhadgaon, Jalgaon - 424105
-                  </a>
+                  </p>
                 </div>
               </div>
 

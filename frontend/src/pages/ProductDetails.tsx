@@ -523,11 +523,9 @@ const ProductDetails = () => {
             <p className="text-lg md:text-xl text-primary-foreground/90 mb-6 max-w-3xl mx-auto leading-relaxed">
               {content.customSolutionText}
             </p>
-            {(content.contactText || "Interested in a custom quote or demo? Contact Trivantas today.") && (
-              <p className="text-base text-primary-foreground/85 mb-6 max-w-2xl mx-auto">
-                {content.contactText || "Interested in a custom quote or demo? Contact Trivantas today."}
-              </p>
-            )}
+            <p className="text-base text-primary-foreground/85 mb-6 max-w-2xl mx-auto">
+              {content.contactText || "Interested in a custom quote or demo? Contact Trivantas today."}
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 variant="secondary"
