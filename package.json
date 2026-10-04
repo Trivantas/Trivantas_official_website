@@ -2,6 +2,9 @@
   "name": "trivantas-official-website",
   "private": true,
   "version": "1.0.0",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "scripts": {
     "dev": "concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix backend\"",
     "dev:frontend": "npm run dev --prefix frontend",
