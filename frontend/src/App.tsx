@@ -18,7 +18,6 @@ import Footer from "./components/Footer";
 import CustomerChatbot from "./components/CustomerChatbot";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
-import RouteSeoManager from "./seo/RouteSeoManager";
 
 const queryClient = new QueryClient();
 
@@ -28,7 +27,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <RouteSeoManager />
         <ScrollToAnchor />
         <div className="min-h-screen flex flex-col">
           <Navigation />

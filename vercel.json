@@ -2,19 +2,6 @@
   "installCommand": "cd frontend && npm install",
   "buildCommand": "cd frontend && npm run build",
   "outputDirectory": "frontend/dist",
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.trivantas.com"
-        }
-      ],
-      "destination": "https://trivantas.com/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
