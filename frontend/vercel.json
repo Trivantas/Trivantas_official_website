@@ -1,8 +1,27 @@
 {
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.trivantas.com"
+        }
+      ],
+      "destination": "https://trivantas.com/:path*",
+      "permanent": true
     }
+  ],
+  "rewrites": [
+    { "source": "/admin/login", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/index.html" },
+    { "source": "/flipbook", "destination": "/index.html" },
+    { "source": "/schedule", "destination": "/index.html" },
+    { "source": "/blogs", "destination": "/index.html" },
+    { "source": "/contact", "destination": "/index.html" },
+    { "source": "/products/:category", "destination": "/index.html" },
+    { "source": "/products", "destination": "/index.html" },
+    { "source": "/about", "destination": "/index.html" },
+    { "source": "/", "destination": "/index.html" }
   ]
 }
