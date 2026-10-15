@@ -370,10 +370,26 @@ const ProductDetails = () => {
                       <Card
                         key={product.id}
                         className="group cursor-pointer hover:shadow-hover transition-all duration-300 hover:-translate-y-2 flex flex-col h-full overflow-hidden"
-                        onClick={() => setSelectedProduct({
-                          ...product,
-                          image: getProductImage(product)
-                        })}
+                        onClick={() => {
+                          if (category === 'sensors' && product.id) {
+                            navigate(`/products/sensors/${product.id}`);
+                          } else if (category === 'water-treatment' && product.id) {
+                            navigate(`/products/water-treatment/${product.id}`);
+                          } else if (category === 'handling' && product.id) {
+                            navigate(`/products/handling/${product.id}`);
+                          } else if (category === 'filtration' && product.id) {
+                            navigate(`/products/filtration/${product.id}`);
+                          } else if (category === 'lubrication-systems' && product.id) {
+                            navigate(`/products/lubrication-systems/${product.id}`);
+                          } else if (category === 'spm' && product.id) {
+                            navigate(`/products/spm/${product.id}`);
+                          } else {
+                            setSelectedProduct({
+                              ...product,
+                              image: getProductImage(product)
+                            });
+                          }
+                        }}
                       >
                         {category === 'sensors' || category === 'water-treatment' || (category === 'filtration' && !productsWithoutImages.includes(product.name)) || (category === 'handling' && productsWithImages.includes(product.name)) ? (
                           <div className="group relative flex flex-col h-full bg-white/40 dark:bg-slate-900/40 backdrop-blur-2xl overflow-hidden rounded-2xl border border-white/60 dark:border-slate-700/50 hover:border-primary/50 dark:hover:border-cyan-500/50 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]">

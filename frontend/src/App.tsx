@@ -9,6 +9,12 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
+import SensorProductDetail from "./pages/SensorProductDetail";
+import WaterTreatmentProductDetail from "./pages/WaterTreatmentProductDetail";
+import HandlingProductDetail from "./pages/HandlingProductDetail";
+import FiltrationProductDetail from "./pages/FiltrationProductDetail";
+import LubricationProductDetail from "./pages/LubricationProductDetail";
+import SpmProductDetail from "./pages/SpmProductDetail";
 import Contact from "./pages/Contact";
 import Schedule from "./pages/Schedule";
 import Blogs from "./pages/Blogs";
@@ -37,6 +43,12 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/products/sensors/:productname" element={<SensorProductDetail />} />
+              <Route path="/products/water-treatment/:productname" element={<WaterTreatmentProductDetail />} />
+              <Route path="/products/handling/:productname" element={<HandlingProductDetail />} />
+              <Route path="/products/filtration/:productname" element={<FiltrationProductDetail />} />
+              <Route path="/products/lubrication-systems/:productname" element={<LubricationProductDetail />} />
+              <Route path="/products/spm/:productname" element={<SpmProductDetail />} />
               <Route path="/products/:category" element={<ProductDetails />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blogs" element={<Blogs />} />
