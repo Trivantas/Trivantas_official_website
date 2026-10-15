@@ -1,4 +1,4 @@
-import { pageContent } from "@/data/pageContent";
+import { pageContent } from "../data/pageContent";
 import type { PageSeoConfig } from "./types";
 
 const BRAND = "Trivantas";

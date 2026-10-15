@@ -1,4 +1,4 @@
-import { pageContent } from "@/data/pageContent";
+import { pageContent } from "../data/pageContent";
 import { SITE_NAME, SITE_ORIGIN } from "./siteConfig";
 
 export function organizationSchema() {
