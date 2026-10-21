@@ -18,6 +18,7 @@ import SpmProductDetail from "./pages/SpmProductDetail";
 import Contact from "./pages/Contact";
 import Schedule from "./pages/Schedule";
 import Blogs from "./pages/Blogs";
+import BlogDetail from "./pages/BlogDetail";
 import Flipbook from "./pages/Flipbook";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
@@ -52,6 +53,7 @@ const App = () => (
               <Route path="/products/:category" element={<ProductDetails />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blogs" element={<Blogs />} />
+              <Route path="/blogs/:id" element={<BlogDetail />} />
               <Route path="/schedule" element={<Schedule />} />
               <Route path="/flipbook" element={<Flipbook />} />
               <Route path="/admin/login" element={<AdminLogin />} />
