@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -55,6 +55,25 @@ const BlogDetail: React.FC = () => {
 
   const post = id ? getBlogPostById(id) : undefined;
   const relatedPosts = post ? getRelatedBlogPosts(post.id, 2) : [];
+
+  useEffect(() => {
+    if (post) {
+      const pageTitle = `${post.title} | Trivantas`;
+      document.title = pageTitle;
+
+      const timer = setTimeout(() => {
+        document.title = pageTitle;
+        const robotsMeta = document.head.querySelector('meta[name="robots"]');
+        if (robotsMeta) {
+          robotsMeta.setAttribute('content', 'index, follow');
+        }
+      }, 0);
+
+      return () => clearTimeout(timer);
+    } else {
+      document.title = 'Blog | Trivantas';
+    }
+  }, [post]);
 
   const handleShare = async () => {
     const currentUrl = window.location.href;
