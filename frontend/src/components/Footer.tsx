@@ -136,12 +136,28 @@ const Footer = () => {
               <div className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 text-center md:text-left">
                 <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
                 <div className="flex flex-col items-center md:items-start">
+                  <h5 className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-1">Gujarat Office</h5>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=167+%26+168+Aadhya+2,+Andada,+Ankleshwar,+Gujarat+393002"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 text-sm hover:text-primary transition-colors block text-center md:text-left"
+                  >
+                    167 & 168 Aadhya 2, Andada,<br />Ankleshwar, Gujarat - 393002
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:flex-row items-center md:items-start space-y-2 md:space-y-0 md:space-x-3 text-center md:text-left">
+                <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
+                <div className="flex flex-col items-center md:items-start">
                   <h5 className="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-1">Reg. Address</h5>
                   <p className="text-slate-300 text-sm block max-w-xs">
                     Trivantas, 01, Dabhade Garage, Parola Road, Bhadgaon, Jalgaon - 424105
                   </p>
                 </div>
               </div>
+
 
               <div className="flex items-center justify-center md:justify-start space-x-3 w-full">
                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />

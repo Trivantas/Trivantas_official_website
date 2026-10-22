@@ -13,6 +13,8 @@ import handlingData from '@/data/handling.json';
 import spmData from '@/data/spm.json';
 import waterTreatmentData from '@/data/water-treatment.json';
 import lubricationData from '@/data/lubrication.json';
+import NotFound from './NotFound';
+
 
 // Hero slide images for Sensors category
 import sensorsHeroSlide1 from '@/assets/sensors-hero-slide1.png';
@@ -255,18 +257,9 @@ const ProductDetails = () => {
   const products = productDataMap[category as keyof typeof productDataMap] || [];
 
   if (!content) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-foreground mb-4">Category Not Found</h1>
-          <Button onClick={() => navigate('/products')}>
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Products
-          </Button>
-        </div>
-      </div>
-    );
+    return <NotFound />;
   }
+
 
   // Helper to find products for a group
   const getProductsForGroup = (groupItems: string[]) => {

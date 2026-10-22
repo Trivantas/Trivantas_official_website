@@ -51,20 +51,45 @@ const Contact = () => {
     }
   };
 
-  return (
+  const searchParams = new URLSearchParams(location.search);
+  const productParam = searchParams.get('product');
+  const typeParam = searchParams.get('type');
+  const emailSubject = productParam
+    ? typeParam === 'datasheet'
+      ? `Technical Datasheet Request: ${productParam}`
+      : `Quote Request: ${productParam}`
+    : 'Inquiry regarding Trivantas Industrial Solutions';
 
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=sales@trivantas.com&su=${encodeURIComponent(emailSubject)}`;
+
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const isMobile = typeof navigator !== 'undefined' && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (!isMobile) {
+      e.preventDefault();
+      window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
+  return (
     <div className="min-h-screen bg-background">
       {/* Side Quick Links */}
       <div className="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-50">
         <a
           href="tel:+917028165428"
-          className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
+          title="Call Us: +91 7028165428"
+          aria-label="Call +91 7028165428"
+          className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform cursor-pointer"
         >
           <Phone className="w-6 h-6" />
         </a>
         <a
-          href="mailto:sales@trivantas.com" // replace with your email
-          className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
+          href={`mailto:sales@trivantas.com?subject=${encodeURIComponent(emailSubject)}`}
+          onClick={handleEmailClick}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Send Email: sales@trivantas.com"
+          aria-label="Send Email to sales@trivantas.com"
+          className="bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform cursor-pointer"
         >
           <Mail className="w-6 h-6" />
         </a>
@@ -73,6 +98,7 @@ const Contact = () => {
       <section className="py-20 bg-gradient-hero text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Contact Us</h1>
+
           <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
             Get in touch with our team to discuss your industrial hardware requirements.
           </p>
@@ -159,29 +185,58 @@ const Contact = () => {
                     <div className="flex items-start space-x-4">
                       <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
+                        <h4 className="font-semibold text-foreground mb-1">Gujarat Office</h4>
+                        <a
+                          href="https://www.google.com/maps/search/?api=1&query=167+%26+168+Aadhya+2,+Andada,+Ankleshwar,+Gujarat+393002"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                        >
+                          167 & 168 Aadhya 2, Andada,<br />Ankleshwar, Gujarat - 393002
+                        </a>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-4">
+                      <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                      <div>
                         <h4 className="font-semibold text-foreground mb-1">Reg. Address</h4>
                         <p className="text-muted-foreground text-sm">
                           01, Dabhade Garage, Parola Road,<br /> Bhadgaon, Jalgaon - 424105
                         </p>
                       </div>
                     </div>
+
                     <div className="flex items-start space-x-4">
                       <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">Phone</h4>
-                        <p className="text-muted-foreground">7028165428</p>
+                        <a
+                          href="tel:+917028165428"
+                          className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                        >
+                          +91 7028165428
+                        </a>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
                       <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">Email</h4>
-                        <p className="text-muted-foreground">sales@trivantas.com</p>
+                        <a
+                          href={`mailto:sales@trivantas.com?subject=${encodeURIComponent(emailSubject)}`}
+                          onClick={handleEmailClick}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                        >
+                          sales@trivantas.com
+                        </a>
                       </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
+
 
               {/* Business Hours */}
               <Card className="shadow-card">

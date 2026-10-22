@@ -1,4 +1,10 @@
 import { pageContent } from "../data/pageContent";
+import {
+  ALL_PRODUCTS,
+  BLOG_ENTRIES,
+  getProductByPath,
+  getBlogByPath,
+} from "./productIndex";
 import type { PageSeoConfig } from "./types";
 
 const BRAND = "Trivantas";
@@ -62,14 +68,27 @@ const CATEGORY_PATHS = new Set(Object.keys(pageContent));
 export function resolvePageSeo(pathname: string): PageSeoConfig {
   const path = pathname === "" ? "/" : pathname.replace(/\/+$/, "") || "/";
 
+  // 1. Check for specific product detail page (/products/:category/:slug)
+  const product = getProductByPath(path);
+  if (product) {
+    return {
+      path,
+      title: `${product.name} | ${product.categoryName} | ${BRAND}`,
+      description: truncate(product.description, 160),
+      noindex: false,
+    };
+  }
+
+  // 2. Check for category listing page (/products/:category)
   if (path.startsWith("/products/")) {
-    const slug = path.slice("/products/".length).split("/")[0];
-    if (slug && CATEGORY_PATHS.has(slug)) {
-      const content = pageContent[slug];
+    const segments = path.slice("/products/".length).split("/").filter(Boolean);
+    if (segments.length === 1 && CATEGORY_PATHS.has(segments[0])) {
+      const content = pageContent[segments[0]];
       return {
         path,
         title: `${content.title} | ${BRAND}`,
         description: truncate(content.description, 160),
+        noindex: false,
       };
     }
     return {
@@ -80,11 +99,24 @@ export function resolvePageSeo(pathname: string): PageSeoConfig {
     };
   }
 
+  // 3. Check for blog post page (/blogs/:id)
+  const blog = getBlogByPath(path);
+  if (blog) {
+    return {
+      path,
+      title: `${blog.title} | ${BRAND}`,
+      description: truncate(blog.excerpt, 160),
+      noindex: false,
+    };
+  }
+
+  // 4. Static defined routes
   const staticConfig = staticRoutes[path];
   if (staticConfig) {
     return { ...staticConfig, path };
   }
 
+  // 5. Catch-all not found
   return {
     path,
     title: `Page Not Found | ${BRAND}`,
@@ -93,13 +125,16 @@ export function resolvePageSeo(pathname: string): PageSeoConfig {
   };
 }
 
-export const INDEXABLE_PATHS = [
+export const INDEXABLE_PATHS: readonly string[] = [
   "/",
   "/about",
   "/products",
   ...Array.from(CATEGORY_PATHS).map((id) => `/products/${id}`),
+  ...ALL_PRODUCTS.map((p) => p.path),
   "/contact",
   "/blogs",
+  ...BLOG_ENTRIES.map((b) => b.path),
   "/schedule",
   "/flipbook",
-] as const;
+];
+

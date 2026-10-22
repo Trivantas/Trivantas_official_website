@@ -4,11 +4,136 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Page Not Found | Trivantas</title>
-    <link rel="canonical" href="https://trivantas.com/" />
+    <title>Page Not Found (404) | Trivantas</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        background: #020617;
+        color: #f8fafc;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .glow-1 {
+        position: absolute;
+        top: 15%;
+        left: 20%;
+        width: 300px;
+        height: 300px;
+        background: rgba(37, 99, 235, 0.15);
+        border-radius: 50%;
+        filter: blur(80px);
+        pointer-events: none;
+      }
+      .glow-2 {
+        position: absolute;
+        bottom: 15%;
+        right: 20%;
+        width: 300px;
+        height: 300px;
+        background: rgba(6, 182, 212, 0.12);
+        border-radius: 50%;
+        filter: blur(80px);
+        pointer-events: none;
+      }
+      .card {
+        position: relative;
+        z-index: 10;
+        max-width: 520px;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(51, 65, 85, 0.7);
+        border-radius: 1.25rem;
+        padding: 2.5rem 2rem;
+        text-align: center;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(12px);
+      }
+      .logo {
+        height: 48px;
+        margin-bottom: 1.5rem;
+        object-fit: contain;
+      }
+      .code {
+        font-size: 5rem;
+        font-weight: 800;
+        letter-spacing: -0.05em;
+        line-height: 1;
+        background: linear-gradient(135deg, #38bdf8, #2563eb);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.75rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #f1f5f9;
+      }
+      p {
+        color: #94a3b8;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+      .actions {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .btn-primary {
+        background: #2563eb;
+        color: #ffffff;
+      }
+      .btn-primary:hover {
+        background: #1d4ed8;
+      }
+      .btn-secondary {
+        background: rgba(30, 41, 59, 0.8);
+        color: #cbd5e1;
+        border: 1px solid #334155;
+      }
+      .btn-secondary:hover {
+        background: rgba(51, 65, 85, 0.8);
+        color: #ffffff;
+      }
+    </style>
   </head>
   <body>
-    <p>Page not found.</p>
-    <p><a href="https://trivantas.com/">Return to Trivantas</a></p>
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+    <div class="card">
+      <img src="/images/logo.png" alt="Trivantas" class="logo" />
+      <div class="code">404</div>
+      <h1>Page Not Found</h1>
+      <p>The page you are looking for doesn't exist, has been removed, or is temporarily unavailable.</p>
+      <div class="actions">
+        <a href="/" class="btn btn-primary">Return to Home</a>
+        <a href="/products" class="btn btn-secondary">Explore Products</a>
+      </div>
+    </div>
   </body>
 </html>
