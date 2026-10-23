@@ -179,76 +179,9 @@ export function renderPrerenderBody(routePath: string): string | undefined {
     `.trim();
   }
 
-  // 4. Static core pages
-  if (normalized === "/") {
-    return `
-      <div class="min-h-screen bg-background text-foreground">
-        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-4">
-            Reliable Partnerships Beyond Business
-          </div>
-          <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-foreground mb-6">
-            Trivantas | One Stop Industrial Solutions
-          </h1>
-          <p class="text-lg sm:text-xl text-muted-foreground max-w-3xl leading-relaxed mb-8">
-            B2B industrial hardware engineering: smart level sensors, advanced filtration systems, water treatment plants, material handling equipment, lubrication systems, and special-purpose machines.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="/products" class="px-6 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm">
-              Explore Products
-            </a>
-            <a href="/contact" class="px-6 py-2.5 rounded-lg border border-border bg-card text-foreground font-medium text-sm">
-              Contact Sales
-            </a>
-          </div>
-        </main>
-      </div>
-    `.trim();
-  }
-
-  if (normalized === "/products") {
-    return `
-      <div class="min-h-screen bg-background text-foreground">
-        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-4">
-            Industrial Products & Systems
-          </h1>
-          <p class="text-lg text-muted-foreground max-w-3xl leading-relaxed mb-8">
-            Explore Trivantas comprehensive industrial hardware catalog across six specialized divisions: Smart Level Sensors, Advanced Filtration, Material Handling, Industrial Lubrication, Water Treatment, and SPM Automation.
-          </p>
-        </main>
-      </div>
-    `.trim();
-  }
-
-  if (normalized === "/about") {
-    return `
-      <div class="min-h-screen bg-background text-foreground">
-        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-4">
-            About Trivantas
-          </h1>
-          <p class="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Delivering precision engineering, customized industrial hardware, filtration technology, and smart monitoring systems for manufacturing excellence across India and global markets.
-          </p>
-        </main>
-      </div>
-    `.trim();
-  }
-
-  if (normalized === "/contact") {
-    return `
-      <div class="min-h-screen bg-background text-foreground">
-        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-4">
-            Contact Trivantas
-          </h1>
-          <p class="text-lg text-muted-foreground max-w-3xl leading-relaxed">
-            Get in touch with our technical sales and engineering teams for equipment inquiries, custom modifications, or quotations.
-          </p>
-        </main>
-      </div>
-    `.trim();
+  // 4. Static core pages - leave root clean to prevent layout flash before hydration
+  if (normalized === "/" || normalized === "/about" || normalized === "/contact" || normalized === "/products") {
+    return undefined;
   }
 
   return undefined;

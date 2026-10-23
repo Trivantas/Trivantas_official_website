@@ -10,8 +10,9 @@ import Footer from "./components/Footer";
 import RouteSeoManager from "./seo/RouteSeoManager";
 import RouteLoadingFallback from "./components/RouteLoadingFallback";
 
+import Index from "./pages/Index";
+
 // Lazy-loaded route components for Core Web Vitals and bundle splitting
-const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
 const Products = lazy(() => import("./pages/Products"));
 const ProductDetails = lazy(() => import("./pages/ProductDetails"));
