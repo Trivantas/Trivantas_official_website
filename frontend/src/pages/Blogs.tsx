@@ -17,7 +17,9 @@ const BlogCard = ({ post }: { post: BlogPost }) => (
     <div className="h-48 w-full overflow-hidden bg-muted relative">
       <img
         src={post.image}
-        alt={post.title}
+        alt={`${post.title} - Trivantas Industrial Insights`}
+        loading="lazy"
+        decoding="async"
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
       />
       {/* Category badges overlaid on top left of image */}

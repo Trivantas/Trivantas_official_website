@@ -124,22 +124,27 @@ const Products = () => {
                 <Button
                   variant="default"
                   size="lg"
+                  asChild
                   className="group w-full sm:w-auto min-h-12 h-auto sm:h-11 py-3 sm:py-2 px-6 sm:px-8 whitespace-normal sm:whitespace-nowrap flex items-center justify-center gap-2 text-center"
-                  onClick={() => navigate(`/products/${product.id}`)}
                 >
-                  <span className="flex-1 text-center">Get Quote for {product.title}</span>
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 shrink-0" />
+                  <Link to={`/products/${product.id}`}>
+                    <span className="flex-1 text-center">Explore {product.title}</span>
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 shrink-0" />
+                  </Link>
                 </Button>
               </div>
 
               {/* Image */}
               <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                <Link to={`/products/${product.id}`} className="block">
+                <Link to={`/products/${product.id}`} className="block" aria-label={`View ${product.title} catalog`}>
                   <Card className="overflow-hidden shadow-hover cursor-pointer group/img">
                     <CardContent className="p-0">
                       <img
                         src={imageMap[product.imageKey] || ''}
-                        alt={product.title}
+                        alt={`${product.title} - Industrial Solutions by Trivantas`}
+                        loading={index === 0 ? undefined : 'lazy'}
+                        fetchPriority={index === 0 ? 'high' : 'auto'}
+                        decoding="async"
                         className="w-full h-96 object-contain hover:scale-105 transition-all duration-500 group-hover/img:brightness-105"
                       />
                     </CardContent>

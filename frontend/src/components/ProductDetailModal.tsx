@@ -243,7 +243,9 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
                 {product.image ? (
                   <img
                     src={product.image}
-                    alt={product.name}
+                    alt={`${product.name} - Industrial Hardware Specifications | Trivantas`}
+                    loading="lazy"
+                    decoding="async"
                     style={product.imageStyle}
                     className="max-h-[400px] w-full object-contain rounded-md"
                   />

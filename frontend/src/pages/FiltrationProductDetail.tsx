@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -68,18 +68,29 @@ const FiltrationProductDetail: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Top Sticky Bar - Only Back Button */}
+      {/* Top Sticky Bar - Breadcrumb & Back */}
       <div className="border-b border-border/80 bg-background/95 backdrop-blur-md sticky top-16 z-30 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center text-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between text-sm flex-wrap gap-2">
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => navigate('/products/filtration')}
+            asChild
             className="text-muted-foreground hover:text-foreground -ml-2 h-8 px-2.5 font-medium hover:bg-muted"
           >
-            <ArrowLeft className="mr-1.5 h-4 w-4" />
-            <span>Back to Filtration</span>
+            <Link to="/products/filtration">
+              <ArrowLeft className="mr-1.5 h-4 w-4" />
+              <span>Back to Filtration Systems</span>
+            </Link>
           </Button>
+          <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground flex items-center gap-1.5 flex-wrap">
+            <Link to="/" className="hover:text-foreground hover:underline">Home</Link>
+            <span>/</span>
+            <Link to="/products" className="hover:text-foreground hover:underline">Products</Link>
+            <span>/</span>
+            <Link to="/products/filtration" className="hover:text-foreground hover:underline">Filtration Systems</Link>
+            <span>/</span>
+            <span className="text-foreground font-semibold truncate max-w-[200px]" aria-current="page">{product.name}</span>
+          </nav>
         </div>
       </div>
 
@@ -124,7 +135,9 @@ const FiltrationProductDetail: React.FC = () => {
                   <div className="relative h-[340px] sm:h-[400px] w-full flex items-center justify-center p-4 my-2 rounded-2xl overflow-hidden bg-white/40 dark:bg-slate-950/40">
                     <img
                       src={productImage}
-                      alt={product.name}
+                      alt={`${product.name} - Industrial Filtration Equipment by Trivantas`}
+                      fetchPriority="high"
+                      decoding="async"
                       className="max-h-full max-w-full object-contain filter drop-shadow-xl group-hover:scale-105 transition-transform duration-500 ease-out"
                     />
                   </div>
@@ -536,47 +549,54 @@ const FiltrationProductDetail: React.FC = () => {
               {relatedProducts.map((item) => {
                 const itemHasImage = hasSpecificImage(item);
                 return (
-                  <Card
+                  <Link
                     key={item.id}
-                    className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-card border border-border overflow-hidden flex flex-col p-5"
-                    onClick={() => navigate(`/products/filtration/${item.slug}`)}
+                    to={`/products/filtration/${item.slug}`}
+                    className="block group/item focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-xl"
+                    aria-label={`View specifications for ${item.name}`}
                   >
-                    {itemHasImage ? (
-                      <div className="h-44 w-full p-3 flex items-center justify-center bg-muted/20 relative rounded-xl mb-4">
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
-                        />
-                        <Badge variant="secondary" className="absolute top-2 left-2 text-[10px] uppercase font-mono">
-                          {item.type || 'Filter'}
-                        </Badge>
+                    <Card
+                      className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-card border border-border overflow-hidden flex flex-col p-5 h-full"
+                    >
+                      {itemHasImage ? (
+                        <div className="h-44 w-full p-3 flex items-center justify-center bg-muted/20 relative rounded-xl mb-4">
+                          <img
+                            src={item.image}
+                            alt={`${item.name} - Filtration System`}
+                            loading="lazy"
+                            decoding="async"
+                            className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                          />
+                          <Badge variant="secondary" className="absolute top-2 left-2 text-[10px] uppercase font-mono">
+                            {item.type || 'Filter'}
+                          </Badge>
+                        </div>
+                      ) : (
+                        <div className="flex items-center justify-between mb-3">
+                          <Badge variant="secondary" className="text-[10px] uppercase font-mono">
+                            {item.type || 'Filter'}
+                          </Badge>
+                          <span className="text-xs text-muted-foreground font-mono">
+                            {item.id}
+                          </span>
+                        </div>
+                      )}
+                      <div className="flex flex-col flex-grow justify-between">
+                        <div>
+                          <h3 className="font-bold text-foreground text-base group-hover:text-primary transition-colors line-clamp-1 mb-1">
+                            {item.name}
+                          </h3>
+                          <p className="text-xs text-muted-foreground line-clamp-2">
+                            {item.features?.[0] || item.efficiency || 'Advanced Industrial Filtration'}
+                          </p>
+                        </div>
+                        <div className="mt-4 pt-3 border-t border-border/60 flex items-center justify-between text-xs font-semibold text-primary">
+                          <span>View Specifications</span>
+                          <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                        </div>
                       </div>
-                    ) : (
-                      <div className="flex items-center justify-between mb-3">
-                        <Badge variant="secondary" className="text-[10px] uppercase font-mono">
-                          {item.type || 'Filter'}
-                        </Badge>
-                        <span className="text-xs text-muted-foreground font-mono">
-                          {item.id}
-                        </span>
-                      </div>
-                    )}
-                    <div className="flex flex-col flex-grow justify-between">
-                      <div>
-                        <h3 className="font-bold text-foreground text-base group-hover:text-primary transition-colors line-clamp-1 mb-1">
-                          {item.name}
-                        </h3>
-                        <p className="text-xs text-muted-foreground line-clamp-2">
-                          {item.features?.[0] || item.efficiency || 'Advanced Industrial Filtration'}
-                        </p>
-                      </div>
-                      <div className="mt-4 pt-3 border-t border-border/60 flex items-center justify-between text-xs font-semibold text-primary">
-                        <span>View Specifications</span>
-                        <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
-                  </Card>
+                    </Card>
+                  </Link>
                 );
               })}
             </div>
@@ -597,18 +617,22 @@ const FiltrationProductDetail: React.FC = () => {
             <Button
               variant="secondary"
               size="lg"
-              onClick={() => navigate(`/contact?product=${encodeURIComponent(product.name)}`)}
+              asChild
               className="shadow-lg"
             >
-              Consult Filtration Engineers
+              <Link to={`/contact?product=${encodeURIComponent(product.name)}`}>
+                Consult Filtration Engineers
+              </Link>
             </Button>
             <Button
               variant="outline"
               size="lg"
-              onClick={() => navigate('/products/filtration')}
+              asChild
               className="bg-white/10 border-white/20 text-white hover:bg-white/20"
             >
-              Back to Filtration Catalog
+              <Link to="/products/filtration">
+                Back to Filtration Catalog
+              </Link>
             </Button>
           </div>
         </div>

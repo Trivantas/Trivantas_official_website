@@ -43,16 +43,17 @@ export function applyPageSeo(config: PageSeoConfig, jsonLdBlocks: object[] = [])
   const robots = config.noindex ? "noindex, nofollow" : "index, follow";
   upsertMeta("name", "robots", robots);
 
+  const ogImage = config.ogImage || DEFAULT_OG_IMAGE;
   upsertMeta("property", "og:title", config.title);
   upsertMeta("property", "og:description", config.description);
   upsertMeta("property", "og:type", config.ogType ?? "website");
   upsertMeta("property", "og:url", canonical);
-  upsertMeta("property", "og:image", DEFAULT_OG_IMAGE);
+  upsertMeta("property", "og:image", ogImage);
 
   upsertMeta("name", "twitter:card", DEFAULT_TWITTER_CARD);
   upsertMeta("name", "twitter:title", config.title);
   upsertMeta("name", "twitter:description", config.description);
-  upsertMeta("name", "twitter:image", DEFAULT_OG_IMAGE);
+  upsertMeta("name", "twitter:image", ogImage);
 
   document.querySelectorAll('script[id^="seo-jsonld-"]').forEach((node) => node.remove());
   jsonLdBlocks.forEach((block, index) => {

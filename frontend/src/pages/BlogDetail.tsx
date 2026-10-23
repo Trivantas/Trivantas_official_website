@@ -48,6 +48,51 @@ const renderTitle = (title: string) => {
   return title;
 };
 
+const getRelatedSolutions = (blogId: string) => {
+  switch (blogId) {
+    case 'ultrasonic-level-sensors':
+      return [
+        {
+          title: 'Ultrasonic Level Sensors',
+          href: '/products/sensors/ultrasonic-level-sensors',
+          desc: 'Non-contact continuous level measurement for liquids, chemicals, and open channels.',
+        },
+        {
+          title: 'Smart Level Sensors Catalog',
+          href: '/products/sensors',
+          desc: 'Explore capacitive, radar, vibrating fork, and hydrostatic sensors engineered by Trivantas.',
+        },
+      ];
+    case 'fuel-level-transmitter':
+      return [
+        {
+          title: 'Fuel Level Transmitters',
+          href: '/products/sensors/fuel-level-transmitters',
+          desc: 'High-precision fuel and oil level monitoring for diesel generators, tanks, and fleets.',
+        },
+        {
+          title: 'Smart Level Sensors Catalog',
+          href: '/products/sensors',
+          desc: 'Industrial-grade liquid and fuel instrumentation built for demanding environments.',
+        },
+      ];
+    case 'industrial-water-oil-coolant-recycling':
+    default:
+      return [
+        {
+          title: 'Advanced Filtration Systems',
+          href: '/products/filtration',
+          desc: 'Paper band filters, magnetic separators, and centralized coolant fluid recycling systems.',
+        },
+        {
+          title: 'Water Treatment Plants (ETP / STP / ZLD)',
+          href: '/products/water-treatment',
+          desc: 'Engineered wastewater recovery, zero liquid discharge, and recycling solutions.',
+        },
+      ];
+  }
+};
+
 const BlogDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
@@ -121,12 +166,20 @@ const BlogDetail: React.FC = () => {
           <div className="absolute bottom-[-30%] left-[-5%] w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+          <nav aria-label="Breadcrumb" className="mb-4 text-xs text-muted-foreground flex items-center gap-1.5 flex-wrap">
+            <Link to="/" className="hover:text-foreground hover:underline">Home</Link>
+            <span>/</span>
+            <Link to="/blogs" className="hover:text-foreground hover:underline">Articles</Link>
+            <span>/</span>
+            <span className="text-foreground font-semibold truncate max-w-[250px]" aria-current="page">{post.title}</span>
+          </nav>
+
           <Link
             to="/blogs"
             className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary-hover font-semibold transition-colors mb-6 group"
           >
             <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform text-primary" />
-            Back to Blogs
+            Back to All Articles
           </Link>
 
           <div className="flex flex-wrap items-center gap-2.5 mb-5">
@@ -185,7 +238,9 @@ const BlogDetail: React.FC = () => {
         <div className="mb-10 rounded-2xl overflow-hidden shadow-md border border-border aspect-video max-h-[420px] w-full bg-muted">
           <img
             src={post.image}
-            alt={post.title}
+            alt={`${post.title} - Trivantas Industrial Article`}
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover"
           />
         </div>
@@ -233,6 +288,37 @@ const BlogDetail: React.FC = () => {
                 {para}
               </p>
             ))}
+          </div>
+
+          {/* Featured Industrial Solutions Callout */}
+          <div className="mt-10 p-6 md:p-8 rounded-2xl bg-card border border-border/80 shadow-sm">
+            <h3 className="text-xl font-bold text-foreground mb-2">
+              Featured Industrial Equipment & Solutions
+            </h3>
+            <p className="text-sm text-muted-foreground mb-6">
+              Learn more about Trivantas engineering hardware and turnkey systems referenced in this article:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {getRelatedSolutions(post.id).map((sol) => (
+                <Link
+                  key={sol.href}
+                  to={sol.href}
+                  className="p-4 rounded-xl border border-border/80 bg-background/60 hover:border-primary/50 hover:shadow-md transition-all group flex flex-col justify-between"
+                >
+                  <div>
+                    <h4 className="font-bold text-foreground group-hover:text-primary transition-colors text-base mb-1">
+                      {sol.title} &rarr;
+                    </h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      {sol.desc}
+                    </p>
+                  </div>
+                  <span className="text-xs font-semibold text-primary mt-3 inline-block">
+                    Explore Specifications &rarr;
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 

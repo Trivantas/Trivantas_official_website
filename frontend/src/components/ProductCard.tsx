@@ -38,12 +38,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
     >
       <Card className="group h-full bg-gradient-card border-border/50 shadow-card hover:shadow-hover transition-all duration-300 overflow-hidden">
         <CardContent className="p-0">
-          {/* Image Section */}
-          <Link to={link}>
+          <Link to={link} aria-label={`Explore ${title} solutions`}>
             <div className="relative overflow-hidden rounded-t-lg bg-accent/30 cursor-pointer">
               <img
                 src={image}
-                alt={title}
+                alt={`${title} - Industrial Automation & Process Systems`}
+                loading="lazy"
+                decoding="async"
                 className={`w-full h-64 transition-transform duration-300 group-hover:scale-110 ${imageClassName || 'object-cover'}`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300"></div>

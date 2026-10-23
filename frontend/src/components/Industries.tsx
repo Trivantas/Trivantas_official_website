@@ -74,7 +74,9 @@ const Industries = () => {
               <div className="relative h-48 md:h-56 overflow-hidden">
                 <img
                   src={industry.img}
-                  alt={industry.name}
+                  alt={`${industry.name} Industry Applications - Trivantas`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Dark overlay */}

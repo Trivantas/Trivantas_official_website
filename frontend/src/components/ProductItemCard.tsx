@@ -45,7 +45,7 @@ const ProductItemCard: React.FC<Props> = ({
   return (
     <article className="bg-card border border-border/50 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-200 overflow-hidden flex flex-col">
       <div className="relative h-48 w-full bg-accent/30">
-        <img src={image} alt={name} className="object-cover w-full h-full" />
+        <img src={image} alt={`${name} - Industrial Product`} loading="lazy" decoding="async" className="object-cover w-full h-full" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 

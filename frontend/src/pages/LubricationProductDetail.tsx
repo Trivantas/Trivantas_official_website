@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
@@ -63,18 +63,29 @@ const LubricationProductDetail: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Top Sticky Bar - Only Back Button */}
+      {/* Top Sticky Bar - Breadcrumb & Back */}
       <div className="border-b border-border/80 bg-background/95 backdrop-blur-md sticky top-16 z-30 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center text-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between text-sm flex-wrap gap-2">
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => navigate('/products/lubrication-systems')}
+            asChild
             className="text-muted-foreground hover:text-foreground -ml-2 h-8 px-2.5 font-medium hover:bg-muted"
           >
-            <ArrowLeft className="mr-1.5 h-4 w-4" />
-            <span>Back to Lubrication</span>
+            <Link to="/products/lubrication-systems">
+              <ArrowLeft className="mr-1.5 h-4 w-4" />
+              <span>Back to Lubrication Systems</span>
+            </Link>
           </Button>
+          <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground flex items-center gap-1.5 flex-wrap">
+            <Link to="/" className="hover:text-foreground hover:underline">Home</Link>
+            <span>/</span>
+            <Link to="/products" className="hover:text-foreground hover:underline">Products</Link>
+            <span>/</span>
+            <Link to="/products/lubrication-systems" className="hover:text-foreground hover:underline">Lubrication</Link>
+            <span>/</span>
+            <span className="text-foreground font-semibold truncate max-w-[200px]" aria-current="page">{product.name}</span>
+          </nav>
         </div>
       </div>
 
@@ -301,30 +312,35 @@ const LubricationProductDetail: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedProducts.map((item) => (
-                <Card
+                <Link
                   key={item.id}
-                  className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-card border border-border overflow-hidden flex flex-col p-6"
-                  onClick={() => navigate(`/products/lubrication-systems/${item.slug}`)}
+                  to={`/products/lubrication-systems/${item.slug}`}
+                  className="block group/item focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-xl"
+                  aria-label={`View specifications for ${item.name}`}
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <Badge variant="secondary" className="text-[10px] uppercase font-mono">
-                      {item.type || 'Lubrication'}
-                    </Badge>
-                    <span className="text-xs text-muted-foreground font-mono">
-                      {item.id}
-                    </span>
-                  </div>
-                  <h3 className="font-bold text-foreground text-base group-hover:text-primary transition-colors mb-2">
-                    {item.name}
-                  </h3>
-                  <p className="text-xs text-muted-foreground line-clamp-2 mb-4 flex-grow">
-                    {item.features?.[0] || item.capacity || 'Industrial Centralized Lubrication'}
-                  </p>
-                  <div className="pt-3 border-t border-border/60 flex items-center justify-between text-xs font-semibold text-primary">
-                    <span>View Specifications</span>
-                    <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Card>
+                  <Card
+                    className="group cursor-pointer hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-card border border-border overflow-hidden flex flex-col p-6 h-full"
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <Badge variant="secondary" className="text-[10px] uppercase font-mono">
+                        {item.type || 'Lubrication'}
+                      </Badge>
+                      <span className="text-xs text-muted-foreground font-mono">
+                        {item.id}
+                      </span>
+                    </div>
+                    <h3 className="font-bold text-foreground text-base group-hover:text-primary transition-colors mb-2">
+                      {item.name}
+                    </h3>
+                    <p className="text-xs text-muted-foreground line-clamp-2 mb-4 flex-grow">
+                      {item.features?.[0] || item.capacity || 'Industrial Centralized Lubrication'}
+                    </p>
+                    <div className="pt-3 border-t border-border/60 flex items-center justify-between text-xs font-semibold text-primary">
+                      <span>View Specifications</span>
+                      <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
@@ -344,18 +360,22 @@ const LubricationProductDetail: React.FC = () => {
             <Button
               variant="secondary"
               size="lg"
-              onClick={() => navigate(`/contact?product=${encodeURIComponent(product.name)}`)}
+              asChild
               className="shadow-lg"
             >
-              Contact Lubrication Engineers
+              <Link to={`/contact?product=${encodeURIComponent(product.name)}`}>
+                Contact Lubrication Engineers
+              </Link>
             </Button>
             <Button
               variant="outline"
               size="lg"
-              onClick={() => navigate('/products/lubrication-systems')}
+              asChild
               className="bg-white/10 border-white/20 text-white hover:bg-white/20"
             >
-              Back to Lubrication Catalog
+              <Link to="/products/lubrication-systems">
+                Back to Lubrication Catalog
+              </Link>
             </Button>
           </div>
         </div>

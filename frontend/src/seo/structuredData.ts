@@ -174,6 +174,7 @@ export function blogPostingSchema(blog: BlogEntry) {
     headline: blog.title,
     description: blog.excerpt,
     url: `${SITE_ORIGIN}${blog.path}`,
+    image: DEFAULT_OG_IMAGE,
     datePublished: blog.date,
     author: {
       "@type": "Organization",

@@ -19,6 +19,8 @@ const HeroSection = () => {
           <img
             src={heroImage}
             alt="Industrial innovation and technology by Trivantas"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover"
           />
         </motion.div>

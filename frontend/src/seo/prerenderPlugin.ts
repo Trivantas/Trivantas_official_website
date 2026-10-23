@@ -43,6 +43,7 @@ export function seoPrerenderPlugin(): Plugin {
       const { INDEXABLE_PATHS, resolvePageSeo } = await import("./routeSeo");
       const { jsonLdForPath } = await import("./structuredData");
       const { SITE_ORIGIN } = await import("./siteConfig");
+      const { renderPrerenderBody } = await import("./prerenderBody");
 
       const outDir = path.resolve(pluginDir, "../../dist");
       const rootHtmlPath = path.join(outDir, "index.html");
@@ -56,7 +57,8 @@ export function seoPrerenderPlugin(): Plugin {
       for (const routePath of INDEXABLE_PATHS) {
         const config = resolvePageSeo(routePath);
         const jsonLd = jsonLdForPath(routePath);
-        const html = injectSeoIntoHtml(template, config, jsonLd);
+        const bodyMarkup = renderPrerenderBody(routePath);
+        const html = injectSeoIntoHtml(template, config, jsonLd, bodyMarkup);
         const relative = routeToDistRelative(routePath);
         const target = path.join(outDir, relative);
         fs.mkdirSync(path.dirname(target), { recursive: true });

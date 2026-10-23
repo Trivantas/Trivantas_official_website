@@ -4,4 +4,5 @@ export interface PageSeoConfig {
   path: string;
   noindex?: boolean;
   ogType?: string;
+  ogImage?: string;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -16,134 +16,12 @@ import lubricationData from '@/data/lubrication.json';
 import NotFound from './NotFound';
 
 
-// Hero slide images for Sensors category
-import sensorsHeroSlide1 from '@/assets/sensors-hero-slide1.png';
-import sensorsHeroSlide2 from '@/assets/sensors-hero-slide2.png';
-import sensorsHeroSlide3 from '@/assets/sensors-hero-slide3.png';
-
-// Hero slide images for Filtration category
-import filtrationHeroSlide1 from '@/assets/filtration-hero-slide1.png';
-import filtrationHeroSlide2 from '@/assets/filtration-hero-slide2.png';
-import filtrationHeroSlide3 from '@/assets/filtration-hero-slide3.png';
-
-// Hero slide images for Water Treatment category
-import waterTreatmentHeroSlide1 from '@/assets/water-treatment-hero-slide1.png';
-import waterTreatmentHeroSlide2 from '@/assets/water-treatment-hero-slide2.png';
-import waterTreatmentHeroSlide3 from '@/assets/water-treatment-hero-slide3.png';
-
-// Hero slide images for Handling category
-import handlingHeroSlide1 from '@/assets/handling-hero-slide1.png';
-import handlingHeroSlide2 from '@/assets/handling-hero-slide2.png';
-import handlingHeroSlide3 from '@/assets/handling-hero-slide3.png';
-
-// Hero slide images for Lubrication Systems category
-import lubricationHeroSlide1 from '@/assets/lubrication-hero-slide1.png';
-import lubricationHeroSlide2 from '@/assets/lubrication-hero-slide2.png';
-import lubricationHeroSlide3 from '@/assets/lubrication-hero-slide3.png';
-
-// Hero slide images for SPM Machines category
-import spmHeroSlide1 from '@/assets/spm-hero-slide1.png';
-import spmHeroSlide2 from '@/assets/spm-hero-slide2.png';
-import spmHeroSlide3 from '@/assets/spm-hero-slide3.png';
-
-// Import images
-import levelSensorImg from '@/assets/smart-level-sensors-new.jpg';
-import filtrationImg from '@/assets/filtration-system.jpg';
-import spmImg from '@/assets/spm-machine.jpg';
-import materialHandlingImg from '@/assets/material-handling-v3.jpg';
-import centralHandlingImg from '@/assets/central-handling-system.jpg';
-import vibratingForkImg from '@/assets/vibrating-fork-v2.jpg';
-import vibratingRodImg from '@/assets/rod-sensor.jpg';
-import capacitanceSensorImg from '@/assets/capacitance-level-sensor.jpg';
-import floatSensorImg from '@/assets/float-level-sensor.jpg';
-import fuelTransmitterImg from '@/assets/fuel-level-transmitter.png';
-import rotatingPaddleImg from '@/assets/rotating-paddle-level-sensor.jpg';
-import nrfProbeImg from '@/assets/nrf-rf-admittance-probe.jpg';
-import vibratingForkSensorImg from '@/assets/vibrating-fork-level-sensor.png';
-import conductivitySensorImg from '@/assets/conductivity-level-sensor.png';
-import radarSensorImg from '@/assets/radar-level-sensor-v2.png';
-import levelTransmitterImg from '@/assets/level-transmitter.png';
-import capacitanceProbeImg from '@/assets/capacitance-level-probe-v2.png';
-import microwaveMoistureImg from '@/assets/microwave-moisture-sensor.jpg';
-import hydroMixNewImg from '@/assets/hydro-mix-moisture-sensor-new.jpg';
-import hydroMixXTImg from '@/assets/hydro-mix-xt-sensor.png';
-import moistureSensorGenericImg from '@/assets/moisture-sensor-generic.png';
-import paperBandFilterImg from '@/assets/paper-band-filter-new.jpeg';
-import oilSkimmerImg from '@/assets/oil-skimmer.jpeg';
-import magneticSeparatorImg from '@/assets/magnetic-separators-new.jpeg';
-import ultrasonicLevelSensorImgV2 from '@/assets/ultrasonic-level-sensor-v2.png';
-import capacitanceLevelSensorImgV2 from '@/assets/capacitance-level-sensor-v2.png';
-import electromagneticFlowMeterImg from '@/assets/electromagnetic-flow-meter.png';
-import hydrostaticLevelSensorImg from '@/assets/hydrostatic-level-sensor.png';
-import magneticLevelSwitchImg from '@/assets/magnetic-level-switch.jpg';
-import gasSensorImg from '@/assets/gas-sensor.png';
-import radarSolidLevelSensorImg from '@/assets/radar-solid-level-sensor.png';
-import miniSensorImg from '@/assets/mini-level-sensor.png';
-import tiltSwitchImg from '@/assets/tilt-level-switch.png';
-import vibratingRodSensorImg from '@/assets/vibrating-rod-level-sensor.png';
-import vibratingForkSensorImgV2 from '@/assets/vibrating-fork-sensor.png';
-import vibratingForkSolidSensorImg from '@/assets/vibrating-fork-solid-sensor.png';
-import ultrasonicFlowMeterImg from '@/assets/ultrasonic-flow-meter.jpg';
-import rfAdmittanceLevelSwitchImg from '@/assets/rf-admittance-level-switch.png';
-
-import zldImg from '@/assets/ZLD.jpeg';
-import stpImg from '@/assets/sewage-treatment-plant.jpg';
-import etpImg from '@/assets/effluent-treatment-plants.jpeg';
-import lubricationImg from '@/assets/lubrication-system.png';
-
-import desalinationImg from '@/assets/desalination.jpeg';
-import sumpCleanerImg from '@/assets/sump-cleaner.jpeg';
-import magBandFilterImg from '@/assets/Mag Band Filter.png';
-
-import highAccuracyLevelIndicatorImg from '@/assets/high-accuracy-level-indicator.jpeg';
-import centralCoolantImg from '@/assets/central-coolant-filtration.jpeg';
-import mobileFilterImg from '@/assets/mobile-type-filters.jpeg';
-import pressureBedImg from '@/assets/compact-pressure-bed-filters.png';
-import chRoAndUfImg from '@/assets/ChROandUF.png';
-import waterFiltrationTreatmentsImg from '@/assets/waterfiltrationtreatments.png';
-import magneticTypeChipConveyorImg from '@/assets/Magnetic Type Chip Conveyor.jpg';
-import coolingConveyorsImg from '@/assets/Cooling Conveyors.jpg';
-import aeroMechanicalConveyorsImg from '@/assets/Aero-Mechanical Conveyors.jpg';
-import bucketElevatorsConveyorsImg from '@/assets/Bucket Elevators Conveyors.jpg';
-import gravityConveyorsImg from '@/assets/Gravity Conveyors.jpg';
-import foodConveyorImg from '@/assets/Food Conveyor.png';
-import scrapperConveyorImg from '@/assets/SCrapper Conveyor.png';
-import slatTypeChipConveyorImg from '@/assets/Slat Type Chip Conveyor.jpg';
-import screwTypeChipConveyorImg from '@/assets/Screw Type Chip Conveyor.jpg';
-import pneumaticConveyorsImg from '@/assets/Pneumatic Conveyors.jpg';
-import vibratingConveyorsImg from '@/assets/Vibrating Conveyors.jpg';
-
-const productsWithoutImages = [
-  "Fine Mesh Oil Filters",
-  "Mineral Water Filtration Plants",
-  "Water Purifiers",
-  "Reusable Food Oil Filters",
-  "High-Temperature Cooking Oil Filtration Units",
-  "Compact Band Filters",
-  "Individual Machine Coolant Filters",
-  "Compact Filters",
-  "Oil Recovery Press Units",
-  "Chip Wringer Systems",
-  "Up-Flow Filters",
-  "Self-Cleaning Industrial Filters",
-  "Reusable Oil & Coolant Filters",
-  "Spare Parts for Filtration Systems (Bags, Paper, Candle, etc.)"
-];
-
-const productsWithImages = [
-  "Magnetic Type Chip Conveyor",
-  "Centralized Chip Handling System",
-  "Cooling Conveyors",
-  "Aero-Mechanical Conveyors",
-  "Bucket Elevators / Conveyors",
-  "Gravity Conveyors",
-  "Food Conveyor",
-  "Scraper Type Chip Conveyor",
-  "Slat Type Chip Conveyor",
-  "Screw Type Chip Conveyor",
-  "Pneumatic Conveyors",
-  "Vibrating Conveyors"
-];
+import {
+  getCategoryHeroSlides,
+  getProductImageSrc,
+  productsWithoutImages,
+  productsWithImages,
+} from '@/data/categoryAssets';
 
 const ProductDetails = () => {
   const { category } = useParams();
@@ -151,16 +29,7 @@ const ProductDetails = () => {
   const [selectedProduct, setSelectedProduct] = useState<ProductType | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const categoryHeroSlidesMap: Record<string, string[]> = {
-    sensors: [sensorsHeroSlide1, sensorsHeroSlide2, sensorsHeroSlide3],
-    filtration: [filtrationHeroSlide1, filtrationHeroSlide2, filtrationHeroSlide3],
-    "water-treatment": [waterTreatmentHeroSlide1, waterTreatmentHeroSlide2, waterTreatmentHeroSlide3],
-    handling: [handlingHeroSlide1, handlingHeroSlide2, handlingHeroSlide3],
-    "lubrication-systems": [lubricationHeroSlide1, lubricationHeroSlide2, lubricationHeroSlide3],
-    spm: [spmHeroSlide1, spmHeroSlide2, spmHeroSlide3]
-  };
-
-  const heroSlides = categoryHeroSlidesMap[category as string] || [];
+  const heroSlides = getCategoryHeroSlides(category);
 
   useEffect(() => {
     setCurrentSlide(0);
@@ -181,85 +50,12 @@ const ProductDetails = () => {
     "lubrication-systems": lubricationData as ProductType[]
   };
 
-  // Image mapping for specific products
-  const imageMap: Record<string, string> = {
-    // Handling
-    centralHandling: centralHandlingImg,
-    scraperConveyor: scrapperConveyorImg,
-    slatConveyor: slatTypeChipConveyorImg,
-    screwConveyor: screwTypeChipConveyorImg,
-    magneticConveyor: magneticTypeChipConveyorImg,
-    rollerConveyor: materialHandlingImg,
-    sparePartsConveyor: materialHandlingImg,
-    allMaterialHandling: materialHandlingImg,
-    foodConveyor: foodConveyorImg,
-    pneumaticConveyor: pneumaticConveyorsImg,
-    vibratingConveyor: vibratingConveyorsImg,
-    bucketElevator: bucketElevatorsConveyorsImg,
-    gravityConveyor: gravityConveyorsImg,
-    aeroConveyor: aeroMechanicalConveyorsImg,
-    coolingConveyor: coolingConveyorsImg,
-    chipShredder: materialHandlingImg,
-    briquetter: materialHandlingImg,
-    automatedHandling: materialHandlingImg,
-    customAutomation: materialHandlingImg,
-
-    // Sensors
-    levelIndicator: highAccuracyLevelIndicatorImg,
-    vibratingRod: vibratingRodSensorImg,
-    vibratingFork: vibratingForkSensorImgV2,
-    vibratingForkSolid: vibratingForkSolidSensorImg,
-    ultrasonicFlow: ultrasonicFlowMeterImg,
-    float: floatSensorImg,
-    fuelTransmitter: fuelTransmitterImg,
-    rotatingPaddle: rotatingPaddleImg,
-    nrfProbe: nrfProbeImg,
-    conductivity: conductivitySensorImg,
-    radar: radarSensorImg,
-    rfAdmittanceSwitch: rfAdmittanceLevelSwitchImg,
-    levelTransmitter: levelTransmitterImg,
-    capacitanceProbe: capacitanceProbeImg,
-    microwaveMoisture: microwaveMoistureImg,
-    hydroMixNew: hydroMixNewImg,
-
-    hydroMixXT: hydroMixXTImg,
-    moistureSensorGeneric: moistureSensorGenericImg,
-    paperBand: paperBandFilterImg,
-    oilSkimmer: oilSkimmerImg,
-    magneticSeparator: magneticSeparatorImg,
-    zld: zldImg,
-    stp: stpImg,
-    etp: etpImg,
-    desalination: desalinationImg,
-    sumpCleaner: sumpCleanerImg,
-    magBandFilter: magBandFilterImg,
-    centralCoolant: centralCoolantImg,
-    mobileFilter: mobileFilterImg,
-    pressureBed: pressureBedImg,
-    membranePlants: chRoAndUfImg,
-    mineralWater: waterFiltrationTreatmentsImg,
-
-    // Defaults/Fallbacks
-    electromagneticFlow: electromagneticFlowMeterImg,
-    ultrasonic: ultrasonicLevelSensorImgV2,
-    capacitance: capacitanceLevelSensorImgV2,
-    hydrostatic: hydrostaticLevelSensorImg,
-    magneticSwitch: magneticLevelSwitchImg,
-    gasPressure: gasSensorImg,
-    microwaveRadarSolid: radarSolidLevelSensorImg,
-    miniSensor: miniSensorImg,
-    tiltSwitch: tiltSwitchImg,
-    lubrication: lubricationImg,
-    default: levelSensorImg
-  };
-
   const content = pageContent[category as keyof typeof pageContent];
   const products = productDataMap[category as keyof typeof productDataMap] || [];
 
   if (!content) {
     return <NotFound />;
   }
-
 
   // Helper to find products for a group
   const getProductsForGroup = (groupItems: string[]) => {
@@ -268,18 +64,7 @@ const ProductDetails = () => {
   };
 
   // Helper to get image for product
-  const getProductImage = (product: ProductType) => {
-    if (product.imageKey && imageMap[product.imageKey]) {
-      return imageMap[product.imageKey];
-    }
-    // Fallback based on category
-    if (category === 'handling') return materialHandlingImg;
-    if (category === 'filtration') return filtrationImg;
-    if (category === 'spm') return spmImg;
-    if (category === 'water-treatment') return stpImg;
-    if (category === 'lubrication-systems') return lubricationImg;
-    return levelSensorImg;
-  };
+  const getProductImage = (product: ProductType) => getProductImageSrc(product, category);
 
   return (
     <div className="min-h-screen bg-background">
@@ -299,6 +84,8 @@ const ProductDetails = () => {
                   <img
                     src={slideImg}
                     alt={`${content.title} Hero Slide ${index + 1}`}
+                    fetchPriority={index === 0 ? 'high' : 'auto'}
+                    decoding="async"
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
@@ -310,13 +97,22 @@ const ProductDetails = () => {
         )}
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col items-center md:items-start w-full">
+          <nav aria-label="Breadcrumb" className="mb-4 text-xs text-white/70 flex items-center gap-2 self-start flex-wrap">
+            <Link to="/" className="hover:text-white hover:underline">Home</Link>
+            <span>/</span>
+            <Link to="/products" className="hover:text-white hover:underline">Products</Link>
+            <span>/</span>
+            <span className="text-white font-semibold" aria-current="page">{content.title}</span>
+          </nav>
           <Button
             variant="ghost"
-            onClick={() => navigate('/products')}
+            asChild
             className="mb-8 text-white hover:bg-white/10 self-start"
           >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Products
+            <Link to="/products">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to All Products
+            </Link>
           </Button>
           <div className="max-w-4xl mx-auto md:mx-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-md">
@@ -359,122 +155,112 @@ const ProductDetails = () => {
 
                 {groupProducts.length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {groupProducts.map((product: ProductType) => (
-                      <Card
-                        key={product.id}
-                        className="group cursor-pointer hover:shadow-hover transition-all duration-300 hover:-translate-y-2 flex flex-col h-full overflow-hidden"
-                        onClick={() => {
-                          if (category === 'sensors' && product.id) {
-                            navigate(`/products/sensors/${product.id}`);
-                          } else if (category === 'water-treatment' && product.id) {
-                            navigate(`/products/water-treatment/${product.id}`);
-                          } else if (category === 'handling' && product.id) {
-                            navigate(`/products/handling/${product.id}`);
-                          } else if (category === 'filtration' && product.id) {
-                            navigate(`/products/filtration/${product.id}`);
-                          } else if (category === 'lubrication-systems' && product.id) {
-                            navigate(`/products/lubrication-systems/${product.id}`);
-                          } else if (category === 'spm' && product.id) {
-                            navigate(`/products/spm/${product.id}`);
-                          } else {
-                            setSelectedProduct({
-                              ...product,
-                              image: getProductImage(product)
-                            });
-                          }
-                        }}
-                      >
-                        {category === 'sensors' || category === 'water-treatment' || (category === 'filtration' && !productsWithoutImages.includes(product.name)) || (category === 'handling' && productsWithImages.includes(product.name)) ? (
-                          <div className="group relative flex flex-col h-full bg-white/40 dark:bg-slate-900/40 backdrop-blur-2xl overflow-hidden rounded-2xl border border-white/60 dark:border-slate-700/50 hover:border-primary/50 dark:hover:border-cyan-500/50 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]">
-                            {/* High-Tech Grid Overlay */}
-                            <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[linear-gradient(rgba(0,0,0,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,1)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
-                            
-                            {/* Futuristic Glowing Orbs */}
-                            <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/20 dark:bg-cyan-500/20 rounded-full blur-[60px] group-hover:bg-primary/30 dark:group-hover:bg-cyan-500/30 group-hover:scale-110 transition-all duration-700 pointer-events-none"></div>
-                            <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-blue-500/15 dark:bg-blue-600/20 rounded-full blur-[60px] group-hover:bg-blue-500/25 dark:group-hover:bg-blue-500/30 group-hover:scale-110 transition-all duration-700 pointer-events-none"></div>
+                    {groupProducts.map((product: ProductType) => {
+                      const productHref = `/products/${category}/${product.id}`;
+                      return (
+                        <Link
+                          key={product.id}
+                          to={productHref}
+                          className="block group/link h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-2xl"
+                          aria-label={`View specifications for ${product.name}`}
+                        >
+                          <Card
+                            className="group cursor-pointer hover:shadow-hover transition-all duration-300 hover:-translate-y-2 flex flex-col h-full overflow-hidden"
+                          >
+                            {category === 'sensors' || category === 'water-treatment' || (category === 'filtration' && !productsWithoutImages.includes(product.name)) || (category === 'handling' && productsWithImages.includes(product.name)) ? (
+                              <div className="group relative flex flex-col h-full bg-white/40 dark:bg-slate-900/40 backdrop-blur-2xl overflow-hidden rounded-2xl border border-white/60 dark:border-slate-700/50 hover:border-primary/50 dark:hover:border-cyan-500/50 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]">
+                                {/* High-Tech Grid Overlay */}
+                                <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[linear-gradient(rgba(0,0,0,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,1)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
+                                
+                                {/* Futuristic Glowing Orbs */}
+                                <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/20 dark:bg-cyan-500/20 rounded-full blur-[60px] group-hover:bg-primary/30 dark:group-hover:bg-cyan-500/30 group-hover:scale-110 transition-all duration-700 pointer-events-none"></div>
+                                <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-blue-500/15 dark:bg-blue-600/20 rounded-full blur-[60px] group-hover:bg-blue-500/25 dark:group-hover:bg-blue-500/30 group-hover:scale-110 transition-all duration-700 pointer-events-none"></div>
 
-                            {/* Tech Reticle Corners */}
-                            <div className="absolute top-5 left-5 w-4 h-4 border-t-2 border-l-2 border-primary/30 dark:border-cyan-500/30 group-hover:border-primary dark:group-hover:border-cyan-400 group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all duration-500 z-10 pointer-events-none"></div>
-                            <div className="absolute top-5 right-5 w-4 h-4 border-t-2 border-r-2 border-primary/30 dark:border-cyan-500/30 group-hover:border-primary dark:group-hover:border-cyan-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500 z-10 pointer-events-none"></div>
-                            
-                            {/* Holographic Badge */}
-                            <div className="absolute top-6 left-8 z-20">
-                              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-primary/10 dark:border-cyan-500/20 text-[10px] font-mono tracking-widest text-primary dark:text-cyan-400 group-hover:border-primary/40 dark:group-hover:border-cyan-400/50 shadow-sm transition-all duration-300">
-                                <span className="relative flex h-1.5 w-1.5">
-                                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary dark:bg-cyan-400 opacity-75"></span>
-                                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary dark:bg-cyan-500"></span>
-                                </span>
-                                {product.type?.toUpperCase() || 'SMART SENSOR'}
-                              </div>
-                            </div>
-                            
-                            {/* Main Image Container */}
-                            <div className="relative h-64 w-full flex items-center justify-center p-12 z-10 mt-6 group-hover:p-8 transition-all duration-700">
-                              <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent dark:from-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                              <img
-                                src={getProductImage(product)}
-                                alt={product.name}
-                                className="max-h-full max-w-full object-contain filter drop-shadow-xl group-hover:drop-shadow-[0_20px_30px_rgba(0,0,0,0.15)] dark:group-hover:drop-shadow-[0_20px_30px_rgba(34,211,238,0.2)] group-hover:scale-110 group-hover:-translate-y-4 transition-all duration-700 ease-out relative z-10"
-                              />
-                            </div>
-                            
-
-                            {/* Bottom Info Console */}
-                            <div className="relative z-20 mt-auto p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border-t border-white/80 dark:border-slate-700/80 group-hover:border-primary/30 dark:group-hover:border-cyan-500/30 transition-colors duration-500">
-                              {/* Scanning line effect on border */}
-                              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary dark:via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                              
-                              <div className="flex items-center justify-between gap-4">
-                                <div className="flex flex-col">
-
-                                  <h3 className="text-lg font-bold text-foreground leading-snug group-hover:text-primary dark:group-hover:text-cyan-400 transition-colors duration-300">
-                                    {product.name}
-                                  </h3>
+                                {/* Tech Reticle Corners */}
+                                <div className="absolute top-5 left-5 w-4 h-4 border-t-2 border-l-2 border-primary/30 dark:border-cyan-500/30 group-hover:border-primary dark:group-hover:border-cyan-400 group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all duration-500 z-10 pointer-events-none"></div>
+                                <div className="absolute top-5 right-5 w-4 h-4 border-t-2 border-r-2 border-primary/30 dark:border-cyan-500/30 group-hover:border-primary dark:group-hover:border-cyan-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500 z-10 pointer-events-none"></div>
+                                
+                                {/* Holographic Badge */}
+                                <div className="absolute top-6 left-8 z-20">
+                                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-primary/10 dark:border-cyan-500/20 text-[10px] font-mono tracking-widest text-primary dark:text-cyan-400 group-hover:border-primary/40 dark:group-hover:border-cyan-400/50 shadow-sm transition-all duration-300">
+                                    <span className="relative flex h-1.5 w-1.5">
+                                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary dark:bg-cyan-400 opacity-75"></span>
+                                      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary dark:bg-cyan-500"></span>
+                                    </span>
+                                    {product.type?.toUpperCase() || 'SMART SENSOR'}
+                                  </div>
                                 </div>
-                                <div className="flex-shrink-0 w-11 h-11 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground group-hover:bg-primary dark:group-hover:bg-cyan-500 group-hover:text-primary-foreground dark:group-hover:text-slate-900 group-hover:border-transparent shadow-sm group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] dark:group-hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-500 transform group-hover:rotate-90">
-                                  <ArrowRight className="h-5 w-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                                
+                                {/* Main Image Container */}
+                                <div className="relative h-64 w-full flex items-center justify-center p-12 z-10 mt-6 group-hover:p-8 transition-all duration-700">
+                                  <div className="absolute inset-0 bg-gradient-to-t from-white/40 to-transparent dark:from-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                                  <img
+                                    src={getProductImage(product)}
+                                    alt={`${product.name} - ${content.title} | Trivantas`}
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="max-h-full max-w-full object-contain filter drop-shadow-xl group-hover:drop-shadow-[0_20px_30px_rgba(0,0,0,0.15)] dark:group-hover:drop-shadow-[0_20px_30px_rgba(34,211,238,0.2)] group-hover:scale-110 group-hover:-translate-y-4 transition-all duration-700 ease-out relative z-10"
+                                  />
+                                </div>
+                                
+
+                                {/* Bottom Info Console */}
+                                <div className="relative z-20 mt-auto p-6 bg-white/60 dark:bg-slate-900/60 backdrop-blur-xl border-t border-white/80 dark:border-slate-700/80 group-hover:border-primary/30 dark:group-hover:border-cyan-500/30 transition-colors duration-500">
+                                  {/* Scanning line effect on border */}
+                                  <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary dark:via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                  
+                                  <div className="flex items-center justify-between gap-4">
+                                    <div className="flex flex-col">
+
+                                      <h3 className="text-lg font-bold text-foreground leading-snug group-hover:text-primary dark:group-hover:text-cyan-400 transition-colors duration-300">
+                                        {product.name}
+                                      </h3>
+                                    </div>
+                                    <div className="flex-shrink-0 w-11 h-11 rounded-full bg-background border border-border flex items-center justify-center text-muted-foreground group-hover:bg-primary dark:group-hover:bg-cyan-500 group-hover:text-primary-foreground dark:group-hover:text-slate-900 group-hover:border-transparent shadow-sm group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] dark:group-hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all duration-500 transform group-hover:rotate-90">
+                                      <ArrowRight className="h-5 w-5 -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        ) : (
-                          <CardContent className="p-6 flex flex-col h-full">
-                            <div className="flex items-center justify-between mb-4">
-                              <Badge variant="secondary" className="bg-secondary/10 text-orange-600 border-secondary/20">
-                                {product.type || 'Product'}
-                              </Badge>
-                              <Info className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
-                            </div>
+                            ) : (
+                              <CardContent className="p-6 flex flex-col h-full">
+                                <div className="flex items-center justify-between mb-4">
+                                  <Badge variant="secondary" className="bg-secondary/10 text-orange-600 border-secondary/20">
+                                    {product.type || 'Product'}
+                                  </Badge>
+                                  <Info className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                                </div>
 
-                            <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                              {product.name}
-                            </h3>
+                                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                                  {product.name}
+                                </h3>
 
-                            <div className="space-y-2 mb-6 flex-grow">
-                              {/* Category specific specs preview could go here if needed, keeping it simple for now */}
-                              <p className="text-sm text-muted-foreground line-clamp-3">
-                                {product.efficiency || product.description || "High performance industrial solution."}
-                              </p>
-                            </div>
+                                <div className="space-y-2 mb-6 flex-grow">
+                                  <p className="text-sm text-muted-foreground line-clamp-3">
+                                    {product.efficiency || product.description || "High performance industrial solution."}
+                                  </p>
+                                </div>
 
-                            <div className="mt-auto">
-                              <div className="flex flex-wrap gap-2 mb-4">
-                                {(product.features || []).slice(0, 2).map((feature: string, idx: number) => (
-                                  <span key={idx} className="text-xs bg-accent text-accent-foreground px-2 py-1 rounded">
-                                    {feature}
-                                  </span>
-                                ))}
-                              </div>
+                                <div className="mt-auto">
+                                  <div className="flex flex-wrap gap-2 mb-4">
+                                    {(product.features || []).slice(0, 2).map((feature: string, idx: number) => (
+                                      <span key={idx} className="text-xs bg-accent text-accent-foreground px-2 py-1 rounded">
+                                        {feature}
+                                      </span>
+                                    ))}
+                                  </div>
 
-                              <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                                <span className="text-sm text-muted-foreground">View Specifications</span>
-                                <ArrowRight className="h-4 w-4 text-primary transform group-hover:translate-x-1 transition-transform" />
-                              </div>
-                            </div>
-                          </CardContent>
-                        )}
-                      </Card>
-                    ))}
+                                  <div className="flex items-center justify-between pt-4 border-t border-border/50">
+                                    <span className="text-sm text-muted-foreground">View Specifications</span>
+                                    <ArrowRight className="h-4 w-4 text-primary transform group-hover:translate-x-1 transition-transform" />
+                                  </div>
+                                </div>
+                              </CardContent>
+                            )}
+                          </Card>
+                        </Link>
+                      );
+                    })}
                   </div>
                 ) : (
                   <div className="bg-muted/30 rounded-lg p-8 text-center border border-dashed border-muted-foreground/30">
