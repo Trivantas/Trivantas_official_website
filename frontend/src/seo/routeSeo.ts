@@ -51,6 +51,18 @@ const staticRoutes: Record<string, Omit<PageSeoConfig, "path">> = {
     description: "Browse the Trivantas digital flipbook — company overview and industrial capabilities.",
     noindex: false,
   },
+  "/privacy-policy": {
+    title: `Privacy Policy | ${BRAND}`,
+    description:
+      "Trivantas Privacy Policy: How we protect, manage, and safeguard client engineering data, technical specifications, RFQ proposals, and commercial confidentiality.",
+    noindex: false,
+  },
+  "/terms-of-service": {
+    title: `Terms of Service | ${BRAND}`,
+    description:
+      "Trivantas Terms of Service: Standard commercial terms governing website use, equipment quotations, custom engineering specifications, and hardware procurement.",
+    noindex: false,
+  },
   "/admin": {
     title: `Admin | ${BRAND}`,
     description: "Internal administration.",
@@ -65,7 +77,7 @@ const staticRoutes: Record<string, Omit<PageSeoConfig, "path">> = {
 
 const CATEGORY_PATHS = new Set(Object.keys(pageContent));
 
-export function resolvePageSeo(pathname: string): PageSeoConfig {
+export function resolvePageSeo(pathname: string, ogImage?: string): PageSeoConfig {
   const path = pathname === "" ? "/" : pathname.replace(/\/+$/, "") || "/";
 
   // 1. Check for specific product detail page (/products/:category/:slug)
@@ -75,6 +87,8 @@ export function resolvePageSeo(pathname: string): PageSeoConfig {
       path,
       title: `${product.name} | ${product.categoryName} | ${BRAND}`,
       description: truncate(product.description, 160),
+      ogType: "product",
+      ogImage,
       noindex: false,
     };
   }
@@ -88,6 +102,8 @@ export function resolvePageSeo(pathname: string): PageSeoConfig {
         path,
         title: `${content.title} | ${BRAND}`,
         description: truncate(content.description, 160),
+        ogType: "website",
+        ogImage,
         noindex: false,
       };
     }
@@ -95,6 +111,7 @@ export function resolvePageSeo(pathname: string): PageSeoConfig {
       path,
       title: `Products | ${BRAND}`,
       description: staticRoutes["/products"].description,
+      ogImage,
       noindex: true,
     };
   }
@@ -106,6 +123,8 @@ export function resolvePageSeo(pathname: string): PageSeoConfig {
       path,
       title: `${blog.title} | ${BRAND}`,
       description: truncate(blog.excerpt, 160),
+      ogType: "article",
+      ogImage,
       noindex: false,
     };
   }
@@ -113,7 +132,11 @@ export function resolvePageSeo(pathname: string): PageSeoConfig {
   // 4. Static defined routes
   const staticConfig = staticRoutes[path];
   if (staticConfig) {
-    return { ...staticConfig, path };
+    return {
+      ...staticConfig,
+      path,
+      ogImage: ogImage ?? staticConfig.ogImage,
+    };
   }
 
   // 5. Catch-all not found
@@ -136,5 +159,7 @@ export const INDEXABLE_PATHS: readonly string[] = [
   ...BLOG_ENTRIES.map((b) => b.path),
   "/schedule",
   "/flipbook",
+  "/privacy-policy",
+  "/terms-of-service",
 ];
 

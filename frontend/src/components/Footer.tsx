@@ -191,11 +191,28 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-center items-center">
-          <p className="text-primary-foreground/60 text-sm text-center w-full">
+        {/* Bottom Bar: Legal Links on Left, Centered Copyright */}
+        <div className="border-t border-slate-800 mt-12 pt-8 grid grid-cols-1 md:grid-cols-3 items-center gap-4 text-xs text-slate-400">
+          <div className="flex items-center justify-center md:justify-start gap-6">
+            <Link
+              to="/privacy-policy"
+              className="text-slate-400 hover:text-white transition-colors underline-offset-4 hover:underline"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/terms-of-service"
+              className="text-slate-400 hover:text-white transition-colors underline-offset-4 hover:underline"
+            >
+              Terms of Service
+            </Link>
+          </div>
+
+          <p className="text-slate-500 text-center">
             © {new Date().getFullYear()} Trivantas. All rights reserved.
           </p>
+
+          <div className="hidden md:block" aria-hidden="true" />
         </div>
       </div>
     </footer>

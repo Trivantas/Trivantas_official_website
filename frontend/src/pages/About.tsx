@@ -10,7 +10,10 @@ import {
   Eye, 
   Calendar, 
   CheckCircle, 
-  Building 
+  Building,
+  Linkedin,
+  ShieldCheck,
+  Factory
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -122,6 +125,16 @@ const About = () => {
                 >
                   View Flipbook
                 </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-blue-600/30 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/30 rounded-xl"
+                  onClick={() => window.open('https://www.linkedin.com/company/trivantas/', '_blank')}
+                  aria-label="Connect with Trivantas on LinkedIn"
+                >
+                  <Linkedin className="mr-2 h-4 w-4 text-blue-600" />
+                  LinkedIn Profile
+                </Button>
               </div>
             </motion.div>
 
@@ -130,9 +143,9 @@ const About = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="lg:col-span-5 bg-gradient-card rounded-3xl p-6 sm:p-10 shadow-card border border-border/50"
+              className="lg:col-span-5 bg-gradient-card rounded-3xl p-6 sm:p-10 shadow-card border border-border/50 flex flex-col justify-between"
             >
-              <div className="grid grid-cols-2 gap-6 sm:gap-10">
+              <div className="grid grid-cols-2 gap-6 sm:gap-10 mb-8">
                 {[
                   { label: "Years Experience", value: "7+" },
                   { label: "Projects Completed", value: "600+" },
@@ -151,6 +164,22 @@ const About = () => {
                     <div className="text-xs sm:text-sm font-medium text-muted-foreground uppercase tracking-wider">{stat.label}</div>
                   </motion.div>
                 ))}
+              </div>
+
+              {/* Verified Trust Cues */}
+              <div className="border-t border-border/60 pt-6 space-y-3">
+                <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                  <Factory className="h-4 w-4 text-primary flex-shrink-0" />
+                  <span><strong>Facilities:</strong> Pune Manufacturing Plant & Gujarat Branch Office</span>
+                </div>
+                <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                  <ShieldCheck className="h-4 w-4 text-emerald-600 flex-shrink-0" />
+                  <span><strong>Quality Assurance:</strong> ISO-Aligned Processes & 100% Pre-Dispatch FAT</span>
+                </div>
+                <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                  <Building className="h-4 w-4 text-blue-600 flex-shrink-0" />
+                  <span><strong>Core Sectors:</strong> Automotive, Chemical, Metallurgy, Pharma, Wastewater</span>
+                </div>
               </div>
             </motion.div>
 

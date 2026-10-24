@@ -1,4 +1,9 @@
-import { DEFAULT_OG_IMAGE, DEFAULT_TWITTER_CARD, SITE_ORIGIN } from "./siteConfig";
+import {
+  DEFAULT_OG_IMAGE,
+  DEFAULT_TWITTER_CARD,
+  SITE_ORIGIN,
+  isNonProductionBuild,
+} from "./siteConfig";
 import type { PageSeoConfig } from "./types";
 
 function escapeHtml(value: string): string {
@@ -9,17 +14,26 @@ function escapeHtml(value: string): string {
     .replace(/"/g, "&quot;");
 }
 
+function toAbsoluteUrl(url?: string): string {
+  if (!url) return DEFAULT_OG_IMAGE;
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  const clean = url.startsWith("/") ? url : `/${url}`;
+  return `${SITE_ORIGIN}${clean}`;
+}
+
 export function buildSeoHeadMarkup(config: PageSeoConfig, jsonLdBlocks: object[] = []): string {
   const canonical = `${SITE_ORIGIN}${config.path === "/" ? "" : config.path}`;
-  const robots = config.noindex ? "noindex, nofollow" : "index, follow";
+  const isNonProd = isNonProductionBuild();
+  const robots = isNonProd || config.noindex ? "noindex, nofollow" : "index, follow";
   const ogType = config.ogType ?? "website";
-  const ogImage = config.ogImage || DEFAULT_OG_IMAGE;
+  const ogImage = toAbsoluteUrl(config.ogImage);
 
   const lines = [
     `<title>${escapeHtml(config.title)}</title>`,
     `<meta name="description" content="${escapeHtml(config.description)}" />`,
     `<link rel="canonical" href="${escapeHtml(canonical)}" />`,
     `<meta name="robots" content="${robots}" />`,
+    ...(isNonProd ? [`<meta name="googlebot" content="noindex, nofollow" />`] : []),
     `<meta property="og:title" content="${escapeHtml(config.title)}" />`,
     `<meta property="og:description" content="${escapeHtml(config.description)}" />`,
     `<meta property="og:type" content="${ogType}" />`,

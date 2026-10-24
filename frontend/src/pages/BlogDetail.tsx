@@ -10,6 +10,7 @@ import {
   Check,
   Copy,
   BookOpen,
+  Linkedin,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { getBlogPostById, getRelatedBlogPosts, BlogPost } from '@/data/blogs';
@@ -209,8 +210,10 @@ const BlogDetail: React.FC = () => {
       {/* Article body */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 md:py-14">
         {/* Share toolbar */}
-        <div className="flex items-center justify-between py-3 mb-8 border-y border-border">
-          <div className="flex items-center gap-2 text-xs md:text-sm text-muted-foreground">
+        <div className="flex items-center justify-between py-3 mb-8 border-y border-border flex-wrap gap-3">
+          <div className="flex items-center gap-2 text-xs md:text-sm text-muted-foreground flex-wrap">
+            <span className="font-semibold text-foreground">By Trivantas Engineering Team</span>
+            <span>•</span>
             <span>Published on {post.date}</span>
             <span>•</span>
             <span>{post.readTime}</span>
@@ -288,6 +291,37 @@ const BlogDetail: React.FC = () => {
                 {para}
               </p>
             ))}
+          </div>
+
+          {/* Author & Editorial Attribution (E-E-A-T - Audit Item 4.20) */}
+          <div className="mt-10 p-6 rounded-2xl border border-border/80 bg-muted/30 shadow-sm flex flex-col sm:flex-row items-start sm:items-center gap-5">
+            <div className="w-14 h-14 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary flex-shrink-0">
+              <img src="/images/Icon-Color.png" alt="Trivantas Engineering Team" className="w-8 h-8 object-contain" />
+            </div>
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-1 flex-wrap">
+                <span className="font-bold text-foreground text-base">Trivantas Technical Engineering Team</span>
+                <span className="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 font-medium border border-emerald-500/20">
+                  Verified Technical Author
+                </span>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-3">
+                Authored and reviewed by Trivantas application specialists and instrumentation engineers with 7+ years of hands-on experience designing, sizing, and commissioning industrial hardware across India.
+              </p>
+              <div className="flex items-center gap-4 text-xs flex-wrap">
+                <a
+                  href="https://www.linkedin.com/company/trivantas/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-primary hover:underline font-semibold"
+                >
+                  <Linkedin className="h-3.5 w-3.5" />
+                  Connect with Trivantas on LinkedIn
+                </a>
+                <span className="text-muted-foreground">•</span>
+                <span className="text-muted-foreground">Technical Review: ISO Compliant</span>
+              </div>
+            </div>
           </div>
 
           {/* Featured Industrial Solutions Callout */}

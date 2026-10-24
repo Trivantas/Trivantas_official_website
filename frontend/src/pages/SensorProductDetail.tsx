@@ -76,7 +76,7 @@ const SensorProductDetail: React.FC = () => {
           >
             <Link to="/products/sensors">
               <ArrowLeft className="mr-1.5 h-4 w-4" />
-              <span>Back to Smart Level Sensors</span>
+              <span>Back to Level Sensors</span>
             </Link>
           </Button>
           <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground flex items-center gap-1.5 flex-wrap">

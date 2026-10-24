@@ -14,6 +14,16 @@ export function organizationSchema() {
     name: SITE_NAME,
     url: SITE_ORIGIN,
     logo: `${SITE_ORIGIN}/images/logo.png`,
+    foundingDate: "2019",
+    description: "Trivantas is a premier B2B manufacturer and engineering solutions provider specializing in smart level sensors, industrial filtration systems, water treatment plants, and material handling.",
+    knowsAbout: [
+      "Smart Level Sensors & Instrumentation",
+      "Industrial Coolant & Oil Filtration Systems",
+      "Wastewater & Effluent Treatment Plants (ETP / STP / ZLD)",
+      "Material Handling & Automated Conveyor Systems",
+      "Special Purpose Industrial Machinery (SPM)",
+      "Centralized Lubrication Systems",
+    ],
     contactPoint: [
       {
         "@type": "ContactPoint",
@@ -152,13 +162,13 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
   };
 }
 
-export function productSchema(product: CatalogProductEntry) {
+export function productSchema(product: CatalogProductEntry, imageUrl?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
     description: product.description,
-    image: DEFAULT_OG_IMAGE,
+    image: imageUrl || DEFAULT_OG_IMAGE,
     brand: {
       "@type": "Brand",
       name: SITE_NAME,
@@ -167,19 +177,20 @@ export function productSchema(product: CatalogProductEntry) {
   };
 }
 
-export function blogPostingSchema(blog: BlogEntry) {
+export function blogPostingSchema(blog: BlogEntry, imageUrl?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: blog.title,
     description: blog.excerpt,
     url: `${SITE_ORIGIN}${blog.path}`,
-    image: DEFAULT_OG_IMAGE,
+    image: imageUrl || DEFAULT_OG_IMAGE,
     datePublished: blog.date,
     author: {
       "@type": "Organization",
-      name: SITE_NAME,
+      name: "Trivantas Technical Engineering Team",
       url: SITE_ORIGIN,
+      sameAs: "https://www.linkedin.com/company/trivantas/",
     },
     publisher: {
       "@type": "Organization",
@@ -196,7 +207,38 @@ export function blogPostingSchema(blog: BlogEntry) {
   };
 }
 
-export function jsonLdForPath(pathname: string): object[] {
+export interface WebPageSchemaOptions {
+  path: string;
+  name: string;
+  description: string;
+  type?: "WebPage" | "AboutPage" | "ContactPage" | "CollectionPage";
+}
+
+export function webPageSchema(options: WebPageSchemaOptions) {
+  const url = `${SITE_ORIGIN}${options.path === "/" ? "" : options.path}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": options.type || "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: options.name,
+    description: options.description,
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${SITE_ORIGIN}/#website`,
+      name: SITE_NAME,
+      url: SITE_ORIGIN,
+    },
+    inLanguage: "en",
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_ORIGIN,
+    },
+  };
+}
+
+export function jsonLdForPath(pathname: string, imageUrl?: string): object[] {
   const blocks: object[] = [organizationSchema()];
   const path = pathname.replace(/\/+$/, "") || "/";
 
@@ -217,15 +259,16 @@ export function jsonLdForPath(pathname: string): object[] {
         { name: product.name, path: product.path },
       ]),
     );
-    blocks.push(productSchema(product));
+    blocks.push(productSchema(product, imageUrl));
     return blocks;
   }
 
-  // 3. Category listing page: 3-level BreadcrumbList
+  // 3. Category listing page: 3-level BreadcrumbList + CollectionPage schema
   if (path.startsWith("/products/")) {
     const slug = path.slice("/products/".length).split("/")[0];
     const content = slug ? pageContent[slug] : undefined;
     const name = content?.title ?? slug ?? "Products";
+    const desc = content?.description ?? `Explore ${name} industrial hardware solutions by ${SITE_NAME}.`;
     blocks.push(
       breadcrumbSchema([
         { name: "Home", path: "/" },
@@ -233,16 +276,33 @@ export function jsonLdForPath(pathname: string): object[] {
         { name: name, path },
       ]),
     );
+    blocks.push(
+      webPageSchema({
+        path,
+        name: `${name} | ${SITE_NAME}`,
+        description: desc,
+        type: "CollectionPage",
+      }),
+    );
     return blocks;
   }
 
-  // 4. Products root
+  // 4. Products root: 2-level BreadcrumbList + CollectionPage schema
   if (path === "/products") {
     blocks.push(
       breadcrumbSchema([
         { name: "Home", path: "/" },
         { name: "Products", path: "/products" },
       ]),
+    );
+    blocks.push(
+      webPageSchema({
+        path: "/products",
+        name: `Industrial Products & Equipment | ${SITE_NAME}`,
+        description:
+          "Explore Trivantas product categories: smart level sensors, advanced filtration, water treatment, material handling, lubrication systems, and special-purpose machines.",
+        type: "CollectionPage",
+      }),
     );
     return blocks;
   }
@@ -257,11 +317,11 @@ export function jsonLdForPath(pathname: string): object[] {
         { name: blog.title, path: blog.path },
       ]),
     );
-    blocks.push(blogPostingSchema(blog));
+    blocks.push(blogPostingSchema(blog, imageUrl));
     return blocks;
   }
 
-  // 6. Blogs root
+  // 6. Blogs root: 2-level BreadcrumbList + CollectionPage schema
   if (path === "/blogs") {
     blocks.push(
       breadcrumbSchema([
@@ -269,22 +329,79 @@ export function jsonLdForPath(pathname: string): object[] {
         { name: "Blogs", path: "/blogs" },
       ]),
     );
+    blocks.push(
+      webPageSchema({
+        path: "/blogs",
+        name: `Industrial Insights & Articles | ${SITE_NAME}`,
+        description:
+          "Articles on filtration, coolant management, and industrial best practices from the Trivantas team.",
+        type: "CollectionPage",
+      }),
+    );
     return blocks;
   }
 
   // 7. General static pages (About, Contact, Schedule, Flipbook)
-  const staticNames: Record<string, string> = {
-    "/about": "About Us",
-    "/contact": "Contact Us",
-    "/schedule": "Schedule Meeting",
-    "/flipbook": "Company Flipbook",
+  const staticPageConfigs: Record<
+    string,
+    { name: string; title: string; description: string; type: "WebPage" | "AboutPage" | "ContactPage" }
+  > = {
+    "/about": {
+      name: "About Us",
+      title: `About ${SITE_NAME} | Industrial Solutions Partner`,
+      description:
+        "Learn about Trivantas — over seven years delivering industrial sensors, filtration, handling, and automation solutions for manufacturing and process industries.",
+      type: "AboutPage",
+    },
+    "/contact": {
+      name: "Contact Us",
+      title: `Contact ${SITE_NAME} | Request a Quote`,
+      description:
+        "Contact Trivantas for industrial equipment inquiries, quotations, and technical support. Sales and engineering teams ready to assist.",
+      type: "ContactPage",
+    },
+    "/schedule": {
+      name: "Schedule Meeting",
+      title: `Schedule a Meeting | ${SITE_NAME}`,
+      description:
+        "Book a consultation with Trivantas to discuss sensors, filtration, handling, or custom industrial solutions.",
+      type: "WebPage",
+    },
+    "/flipbook": {
+      name: "Company Flipbook",
+      title: `Company Flipbook | ${SITE_NAME}`,
+      description: "Browse the Trivantas digital flipbook — company overview and industrial capabilities.",
+      type: "WebPage",
+    },
+    "/privacy-policy": {
+      name: "Privacy Policy",
+      title: `Privacy Policy | ${SITE_NAME}`,
+      description: "Trivantas Privacy Policy: Data protection and confidentiality standards.",
+      type: "WebPage",
+    },
+    "/terms-of-service": {
+      name: "Terms of Service",
+      title: `Terms of Service | ${SITE_NAME}`,
+      description: "Trivantas Terms of Service: Commercial, quotation, and warranty terms.",
+      type: "WebPage",
+    },
   };
-  if (staticNames[path]) {
+
+  const staticConfig = staticPageConfigs[path];
+  if (staticConfig) {
     blocks.push(
       breadcrumbSchema([
         { name: "Home", path: "/" },
-        { name: staticNames[path], path },
+        { name: staticConfig.name, path },
       ]),
+    );
+    blocks.push(
+      webPageSchema({
+        path,
+        name: staticConfig.title,
+        description: staticConfig.description,
+        type: staticConfig.type,
+      }),
     );
   }
 

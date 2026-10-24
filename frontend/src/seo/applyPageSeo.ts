@@ -1,4 +1,9 @@
-import { DEFAULT_OG_IMAGE, DEFAULT_TWITTER_CARD, SITE_ORIGIN } from "./siteConfig";
+import {
+  DEFAULT_OG_IMAGE,
+  DEFAULT_TWITTER_CARD,
+  SITE_ORIGIN,
+  isProductionHostname,
+} from "./siteConfig";
 import type { PageSeoConfig } from "./types";
 
 function upsertMeta(attr: "name" | "property", key: string, content: string) {
@@ -33,6 +38,13 @@ function upsertJsonLd(id: string, data: object) {
   el.textContent = JSON.stringify(data);
 }
 
+function toAbsoluteUrl(url?: string): string {
+  if (!url) return DEFAULT_OG_IMAGE;
+  if (url.startsWith("http://") || url.startsWith("https://")) return url;
+  const clean = url.startsWith("/") ? url : `/${url}`;
+  return `${SITE_ORIGIN}${clean}`;
+}
+
 export function applyPageSeo(config: PageSeoConfig, jsonLdBlocks: object[] = []) {
   const canonical = `${SITE_ORIGIN}${config.path === "/" ? "" : config.path}`;
   document.title = config.title;
@@ -40,10 +52,17 @@ export function applyPageSeo(config: PageSeoConfig, jsonLdBlocks: object[] = [])
   upsertMeta("name", "description", config.description);
   upsertLink("canonical", canonical);
 
-  const robots = config.noindex ? "noindex, nofollow" : "index, follow";
+  // Staging and preview environments safeguard (Audit Item 4.19):
+  // Non-production hosts (preview deployments, staging domains, localhost)
+  // must NEVER be indexed by search engines.
+  const isProdHost = typeof window !== "undefined" && isProductionHostname(window.location.hostname);
+  const robots = !isProdHost || config.noindex ? "noindex, nofollow" : "index, follow";
   upsertMeta("name", "robots", robots);
+  if (!isProdHost) {
+    upsertMeta("name", "googlebot", "noindex, nofollow");
+  }
 
-  const ogImage = config.ogImage || DEFAULT_OG_IMAGE;
+  const ogImage = toAbsoluteUrl(config.ogImage);
   upsertMeta("property", "og:title", config.title);
   upsertMeta("property", "og:description", config.description);
   upsertMeta("property", "og:type", config.ogType ?? "website");
