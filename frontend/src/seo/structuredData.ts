@@ -30,7 +30,7 @@ export function organizationSchema() {
         telephone: "+91-7028165428",
         contactType: "sales",
         email: "sales@trivantas.com",
-        areaServed: "IN",
+        areaServed: "Worldwide",
         availableLanguage: ["English", "Hindi", "Marathi", "Gujarati"],
       },
     ],
@@ -71,6 +71,7 @@ export function localBusinessSchemas() {
       telephone: "+91-7028165428",
       email: "sales@trivantas.com",
       priceRange: "$$",
+      hasMap: "https://www.google.com/maps/search/?api=1&query=Trivantas,+Kanjane+Nagar,+Ghar+society+Road,+677,+Tal,+Mulshi,+Uravade,+Maharashtra+412115",
       address: {
         "@type": "PostalAddress",
         streetAddress: "No. 677, Kanjane Nagar, Ghar society Road, Tal Mulshi, Uravade",
@@ -108,6 +109,7 @@ export function localBusinessSchemas() {
       telephone: "+91-7028165428",
       email: "sales@trivantas.com",
       priceRange: "$$",
+      hasMap: "https://www.google.com/maps/search/?api=1&query=167+%26+168+Aadhya+2,+Andada,+Ankleshwar,+Gujarat+393002",
       address: {
         "@type": "PostalAddress",
         streetAddress: "167 & 168 Aadhya 2, Andada",
