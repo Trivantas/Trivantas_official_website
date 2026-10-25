@@ -39,6 +39,7 @@ export default defineConfig(({ mode }) => {
               "@radix-ui/react-slot",
             ],
             "vendor-query": ["@tanstack/react-query"],
+            "vendor-emailjs": ["emailjs-com", "@emailjs/browser"],
           },
         },
       },

@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import emailjs from 'emailjs-com';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -28,9 +27,10 @@ const Contact = () => {
     }
   }, [location]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (form.current) {
+      const { default: emailjs } = await import('emailjs-com');
       emailjs
         .sendForm(
           'service_i8s6s0m',   // replace with your EmailJS service ID

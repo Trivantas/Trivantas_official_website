@@ -94,7 +94,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2">
-              <img src="/images/Icon-Color.png" alt="Trivantas Logo" className="h-14 w-14 object-contain" />
+              <img src="/images/Icon-Color.png" alt="Trivantas Logo" width={56} height={56} decoding="async" className="h-14 w-14 object-contain" />
               <div className="hidden md:flex flex-col items-start leading-tight">
                 <span className="text-2xl font-bold text-primary">Trivantas</span>
                 <span className="text-sm text-muted-foreground">One Stop Solution</span>

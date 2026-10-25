@@ -19,10 +19,10 @@ export interface PageContent {
 export const pageContent: Record<string, PageContent> = {
     sensors: {
         id: "sensors",
-        title: "Smart Level Sensors",
-        subtitle: "Precision Monitoring for Liquids, Solids, Moisture & Gas",
-        introPrefix: "Wherever precision sensing is essential, Trivantas delivers.",
-        description: "Our smart level sensors are engineered for accuracy and durability available in waterproof, dust-proof, high-temperature, and high-pressure designs. We also specialize in custom-built sensors tailored to your application's exact requirements.",
+        title: "Smart Level Sensors for Industrial Applications",
+        subtitle: "Radar, ultrasonic, capacitive, and vibrating fork level measurement for process plants",
+        introPrefix: "For tanks, silos, and process lines that cannot afford false trips or drift, Trivantas supplies application-matched level instrumentation.",
+        description: "Choose from radar, ultrasonic, capacitance, vibrating fork, and hydrostatic level sensors and switches—plus microwave moisture and gas detection—built for waterproof, dust-tight, high-temperature, and high-pressure duty. We configure outputs, materials, and mounting for your PLC, SCADA, or panel spec, including custom builds for OEM and plant upgrades.",
         whyChooseTitle: "Why Choose Trivantas?",
         whyChoosePoints: [
             "Robust performance in demanding environments",
@@ -100,10 +100,10 @@ export const pageContent: Record<string, PageContent> = {
     },
     filtration: {
         id: "filtration",
-        title: "Advanced Filtration Solutions ",
-        subtitle: "Clean. Reliable. Sustainable.",
-        introPrefix: "Where clean separation is critical, Trivantas delivers advanced filtration systems engineered for performance, durability, and sustainability.",
-        description: "Whether you're filtering liquids, oils, emulsions, or gases, our systems are designed for high-pressure, high-temperature, waterproof, and dust-proof operations adapted to meet your specific industrial needs.We also offer custom-built filtration systems based on your exact flow rate, media type, and filtration grade requirements.",
+        title: "Advanced Industrial Filtration Systems",
+        subtitle: "Coolant, oil, and process filtration for machining and manufacturing",
+        introPrefix: "When chip loads, tramp oil, or fine particulate threaten tool life and uptime, Trivantas designs filtration that fits your line—not generic catalog boxes.",
+        description: "Industrial coolant and oil filtration: magnetic separators, paper and compact band filters, centralized systems, skimmers, chip wringers, and reusable cartridge or bag units for machining, metalworking, and process fluids. Systems are sized for your flow rate, particle size, and shop layout, with options for high pressure, temperature, and wash-down environments. Food-grade oil filtration and environmental process-water modules are available on request.",
         whyChooseTitle: "Why Trivantas Filtration?",
         whyChoosePoints: [
             "multi-stage filtration options",
@@ -163,10 +163,10 @@ export const pageContent: Record<string, PageContent> = {
     },
     "water-treatment": {
         id: "water-treatment",
-        title: "Water Treatment Plants",
-        subtitle: "Clean. Compliant. Sustainable.",
-        introPrefix: "Where sustainable water management is key, Trivantas delivers advanced water treatment systems engineered for environmental compliance and high efficiency.",
-        description: "From sewage and effluent treatment to high-purity industrial process water and desalination, our systems are designed to maximize water recovery, minimize waste, and ensure compliance with strict environmental regulations.",
+        title: "Industrial Water Treatment Systems",
+        subtitle: "STP, ETP, RO/UF, and process water for compliant discharge and reuse",
+        introPrefix: "Plants facing tightening discharge norms or rising raw-water cost need treatment packages engineered for your influent, footprint, and operating team.",
+        description: "Trivantas delivers sewage treatment plants (STP), effluent treatment plants (ETP), RO and UF purification, and industrial water filtration for manufacturing and process industries. Solutions emphasize reliable biology and membrane performance, water recovery where feasible, and layouts that fit existing civil works. Automation, PLC integration, and commissioning support help you move from bid to compliant operation faster.",
         whyChooseTitle: "Why Trivantas Water Treatment?",
         whyChoosePoints: [
             "Complete environmental & local regulatory compliance",
@@ -198,10 +198,10 @@ export const pageContent: Record<string, PageContent> = {
     },
     handling: {
         id: "handling",
-        title: "Material Handling Equipment",
-        subtitle: "Move Smarter. Save Time.",
-        introPrefix: "When you need to shift and transfer materials quickly while saving time, our efficient material handling equipment is the perfect solution.",
-        description: "Built for high temperatures as well as cooling operations, our systems deliver reliable performance even in the most demanding environments.\\nWe also design and supply custom-built material handling solutions tailored to your specific requirements and automation needs.",
+        title: "Material Handling Systems",
+        subtitle: "Chip conveyors, automated conveying, and centralized chip handling for machine shops",
+        introPrefix: "When scrap volume or plant layout demands reliable transfer, Trivantas designs material handling systems that keep machines running.",
+        description: "Material handling systems including scraper and screw chip conveyors, centralized chip handling, pneumatic and vibrating transport, and chip processing—from single-machine swarf removal to plant-wide automated chip conveying. Built for high-temperature and cooling duty, automation-ready, and sized for throughput, material type, and floor layout.",
         whyChooseTitle: "Why Trivantas Material Handling?",
         whyChoosePoints: [
             "End-to-end solutions for conveying, lifting, shifting, and storage",
@@ -255,10 +255,10 @@ export const pageContent: Record<string, PageContent> = {
     },
     spm: {
         id: "spm",
-        title: "SPM Machines",
-        subtitle: "Your Turnkey Project Partner",
-        introPrefix: "Fully customized Special Purpose Machines (SPM) — from concept to commissioning.",
-        description: "From your concept or problem, we deliver the right solution. All Types of SPM Machines.",
+        title: "Special Purpose Machines (SPM)",
+        subtitle: "Custom SPM and automated assembly, testing, and process-specific machines",
+        introPrefix: "When standard machines cannot hit your cycle time, quality gate, or integration target, Trivantas builds special purpose machines from concept through commissioning.",
+        description: "Assembly, drilling, tapping, milling, cutting, welding, riveting, testing, inspection, and packaging SPMs—fully or semi-automated—engineered around your process, tooling, and plant layout. We support fixture design, safety compliance, and tie-in with existing lines so you get repeatable output without compromising uptime.",
         whyChooseTitle: "Why Trivantas SPM Machines?",
         whyChoosePoints: [
             "End-to-end support: concept, design, manufacturing & commissioning",
@@ -289,13 +289,14 @@ export const pageContent: Record<string, PageContent> = {
             }
         ],
         customSolutionText: "Can’t find exactly what you’re looking for? Trivantas provides tailor-made Special Purpose Machines, built to your exact specifications based on: Your production process & workflow, Required level of automation, Output, speed & cycle time targets, Integration with existing equipment & plant layout",
+        contactText: "Share your cycle-time target or sample part drawing—contact Trivantas to scope an SPM concept review and timeline.",
     },
     "lubrication-systems": {
         id: "lubrication-systems",
-        title: "Lubrication Systems",
-        subtitle: "Precision Lubrication & Fluid Management Solutions",
+        title: "Industrial Lubrication Systems",
+        subtitle: "Progressive lubricators, grease pumps, and oil mist lubrication for machine tools",
         introPrefix: "Wherever reliable lubrication is critical to prevent machine wear and downtime, Trivantas delivers.",
-        description: "Our lubrication systems, pumps, and components are built to ensure consistent oil or grease delivery to all friction points, protecting your machinery and increasing its operational lifetime.",
+        description: "Oil, grease, motorised, pneumatic, and air-oil mist systems with pumps, progressive distributors, injectors, and electronic timers—delivering metered lubricant to every friction point on presses, machine tools, and process lines. High-pressure options, manifolds, and hose routing are engineered for wash-down, heat, and continuous-duty plants, with spares and retrofit kits for legacy equipment.",
         whyChooseTitle: "Why Trivantas Lubrication Systems?",
         whyChoosePoints: [
             "Comprehensive range covering oil, grease, motorised, and manual systems",

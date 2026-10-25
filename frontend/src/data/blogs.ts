@@ -27,7 +27,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: 'industrial-water-oil-coolant-recycling',
     title: 'Industrial Water, Oil & Coolant Recycling: A Smarter Approach to Sustainable Manufacturing',
     excerpt:
-      'Discover how recycling, filtration and resource recovery solutions for industrial water, oil and coolant enable more efficient and sustainable manufacturing operations.',
+      'Industrial water, oil and coolant recycling for sustainable manufacturing—filtration and resource recovery strategies for machining and process plants.',
     date: 'August 29, 2026',
     readTime: '7 min read',
     category: 'Sustainable Manufacturing',
@@ -138,7 +138,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: 'ultrasonic-level-sensors',
     title: 'How Ultrasonic Level Sensors Solve Modern Industrial Level Challenges',
     excerpt:
-      'From chemical plants to water treatment facilities, discover how non-contact ultrasonic sensing delivers accurate, automated, and maintenance-light level measurement.',
+      'Ultrasonic level sensors guide: non-contact tank level for chemical plants and water treatment—accuracy, automation, and maintenance benefits.',
     date: 'July 9, 2026',
     readTime: '6 min read',
     category: 'Industrial Automation',
@@ -223,7 +223,7 @@ export const BLOG_POSTS: BlogPost[] = [
     id: 'fuel-level-transmitter',
     title: 'How Fuel Level Transmitters Solve Critical Fuel Monitoring Challenges',
     excerpt:
-      'From diesel generators to mining equipment, discover how Fuel Level Transmitters deliver real-time accuracy, prevent downtime, and automate fuel management across industries.',
+      'Fuel level transmitter applications for generators, mining, and industrial tanks—real-time fuel monitoring and downtime prevention.',
     date: 'July 9, 2026',
     readTime: '5 min read',
     category: 'Fuel Management',

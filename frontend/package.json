@@ -11,7 +11,8 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify:seo-map": "node scripts/_verify-map-v1.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

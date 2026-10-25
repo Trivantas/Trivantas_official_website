@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -7,12 +7,8 @@ import { ArrowLeft, Info, CheckCircle, ArrowRight, ChevronLeft, ChevronRight } f
 import ProductDetailModal, { ProductType } from '@/components/ProductDetailModal';
 import { motion } from 'framer-motion';
 import { pageContent } from '@/data/pageContent';
-import sensorsData from '@/data/sensors.json';
-import filtrationData from '@/data/filtration.json';
-import handlingData from '@/data/handling.json';
-import spmData from '@/data/spm.json';
-import waterTreatmentData from '@/data/water-treatment.json';
-import lubricationData from '@/data/lubrication.json';
+import { ProductCategoryBreadcrumb } from '@/components/ProductCategoryBreadcrumb';
+import { loadCategoryProducts } from '@/data/loadCategoryProducts';
 import NotFound from './NotFound';
 
 
@@ -28,8 +24,23 @@ const ProductDetails = () => {
   const navigate = useNavigate();
   const [selectedProduct, setSelectedProduct] = useState<ProductType | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [products, setProducts] = useState<ProductType[]>([]);
 
   const heroSlides = getCategoryHeroSlides(category);
+
+  useLayoutEffect(() => {
+    if (!category) {
+      setProducts([]);
+      return;
+    }
+    let cancelled = false;
+    loadCategoryProducts(category).then((data) => {
+      if (!cancelled) setProducts(data);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [category]);
 
   useEffect(() => {
     setCurrentSlide(0);
@@ -41,17 +52,7 @@ const ProductDetails = () => {
     }
   }, [category, heroSlides.length]);
 
-  const productDataMap: Record<string, ProductType[]> = {
-    sensors: sensorsData as ProductType[],
-    filtration: filtrationData as ProductType[],
-    spm: spmData as ProductType[],
-    handling: handlingData as ProductType[],
-    "water-treatment": waterTreatmentData as ProductType[],
-    "lubrication-systems": lubricationData as ProductType[]
-  };
-
   const content = pageContent[category as keyof typeof pageContent];
-  const products = productDataMap[category as keyof typeof productDataMap] || [];
 
   if (!content) {
     return <NotFound />;
@@ -68,6 +69,11 @@ const ProductDetails = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <div className="border-b border-border/60 bg-background md:hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <ProductCategoryBreadcrumb categorySlug={category as string} />
+        </div>
+      </div>
       {/* Header */}
       <section className="relative py-20 md:py-28 overflow-hidden bg-gradient-hero text-white">
         {heroSlides.length > 0 && (
@@ -85,6 +91,7 @@ const ProductDetails = () => {
                     src={slideImg}
                     alt={`${content.title} Hero Slide ${index + 1}`}
                     fetchPriority={index === 0 ? 'high' : 'auto'}
+                    loading={index === 0 ? 'eager' : 'lazy'}
                     decoding="async"
                     className="w-full h-full object-cover object-center"
                   />
@@ -97,13 +104,11 @@ const ProductDetails = () => {
         )}
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col items-center md:items-start w-full">
-          <nav aria-label="Breadcrumb" className="mb-4 text-xs text-white/70 flex items-center gap-2 self-start flex-wrap">
-            <Link to="/" className="hover:text-white hover:underline">Home</Link>
-            <span>/</span>
-            <Link to="/products" className="hover:text-white hover:underline">Products</Link>
-            <span>/</span>
-            <span className="text-white font-semibold" aria-current="page">{content.title}</span>
-          </nav>
+          <ProductCategoryBreadcrumb
+            categorySlug={category as string}
+            variant="hero"
+            className="mb-4 self-start hidden md:flex"
+          />
           <Button
             variant="ghost"
             asChild
