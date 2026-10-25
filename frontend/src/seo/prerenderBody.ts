@@ -1,5 +1,36 @@
-import { getProductByPath, getBlogByPath } from "./productIndex";
+import { ALL_PRODUCTS, getProductByPath, getBlogByPath } from "./productIndex";
 import { pageContent } from "../data/pageContent";
+
+const BLOG_CONTEXTUAL_LINKS: Record<string, { href: string; label: string }[]> = {
+  "ultrasonic-level-sensors": [
+    { href: "/products/sensors/ultrasonic-level-sensors", label: "Ultrasonic level sensors" },
+    { href: "/products/sensors", label: "Smart level sensors catalog" },
+  ],
+  "fuel-level-transmitter": [
+    { href: "/products/sensors/fuel-level-transmitters", label: "Fuel level transmitters" },
+    { href: "/products/sensors", label: "Industrial level instrumentation" },
+  ],
+  "industrial-water-oil-coolant-recycling": [
+    { href: "/products/filtration", label: "Advanced filtration systems" },
+    { href: "/products/water-treatment", label: "Water treatment plants (ETP / STP / ZLD)" },
+  ],
+};
+
+function blogRelatedLinksHtml(blogId: string): string {
+  const links = BLOG_CONTEXTUAL_LINKS[blogId];
+  if (!links?.length) return "";
+  return `<nav aria-label="Related products" class="mt-8 pt-6 border-t border-border/60">
+    <p class="text-sm font-semibold text-foreground mb-3">Related Trivantas solutions</p>
+    <ul class="space-y-2 text-sm">
+      ${links
+        .map(
+          (l) =>
+            `<li><a href="${l.href}" class="text-primary hover:underline font-medium">${escapeHtml(l.label)}</a></li>`,
+        )
+        .join("")}
+    </ul>
+  </nav>`;
+}
 
 function escapeHtml(value: string): string {
   return value
@@ -108,6 +139,28 @@ export function renderPrerenderBody(routePath: string): string | undefined {
           </div>`
         : "";
 
+      const categoryProducts = ALL_PRODUCTS.filter((p) => p.categorySlug === categoryKey);
+      const productLinksHtml =
+        categoryProducts.length > 0
+          ? `<nav aria-label="Products in this category" class="mt-10 pt-6 border-t border-border/60 max-w-3xl">
+            <p class="text-sm font-semibold text-foreground mb-3">Product specifications</p>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+              ${categoryProducts
+                .slice(0, 24)
+                .map(
+                  (p) =>
+                    `<li><a href="${p.path}" class="text-primary hover:underline font-medium">${escapeHtml(p.name)}</a></li>`,
+                )
+                .join("")}
+            </ul>
+            ${
+              categoryProducts.length > 24
+                ? `<p class="text-xs text-muted-foreground mt-3">+ ${categoryProducts.length - 24} additional SKUs in this category.</p>`
+                : ""
+            }
+          </nav>`
+          : "";
+
       return `
         <div class="min-h-screen bg-background text-foreground flex flex-col">
           <header class="border-b border-border/80 bg-background/95 py-3 px-4 sm:px-8">
@@ -133,6 +186,7 @@ export function renderPrerenderBody(routePath: string): string | undefined {
               ${escapeHtml(category.description)}
             </p>
             ${groupsHtml}
+            ${productLinksHtml}
             <div class="mt-8 flex gap-4">
               <a href="/contact" class="inline-flex items-center justify-center px-6 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium text-sm shadow">
                 Inquire About Custom Systems
@@ -147,6 +201,7 @@ export function renderPrerenderBody(routePath: string): string | undefined {
   // 3. Blog Detail Pages (/blogs/:id)
   const blog = getBlogByPath(normalized);
   if (blog) {
+    const relatedNav = blogRelatedLinksHtml(blog.id);
     return `
       <div class="min-h-screen bg-background text-foreground flex flex-col">
         <header class="border-b border-border/80 bg-background/95 py-3 px-4 sm:px-8">
@@ -169,6 +224,7 @@ export function renderPrerenderBody(routePath: string): string | undefined {
           <p class="text-lg text-muted-foreground leading-relaxed">
             ${escapeHtml(blog.excerpt)}
           </p>
+          ${relatedNav}
           <div class="mt-8">
             <a href="/blogs" class="text-primary hover:underline text-sm font-medium">
               &larr; Back to all industrial insights

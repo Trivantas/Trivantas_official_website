@@ -110,7 +110,7 @@ function buildProductDescription(item: RawProductItem, categoryName: string, pat
   if (details) {
     return `${item.name} by Trivantas - ${details}. Engineered for demanding industrial environments.`;
   }
-  return `${item.name} - High-performance ${categoryName.toLowerCase()} solution by Trivantas, engineered for industrial reliability.`;
+  return `${item.name} — ${categoryName} from Trivantas. Engineered for industrial reliability; contact our team for specifications and B2B quotation.`;
 }
 
 export const ALL_PRODUCTS: CatalogProductEntry[] = CATEGORY_DEFINITIONS.flatMap(

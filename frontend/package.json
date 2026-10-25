@@ -12,7 +12,10 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "verify:seo-map": "node scripts/_verify-map-v1.mjs"
+    "verify:seo-map": "node scripts/_verify-map-v1.mjs",
+    "verify:seo-shells": "node scripts/verify-seo-shells.mjs",
+    "generate:vercel-rewrites": "node scripts/generate-vercel-rewrites.mjs",
+    "optimize:hero-assets": "node scripts/optimize-hero-assets.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
