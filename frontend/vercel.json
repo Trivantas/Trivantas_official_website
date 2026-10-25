@@ -2,25 +2,111 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/sensors", "destination": "/products/sensors", "permanent": true },
-    { "source": "/filtration", "destination": "/products/filtration", "permanent": true },
-    { "source": "/water-treatment", "destination": "/products/water-treatment", "permanent": true },
-    { "source": "/handling", "destination": "/products/handling", "permanent": true },
-    { "source": "/lubrication", "destination": "/products/lubrication-systems", "permanent": true },
-    { "source": "/lubrication-systems", "destination": "/products/lubrication-systems", "permanent": true },
-    { "source": "/spm", "destination": "/products/spm", "permanent": true },
-    { "source": "/product", "destination": "/products", "permanent": true },
-    { "source": "/catalog", "destination": "/products", "permanent": true },
-    { "source": "/product-details", "destination": "/products", "permanent": true },
-    { "source": "/products-details", "destination": "/products", "permanent": true },
-    { "source": "/products/water", "destination": "/products/water-treatment", "permanent": true },
-    { "source": "/products/material-handling", "destination": "/products/handling", "permanent": true },
-    { "source": "/products/lubrication", "destination": "/products/lubrication-systems", "permanent": true },
-    { "source": "/blog", "destination": "/blogs", "permanent": true },
-    { "source": "/articles", "destination": "/blogs", "permanent": true },
-    { "source": "/insights", "destination": "/blogs", "permanent": true },
-    { "source": "/privacy", "destination": "/privacy-policy", "permanent": true },
-    { "source": "/terms", "destination": "/terms-of-service", "permanent": true }
+    {
+      "source": "/sensors",
+      "destination": "/products/sensors",
+      "permanent": true
+    },
+    {
+      "source": "/filtration",
+      "destination": "/products/filtration",
+      "permanent": true
+    },
+    {
+      "source": "/water-treatment",
+      "destination": "/products/water-treatment",
+      "permanent": true
+    },
+    {
+      "source": "/handling",
+      "destination": "/products/handling",
+      "permanent": true
+    },
+    {
+      "source": "/lubrication",
+      "destination": "/products/lubrication-systems",
+      "permanent": true
+    },
+    {
+      "source": "/lubrication-systems",
+      "destination": "/products/lubrication-systems",
+      "permanent": true
+    },
+    {
+      "source": "/spm",
+      "destination": "/products/spm",
+      "permanent": true
+    },
+    {
+      "source": "/product",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/catalog",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/product-details",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/products-details",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/products/water",
+      "destination": "/products/water-treatment",
+      "permanent": true
+    },
+    {
+      "source": "/products/material-handling",
+      "destination": "/products/handling",
+      "permanent": true
+    },
+    {
+      "source": "/products/lubrication",
+      "destination": "/products/lubrication-systems",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/blogs",
+      "permanent": true
+    },
+    {
+      "source": "/articles",
+      "destination": "/blogs",
+      "permanent": true
+    },
+    {
+      "source": "/insights",
+      "destination": "/blogs",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-of-service",
+      "permanent": true
+    },
+    {
+      "source": "/sensors-catalog",
+      "destination": "/products/sensors",
+      "permanent": true
+    },
+    {
+      "source": "/products/sensors-catalog",
+      "destination": "/products/sensors",
+      "permanent": true
+    }
   ],
   "headers": [
     {
@@ -50,6 +136,13 @@
       ],
       "destination": "/robots-staging.txt"
     },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/admin/login",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/index.html"
+    }
   ]
 }

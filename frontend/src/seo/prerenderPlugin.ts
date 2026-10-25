@@ -155,6 +155,24 @@ export function seoPrerenderPlugin(): Plugin {
       console.info(
         `✅ [seo-quality-gate] Passed all build-time SEO quality gates (Sitemap: ${sitemapMatches.length}, Products: ${ALL_PRODUCTS.length}, Shells: ${INDEXABLE_PATHS.length})`
       );
+
+      const { spawnSync } = await import("child_process");
+      const genScript = path.resolve(pluginDir, "../../scripts/generate-vercel-rewrites.mjs");
+      const inv = spawnSync(process.execPath, [genScript], {
+        cwd: path.resolve(pluginDir, "../.."),
+        encoding: "utf8",
+      });
+      if (inv.status !== 0) {
+        console.error(inv.stdout || inv.stderr);
+        throw new Error("[seo-prerender] generate-vercel-rewrites.mjs failed");
+      }
+      if (inv.stdout?.trim()) console.info(inv.stdout.trim());
+
+      const invCsv = spawnSync(process.execPath, [path.resolve(pluginDir, "../../scripts/build-onpage-inventory.mjs")], {
+        cwd: path.resolve(pluginDir, "../.."),
+        encoding: "utf8",
+      });
+      if (invCsv.stdout?.trim()) console.info(invCsv.stdout.trim());
     },
   };
 }

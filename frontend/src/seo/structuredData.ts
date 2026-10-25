@@ -197,22 +197,46 @@ function productGroupItemListSchema(slug: string) {
   };
 }
 
+/** B2B quote-based catalog — Offer without public price (Google: omit price when not listed). */
+function productOfferBlock(product: CatalogProductEntry) {
+  const offerUrl = `${SITE_ORIGIN}${product.path}`;
+  return {
+    "@type": "Offer" as const,
+    url: offerUrl,
+    availability: "https://schema.org/InStock",
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      priceCurrency: "INR",
+      description: "Contact for quote — pricing provided on request for industrial B2B orders.",
+    },
+    seller: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_ORIGIN,
+    },
+  };
+}
+
 export function productSchema(product: CatalogProductEntry, imageUrl?: string) {
+  const productUrl = `${SITE_ORIGIN}${product.path}`;
   return {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
     description: product.description,
+    url: productUrl,
     image: imageUrl || DEFAULT_OG_IMAGE,
     brand: {
       "@type": "Brand",
       name: SITE_NAME,
     },
     category: product.categoryName,
+    offers: productOfferBlock(product),
   };
 }
 
 export function blogPostingSchema(blog: BlogEntry, imageUrl?: string) {
+  const published = blog.date || undefined;
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -220,7 +244,8 @@ export function blogPostingSchema(blog: BlogEntry, imageUrl?: string) {
     description: blog.excerpt,
     url: `${SITE_ORIGIN}${blog.path}`,
     image: imageUrl || DEFAULT_OG_IMAGE,
-    datePublished: blog.date,
+    ...(published ? { datePublished: published, dateModified: published } : {}),
+    inLanguage: "en",
     author: {
       "@type": "Organization",
       name: "Trivantas Technical Engineering Team",
@@ -229,7 +254,7 @@ export function blogPostingSchema(blog: BlogEntry, imageUrl?: string) {
     },
     publisher: {
       "@type": "Organization",
-      name: SITE_NAME,
+      name: SITE_NAME, 
       logo: {
         "@type": "ImageObject",
         url: `${SITE_ORIGIN}/images/logo.png`,
@@ -298,13 +323,20 @@ export function jsonLdForPath(pathname: string, imageUrl?: string): object[] {
     return blocks;
   }
 
-  // 3. Category listing page: 3-level BreadcrumbList + CollectionPage schema
+  // 3. Category listing page only (/products/:category) — not invalid or unknown product paths
   if (path.startsWith("/products/")) {
-    const slug = path.slice("/products/".length).split("/")[0];
-    const crumbs = slug ? productCategoryBreadcrumbItems(slug) : null;
-    const content = slug ? pageContent[slug as keyof typeof pageContent] : undefined;
-    const name = crumbs?.[2]?.name ?? content?.title?.trim() ?? slug ?? "Products";
-    const desc = content?.description ?? `Explore ${name} industrial hardware solutions by ${SITE_NAME}.`;
+    const segments = path.slice("/products/".length).split("/").filter(Boolean);
+    if (segments.length !== 1) {
+      return blocks;
+    }
+    const slug = segments[0];
+    const content = pageContent[slug as keyof typeof pageContent];
+    if (!content) {
+      return blocks;
+    }
+    const crumbs = productCategoryBreadcrumbItems(slug);
+    const name = crumbs?.[2]?.name ?? content.title.trim();
+    const desc = content.description ?? `Explore ${name} industrial hardware solutions by ${SITE_NAME}.`;
     if (crumbs) {
       blocks.push(breadcrumbSchema(crumbs));
     }
@@ -316,7 +348,7 @@ export function jsonLdForPath(pathname: string, imageUrl?: string): object[] {
         type: "CollectionPage",
       }),
     );
-    const groupList = slug ? productGroupItemListSchema(slug) : null;
+    const groupList = productGroupItemListSchema(slug);
     if (groupList) {
       blocks.push(groupList);
     }

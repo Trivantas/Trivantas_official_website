@@ -13,11 +13,26 @@
       ],
       "destination": "https://trivantas.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/sensors-catalog",
+      "destination": "/products/sensors",
+      "permanent": true
+    },
+    {
+      "source": "/products/sensors-catalog",
+      "destination": "/products/sensors",
+      "permanent": true
     }
   ],
   "rewrites": [
-    { "source": "/admin/login", "destination": "/index.html" },
-    { "source": "/admin", "destination": "/index.html" }
+    {
+      "source": "/admin/login",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/index.html"
+    }
   ]
 }
-
