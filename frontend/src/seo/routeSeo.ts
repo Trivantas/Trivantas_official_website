@@ -17,9 +17,9 @@ function truncate(text: string, max: number): string {
 
 const staticRoutes: Record<string, Omit<PageSeoConfig, "path">> = {
   "/": {
-    title: `${BRAND} | One Stop Industrial Solutions`,
+    title: `${BRAND} | Industrial Equipment & Automation Supplier`,
     description:
-      "B2B industrial hardware: smart level sensors, filtration, water treatment, material handling, lubrication systems, and SPM machines. Reliable partnerships beyond business.",
+      "Trivantas industrial equipment: smart level sensors, filtration, water treatment plants, material handling, lubrication systems, and special purpose machines. B2B quotes and engineering support.",
   },
   "/about": {
     title: `About ${BRAND} | Industrial Solutions Partner`,
@@ -27,14 +27,14 @@ const staticRoutes: Record<string, Omit<PageSeoConfig, "path">> = {
       "Learn about Trivantas — over seven years delivering industrial sensors, filtration, handling, and automation solutions for manufacturing and process industries.",
   },
   "/products": {
-    title: `Industrial Products & Equipment | ${BRAND}`,
+    title: `Industrial Product Catalog | ${BRAND}`,
     description:
-      "Explore Trivantas product categories: smart level sensors, advanced filtration, water treatment, material handling, lubrication systems, and special-purpose machines.",
+      "Browse the Trivantas industrial product catalog: level sensors, filtration, water treatment, chip conveyors and material handling, lubrication, and SPM machines.",
   },
   "/contact": {
     title: `Contact ${BRAND} | Request a Quote`,
     description:
-      "Contact Trivantas for industrial equipment inquiries, quotations, and technical support. Sales and engineering teams ready to assist.",
+      "Contact Trivantas for B2B industrial equipment quotes, technical inquiries, and project consultations. Sales and engineering teams respond to India and export requests.",
   },
   "/blogs": {
     title: `Industrial Insights & Articles | ${BRAND}`,

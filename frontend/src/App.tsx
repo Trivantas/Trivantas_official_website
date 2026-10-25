@@ -12,22 +12,11 @@ import RouteLoadingFallback from "./components/RouteLoadingFallback";
 import ErrorBoundary from "./components/ErrorBoundary";
 import LegacyUrlRedirector from "./components/LegacyUrlRedirector";
 
-// Core marketing & catalog pages: eager loaded so refresh never flashes or causes layout shift
+// Core marketing entry routes: eager loaded for fast first paint on home, hub, about, contact
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
-import ProductDetails from "./pages/ProductDetails";
-import SensorProductDetail from "./pages/SensorProductDetail";
-import WaterTreatmentProductDetail from "./pages/WaterTreatmentProductDetail";
-import HandlingProductDetail from "./pages/HandlingProductDetail";
-import FiltrationProductDetail from "./pages/FiltrationProductDetail";
-import LubricationProductDetail from "./pages/LubricationProductDetail";
-import SpmProductDetail from "./pages/SpmProductDetail";
-import Blogs from "./pages/Blogs";
-import BlogDetail from "./pages/BlogDetail";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 
 // Helper for dynamic imports with automatic retry on chunk loading failure
@@ -51,7 +40,18 @@ function lazyWithRetry<T extends React.ComponentType<unknown>>(
   });
 }
 
-// Lazy-loaded auxiliary and admin pages
+// Lazy-loaded catalog, content, and admin pages (smaller initial JS for home/contact LCP)
+const ProductDetails = lazyWithRetry(() => import("./pages/ProductDetails"));
+const SensorProductDetail = lazyWithRetry(() => import("./pages/SensorProductDetail"));
+const WaterTreatmentProductDetail = lazyWithRetry(() => import("./pages/WaterTreatmentProductDetail"));
+const HandlingProductDetail = lazyWithRetry(() => import("./pages/HandlingProductDetail"));
+const FiltrationProductDetail = lazyWithRetry(() => import("./pages/FiltrationProductDetail"));
+const LubricationProductDetail = lazyWithRetry(() => import("./pages/LubricationProductDetail"));
+const SpmProductDetail = lazyWithRetry(() => import("./pages/SpmProductDetail"));
+const Blogs = lazyWithRetry(() => import("./pages/Blogs"));
+const BlogDetail = lazyWithRetry(() => import("./pages/BlogDetail"));
+const PrivacyPolicy = lazyWithRetry(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazyWithRetry(() => import("./pages/TermsOfService"));
 const Schedule = lazyWithRetry(() => import("./pages/Schedule"));
 const Flipbook = lazyWithRetry(() => import("./pages/Flipbook"));
 const AdminLogin = lazyWithRetry(() => import("./pages/AdminLogin"));

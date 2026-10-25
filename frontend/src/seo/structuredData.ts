@@ -7,6 +7,19 @@ import {
 } from "./productIndex";
 import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_ORIGIN } from "./siteConfig";
 
+export type BreadcrumbTrailItem = { name: string; path: string };
+
+export function productCategoryBreadcrumbItems(slug: string): BreadcrumbTrailItem[] | null {
+  const content = slug ? pageContent[slug as keyof typeof pageContent] : undefined;
+  if (!content) return null;
+  const path = `/products/${slug}`;
+  return [
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    { name: content.title.trim(), path },
+  ];
+}
+
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
@@ -151,7 +164,7 @@ export function webSiteSchema() {
   };
 }
 
-export function breadcrumbSchema(items: { name: string; path: string }[]) {
+export function breadcrumbSchema(items: BreadcrumbTrailItem[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -161,6 +174,26 @@ export function breadcrumbSchema(items: { name: string; path: string }[]) {
       name: item.name,
       item: `${SITE_ORIGIN}${item.path === "/" ? "" : item.path}`,
     })),
+  };
+}
+
+/** ItemList of product groups on category listing pages (Week 3 JSON-LD). */
+function productGroupItemListSchema(slug: string) {
+  const content = pageContent[slug as keyof typeof pageContent];
+  if (!content?.productGroups?.length) return null;
+
+  const groupItems = content.productGroups.map((group, index) => ({
+    "@type": "ListItem" as const,
+    position: index + 1,
+    name: group.title,
+  }));
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `${content.title.trim()} — product groups`,
+    numberOfItems: groupItems.length,
+    itemListElement: groupItems,
   };
 }
 
@@ -268,16 +301,13 @@ export function jsonLdForPath(pathname: string, imageUrl?: string): object[] {
   // 3. Category listing page: 3-level BreadcrumbList + CollectionPage schema
   if (path.startsWith("/products/")) {
     const slug = path.slice("/products/".length).split("/")[0];
-    const content = slug ? pageContent[slug] : undefined;
-    const name = content?.title ?? slug ?? "Products";
+    const crumbs = slug ? productCategoryBreadcrumbItems(slug) : null;
+    const content = slug ? pageContent[slug as keyof typeof pageContent] : undefined;
+    const name = crumbs?.[2]?.name ?? content?.title?.trim() ?? slug ?? "Products";
     const desc = content?.description ?? `Explore ${name} industrial hardware solutions by ${SITE_NAME}.`;
-    blocks.push(
-      breadcrumbSchema([
-        { name: "Home", path: "/" },
-        { name: "Products", path: "/products" },
-        { name: name, path },
-      ]),
-    );
+    if (crumbs) {
+      blocks.push(breadcrumbSchema(crumbs));
+    }
     blocks.push(
       webPageSchema({
         path,
@@ -286,6 +316,10 @@ export function jsonLdForPath(pathname: string, imageUrl?: string): object[] {
         type: "CollectionPage",
       }),
     );
+    const groupList = slug ? productGroupItemListSchema(slug) : null;
+    if (groupList) {
+      blocks.push(groupList);
+    }
     return blocks;
   }
 
