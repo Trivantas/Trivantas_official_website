@@ -219,6 +219,7 @@ export const pageContent: Record<string, PageContent> = {
                     "Slat Type Chip Conveyor",
                     "Screw Type Chip Conveyor",
                     "Magnetic Type Chip Conveyor",
+                    "Cleat Conveyor",
                     "Centralized Chip Handling System",
                     "Roller Type Conveyor",
                     "Spare Parts for Chip Conveyors",

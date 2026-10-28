@@ -139,6 +139,46 @@
     }
   },
   {
+    "id": "cleat-conveyor",
+    "categoryLabel": "Material Handling Equipment",
+    "name": "Cleat Conveyor",
+    "capacity": "Up to 500 kg/hr",
+    "efficiency": "Anti-slip incline conveying",
+    "features": [
+      "Cleated belt or chain design prevents material rollback on steep inclines",
+      "Heavy-duty fabricated structural steel frame engineered for continuous operation",
+      "Low horizontal loading section with inclined discharge elevation",
+      "Enclosed high-torque drive motor with protective safety mesh guard",
+      "Integrated electrical control panel with push-button controls and warning beacon",
+      "Handles metal chips, stampings, scrap, forgings, fasteners, and bulk components",
+      "Low-wear guide rails and easy-tensioning mechanism for minimal maintenance",
+      "Customizable cleat height, conveyor length, and incline angles to match machine chutes"
+    ],
+    "icons": [
+      "⛓️"
+    ],
+    "imageKey": "cleatConveyor",
+    "type": "Cleat Conveyor",
+    "range": "As per customer requirements",
+    "accuracy": "As per customer requirements",
+    "applications": [
+      "CNC machining centers & chip collection",
+      "Press shops and sheet metal stamping scrap",
+      "Foundries, forging and die-casting lines",
+      "Automotive parts manufacturing and assembly",
+      "Elevating small parts, fasteners, and hardware to hoppers",
+      "Recycling plants and centralized scrap disposal"
+    ],
+    "specifications": {
+      "cleatHeight": "30 mm - 100 mm (Customizable)",
+      "conveyorType": "Cleated Belt / Steel Slat Incline Conveyor",
+      "driveUnit": "Geared motor with safety guard",
+      "controlPanel": "Integrated with push buttons & warning beacon",
+      "inclineAngle": "Up to 60° (Application specific)",
+      "frameMaterial": "Heavy-duty fabricated structural steel"
+    }
+  },
+  {
     "id": "centralized-chip-handling-system",
     "categoryLabel": "Material Handling Equipment",
     "name": "Centralized Chip Handling System",

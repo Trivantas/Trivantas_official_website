@@ -7,6 +7,7 @@ export const PRODUCT_IMAGEKEY_TO_ASSET_BASE: Record<string, string[]> = {
   slatConveyor: ["Slat Type Chip Conveyor", "slat-type-chip-conveyor"],
   screwConveyor: ["Screw Type Chip Conveyor", "screw-type-chip-conveyor"],
   magneticConveyor: ["Magnetic Type Chip Conveyor", "magnetic-type-chip-conveyor"],
+  cleatConveyor: ["Cleat Conveyor", "cleat-conveyor"],
   rollerConveyor: ["material-handling-v3"],
   sparePartsConveyor: ["material-handling-v3"],
   allMaterialHandling: ["material-handling-v3"],

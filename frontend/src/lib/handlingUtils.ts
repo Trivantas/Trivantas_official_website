@@ -19,6 +19,7 @@ import slatTypeChipConveyorImg from '@/assets/Slat Type Chip Conveyor.jpg';
 import screwTypeChipConveyorImg from '@/assets/Screw Type Chip Conveyor.jpg';
 import pneumaticConveyorsImg from '@/assets/Pneumatic Conveyors.jpg';
 import vibratingConveyorsImg from '@/assets/Vibrating Conveyors.jpg';
+import cleatConveyorImg from '@/assets/Cleat Conveyor.jpg';
 
 export type HandlingProduct = HandlingItem;
 export { slugify, getHandlingSlug, getHandlingBySlug };
@@ -29,6 +30,7 @@ export const handlingImageMap: Record<string, string> = {
   slatConveyor: slatTypeChipConveyorImg,
   screwConveyor: screwTypeChipConveyorImg,
   magneticConveyor: magneticTypeChipConveyorImg,
+  cleatConveyor: cleatConveyorImg,
   rollerConveyor: materialHandlingImg,
   sparePartsConveyor: materialHandlingImg,
   allMaterialHandling: materialHandlingImg,
@@ -49,6 +51,7 @@ export const handlingImageMap: Record<string, string> = {
 export const productsWithHandlingImages = [
   "Magnetic Type Chip Conveyor",
   "Centralized Chip Handling System",
+  "Cleat Conveyor",
   "Cooling Conveyors",
   "Aero-Mechanical Conveyors",
   "Bucket Elevators / Conveyors",

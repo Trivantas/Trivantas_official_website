@@ -55,6 +55,7 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
   const productsWithImages = [
     "Magnetic Type Chip Conveyor",
     "Centralized Chip Handling System",
+    "Cleat Conveyor",
     "Cooling Conveyors",
     "Aero-Mechanical Conveyors",
     "Bucket Elevators / Conveyors",
