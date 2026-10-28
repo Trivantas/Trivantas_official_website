@@ -1,0 +1,834 @@
+[
+  {
+    "id": "coolant-oil-hot-water-filter-paper-roll",
+    "categoryLabel": "Spare Parts",
+    "name": "Coolant, Oil, Hot Water Filter Paper Roll",
+    "capacity": "Roll widths 300mm - 1500mm",
+    "efficiency": "High flow rate & uniform 10-50µm porosity",
+    "features": [
+      "High wet tensile strength resists tearing under fluid weight",
+      "Compatible with water-soluble coolants, cutting oils, and hot wash water",
+      "Non-woven polyester and viscose blend for rapid drainage and low drag-out",
+      "Engineered for gravity, vacuum, and compact pressure paper band filters",
+      "Available in multiple GSM densities (20 GSM to 70 GSM)",
+      "Standard 50mm and 70mm inner core diameters for quick spool replacement",
+      "Improves surface finish of machined parts and extends coolant bath life"
+    ],
+    "icons": ["📜"],
+    "imageKey": "coolantFilterPaperRoll",
+    "type": "Filter Paper Roll",
+    "range": "Width: 300mm to 1500mm | Length: 50m to 200m",
+    "accuracy": "Micron Rating: 10µm - 50µm",
+    "applications": [
+      "CNC grinding, milling, and turning machines",
+      "Centralized machine shop coolant filtration plants",
+      "Hot water industrial parts washing and degreasing tanks",
+      "Steel and aluminum rolling mill coolant systems",
+      "Honing and superfinishing machine sumps"
+    ],
+    "specifications": {
+      "material": "Non-woven Viscose / Polyester Blend",
+      "density": "20 - 70 GSM",
+      "micronRating": "10µm - 50µm",
+      "coreDiameter": "50mm / 70mm Heavy-Duty Cardboard Core",
+      "rollLength": "50m, 100m, 150m, 200m",
+      "maxTemperature": "Up to 95°C"
+    }
+  },
+  {
+    "id": "filter-paper-roll",
+    "categoryLabel": "Spare Parts",
+    "name": "Filter Paper Roll",
+    "capacity": "Standard & Custom Spool Widths",
+    "efficiency": "High swarf retention & fast drainage",
+    "features": [
+      "Premium non-woven filtration paper for continuous band filter units",
+      "Captures fine swarf, cast iron fines, grinding sludge, and abrasive particles",
+      "Low fluid absorption minimizes coolant loss during disposal",
+      "Clean edge slitting prevents tracking errors and jamming on conveyor drive rolls",
+      "Chemical resistance to synthetic, semi-synthetic, and neat cutting fluids",
+      "Custom lengths and widths tailored to all domestic and imported machine tools"
+    ],
+    "icons": ["🧻"],
+    "imageKey": "filterPaperRoll",
+    "type": "Filter Paper Roll",
+    "range": "Width: 400mm - 1200mm | Length: 50m - 150m",
+    "accuracy": "Micron Rating: 15µm - 40µm",
+    "applications": [
+      "Deep bed and gravity paper band filters",
+      "Surface grinding and cylindrical grinding coolant loops",
+      "Automotive component machining centers",
+      "Bearing and gear manufacturing lines",
+      "Wire EDM dielectric fluid filtration"
+    ],
+    "specifications": {
+      "material": "100% Polypropylene / Cellulosic Fiber Blend",
+      "density": "30 - 50 GSM",
+      "micronRating": "15µm - 40µm",
+      "coreSize": "50mm / 75mm",
+      "compatibility": "Compatible with all OEM band filter machines"
+    }
+  },
+  {
+    "id": "dust-collector-air-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "Dust Collector Air Filter",
+    "capacity": "Up to 1500 CFM per cartridge",
+    "efficiency": "99.9% separation down to 1 micron",
+    "features": [
+      "High-efficiency cylindrical and conical air filtration cartridge",
+      "Cellulose and synthetic nano-fiber media with flame-retardant coating",
+      "Galvanized expanded steel inner and outer support cages prevent collapse",
+      "Molded polyurethane or EPDM gasket for 100% leak-proof airtight seal",
+      "Optimized pleat spacing for superior pulse-jet reverse cleaning cake release",
+      "Significantly reduces workplace dust emissions and meets OSHA/CPCB standards"
+    ],
+    "icons": ["💨"],
+    "imageKey": "dustCollectorAirFilter",
+    "type": "Air Filter Cartridge",
+    "range": "Diameter: 150mm - 350mm | Length: 300mm - 1200mm",
+    "accuracy": "Filtration: 99.9% @ 1µm",
+    "applications": [
+      "Shot blasting and sand blasting booths",
+      "Powder coating booths and paint recovery systems",
+      "Laser, plasma, and robotic welding fume extraction",
+      "Cement, mineral, and bulk powder packaging stations",
+      "Pharmaceutical powder transfer containment"
+    ],
+    "specifications": {
+      "media": "Spunbond Polyester / Cellulose Nano-Fiber",
+      "efficiency": "MERV 15 / HEPA H13 compatible",
+      "endCaps": "Galvanized Steel / Molded Polyurethane",
+      "maxOperatingTemp": "Up to 90°C (standard) / 150°C (high-temp)",
+      "cleaningType": "Pulse-jet compressed air backwash"
+    }
+  },
+  {
+    "id": "liquid-filter-bag",
+    "categoryLabel": "Spare Parts",
+    "name": "Liquid Filter Bag",
+    "capacity": "Standard Sizes #1, #2, #3, #4",
+    "efficiency": "1µm to 200µm nominal / absolute",
+    "features": [
+      "Ultrasonically welded seam construction completely eliminates needle holes and bypass",
+      "Proprietary Polypropylene Sentinel seal ring creates positive bypass-free pressure seal",
+      "High dirt-holding glazed felt surface eliminates fiber shedding into clean fluids",
+      "Available in food-grade compliant and silicon-free grades",
+      "Heavy-duty pull handles for rapid changeover and operator safety",
+      "Broad chemical resistance to acids, alkalis, solvents, and industrial oils"
+    ],
+    "icons": ["🛍️"],
+    "imageKey": "liquidFilterBag",
+    "type": "Liquid Filter Bag",
+    "range": "Size #1 (7\"x16\"), Size #2 (7\"x32\"), Size #3 (4\"x9\"), Size #4 (4\"x14\")",
+    "accuracy": "Rating: 1µm - 200µm",
+    "applications": [
+      "Industrial paints, inks, lacquers, and resins filtration",
+      "Pre-filtration for RO membranes and wastewater treatment",
+      "Electroplating chemical baths and surface finishing lines",
+      "Automotive parts washing and phosphate rinse stages",
+      "Edible oils, beverages, and food processing lines"
+    ],
+    "specifications": {
+      "media": "Polypropylene Felt / Polyester Felt / Nylon Monofilament",
+      "collarRing": "Polypropylene Flange / Carbon Steel / Stainless Steel Ring",
+      "construction": "Ultrasonic Welded / Heavy-Duty Sewn",
+      "maxDifferentialPressure": "2.5 bar (changeout recommended at 1.5 bar)",
+      "operatingTemperature": "Up to 90°C (PP) / 150°C (Polyester)"
+    }
+  },
+  {
+    "id": "dust-collector-filter-bag",
+    "categoryLabel": "Spare Parts",
+    "name": "Dust Collector Filter Bag",
+    "capacity": "Custom Lengths up to 6 meters",
+    "efficiency": "High air permeability & low pressure drop",
+    "features": [
+      "Precision-tailored fabric filter sleeves for pulse-jet and shaker baghouses",
+      "Specialty surface finishes: singed, glazed, PTFE laminated, and oil/water repellent",
+      "Anti-static epitropic fibers for explosive and combustible dust environments",
+      "Heavy-duty spring snap-band collar for secure, tool-free tubesheet sealing",
+      "Triple-needle stitched seams with high-tenacity thread for extreme durability",
+      "Engineered for high air-to-cloth ratios and extended operational life"
+    ],
+    "icons": ["🧥"],
+    "imageKey": "dustCollectorFilterBag",
+    "type": "Filter Bag",
+    "range": "Diameter: 100mm - 200mm | Length: 1m - 6m",
+    "accuracy": "Weight: 450 - 550 GSM",
+    "applications": [
+      "Foundry induction furnace flue gas filtration",
+      "Cement plant raw mill, kiln, and packing baghouses",
+      "Coal and biomass-fired boiler exhaust cleaning",
+      "Woodworking, sawdust, and paper recycling extraction",
+      "Chemical processing and carbon black recovery"
+    ],
+    "specifications": {
+      "fabric": "Polyester / Nomex (Aramid) / Ryton (PPS) / Fiberglass / PTFE",
+      "weight": "450 - 550 GSM",
+      "airPermeability": "120 - 200 L/dm²/min @ 200 Pa",
+      "topAttachment": "Snap Band / Cord Ring / Raw Edge / Flange",
+      "operatingTemperature": "130°C (Polyester) up to 260°C (Fiberglass / PTFE)"
+    }
+  },
+  {
+    "id": "pleated-dust-collection-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "Pleated dust collection filter",
+    "capacity": "3x to 5x filtration area vs standard bags",
+    "efficiency": "MERV 15 / High Dust Cake Release",
+    "features": [
+      "Provides up to 500% more active filtration surface area in existing baghouse footprint",
+      "Drop-in retrofit replacement for traditional filter bags and metal cages",
+      "Significantly reduces operating differential pressure and compressed air consumption",
+      "Spunbond polyester media with optional antistatic aluminum or PTFE membrane",
+      "Rigid one-piece construction eliminates cage rub wear and bag abrasion",
+      "Dramatically lowers fan energy consumption and increases production ventilation"
+    ],
+    "icons": ["🌪️"],
+    "imageKey": "pleatedDustCollectionFilter",
+    "type": "Pleated Filter Element",
+    "range": "Diameter: 120mm - 160mm | Length: 1m - 3m",
+    "accuracy": "Efficiency: 99.95% @ 0.5µm",
+    "applications": [
+      "Powder metallurgy and bulk solid conveying",
+      "Pharmaceutical powder collection and tableting rooms",
+      "Cement silos and pneumatic conveying bin vents",
+      "Thermal spray, plasma, and robotic laser cutting booths",
+      "Agricultural seed, flour, and grain elevators"
+    ],
+    "specifications": {
+      "media": "100% Spunbond Polyester with PTFE coating",
+      "pleatDepth": "25mm - 50mm",
+      "topStyle": "Oval / Round Snap-Band or Bolt-down",
+      "core": "Perforated Galvanized Steel / SS 304",
+      "temperatureLimit": "Up to 110°C (continuous)"
+    }
+  },
+  {
+    "id": "oil-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "Oil Filter",
+    "capacity": "Flow rates up to 100 LPM",
+    "efficiency": "Beta(x) >= 200 microglass rating",
+    "features": [
+      "Spin-on canister and coreless cartridge elements for industrial lubrication and oil lines",
+      "Multi-layered inorganic microglass fiber captures sub-micron wear metals and silt",
+      "Built-in bypass relief valve prevents oil starvation during cold start-ups",
+      "Heavy-gauge steel housing with burst rating exceeding 25 bar",
+      "Viton and Buna-N high-temperature synthetic gaskets ensure zero external leakage",
+      "Maintains target ISO 4406 fluid cleanliness codes for extended servo valve life"
+    ],
+    "icons": ["🛢️"],
+    "imageKey": "oilFilter",
+    "type": "Oil Filter Element",
+    "range": "Working Pressure: Up to 25 bar",
+    "accuracy": "Micron Rating: 3µm, 5µm, 10µm, 25µm",
+    "applications": [
+      "Machine tool hydraulic power packs and lube systems",
+      "Industrial gearboxes and speed reducers",
+      "Rotary screw air compressor oil circuits",
+      "Plastic injection molding machine hydraulics",
+      "Turbine and generator bearing lubrication loops"
+    ],
+    "specifications": {
+      "media": "Inorganic Microglass / Resin-impregnated Cellulose",
+      "burstPressure": "Exceeds 25 bar (360 psi)",
+      "bypassValve": "Built-in 1.5 bar / 2.5 bar relief setting",
+      "seal": "Buna-N (standard) / Viton (FKM for high temp)",
+      "cleanlinessStandard": "Designed to achieve ISO 16/14/11 or better"
+    }
+  },
+  {
+    "id": "pressure-suction-oil-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "Pressure & Suction Oil Filter",
+    "capacity": "20 LPM - 500 LPM flow rates",
+    "efficiency": "Dual-stage protection for pumps & valves",
+    "features": [
+      "Engineered for reservoir tank mounting, in-line suction, and medium pressure lines",
+      "Protects hydraulic pumps from coarse metal swarf, scale, and contaminants",
+      "Integrated magnetic column captures ferrous chips before reaching filter media",
+      "Washable stainless steel wire mesh suction cartridge reduces operating costs",
+      "Visual and electrical differential pressure clogging indicators available",
+      "Low initial pressure drop minimizes risk of hydraulic pump cavitation"
+    ],
+    "icons": ["⚙️"],
+    "imageKey": "pressureSuctionOilFilter",
+    "type": "Suction & Pressure Filter",
+    "range": "Port Sizes: 1/2\" to 3\" BSP / NPT / SAE Flange",
+    "accuracy": "Suction: 60-150 Mesh | Return: 10-25µm",
+    "applications": [
+      "Hydraulic power packs (HPU) and reservoir sumps",
+      "Die casting and forging hydraulic systems",
+      "CNC machine tool lube and coolant reservoirs",
+      "Mobile construction equipment and cranes",
+      "Mining machinery and heavy fluid transfer"
+    ],
+    "specifications": {
+      "filterMesh": "60, 100, 150 Mesh SS Wire Cloth (Suction)",
+      "housingMaterial": "Anodized Aluminum / Ductile Iron",
+      "bypassPressure": "0.2 bar (suction bypass) / 3 bar (pressure bypass)",
+      "temperatureRange": "-25°C to +110°C",
+      "fluidCompatibility": "Mineral oils, synthetic fluids, water glycols"
+    }
+  },
+  {
+    "id": "hydraulic-oil-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "Hydraulic Oil Filter",
+    "capacity": "High dirt holding capacity up to 350 bar",
+    "efficiency": "Beta 200+ absolute rating",
+    "features": [
+      "Direct OEM replacement cartridges compatible with major international filter housings",
+      "Pleated progressive microglass media structure with upstream and downstream wire mesh support",
+      "Available in low collapse (21 bar) and high collapse (210 bar) pressure designs",
+      "Prevents sticking of proportional valves, servo valves, and hydraulic cylinders",
+      "Resistant to high fluid flow fatigue and cyclic pressure pulses",
+      "Includes premium O-ring seals for seamless drop-in field installation"
+    ],
+    "icons": ["🔧"],
+    "imageKey": "hydraulicOilFilter",
+    "type": "Hydraulic Filter",
+    "range": "Micron Rating: 1µm, 3µm, 5µm, 10µm, 20µm",
+    "accuracy": "Beta Ratio: Beta_x >= 200",
+    "applications": [
+      "Hydraulic stamping presses and press brakes",
+      "Plastic injection molding and blow molding machines",
+      "Steel rolling mills and furnace hydraulic tilt systems",
+      "CNC machining centers through-coolant power units",
+      "Automated assembly machine hydraulic drives"
+    ],
+    "specifications": {
+      "media": "Multi-layer Glass Fiber / Synthetic Fleece",
+      "collapseRating": "21 bar (Standard) / 210 bar (High Collapse)",
+      "endCaps": "Corrosion-resistant Zinc-plated Steel / Aluminum",
+      "seals": "Viton (FKM) / NBR",
+      "compatibility": "Direct drop-in replacement for Hydac, Pall, Parker, Mahle styles"
+    }
+  },
+  {
+    "id": "ss-washable-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "SS Washable Filter",
+    "capacity": "High flow rate & re-usable lifetime",
+    "efficiency": "Zero media migration & cleanable",
+    "features": [
+      "Constructed entirely from premium Stainless Steel 304 or 316L wire cloth",
+      "Cleanable and reusable via ultrasonic cleaning, solvent wash, or pressurized backwash",
+      "High collapse and burst pressure resistance under severe temperature conditions",
+      "No resin or binders that could leach chemicals into process liquids",
+      "Pleated design provides maximum filtration area in compact envelope",
+      "Ideal for aggressive solvents, corrosive chemicals, and high-viscosity resins"
+    ],
+    "icons": ["🛡️"],
+    "imageKey": "ssWashableFilter",
+    "type": "Stainless Steel Filter",
+    "range": "Rating: 5µm to 500µm | Length: 10\" to 40\"",
+    "accuracy": "Tolerance: Up to 350°C",
+    "applications": [
+      "High-temperature steam, gas, and hot oil filtration",
+      "Corrosive chemical and petrochemical fluid processing",
+      "Heavy fuel oil, bitumen, and viscous polymer straining",
+      "Quenching oil and heat-treatment tank filtration",
+      "Food and pharmaceutical sanitary cleanable loops"
+    ],
+    "specifications": {
+      "metallurgy": "SS 304 / SS 316 / SS 316L",
+      "meshRating": "5µm - 500µm (Pleated or Plain Cylindrical)",
+      "operatingTemperature": "-100°C to +350°C",
+      "maxPressureDrop": "Up to 25 bar differential",
+      "endConnections": "DOE, 222 O-Ring, NPT / BSP Threaded"
+    }
+  },
+  {
+    "id": "high-pressure-oil-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "High Pressure Oil Filter",
+    "capacity": "Working pressure up to 420 bar (6000 psi)",
+    "efficiency": "Absolute Beta >= 1000 at 3-10µm",
+    "features": [
+      "Engineered specifically for in-line high-pressure lines directly upstream of servo valves",
+      "High collapse strength (210 bar differential) withstands severe pressure spikes",
+      "Reinforced heavy-duty wire mesh pleat support prevents pleat bunching under pulsating flow",
+      "Machined steel end caps with chemical-resistant bonding resins",
+      "Eliminates catastrophic valve failure and unplanned manufacturing downtime",
+      "Exhaustively tested for dirt-holding capacity, flow fatigue, and multi-pass efficiency"
+    ],
+    "icons": ["💪"],
+    "imageKey": "highPressureOilFilter",
+    "type": "High Pressure Filter",
+    "range": "Operating Pressure: Up to 420 bar",
+    "accuracy": "Beta Rating: Beta_3 >= 1000",
+    "applications": [
+      "Hydraulic test rigs and aerospace ground support equipment",
+      "Forging presses, scrap balers, and extrusion machines",
+      "High-pressure through-spindle coolant systems (70 bar - 150 bar)",
+      "Proportional and servo valve pilot control circuits",
+      "Oil and gas high-pressure BOP control skids"
+    ],
+    "specifications": {
+      "workingPressure": "Up to 420 bar (6000 psi)",
+      "collapseRating": "210 bar (3045 psi)",
+      "filtrationMedia": "Inorganic Glass Fiber with dual wire mesh backing",
+      "micronRating": "3µm, 5µm, 10µm absolute",
+      "sealing": "Viton (FKM) high-temperature high-pressure seals"
+    }
+  },
+  {
+    "id": "water-filter-element",
+    "categoryLabel": "Spare Parts",
+    "name": "Water Filter Element",
+    "capacity": "Standard lengths 10\", 20\", 30\", 40\"",
+    "efficiency": "0.5µm to 50µm particle reduction",
+    "features": [
+      "High-purity melt-blown polypropylene and wound-string cartridge construction",
+      "Thermally bonded micro-fibers prevent fiber release and particulate shedding",
+      "Graded density pore structure for progressive depth filtration and high dirt holding",
+      "Free of surfactants, binders, lubricants, and anti-static agents",
+      "Direct drop-in replacement for single and multi-cartridge stainless steel housings",
+      "Protects reverse osmosis membranes and downstream deionizers from fouling"
+    ],
+    "icons": ["💧"],
+    "imageKey": "waterFilterElement",
+    "type": "Water Filter Cartridge",
+    "range": "Length: 10\", 20\", 30\", 40\" | OD: 2.5\" (Standard) / 4.5\" (Jumbo)",
+    "accuracy": "Rating: 0.5µm - 50µm",
+    "applications": [
+      "Pre-filtration for RO (Reverse Osmosis) and UF water plants",
+      "Industrial boiler feed water and cooling tower side-stream loops",
+      "Parts washing final rinse and electro-deposition tanks",
+      "Food, beverage, dairy, and pharmaceutical water treatment",
+      "Municipal and commercial water purification stations"
+    ],
+    "specifications": {
+      "material": "100% Food-Grade Virgin Polypropylene",
+      "cartridgeStyle": "Melt-Blown Spun / Wound String / Pleated PP",
+      "micronRating": "0.5µm, 1µm, 5µm, 10µm, 25µm, 50µm",
+      "endConfiguration": "DOE (Double Open End) / 222 O-Ring with Flat or Spear",
+      "maxOperatingTemp": "Up to 65°C",
+      "maxDifferentialPressure": "2.0 bar @ 25°C"
+    }
+  },
+  {
+    "id": "air-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "Air Filter",
+    "capacity": "Airflow 100 to 3500 CFM",
+    "efficiency": "99.8% filtration efficiency down to 2µm",
+    "features": [
+      "Radial seal and axial end cap designs for air compressors, blowers, and diesel gensets",
+      "Heavy-duty pleated cellulose and synthetic nano-fiber media with flame retardancy",
+      "Perforated galvanized steel outer and inner support cores prevent implosion under high vacuum",
+      "Resilient polyurethane or silicone molded end caps ensure airtight seal against dust bypass",
+      "High dust holding capacity extends service intervals in dusty factory environments",
+      "Resistant to engine vibrations, elevated intake temperatures, and continuous humidity"
+    ],
+    "icons": ["🌬️"],
+    "imageKey": "airFilterSpare",
+    "type": "Industrial Air Filter",
+    "range": "Outer Diameter: 100mm - 450mm | Height: 150mm - 800mm",
+    "accuracy": "Filtration Rating: 2µm - 10µm nominal",
+    "applications": [
+      "Screw, piston, and centrifugal air compressors",
+      "Industrial diesel generators and gas engines",
+      "Roots blowers and pneumatic conveying intake lines",
+      "Heavy earthmoving and mining machinery",
+      "Factory pneumatic utility intake systems"
+    ],
+    "specifications": {
+      "media": "Cellulose / Synthetic Microfiber Blend",
+      "airflowRating": "100 - 3500 CFM",
+      "micronRating": "2µm - 10µm",
+      "endCapMaterial": "Molded Polyurethane / Galvanized Steel",
+      "maxWorkingTemp": "Up to 110°C",
+      "sealType": "Radial / Axial Rubber Gasket"
+    }
+  },
+  {
+    "id": "composite-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "Composite Filter",
+    "capacity": "Multi-layer multi-stage filtration",
+    "efficiency": "Combined particulate retention & coalescing >99.9%",
+    "features": [
+      "Multi-layer hybrid construction combining particulate pre-filter, coalescing microfiber, and adsorbent layers",
+      "Engineered for severe process duties involving aerosols, condensed moisture, and sub-micron particulates",
+      "Differential pressure indicator friendly with optimized media flow gradient",
+      "Rugged corrosion-resistant core tube with protective outer mesh wrap",
+      "Prevents emulsion breakdown and removes entrained contaminants in industrial fluids",
+      "Direct drop-in replacement for multi-component OEM filtration vessels"
+    ],
+    "icons": ["🛡️"],
+    "imageKey": "compositeFilter",
+    "type": "Multi-Stage Composite Filter",
+    "range": "Diameter: 60mm - 200mm | Length: 250mm - 1000mm",
+    "accuracy": "Efficiency: >99.9% @ 0.3µm - 5µm",
+    "applications": [
+      "Compressed air coalescing and aerosol removal trains",
+      "Turbine and compressor lube oil conditioning skids",
+      "Coolant mist collectors and oil smoke extractors",
+      "Chemical process gas and liquid purification",
+      "High-precision CNC machine enclosure air handling"
+    ],
+    "specifications": {
+      "mediaLayers": "Borosilicate Microfiber + Spunbond Polypropylene + Active Carbon Layer",
+      "micronRating": "0.3µm - 5µm multi-stage",
+      "differentialPressureMax": "5.0 bar",
+      "endCaps": "Aluminum / Stainless Steel / Engineered Polymer",
+      "operatingTemp": "-20°C to +120°C"
+    }
+  },
+  {
+    "id": "coolant-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "Coolant Filter",
+    "capacity": "Flow rates 30 LPM to 600 LPM",
+    "efficiency": "High swarf retention down to 5 microns",
+    "features": [
+      "Specially designed pleated media cartridge for water-soluble coolants and neat cutting oils",
+      "Expanded mesh outer basket prevents pleat flutter and withstands pulsating coolant pumps",
+      "Water-resistant, resin-impregnated cellulose or synthetic media resists softening and degradation",
+      "Captures fine aluminum, cast iron, and carbide grinding swarf without premature clogging",
+      "Directly compatible with through-spindle coolant (TSC) systems and high-pressure pumps",
+      "Minimizes workpiece scratching and significantly extends cutting tool and spindle lifespan"
+    ],
+    "icons": ["🧪"],
+    "imageKey": "coolantFilterSpare",
+    "type": "Machine Tool Coolant Filter",
+    "range": "Outer Diameter: 100mm - 250mm | Height: 200mm - 600mm",
+    "accuracy": "Micron Rating: 5µm - 25µm",
+    "applications": [
+      "CNC machining centers (VMC / HMC) with Through-Spindle Coolant",
+      "Cylindrical, centerless, and surface grinding machines",
+      "Deep hole drilling and gun drilling coolant delivery lines",
+      "Gear hobbing, shaping, and broaching lubrication loops",
+      "Centralized machine shop coolant filtration plants"
+    ],
+    "specifications": {
+      "media": "Resin-Bonded Synthetic / Wire-Supported Cellulose",
+      "flowCapacity": "30 - 600 LPM",
+      "micronRating": "5µm, 10µm, 20µm, 25µm",
+      "coreReinforcement": "Perforated Galvanized Steel / SS 304",
+      "operatingPressure": "Up to 20 bar (TSC compatible)",
+      "sealing": "NBR / Viton O-Rings"
+    }
+  },
+  {
+    "id": "ss-sintered-wedge-wire-filter-cartridges",
+    "categoryLabel": "Spare Parts",
+    "name": "SS Sintered Wedge Wire Filter Cartridges",
+    "capacity": "Continuous heavy-duty flow with ultra-low pressure drop",
+    "efficiency": "Absolute slot gap retention from 20µm to 500µm",
+    "features": [
+      "Precision continuous V-shaped slot profile provides non-clogging surface filtration",
+      "Fabricated from high-tensile SS 304 / SS 316L wire resistance-welded to support rods",
+      "Sintered multi-layer wire mesh option for extreme differential pressures and thermal shock",
+      "100% cleanable and reusable via backwashing, ultrasonic agitation, or chemical bathing",
+      "Smooth surface allows effortless cake release in automated self-cleaning scraper strainers",
+      "Withstands high collapse pressure, abrasive slurry wear, and aggressive chemical environments"
+    ],
+    "icons": ["⚙️"],
+    "imageKey": "ssSinteredWedgeWireFilterCartridges",
+    "type": "Wedge Wire / Sintered SS Cartridge",
+    "range": "Diameter: 25mm - 200mm | Length: 100mm - 1500mm",
+    "accuracy": "Slot Opening: 20µm - 500µm (Slot tolerance ±5µm)",
+    "applications": [
+      "Self-cleaning wedge wire coolant and process strainers",
+      "High-viscosity polymer, resin, adhesive, and paint filtration",
+      "Water intake screens and cooling tower water recycling",
+      "Food & beverage starch, syrup, and beverage separation",
+      "Petrochemical, amine, and solvent recovery loops"
+    ],
+    "specifications": {
+      "materialGrade": "SS 304, SS 316, SS 316L, Hastelloy",
+      "slotGap": "20µm, 50µm, 75µm, 100µm, 150µm, 250µm, 500µm",
+      "burstPressure": "Up to 100 bar differential",
+      "construction": "Continuous Resistance-Welded V-Wire / Sintered Multi-Layer",
+      "connectionTypes": "Threaded BSP/NPT, DOE, 222 O-Ring, Flanged",
+      "maxTemperature": "Up to 450°C"
+    }
+  },
+  {
+    "id": "pp-pleated-filter-cartridges",
+    "categoryLabel": "Spare Parts",
+    "name": "PP Pleated Filter Cartridges",
+    "capacity": "High filtration surface area (up to 0.65 m² per 10\" element)",
+    "efficiency": "99.98% absolute rated retention down to 0.1µm",
+    "features": [
+      "100% high-purity virgin polypropylene pleated filter membrane and support components",
+      "All-thermal welded construction without adhesives, glues, binders, or silicone surfactants",
+      "Graded pore density micro-fiber structure maximizes dirt holding and service lifetime",
+      "Wide chemical compatibility with acids, alkalis, alcohols, deionized water, and plating baths",
+      "Available in DOE, Code 7 (226 with bayonet), and Code 3 (222 with flat) end connections",
+      "Individually integrity tested and compliant with FDA CFR Title 21 food contact regulations"
+    ],
+    "icons": ["🔬"],
+    "imageKey": "ppPleatedFilterCartridges",
+    "type": "Pleated Membrane Cartridge",
+    "range": "Length: 5\", 10\", 20\", 30\", 40\" | OD: 69mm (2.7\")",
+    "accuracy": "Absolute Micron Rating: 0.1µm to 50µm (Beta 5000)",
+    "applications": [
+      "Electronics, semiconductor, and PCB DI water polishing",
+      "Pre-filtration for RO membranes and EDI systems",
+      "Electroplating chemical baths and etching solution filtration",
+      "Pharmaceutical API, sterile water, and buffer filtration",
+      "Food, beverage, beer, wine, and bottled water clarifying"
+    ],
+    "specifications": {
+      "filterMedia": "100% Virgin Polypropylene Microfiber",
+      "coreAndCage": "Molded High-Strength Polypropylene",
+      "micronRating": "0.1µm, 0.2µm, 0.45µm, 1µm, 5µm, 10µm, 20µm",
+      "endFittings": "DOE, 222 Flat/Fin, 226 Flat/Fin",
+      "maxDifferentialPressure": "4.0 bar @ 25°C, 2.0 bar @ 60°C",
+      "effectiveSurfaceArea": "0.65 m² per 10-inch element"
+    }
+  },
+  {
+    "id": "rbc-filter-cartridges",
+    "categoryLabel": "Spare Parts",
+    "name": "RBC Filter Cartridges",
+    "capacity": "Heavy-duty resin bonded rigid depth filtration",
+    "efficiency": "Handles high viscosity fluids up to 15,000 SSU",
+    "features": [
+      "Resin Bonded Cartridge (RBC) technology featuring phenolic or melamine resin bonded fibers",
+      "Rigid grooved outer surface increases effective surface area and prevents surface blinding",
+      "True graded depth matrix captures varying particle sizes progressively through the wall",
+      "Resists collapse, channeling, and particle unloading under severe pressure surges",
+      "Withstands aggressive organic solvents, paints, adhesives, inks, and high-viscosity oils",
+      "Eliminates core support collapse common with conventional wound and melt-blown elements"
+    ],
+    "icons": ["🪵"],
+    "imageKey": "rbcFilterCartridges",
+    "type": "Resin Bonded Cartridge",
+    "range": "Length: 9.75\", 10\", 20\", 30\", 40\" | OD: 65mm (2.56\")",
+    "accuracy": "Micron Rating: 1µm to 150µm",
+    "applications": [
+      "Industrial paints, coatings, lacquers, and automotive primers",
+      "Printing inks, dyes, and pigment dispersions",
+      "High-viscosity adhesives, resins, and epoxies",
+      "Machine tool neat cutting oils, quench oils, and hydraulic fluids",
+      "Petroleum lube oil blending and grease processing plants"
+    ],
+    "specifications": {
+      "fiberMatrix": "Long Acrylic / Cellulosic Fiber bonded with Phenolic Resin",
+      "outerSurface": "Spiral Grooved for extended life",
+      "collapseStrength": "Up to 10.5 bar (150 psi) @ 20°C",
+      "micronRatings": "1µm, 5µm, 10µm, 25µm, 50µm, 75µm, 125µm, 150µm",
+      "temperatureRating": "Continuous operation up to 125°C",
+      "viscosityRange": "Compatible up to 15,000 SSU (3,200 cSt)"
+    }
+  },
+  {
+    "id": "paint-booth-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "Paint Booth Filter",
+    "capacity": "Paint overspray arrestance up to 99.2%",
+    "efficiency": "Enables mirror-smooth spray booth finish without surface blemish",
+    "features": [
+      "Complete suite including ceiling diffusion media, floor paint arrestor, and exhaust pocket filters",
+      "Ceiling diffusion media features thermally bonded polyester fibers with tackifier impregnation",
+      "Progressive density structure guarantees laminar airflow distribution and prevents turbulence",
+      "Floor fiberglass paint stop media captures heavy wet paint mist and overspray particles",
+      "Silicon-free certified to prevent fish-eye and crater defects on automotive paintwork",
+      "High holding capacity reduces filter replacement cycles and maintains constant booth pressure"
+    ],
+    "icons": ["🎨"],
+    "imageKey": "paintBoothFilter",
+    "type": "Spray Booth Media & Filters",
+    "range": "Ceiling Rolls: 1m - 2m x 20m | Floor Rolls: 0.5m - 2m x 20m | Panel Pads",
+    "accuracy": "Efficiency: EN 779 / ISO 16890 rated (G3, G4, M5, F5)",
+    "applications": [
+      "Automotive OEM and refinish paint spray booths (downdraft & crossdraft)",
+      "Industrial machinery, tractor, and earthmover painting enclosures",
+      "Wood finishing, furniture lacquer, and cabinet spray lines",
+      "Powder coating pre-treatment and spray bake oven air supply",
+      "Aerospace component painting and cleanroom finishing rooms"
+    ],
+    "specifications": {
+      "typesAvailable": "Ceiling Diffusion (F5/M5), Floor Paint Stop (G3/G4), Andreae Pleated Cardboard",
+      "media": "Non-Woven Synthetic Polyester / Open-Structure Glass Fiber",
+      "tackifier": "Full-depth adhesive migration preventing particle release",
+      "fireResistance": "DIN 53438 Class F1 / UL 900 Self-extinguishing",
+      "dustHoldingCapacity": "Up to 4500 g/m² paint overspray holding",
+      "initialPressureDrop": "25 Pa - 45 Pa @ 0.5 m/s face velocity"
+    }
+  },
+  {
+    "id": "strainer-filter-insert",
+    "categoryLabel": "Spare Parts",
+    "name": "Strainer Filter Insert",
+    "capacity": "High basket dirt volume with minimal pressure loss",
+    "efficiency": "Coarse to fine particulate trapping (20 mesh to 400 mesh / 40µm)",
+    "features": [
+      "Robust stainless steel replacement basket / cone insert for Y-type, Simplex, and Duplex strainers",
+      "Perforated heavy-gauge SS sheet outer support with inner fine woven wire mesh lining",
+      "Heavy-duty lifting handle for swift extraction, cleaning, and replacement during routine maintenance",
+      "Precision machined seating flange with rubber or PTFE gasket ensures bypass-free containment",
+      "Fully welded seam construction prevents tearing during pressurized forward and reverse flow",
+      "Reusable and cleanable via high-pressure water spray, solvents, or chemical degreasing"
+    ],
+    "icons": ["🧺"],
+    "imageKey": "strainerFilterInsert",
+    "type": "Strainer Basket / Insert",
+    "range": "Pipe Size: 1/2\" (DN15) to 24\" (DN600) | Custom Dimensions",
+    "accuracy": "Mesh Rating: 20 mesh (840µm) to 400 mesh (37µm)",
+    "applications": [
+      "Simplex, Duplex, and Y-Strainers in pipeline distribution",
+      "Pump suction protection for centrifugal, gear, and screw pumps",
+      "Cooling water, raw water intake, and heat exchanger protection",
+      "Chemical, petroleum, and hydrocarbon transport manifolds",
+      "Machine tool centralized coolant tank suction lines"
+    ],
+    "specifications": {
+      "materials": "SS 304, SS 316, SS 316L, Monel, Carbon Steel",
+      "perforations": "1mm to 6mm hole diameter support cylinder",
+      "meshLining": "20, 40, 60, 80, 100, 150, 200, 400 Mesh Plain / Twilled Dutch Weave",
+      "handleConfig": "Swing Wire Handle / Rigid Fixed Bar",
+      "flangeSealing": "Machined flat ring with Viton, EPDM, or PTFE seal",
+      "pressureRating": "ANSI Class 150# / 300# / PN16 / PN40 compatible"
+    }
+  },
+  {
+    "id": "edm-filter",
+    "categoryLabel": "Spare Parts",
+    "name": "EDM Filter",
+    "capacity": "High dielectric fluid flow rate with extended service life",
+    "efficiency": "Super-fine 3µm to 5µm spark erosion debris retention",
+    "features": [
+      "Designed specifically for Wire EDM (WEDM) and Die Sinking (SEDM) machines",
+      "Dual-layer pleated polyester and German cellulose paper media prevents rapid sludge saturation",
+      "Heavy-duty polyurethane molded end caps or threaded corrosion-proof metal couplers",
+      "Maintains optimal deionized water conductivity and dielectric fluid transparency",
+      "Prevents wire breakage and surface micro-arcing, ensuring superior Ra surface finish",
+      "Available in internal pressure and external pressure flow configurations for all Japanese and European EDMs"
+    ],
+    "icons": ["⚡"],
+    "imageKey": "edmFilter",
+    "type": "EDM Dielectric Filter Cartridge",
+    "range": "Diameter: 150mm - 340mm | Height: 300mm - 450mm",
+    "accuracy": "Micron Rating: 3µm - 5µm absolute",
+    "applications": [
+      "Wire-Cut EDM machines (Mitsubishi, Sodick, Fanuc, Charmilles, Makino, Accutex)",
+      "Die Sinking / Spark EDM dielectric fluid filtration tanks",
+      "Super drill / EDM hole popper flushing fluid loops",
+      "Carbide, titanium, and hardened tool steel erosion processing",
+      "Precision aerospace and medical component EDM machining"
+    ],
+    "specifications": {
+      "flowDirection": "Outside-to-Inside / Inside-to-Outside (Specific to machine model)",
+      "media": "Multi-Layer Composite Cellulose / Polyester Microfiber",
+      "micronRating": "3µm - 5µm",
+      "couplerType": "Side Nipple, Center Threaded G 3/4\", Twin Coupler, Standard DOE",
+      "burstPressure": "Up to 3.0 bar",
+      "maxFluidTemp": "Up to 70°C"
+    }
+  },
+  {
+    "id": "polyester-media",
+    "categoryLabel": "Spare Parts",
+    "name": "Polyester Media",
+    "capacity": "Roll widths from 0.5m to 3.2m | Cut pad sizes on request",
+    "efficiency": "G2 to F5 filtration efficiency classes (EN779 / ISO 16890)",
+    "features": [
+      "100% thermally bonded polyester fiber batting engineered for progressive air and fluid filtering",
+      "Non-directional fiber matrix provides depth particle retention without surface clumping",
+      "100% synthetic fibers free of chemical binders, silicones, and toxic volatile compounds",
+      "High moisture resistance: maintains full mechanical loft and permeability in 100% relative humidity",
+      "Washable and reusable multiple times with gentle compressed air or lukewarm water jet",
+      "Available in various thicknesses (5mm to 50mm) and grammages (100 GSM to 600 GSM)"
+    ],
+    "icons": ["🧵"],
+    "imageKey": "polyesterMedia",
+    "type": "Non-Woven Synthetic Filter Media",
+    "range": "Thickness: 5mm - 50mm | Density: 100 - 600 GSM | Roll Length: 20m - 50m",
+    "accuracy": "Filtration Class: ISO Coarse 50% - ePM10 60% (G2 - M5)",
+    "applications": [
+      "Air Handling Units (AHU) and HVAC pre-filter pads and rolls",
+      "Electrical control panel and server cabinet ventilation grilles",
+      "Industrial fan coil units, heat exchangers, and air conditioning",
+      "Automotive cabin air pre-filters and spray booth intake dampers",
+      "Aquaculture, pond, and industrial coolant pre-filtration"
+    ],
+    "specifications": {
+      "fiberMaterial": "100% Virgin Polyester (PET) Synthetic Fibers",
+      "weight": "100 GSM, 150 GSM, 200 GSM, 300 GSM, 400 GSM, 600 GSM",
+      "thickness": "5mm, 10mm, 15mm, 20mm, 25mm, 50mm",
+      "flammability": "DIN 53438 F1, UL 900 Class 2 Self-Extinguishing",
+      "temperatureLimit": "Up to 100°C continuous, 120°C peak",
+      "dustHolding": "Up to 650 g/m²"
+    }
+  },
+  {
+    "id": "ahu-air-filter-box-type",
+    "categoryLabel": "Spare Parts",
+    "name": "AHU Air Filter (Box Type / Flange Type)",
+    "capacity": "Airflow up to 2500 CFM (4250 m³/h) per 24\"x24\" unit",
+    "efficiency": "MERV 8 to MERV 14 / ISO ePM1 50%-85% (F7 - F9)",
+    "features": [
+      "Rigid deep-pleat and mini-pleat box construction with aluminum, GI, or wooden outer frame",
+      "Available in Box type (flat perimeter) and Single / Double Header Flange configurations",
+      "Corrugated aluminum foil separators or hot-melt bead spacing ensure uniform airflow",
+      "High mechanical stability resists air surges, turbulent fan velocities, and duct vibrations",
+      "Continuous polyurethane sealing gasket eliminates air bypass around filter holding frames",
+      "Direct replacement for cleanroom, hospital, commercial, and industrial ventilation units"
+    ],
+    "icons": ["📦"],
+    "imageKey": "ahuAirFilterBoxType",
+    "type": "AHU Box & Flange Filter",
+    "range": "Standard Sizes: 24\"x24\"x12\", 24\"x12\"x12\", 24\"x24\"x6\", 24\"x24\"x2\", 24\"x24\"x4\"",
+    "accuracy": "Rating: F7, F8, F9 / EN 779 / MERV 13-14 / ISO 16890",
+    "applications": [
+      "Air Handling Units (AHU) in pharmaceuticals, cleanrooms, and electronics",
+      "Hospital surgical operating theaters, ICUs, and pathology laboratories",
+      "Commercial office complexes, malls, and airport terminal HVAC systems",
+      "Gas turbine and centrifugal compressor combustion air intake",
+      "Industrial clean processing environments and paint bake rooms"
+    ],
+    "specifications": {
+      "frameMaterial": "Galvanized Iron (GI) / Extruded Aluminum / Stainless Steel / Marine Plywood",
+      "media": "Sub-Micron Water-Repellent Microglass Fiber / Synthetic Blend",
+      "separatorType": "Corrugated Aluminum Separators / Hot-Melt Thermoplastic Spacers",
+      "headerFlange": "None (Box Type) / 20mm Single Header / 25mm Double Header",
+      "initialResistance": "90 Pa - 130 Pa @ rated CFM",
+      "finalPressureDrop": "Recommended replacement @ 350 Pa - 450 Pa",
+      "maxTemp": "80°C continuous (High-temperature 250°C options available)"
+    }
+  },
+  {
+    "id": "ahu-air-filter-pocket-type",
+    "categoryLabel": "Spare Parts",
+    "name": "AHU Air Filter (Pocket Type)",
+    "capacity": "High volumetric capacity up to 3400 m³/h (2000 CFM)",
+    "efficiency": "M5, M6, F7, F8, F9 (MERV 9 to MERV 15)",
+    "features": [
+      "Aerodynamically optimized wedge-shaped pockets maximize airflow and dust holding",
+      "Multi-pocket design (3 to 10 pockets) prevents pocket inflation touch and blind spots",
+      "Ultrasonically welded pocket edges guarantee zero stitch leakage and high bursting strength",
+      "Progressively structured multi-layer synthetic media: coarse pre-filter + fine spunbond layer",
+      "Rigid corrosion-resistant roll-formed GI or extruded aluminum header frame (20mm / 25mm)",
+      "Extremely low operating energy consumption due to streamlined low initial pressure drop"
+    ],
+    "icons": ["👝"],
+    "imageKey": "ahuAirFilterPocketType",
+    "type": "AHU Pocket / Bag Filter",
+    "range": "Dimensions: 592x592mm (24\"x24\"), 592x287mm, 592x490mm | Depth: 300mm to 650mm",
+    "accuracy": "Efficiency: 45% - 95% Atmospheric Dust Spot (F5 to F9 / ePM1 85%)",
+    "applications": [
+      "Intermediate filtration in central Air Handling Units (AHUs)",
+      "Pre-filtration upstream of HEPA / ULPA cleanroom terminals",
+      "Food processing, beverage packaging, and dairy hygienic air supply",
+      "Data centers, telecom shelters, and server room climate control",
+      "Automotive assembly plants, paint booths, and precision machine workshops"
+    ],
+    "specifications": {
+      "media": "100% Synthetic Multi-Layer Meltblown / Non-Woven Polypropylene",
+      "headerFrame": "20mm / 25mm Galvanized Steel or Extruded Aluminum Header",
+      "pocketCount": "3, 4, 5, 6, 8, or 10 Pockets",
+      "pocketDepth": "300mm, 380mm, 500mm, 600mm, 650mm",
+      "burstStrength": "Exceeds 2500 Pa test pressure",
+      "operatingTemperature": "Up to 70°C @ 100% RH"
+    }
+  }
+]
+

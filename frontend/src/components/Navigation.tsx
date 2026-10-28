@@ -66,6 +66,17 @@ const Navigation = () => {
       ]
     },
     {
+      title: 'Spare Parts',
+      id: 'spare-parts',
+      items: [
+        { name: 'Filter Paper Rolls & Media', href: '/products/spare-parts#group-0' },
+        { name: 'Industrial Bags & Air Filters', href: '/products/spare-parts#group-1' },
+        { name: 'Oil & Hydraulic Filters', href: '/products/spare-parts#group-2' },
+        { name: 'Process Cartridges & Strainers', href: '/products/spare-parts#group-3' },
+        { name: 'HVAC & Paint Booth Filters', href: '/products/spare-parts#group-4' },
+      ]
+    },
+    {
       title: 'SPM Solutions',
       id: 'spm',
       items: [
@@ -125,8 +136,8 @@ const Navigation = () => {
                     </Link>
 
                     {/* Mega Menu Dropdown */}
-                    <div className={`absolute left-1/2 -translate-x-1/2 mt-0 w-[1200px] rounded-xl bg-background border border-border shadow-2xl transform transition-all duration-300 origin-top overflow-hidden ${isProductsOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'}`}>
-                      <div className="grid grid-cols-6 gap-6 p-8 bg-card">
+                    <div className={`absolute left-1/2 -translate-x-1/2 mt-0 w-[1320px] max-w-[96vw] rounded-xl bg-background border border-border shadow-2xl transform transition-all duration-300 origin-top overflow-hidden ${isProductsOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'}`}>
+                      <div className="grid grid-cols-7 gap-5 p-8 bg-card">
                         {productMegaMenu.map((category) => (
                           <div key={category.title} className="space-y-4">
                             <Link

@@ -23,6 +23,7 @@ const JSON_PRODUCT_FILES = [
   "handling.json",
   "water-treatment.json",
   "lubrication.json",
+  "spare-parts.json",
   "spm.json",
 ];
 
@@ -51,7 +52,7 @@ function loadIndexablePaths() {
   }
 
   for (const file of JSON_PRODUCT_FILES) {
-    const slug = file.replace(".json", "");
+    const slug = file === "lubrication.json" ? "lubrication-systems" : file.replace(".json", "");
     const data = JSON.parse(
       fs.readFileSync(path.join(frontendRoot, "src", "data", file), "utf8"),
     );

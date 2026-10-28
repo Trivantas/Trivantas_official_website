@@ -1,8 +1,9 @@
 import sensorsData from "../data/sensors.json";
 import filtrationData from "../data/filtration.json";
+import waterTreatmentData from "../data/water-treatment.json";
 import handlingData from "../data/handling.json";
 import lubricationData from "../data/lubrication.json";
-import waterTreatmentData from "../data/water-treatment.json";
+import sparePartsData from "../data/spare-parts.json";
 import spmData from "../data/spm.json";
 
 export interface RawProductItem {
@@ -45,9 +46,10 @@ const CATEGORY_DEFINITIONS: {
 }[] = [
   { slug: "sensors", name: "Level Sensors", data: sensorsData as RawProductItem[] },
   { slug: "filtration", name: "Advanced Filtration Systems", data: filtrationData as RawProductItem[] },
+  { slug: "water-treatment", name: "Water Treatment Plants", data: waterTreatmentData as RawProductItem[] },
   { slug: "handling", name: "Material Handling Systems", data: handlingData as RawProductItem[] },
   { slug: "lubrication-systems", name: "Industrial Lubrication Systems", data: lubricationData as RawProductItem[] },
-  { slug: "water-treatment", name: "Water Treatment Plants", data: waterTreatmentData as RawProductItem[] },
+  { slug: "spare-parts", name: "Industrial Spare Parts", data: sparePartsData as RawProductItem[] },
   { slug: "spm", name: "Special Purpose Machines", data: spmData as RawProductItem[] },
 ];
 

@@ -8,6 +8,8 @@ export const STATIC_REDIRECTS: Record<string, string> = {
   "/handling": "/products/handling",
   "/lubrication": "/products/lubrication-systems",
   "/lubrication-systems": "/products/lubrication-systems",
+  "/spare-parts": "/products/spare-parts",
+  "/spares": "/products/spare-parts",
   "/spm": "/products/spm",
 
   // Legacy route aliases
@@ -16,6 +18,7 @@ export const STATIC_REDIRECTS: Record<string, string> = {
   "/products/water": "/products/water-treatment",
   "/products/material-handling": "/products/handling",
   "/products/lubrication": "/products/lubrication-systems",
+  "/products/spares": "/products/spare-parts",
   "/products-details": "/products",
   "/product-details": "/products",
 

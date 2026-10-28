@@ -47,6 +47,7 @@ const WaterTreatmentProductDetail = lazyWithRetry(() => import("./pages/WaterTre
 const HandlingProductDetail = lazyWithRetry(() => import("./pages/HandlingProductDetail"));
 const FiltrationProductDetail = lazyWithRetry(() => import("./pages/FiltrationProductDetail"));
 const LubricationProductDetail = lazyWithRetry(() => import("./pages/LubricationProductDetail"));
+const SparePartsProductDetail = lazyWithRetry(() => import("./pages/SparePartsProductDetail"));
 const SpmProductDetail = lazyWithRetry(() => import("./pages/SpmProductDetail"));
 const Blogs = lazyWithRetry(() => import("./pages/Blogs"));
 const BlogDetail = lazyWithRetry(() => import("./pages/BlogDetail"));
@@ -86,6 +87,7 @@ const App = () => (
                     <Route path="/products/handling/:productname" element={<HandlingProductDetail />} />
                     <Route path="/products/filtration/:productname" element={<FiltrationProductDetail />} />
                     <Route path="/products/lubrication-systems/:productname" element={<LubricationProductDetail />} />
+                    <Route path="/products/spare-parts/:productname" element={<SparePartsProductDetail />} />
                     <Route path="/products/spm/:productname" element={<SpmProductDetail />} />
                     <Route path="/products/:category" element={<ProductDetails />} />
                     <Route path="/contact" element={<Contact />} />

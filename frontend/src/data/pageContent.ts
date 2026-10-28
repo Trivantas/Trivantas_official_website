@@ -254,44 +254,6 @@ export const pageContent: Record<string, PageContent> = {
         customSolutionText: "Can’t find exactly what you’re looking for? Trivantas provides tailor-made material handling systems, built to your exact specifications—based on: Material capacity & load requirements, Material grade & handling type, Full or semi-automation needs, Customized layouts for your facility",
         contactText: "Interested in a custom quote or demo? Contact Trivantas today to speak with a material handling expert and explore the right solution for your business."
     },
-    spm: {
-        id: "spm",
-        title: "Special Purpose Machines (SPM)",
-        subtitle: "Custom SPM and automated assembly, testing, and process-specific machines",
-        introPrefix: "When standard machines cannot hit your cycle time, quality gate, or integration target, Trivantas builds special purpose machines from concept through commissioning.",
-        description: "Assembly, drilling, tapping, milling, cutting, welding, riveting, testing, inspection, and packaging SPMs—fully or semi-automated—engineered around your process, tooling, and plant layout. We support fixture design, safety compliance, and tie-in with existing lines so you get repeatable output without compromising uptime.",
-        whyChooseTitle: "Why Trivantas SPM Machines?",
-        whyChoosePoints: [
-            "End-to-end support: concept, design, manufacturing & commissioning",
-            "Built for productivity, reliability & long service life",
-            "Automation-ready & industry-compliant",
-            "Proven expertise across multiple industries",
-            "Custom integration with your existing systems"
-        ],
-        productGroups: [
-            {
-                title: "Product Range",
-                description: "Our diverse range of Special Purpose Machines.",
-                items: [
-                    "Assembly SPMs",
-                    "Drilling SPMs",
-                    "Tapping SPMs",
-                    "Milling SPMs",
-                    "Cutting SPMs",
-                    "Welding SPMs",
-                    "Riveting SPMs",
-                    "Testing SPMs",
-                    "Inspection SPMs",
-                    "Packaging SPMs",
-                    "Process-Specific SPMs",
-                    "Fully Automated SPMs",
-                    "Semi-Automated SPMs"
-                ]
-            }
-        ],
-        customSolutionText: "Can’t find exactly what you’re looking for? Trivantas provides tailor-made Special Purpose Machines, built to your exact specifications based on: Your production process & workflow, Required level of automation, Output, speed & cycle time targets, Integration with existing equipment & plant layout",
-        contactText: "Share your cycle-time target or sample part drawing—contact Trivantas to scope an SPM concept review and timeline.",
-    },
     "lubrication-systems": {
         id: "lubrication-systems",
         title: "Industrial Lubrication Systems",
@@ -348,5 +310,116 @@ export const pageContent: Record<string, PageContent> = {
         ],
         customSolutionText: "Need a customized lubrication layout or custom manifold configurations? Trivantas provides custom system design, tube selection, and component engineering tailored to your machinery's specific points and duty cycle.",
         contactText: "Interested in a customized lubrication solution? Contact Trivantas today to consult with our lubrication engineers."
+    },
+    "spare-parts": {
+        id: "spare-parts",
+        title: "Industrial Spare Parts & Filtration Consumables",
+        subtitle: "Replacement filter media, bags, cartridges, and hydraulic elements",
+        introPrefix: "Ensure continuous uptime and optimal equipment protection with Trivantas's premium replacement spare parts.",
+        description: "Comprehensive range of industrial filtration media, non-woven filter paper rolls, high-efficiency liquid and dust collector filter bags, and microglass hydraulic oil elements. Engineered to meet strict OEM tolerances, extend machine tool lifespan, and maintain fluid purity across harsh operating conditions.",
+        whyChooseTitle: "Why Trivantas Spare Parts?",
+        whyChoosePoints: [
+            "Precision OEM dimensional compatibility & seamless retrofit",
+            "Superior dirt holding capacity & low operating pressure drop",
+            "Wide fluid & chemical compatibility (coolants, oils, solvents, high temp)",
+            "Strict quality control with verified micron retention ratings",
+            "Fast dispatch & custom roll widths or bag tailored configurations"
+        ],
+        productGroups: [
+            {
+                title: "Filter Paper Rolls & Media",
+                description: "Precision non-woven media and rolls for continuous gravity, vacuum, and band filtration.",
+                items: [
+                    "Coolant, Oil, Hot Water Filter Paper Roll",
+                    "Filter Paper Roll",
+                    "Polyester Media"
+                ]
+            },
+            {
+                title: "Industrial Filter Bags & Dust Air Filters",
+                description: "High-efficiency fabric filter sleeves, liquid filter bags, and pulse-jet cartridges.",
+                items: [
+                    "Dust Collector Air Filter",
+                    "Air Filter",
+                    "Liquid Filter Bag",
+                    "Dust Collector Filter Bag",
+                    "Pleated dust collection filter"
+                ]
+            },
+            {
+                title: "Oil, Coolant & Hydraulic Filtration",
+                description: "Pressure, return, suction, and machine tool fluid elements engineered for system protection.",
+                items: [
+                    "Oil Filter",
+                    "Pressure & Suction Oil Filter",
+                    "Hydraulic Oil Filter",
+                    "High Pressure Oil Filter",
+                    "Coolant Filter",
+                    "Composite Filter"
+                ]
+            },
+            {
+                title: "Specialized Process Cartridges & Strainers",
+                description: "Cleanable wire mesh, wedge wire, pleated membrane, and resin bonded cartridges.",
+                items: [
+                    "SS Washable Filter",
+                    "SS Sintered Wedge Wire Filter Cartridges",
+                    "PP Pleated Filter Cartridges",
+                    "RBC Filter Cartridges",
+                    "Strainer Filter Insert",
+                    "Water Filter Element"
+                ]
+            },
+            {
+                title: "HVAC, Paint Booth & Machine Filters",
+                description: "Ceiling diffusion media, paint stop arrestors, EDM filters, and AHU box and pocket filters.",
+                items: [
+                    "Paint Booth Filter",
+                    "EDM Filter",
+                    "AHU Air Filter (Box Type / Flange Type)",
+                    "AHU Air Filter (Pocket Type)"
+                ]
+            }
+        ],
+        customSolutionText: "Need custom roll slitting, bespoke filter bag dimensions, or cross-referencing an obsolete OEM filter element? Trivantas manufactures and supplies tailored filtration spares to your exact machine specifications.",
+        contactText: "Looking for replacement filter cartridges or bulk spare parts? Contact Trivantas today for instant quotations and technical cross-references."
+    },
+    spm: {
+        id: "spm",
+        title: "Special Purpose Machines (SPM)",
+        subtitle: "Custom SPM and automated assembly, testing, and process-specific machines",
+        introPrefix: "When standard machines cannot hit your cycle time, quality gate, or integration target, Trivantas builds special purpose machines from concept through commissioning.",
+        description: "Assembly, drilling, tapping, milling, cutting, welding, riveting, testing, inspection, and packaging SPMs—fully or semi-automated—engineered around your process, tooling, and plant layout. We support fixture design, safety compliance, and tie-in with existing lines so you get repeatable output without compromising uptime.",
+        whyChooseTitle: "Why Trivantas SPM Machines?",
+        whyChoosePoints: [
+            "End-to-end support: concept, design, manufacturing & commissioning",
+            "Built for productivity, reliability & long service life",
+            "Automation-ready & industry-compliant",
+            "Proven expertise across multiple industries",
+            "Custom integration with your existing systems"
+        ],
+        productGroups: [
+            {
+                title: "Product Range",
+                description: "Our diverse range of Special Purpose Machines.",
+                items: [
+                    "Assembly SPMs",
+                    "Drilling SPMs",
+                    "Tapping SPMs",
+                    "Milling SPMs",
+                    "Cutting SPMs",
+                    "Welding SPMs",
+                    "Riveting SPMs",
+                    "Testing SPMs",
+                    "Inspection SPMs",
+                    "Packaging SPMs",
+                    "Process-Specific SPMs",
+                    "Fully Automated SPMs",
+                    "Semi-Automated SPMs"
+                ]
+            }
+        ],
+        customSolutionText: "Can’t find exactly what you’re looking for? Trivantas provides tailor-made Special Purpose Machines, built to your exact specifications based on: Your production process & workflow, Required level of automation, Output, speed & cycle time targets, Integration with existing equipment & plant layout",
+        contactText: "Share your cycle-time target or sample part drawing—contact Trivantas to scope an SPM concept review and timeline.",
     }
 };

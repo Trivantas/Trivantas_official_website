@@ -33,6 +33,16 @@
       "permanent": true
     },
     {
+      "source": "/spare-parts",
+      "destination": "/products/spare-parts",
+      "permanent": true
+    },
+    {
+      "source": "/spares",
+      "destination": "/products/spare-parts",
+      "permanent": true
+    },
+    {
       "source": "/spm",
       "destination": "/products/spm",
       "permanent": true

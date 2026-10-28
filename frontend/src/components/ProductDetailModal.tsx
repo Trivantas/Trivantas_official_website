@@ -65,7 +65,32 @@ const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product, onClos
     "Slat Type Chip Conveyor",
     "Screw Type Chip Conveyor",
     "Pneumatic Conveyors",
-    "Vibrating Conveyors"
+    "Vibrating Conveyors",
+    // Spare Parts
+    "Coolant, Oil, Hot Water Filter Paper Roll",
+    "Filter Paper Roll",
+    "Dust Collector Air Filter",
+    "Liquid Filter Bag",
+    "Dust Collector Filter Bag",
+    "Pleated dust collection filter",
+    "Oil Filter",
+    "Pressure & Suction Oil Filter",
+    "Hydraulic Oil Filter",
+    "SS Washable Filter",
+    "High Pressure Oil Filter",
+    "Water Filter Element",
+    "Air Filter",
+    "Composite Filter",
+    "Coolant Filter",
+    "SS Sintered Wedge Wire Filter Cartridges",
+    "PP Pleated Filter Cartridges",
+    "RBC Filter Cartridges",
+    "Paint Booth Filter",
+    "Strainer Filter Insert",
+    "EDM Filter",
+    "Polyester Media",
+    "AHU Air Filter (Box Type / Flange Type)",
+    "AHU Air Filter (Pocket Type)"
   ];
 
   // Check if we should use the new text-heavy layout (no image)

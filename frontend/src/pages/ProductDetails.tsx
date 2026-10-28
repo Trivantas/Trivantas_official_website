@@ -172,7 +172,7 @@ const ProductDetails = () => {
                           <Card
                             className="group cursor-pointer hover:shadow-hover transition-all duration-300 hover:-translate-y-2 flex flex-col h-full overflow-hidden"
                           >
-                            {category === 'sensors' || category === 'water-treatment' || (category === 'filtration' && !productsWithoutImages.includes(product.name)) || (category === 'handling' && productsWithImages.includes(product.name)) ? (
+                            {category === 'sensors' || category === 'water-treatment' || category === 'spare-parts' || (category === 'filtration' && !productsWithoutImages.includes(product.name)) || (category === 'handling' && productsWithImages.includes(product.name)) ? (
                               <div className="group relative flex flex-col h-full bg-white/40 dark:bg-slate-900/40 backdrop-blur-2xl overflow-hidden rounded-2xl border border-white/60 dark:border-slate-700/50 hover:border-primary/50 dark:hover:border-cyan-500/50 transition-all duration-500 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]">
                                 {/* High-Tech Grid Overlay */}
                                 <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[linear-gradient(rgba(0,0,0,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,1)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>

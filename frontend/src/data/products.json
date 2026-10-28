@@ -120,6 +120,31 @@
     ]
   },
   {
+    "id": "spare-parts",
+    "title": "Spare Parts",
+    "subtitle": "Filtration Media, Filter Bags & Hydraulic Elements",
+    "description": "High-grade industrial replacement spare parts, filter paper rolls, dust collection bags, oil filters, and hydraulic cartridges engineered for maximum operational reliability.",
+    "imageKey": "spareParts",
+    "features": [
+      "OEM precision fit & durable construction",
+      "High micron rating efficiency & dirt holding capacity",
+      "Custom roll widths, bag dimensions & filter media"
+    ],
+    "applications": [
+      "Coolant & cutting fluid filtration",
+      "Dust collection & baghouse extraction",
+      "Hydraulic system & lube line protection",
+      "Process water & liquid clarification"
+    ],
+    "industries": [
+      "Machine Tools & CNC Machining",
+      "Automotive & Heavy Engineering",
+      "Cement, Steel & Metal Processing",
+      "Chemical & Pharmaceutical",
+      "Water & Wastewater Treatment"
+    ]
+  },
+  {
     "id": "spm",
     "title": "SPM (Special Purpose Machines)",
     "subtitle": "Custom Engineering Solutions",

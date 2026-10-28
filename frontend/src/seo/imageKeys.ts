@@ -70,6 +70,34 @@ export const PRODUCT_IMAGEKEY_TO_ASSET_BASE: Record<string, string[]> = {
 
   // Lubrication & SPMs
   lubrication: ["lubrication-system", "lubrication-hero-slide3"],
+  
+  // Spare Parts
+  spareParts: ["spare-parts-main"],
+  coolantFilterPaperRoll: ["coolant-oil-hot-water-filter-paper-roll"],
+  filterPaperRoll: ["filter-paper-roll"],
+  dustCollectorAirFilter: ["dust-collector-air-filter"],
+  liquidFilterBag: ["liquid-filter-bag"],
+  dustCollectorFilterBag: ["dust-collector-filter-bag"],
+  pleatedDustCollectionFilter: ["pleated-dust-collection-filter"],
+  oilFilter: ["oil-filter"],
+  pressureSuctionOilFilter: ["pressure-suction-oil-filter"],
+  hydraulicOilFilter: ["hydraulic-oil-filter"],
+  ssWashableFilter: ["ss-washable-filter"],
+  highPressureOilFilter: ["high-pressure-oil-filter"],
+  waterFilterElement: ["water-filter-element"],
+  airFilterSpare: ["air-filter"],
+  compositeFilter: ["composite-filter"],
+  coolantFilterSpare: ["coolant-filter"],
+  ssSinteredWedgeWireFilterCartridges: ["ss-sintered-wedge-wire-filter-cartridges"],
+  ppPleatedFilterCartridges: ["pp-pleated-filter-cartridges"],
+  rbcFilterCartridges: ["rbc-filter-cartridges"],
+  paintBoothFilter: ["paint-booth-filter"],
+  strainerFilterInsert: ["strainer-filter-insert"],
+  edmFilter: ["edm-filter"],
+  polyesterMedia: ["polyester-media"],
+  ahuAirFilterBoxType: ["ahu-air-filter-box-type"],
+  ahuAirFilterPocketType: ["ahu-air-filter-pocket-type"],
+
   default: ["smart-level-sensors-new"],
 };
 
@@ -79,6 +107,7 @@ export const CATEGORY_DEFAULT_IMAGE_BASES: Record<string, string[]> = {
   "water-treatment": ["water-treatment-hero-slide1", "sewage-treatment-plant"],
   handling: ["handling-hero-slide1", "material-handling-v3"],
   "lubrication-systems": ["lubrication-hero-slide3", "lubrication-system"],
+  "spare-parts": ["spare-parts-main", "filtration-hero-slide1"],
   spm: ["spm-machine", "spm-hero-slide1"],
 };
 

@@ -15,6 +15,8 @@ export async function loadCategoryProducts(category: string): Promise<ProductTyp
       return (await import("@/data/water-treatment.json")).default as ProductType[];
     case "lubrication-systems":
       return (await import("@/data/lubrication.json")).default as ProductType[];
+    case "spare-parts":
+      return (await import("@/data/spare-parts.json")).default as ProductType[];
     default:
       return [];
   }

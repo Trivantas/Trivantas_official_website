@@ -9,6 +9,7 @@ import spmImg from '@/assets/spm-machine.jpg';
 import materialHandlingImg from '@/assets/material-handling-v3.jpg';
 import stpImg from '@/assets/sewage-treatment-plant.jpg';
 import lubricationImg from '@/assets/lubrication-system.png';
+import sparePartsImg from '@/assets/spare-parts-main.png';
 import productsData from '@/data/products.json';
 
 const Products = () => {
@@ -32,13 +33,15 @@ const Products = () => {
     handling: materialHandlingImg,
     waterTreatment: stpImg,
     lubrication: lubricationImg,
+    spareParts: sparePartsImg,
     // keep existing keys backwards compatible
     levelSensorImg,
     filtrationImg,
     spmImg,
     materialHandlingImg,
     stpImg,
-    lubricationImg
+    lubricationImg,
+    sparePartsImg
   } as unknown as Record<string, string>;
 
   const products: ProductSummary[] = (productsData as unknown as ProductSummary[]) || [];

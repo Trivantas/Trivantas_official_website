@@ -36,12 +36,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trivantas.com/products/spm</loc>
+    <loc>https://trivantas.com/products/lubrication-systems</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trivantas.com/products/lubrication-systems</loc>
+    <loc>https://trivantas.com/products/spare-parts</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spm</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>
   </url>
@@ -356,6 +361,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://trivantas.com/products/water-treatment/sewage-treatment-plant</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/water-treatment/effluent-treatment-plant</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/water-treatment/ro-uf-system</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/water-treatment/water-filtration-system</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://trivantas.com/products/handling/scraper-type-chip-conveyor</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>
@@ -556,22 +581,122 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trivantas.com/products/water-treatment/sewage-treatment-plant</loc>
+    <loc>https://trivantas.com/products/spare-parts/coolant-oil-hot-water-filter-paper-roll</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trivantas.com/products/water-treatment/effluent-treatment-plant</loc>
+    <loc>https://trivantas.com/products/spare-parts/filter-paper-roll</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trivantas.com/products/water-treatment/ro-uf-system</loc>
+    <loc>https://trivantas.com/products/spare-parts/dust-collector-air-filter</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://trivantas.com/products/water-treatment/water-filtration-system</loc>
+    <loc>https://trivantas.com/products/spare-parts/liquid-filter-bag</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/dust-collector-filter-bag</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/pleated-dust-collection-filter</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/oil-filter</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/pressure-suction-oil-filter</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/hydraulic-oil-filter</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/ss-washable-filter</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/high-pressure-oil-filter</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/water-filter-element</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/air-filter</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/composite-filter</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/coolant-filter</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/ss-sintered-wedge-wire-filter-cartridges</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/pp-pleated-filter-cartridges</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/rbc-filter-cartridges</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/paint-booth-filter</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/strainer-filter-insert</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/edm-filter</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/polyester-media</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/ahu-air-filter-box-type</loc>
+    <lastmod>2026-10-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trivantas.com/products/spare-parts/ahu-air-filter-pocket-type</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>
   </url>

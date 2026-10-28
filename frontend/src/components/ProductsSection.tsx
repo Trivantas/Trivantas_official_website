@@ -6,6 +6,7 @@ import spmImg from '@/assets/spm-machine.jpg';
 import materialHandlingImg from '@/assets/material-handling-v3.jpg';
 import stpImg from '@/assets/sewage-treatment-plant.jpg';
 import lubricationImg from '@/assets/lubrication-system.png';
+import sparePartsImg from '@/assets/spare-parts-main.png';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -78,6 +79,20 @@ const ProductsSection = () => {
       ],
       industries: ['Manufacturing', 'Automotive', 'Steel & Metal', 'Cement & Mining'],
       link: '/products#lubrication-systems'
+    },
+    {
+      title: 'Spare Parts',
+      description: 'Industrial replacement filter paper rolls, dust collector bags, oil filters, and high-pressure hydraulic elements engineered for continuous equipment protection.',
+      image: sparePartsImg,
+      imageClassName: 'object-contain',
+      features: [
+        'OEM precision fit & durable construction',
+        'High micron rating efficiency & dirt holding capacity',
+        'Full range: paper rolls, bags, hydraulic elements',
+        'Custom roll widths, bag dimensions & filter media'
+      ],
+      industries: ['Machine Tools & CNC', 'Automotive', 'Steel & Metal', 'Chemical & Cement'],
+      link: '/products#spare-parts'
     },
     {
       title: 'SPM (Special Purpose Machines)',

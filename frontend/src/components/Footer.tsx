@@ -101,18 +101,23 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/products/handling" className="text-slate-300 hover:text-primary transition-colors">
+                  Material Handling
+                </Link>
+              </li>
+              <li>
                 <Link to="/products/lubrication-systems" className="text-slate-300 hover:text-primary transition-colors">
                   Lubrication Systems
                 </Link>
               </li>
               <li>
-                <Link to="/products/spm" className="text-slate-300 hover:text-primary transition-colors">
-                  SPM Machines
+                <Link to="/products/spare-parts" className="text-slate-300 hover:text-primary transition-colors">
+                  Spare Parts
                 </Link>
               </li>
               <li>
-                <Link to="/products/handling" className="text-slate-300 hover:text-primary transition-colors">
-                  Material Handling
+                <Link to="/products/spm" className="text-slate-300 hover:text-primary transition-colors">
+                  SPM Machines
                 </Link>
               </li>
             </ul>
