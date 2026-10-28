@@ -84,7 +84,7 @@ const SensorProductDetail: React.FC = () => {
             <span>/</span>
             <Link to="/products" className="hover:text-foreground hover:underline">Products</Link>
             <span>/</span>
-            <Link to="/products/sensors" className="hover:text-foreground hover:underline">Smart Level Sensors</Link>
+            <Link to="/products/sensors" className="hover:text-foreground hover:underline">Level Sensors</Link>
             <span>/</span>
             <span className="text-foreground font-semibold truncate max-w-[200px]" aria-current="page">{sensor.name}</span>
           </nav>
@@ -129,7 +129,7 @@ const SensorProductDetail: React.FC = () => {
                 <div className="relative h-[340px] sm:h-[400px] w-full flex items-center justify-center p-6 my-2">
                   <img
                     src={productImage}
-                    alt={`${sensor.name} - ${sensor.type || 'Smart Level Sensor'} by Trivantas`}
+                    alt={`${sensor.name} - ${sensor.type || 'Level Sensor'} by Trivantas`}
                     style={sensor.imageStyle}
                     fetchPriority="high"
                     decoding="async"
@@ -166,7 +166,7 @@ const SensorProductDetail: React.FC = () => {
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-3">
                   <Activity className="h-3.5 w-3.5" />
-                  {sensor.categoryLabel || 'Smart Level Sensors'}
+                  {sensor.categoryLabel || 'Level Sensors'}
                 </div>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground tracking-tight leading-tight mb-4">
                   {sensor.name}

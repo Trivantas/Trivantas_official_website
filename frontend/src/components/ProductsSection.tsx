@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const ProductsSection = () => {
   const products = [
     {
-      title: 'Smart Level Sensors ',
+      title: 'Level Sensors',
       description: 'Precision Monitoring for Liquids, Solids, Moisture & Gas',
       image: levelSensorImg,
       imageClassName: 'object-cover',

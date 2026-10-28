@@ -28,9 +28,9 @@ export function organizationSchema() {
     url: SITE_ORIGIN,
     logo: `${SITE_ORIGIN}/images/logo.png`,
     foundingDate: "2019",
-    description: "Trivantas is a premier B2B manufacturer and engineering solutions provider specializing in smart level sensors, industrial filtration systems, water treatment plants, and material handling.",
+    description: "Trivantas is a premier B2B manufacturer and engineering solutions provider specializing in level sensors, industrial filtration systems, water treatment plants, and material handling.",
     knowsAbout: [
-      "Smart Level Sensors & Instrumentation",
+      "Level Sensors & Instrumentation",
       "Industrial Coolant & Oil Filtration Systems",
       "Wastewater & Effluent Treatment Plants (ETP / STP / ZLD)",
       "Material Handling & Automated Conveyor Systems",
@@ -368,7 +368,7 @@ export function jsonLdForPath(pathname: string, imageUrl?: string): object[] {
         path: "/products",
         name: `Industrial Products & Equipment | ${SITE_NAME}`,
         description:
-          "Explore Trivantas product categories: smart level sensors, advanced filtration, water treatment, material handling, lubrication systems, and special-purpose machines.",
+          "Explore Trivantas product categories: level sensors, advanced filtration, water treatment, material handling, lubrication systems, and special-purpose machines.",
         type: "CollectionPage",
       }),
     );

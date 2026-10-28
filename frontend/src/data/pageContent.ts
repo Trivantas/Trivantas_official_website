@@ -19,7 +19,7 @@ export interface PageContent {
 export const pageContent: Record<string, PageContent> = {
     sensors: {
         id: "sensors",
-        title: "Smart Level Sensors for Industrial Applications",
+        title: "Level Sensors for Industrial Applications",
         subtitle: "Radar, ultrasonic, capacitive, and vibrating fork level measurement for process plants",
         introPrefix: "For tanks, silos, and process lines that cannot afford false trips or drift, Trivantas supplies application-matched level instrumentation.",
         description: "Choose from radar, ultrasonic, capacitance, vibrating fork, and hydrostatic level sensors and switches—plus microwave moisture and gas detection—built for waterproof, dust-tight, high-temperature, and high-pressure duty. We configure outputs, materials, and mounting for your PLC, SCADA, or panel spec, including custom builds for OEM and plant upgrades.",

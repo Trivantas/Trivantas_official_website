@@ -19,7 +19,7 @@ const staticRoutes: Record<string, Omit<PageSeoConfig, "path">> = {
   "/": {
     title: `${BRAND} | Industrial Equipment & Automation Supplier`,
     description:
-      "Trivantas industrial equipment: smart level sensors, filtration, water treatment plants, material handling, lubrication systems, and special purpose machines. B2B quotes and engineering support.",
+      "Trivantas industrial equipment: level sensors, filtration, water treatment plants, material handling, lubrication systems, and special purpose machines. B2B quotes and engineering support.",
   },
   "/about": {
     title: `About ${BRAND} | Industrial Solutions Partner`,

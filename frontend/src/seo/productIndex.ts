@@ -43,7 +43,7 @@ const CATEGORY_DEFINITIONS: {
   name: string;
   data: RawProductItem[];
 }[] = [
-  { slug: "sensors", name: "Smart Level Sensors", data: sensorsData as RawProductItem[] },
+  { slug: "sensors", name: "Level Sensors", data: sensorsData as RawProductItem[] },
   { slug: "filtration", name: "Advanced Filtration Systems", data: filtrationData as RawProductItem[] },
   { slug: "handling", name: "Material Handling Systems", data: handlingData as RawProductItem[] },
   { slug: "lubrication-systems", name: "Industrial Lubrication Systems", data: lubricationData as RawProductItem[] },

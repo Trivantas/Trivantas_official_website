@@ -95,7 +95,7 @@ const About = () => {
                 and practical industrial needs, we have grown into a trusted partner for businesses across multiple sectors.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Our expertise spans Smart Level Sensors, Advanced Filtration Systems, Special Purpose Machines,
+                Our expertise spans Level Sensors, Advanced Filtration Systems, Special Purpose Machines,
                 and Material Handling Equipment. Each solution is engineered to deliver precision, efficiency,
                 and reliability that our clients depend on for their critical operations.
               </p>

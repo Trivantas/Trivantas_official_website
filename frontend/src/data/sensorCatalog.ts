@@ -20,7 +20,7 @@ export interface SensorItem {
 export const SENSOR_CATALOG: SensorItem[] = [
   {
     "id": "high-accuracy-level-indicator",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "High-Accuracy Level Indicator",
     "capacity": "Custom Height Available",
     "efficiency": "Visual & Optional Sensor Integration",
@@ -62,7 +62,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "float-type-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Magnetic Float Level Switch",
     "capacity": "Up to 10 m",
     "efficiency": "Reliable for most liquids",
@@ -101,7 +101,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "vibrating-fork-level-sensors-liquid",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Vibrating Fork Level Switch Aquafork Swift",
     "capacity": "Point detection",
     "efficiency": "Works with liquids and solids (liquid models)",
@@ -147,7 +147,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "conductivity-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Conductivity Level Sensors",
     "capacity": "Point detection for conductive liquids",
     "efficiency": "Fast response in conductive media",
@@ -184,7 +184,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "capacitance-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Capacitance Level Sensors",
     "capacity": "Continuous measurement for various media",
     "efficiency": "Good for viscous and dielectric materials",
@@ -230,7 +230,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "fuel-level-transmitters",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Fuel Level Transmitters",
     "capacity": "Designed for fuel tanks",
     "efficiency": "Low drift in hydrocarbon fluids",
@@ -273,7 +273,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "ultrasonic-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Ultrasonic Level Sensors",
     "capacity": "Non-contact up to 15 m",
     "efficiency": "Cost-effective for many liquids",
@@ -320,7 +320,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "radar-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Radar Level Sensors",
     "capacity": "Contactless up to 70 m",
     "efficiency": "High accuracy in vapour/foam",
@@ -365,7 +365,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "hydrostatic-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Hydrostatic Level Sensors",
     "capacity": "Submersible measurement",
     "efficiency": "Robust in open water applications",
@@ -415,7 +415,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "magnetic-level-switches",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Magnetic Level Switches",
     "capacity": "Point level switching",
     "efficiency": "No power switching options",
@@ -462,7 +462,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "side-mounted-level-switch",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Side Mounted Level Switch",
     "capacity": "Local point detection",
     "efficiency": "Good for confined tanks",
@@ -489,7 +489,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "top-mounted-level-switch",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Top Mounted Level Switch",
     "capacity": "Top-entry switching",
     "efficiency": "Ideal for hoppers and silos",
@@ -516,7 +516,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "mini-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Mini Level Switch",
     "capacity": "Small tanks and OEM integrations",
     "efficiency": "Compact, low-cost solutions",
@@ -557,7 +557,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "level-transmitters",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Level Transmitters",
     "capacity": "Continuous transmitters for tank level",
     "efficiency": "Industrial-grade outputs and diagnostics",
@@ -593,7 +593,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "electromagnetic-flow-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Electromagnetic Flow Meter",
     "capacity": "Flow measurement for conductive fluids",
     "efficiency": "Accurate flow & level readings",
@@ -645,7 +645,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "vibrating-fork-level-sensors-solid",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Vibrating Fork Level Switch for Solid",
     "capacity": "Point detection for solids",
     "efficiency": "Reliable in powders and granules",
@@ -681,7 +681,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "vibrating-rod-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Vibrating Rod Type Level Sensors",
     "capacity": "Point/short-span detection",
     "efficiency": "Good for cohesive solids",
@@ -726,7 +726,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "nrf-rf-admittance-probes",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "NRF / RF Admittance Level Sensors",
     "capacity": "Interface and solid detection",
     "efficiency": "Works with conductive/adhesive materials",
@@ -771,7 +771,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "rotating-paddle-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Rotating Paddle Level Sensors",
     "capacity": "Point detection for solids",
     "efficiency": "Simple mechanical operation",
@@ -810,7 +810,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "capacitance-level-probes",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Capacitance Level Sensors(Probes)",
     "capacity": "Continuous probes for solids & liquids",
     "efficiency": "Good for interface detection",
@@ -851,7 +851,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "microwave-radar-solid-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Radar Solid Level Sensors",
     "capacity": "Bulk solids measurement",
     "efficiency": "Reliable in dusty/foamy conditions",
@@ -892,7 +892,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "tilt-level-switches",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Tilt Level Switch",
     "capacity": "Angular/presence detection",
     "efficiency": "Simple robust sensing",
@@ -933,7 +933,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "online-moisture-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Online Moisture Sensors (Hoppers & Conveyors)",
     "capacity": "Real-time moisture monitoring",
     "efficiency": "Continuous online measurement",
@@ -960,7 +960,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "bulk-material-moisture-measurement-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Bulk Material Moisture Measurement Sensors",
     "capacity": "In-line moisture for bulk solids",
     "efficiency": "Robust for powders and granules",
@@ -987,7 +987,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "capacitance-moisture-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Capacitance Moisture Sensors",
     "capacity": "Moisture percentage measurement",
     "efficiency": "Sensitive and stable",
@@ -1014,7 +1014,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "microwave-moisture-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Hydro-Probe Microwave Moisture Measurement Sensor",
     "capacity": "Non-contact bulk moisture",
     "efficiency": "Good in dusty environments",
@@ -1050,7 +1050,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "gas-pressure-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Gas Sensors",
     "capacity": "Pressure-based level detection",
     "efficiency": "Suitable for gas/vapour systems",
@@ -1090,7 +1090,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "ultrasonic-gas-flow-level-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Ultrasonic Gas Flow / Level Sensors",
     "capacity": "Gas flow and level estimations",
     "efficiency": "Non-intrusive measurement",
@@ -1117,7 +1117,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "capacitance-gas-detection-probes",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Capacitance Gas Detection Probes",
     "capacity": "Gas detection and level estimation",
     "efficiency": "Sensitive to dielectric changes",
@@ -1144,7 +1144,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "ultrasonic-flow-meters",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Ultrasonic Flow Meters",
     "capacity": "Liquid Flow Meter",
     "efficiency": "Non-contact flow measurement",
@@ -1200,7 +1200,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "rf-admittance-level-switch",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "RF Admittance Level Switch",
     "capacity": "Point level detection",
     "efficiency": "Immune to coating",
@@ -1248,7 +1248,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "hydro-mix-moisture-sensor",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Hydro-Mix Microwave Moisture Measurement Sensors",
     "capacity": "Up to saturation",
     "efficiency": "Real-time process optimization",
@@ -1299,7 +1299,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "hydro-probe-bx-sensor",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Hydro-Probe BX",
     "capacity": "Up to 25 readings per second",
     "efficiency": "Brix & concentration control",
@@ -1339,7 +1339,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "hydro-mix-xt-sensor",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Hydro-Mix XT",
     "capacity": "Up to 25 readings per second",
     "efficiency": "High precision measurement",
@@ -1382,7 +1382,7 @@ export const SENSOR_CATALOG: SensorItem[] = [
   },
   {
     "id": "moisture-sensors",
-    "categoryLabel": "Smart Level Sensors",
+    "categoryLabel": "Level Sensors",
     "name": "Moisture Sensors",
     "capacity": "Real-time moisture measurement",
     "efficiency": "Process optimization & Quality control",

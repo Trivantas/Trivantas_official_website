@@ -48,7 +48,7 @@ const PrivacyPolicy: React.FC = () => {
               Commitment to Client Confidentiality
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              At <strong>Trivantas</strong> ("we", "our", or "us"), we specialize in engineering and supplying industrial hardware solutions, including smart level sensors, filtration systems, wastewater plants, and material handling systems. We understand that our industrial clients and partners share proprietary technical specifications, plant operating parameters, and commercial details with us.
+              At <strong>Trivantas</strong> ("we", "our", or "us"), we specialize in engineering and supplying industrial hardware solutions, including level sensors, filtration systems, wastewater plants, and material handling systems. We understand that our industrial clients and partners share proprietary technical specifications, plant operating parameters, and commercial details with us.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               This Privacy Policy explains what information we collect when you visit <a href="https://trivantas.com" className="text-primary hover:underline">trivantas.com</a>, request quotes, schedule technical consultations, or partner with us, and how we safeguard that data.

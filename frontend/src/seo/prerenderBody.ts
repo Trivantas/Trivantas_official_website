@@ -4,7 +4,7 @@ import { pageContent } from "../data/pageContent";
 const BLOG_CONTEXTUAL_LINKS: Record<string, { href: string; label: string }[]> = {
   "ultrasonic-level-sensors": [
     { href: "/products/sensors/ultrasonic-level-sensors", label: "Ultrasonic level sensors" },
-    { href: "/products/sensors", label: "Smart level sensors catalog" },
+    { href: "/products/sensors", label: "Level sensors catalog" },
   ],
   "fuel-level-transmitter": [
     { href: "/products/sensors/fuel-level-transmitters", label: "Fuel level transmitters" },

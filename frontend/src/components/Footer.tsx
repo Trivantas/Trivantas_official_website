@@ -87,7 +87,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/products/sensors" className="text-slate-300 hover:text-primary transition-colors">
-                  Smart Level Sensors
+                  Level Sensors
                 </Link>
               </li>
               <li>

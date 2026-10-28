@@ -57,7 +57,7 @@
     {
       "id": "smart-level-sensors",
       "categoryLabel": "Sensors",
-      "name": "Smart Level Sensors",
+      "name": "Level Sensors",
       "capacity": "Varies by type",
       "efficiency": "High precision & reliability",
       "features": [

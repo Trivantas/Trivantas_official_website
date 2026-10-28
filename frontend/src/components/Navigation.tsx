@@ -21,7 +21,7 @@ const Navigation = () => {
 
   const productMegaMenu = [
     {
-      title: 'Smart Level Sensors',
+      title: 'Level Sensors',
       id: 'sensors',
       items: [
         { name: 'Liquid Level Sensors', href: '/products/sensors#group-0' },

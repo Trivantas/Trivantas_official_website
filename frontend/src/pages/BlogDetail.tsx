@@ -59,7 +59,7 @@ const getRelatedSolutions = (blogId: string) => {
           desc: 'Non-contact continuous level measurement for liquids, chemicals, and open channels.',
         },
         {
-          title: 'Smart Level Sensors Catalog',
+          title: 'Level Sensors Catalog',
           href: '/products/sensors',
           desc: 'Explore capacitive, radar, vibrating fork, and hydrostatic sensors engineered by Trivantas.',
         },
@@ -72,7 +72,7 @@ const getRelatedSolutions = (blogId: string) => {
           desc: 'High-precision fuel and oil level monitoring for diesel generators, tanks, and fleets.',
         },
         {
-          title: 'Smart Level Sensors Catalog',
+          title: 'Level Sensors Catalog',
           href: '/products/sensors',
           desc: 'Industrial-grade liquid and fuel instrumentation built for demanding environments.',
         },
