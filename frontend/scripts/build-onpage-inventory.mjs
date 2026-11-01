@@ -25,6 +25,7 @@ const STATIC_META = {
   "/flipbook": { title: "routeSeo.staticRoutes", meta: "routeSeo.staticRoutes" },
   "/privacy-policy": { title: "routeSeo.staticRoutes", meta: "routeSeo.staticRoutes" },
   "/terms-of-service": { title: "routeSeo.staticRoutes", meta: "routeSeo.staticRoutes" },
+  "/service-areas": { title: "routeSeo.staticRoutes", meta: "routeSeo.staticRoutes" },
 };
 
 function loadPaths() {

@@ -13,6 +13,8 @@ const distDir = path.join(frontendRoot, "dist");
 const PRIORITY_TITLE_ROUTES = [
   "/",
   "/about",
+  "/contact",
+  "/service-areas",
   "/schedule",
   "/flipbook",
   "/blogs",

@@ -22,9 +22,9 @@ const staticRoutes: Record<string, Omit<PageSeoConfig, "path">> = {
       "Trivantas industrial equipment: level sensors, filtration, water treatment plants, material handling, lubrication systems, and special purpose machines. B2B quotes and engineering support.",
   },
   "/about": {
-    title: `About ${BRAND} | Industrial Solutions Partner`,
+    title: `About ${BRAND} | Pune & Gujarat Industrial Partner`,
     description:
-      "Learn about Trivantas — over seven years delivering industrial sensors, filtration, handling, and automation solutions for manufacturing and process industries.",
+      "About Trivantas: Pune manufacturing plant and Ankleshwar, Gujarat office — industrial sensors, filtration, water treatment, and automation for Maharashtra, Gujarat, and India.",
   },
   "/products": {
     title: `Industrial Product Catalog | ${BRAND}`,
@@ -32,9 +32,14 @@ const staticRoutes: Record<string, Omit<PageSeoConfig, "path">> = {
       "Browse the Trivantas industrial product catalog: level sensors, filtration, water treatment, chip conveyors and material handling, lubrication, and SPM machines.",
   },
   "/contact": {
-    title: `Contact ${BRAND} | Request a Quote`,
+    title: `Contact ${BRAND} | Pune & Ankleshwar Offices`,
     description:
-      "Contact Trivantas for B2B industrial equipment quotes, technical inquiries, and project consultations. Sales and engineering teams respond to India and export requests.",
+      "Contact Trivantas: Pune plant (Maharashtra) and Ankleshwar office (Gujarat). B2B quotes and engineering support for Mumbai, Jalgaon, western India, and nationwide industrial projects.",
+  },
+  "/service-areas": {
+    title: `Service Areas | ${BRAND} | Pune, Mumbai, Jalgaon & Gujarat`,
+    description:
+      "Trivantas service areas: manufacturing in Pune, Gujarat branch in Ankleshwar, and project support for Mumbai, Jalgaon, Maharashtra, Gujarat, and pan-India B2B industrial supply.",
   },
   "/blogs": {
     title: `Industrial Insights & Articles | ${BRAND}`,
@@ -155,6 +160,7 @@ export const INDEXABLE_PATHS: readonly string[] = [
   ...Array.from(CATEGORY_PATHS).map((id) => `/products/${id}`),
   ...ALL_PRODUCTS.map((p) => p.path),
   "/contact",
+  "/service-areas",
   "/blogs",
   ...BLOG_ENTRIES.map((b) => b.path),
   "/schedule",

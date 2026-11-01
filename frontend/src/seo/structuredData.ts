@@ -9,6 +9,39 @@ import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_ORIGIN } from "./siteConfig";
 
 export type BreadcrumbTrailItem = { name: string; path: string };
 
+/** Approximate coordinates for published NAP locations (Maps-verifiable). */
+const GEO_PUNE_PLANT = { latitude: 18.5075, longitude: 73.684 };
+const GEO_ANKLESHWAR_OFFICE = { latitude: 21.6242, longitude: 73.0018 };
+
+function geoCoordinates(lat: number, lng: number) {
+  return {
+    "@type": "GeoCoordinates" as const,
+    latitude: lat,
+    longitude: lng,
+  };
+}
+
+/** B2B service footprint — no fabricated street addresses for cities without an office. */
+export function trivantasAreaServedSchema() {
+  return [
+    { "@type": "Country" as const, name: "India" },
+    {
+      "@type": "AdministrativeArea" as const,
+      name: "Maharashtra",
+      containsPlace: [
+        { "@type": "City" as const, name: "Pune" },
+        { "@type": "City" as const, name: "Mumbai" },
+        { "@type": "City" as const, name: "Jalgaon" },
+      ],
+    },
+    {
+      "@type": "AdministrativeArea" as const,
+      name: "Gujarat",
+      containsPlace: [{ "@type": "City" as const, name: "Ankleshwar" }],
+    },
+  ];
+}
+
 export function productCategoryBreadcrumbItems(slug: string): BreadcrumbTrailItem[] | null {
   const content = slug ? pageContent[slug as keyof typeof pageContent] : undefined;
   if (!content) return null;
@@ -36,14 +69,18 @@ export function organizationSchema() {
       "Material Handling & Automated Conveyor Systems",
       "Special Purpose Industrial Machinery (SPM)",
       "Centralized Lubrication Systems",
+      "Industrial equipment supply in Pune and Maharashtra",
+      "Industrial equipment supply in Gujarat and Ankleshwar",
+      "B2B project support for Mumbai, Jalgaon, and western India manufacturing",
     ],
+    areaServed: trivantasAreaServedSchema(),
     contactPoint: [
       {
         "@type": "ContactPoint",
         telephone: "+91-7028165428",
         contactType: "sales",
         email: "sales@trivantas.com",
-        areaServed: "Worldwide",
+        areaServed: trivantasAreaServedSchema(),
         availableLanguage: ["English", "Hindi", "Marathi", "Gujarati"],
       },
     ],
@@ -64,6 +101,14 @@ export function organizationSchema() {
         postalCode: "393002",
         addressCountry: "IN",
       },
+      {
+        "@type": "PostalAddress",
+        streetAddress: "01, Dabhade Garage, Parola Road, Bhadgaon",
+        addressLocality: "Jalgaon",
+        addressRegion: "Maharashtra",
+        postalCode: "424105",
+        addressCountry: "IN",
+      },
     ],
     sameAs: [
       "https://www.linkedin.com/company/trivantas/",
@@ -76,7 +121,7 @@ export function localBusinessSchemas() {
   return [
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "Manufacturer"],
       name: `${SITE_NAME} - Pune Plant`,
       url: SITE_ORIGIN,
       logo: `${SITE_ORIGIN}/images/logo.png`,
@@ -93,6 +138,18 @@ export function localBusinessSchemas() {
         postalCode: "412115",
         addressCountry: "IN",
       },
+      geo: geoCoordinates(GEO_PUNE_PLANT.latitude, GEO_PUNE_PLANT.longitude),
+      areaServed: [
+        { "@type": "City", name: "Pune" },
+        {
+          "@type": "AdministrativeArea",
+          name: "Maharashtra",
+          containsPlace: [
+            { "@type": "City", name: "Mumbai" },
+            { "@type": "City", name: "Jalgaon" },
+          ],
+        },
+      ],
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
@@ -114,7 +171,7 @@ export function localBusinessSchemas() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "ProfessionalService"],
       name: `${SITE_NAME} - Gujarat Office`,
       url: SITE_ORIGIN,
       logo: `${SITE_ORIGIN}/images/logo.png`,
@@ -131,6 +188,11 @@ export function localBusinessSchemas() {
         postalCode: "393002",
         addressCountry: "IN",
       },
+      geo: geoCoordinates(GEO_ANKLESHWAR_OFFICE.latitude, GEO_ANKLESHWAR_OFFICE.longitude),
+      areaServed: [
+        { "@type": "City", name: "Ankleshwar" },
+        { "@type": "AdministrativeArea", name: "Gujarat" },
+      ],
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
@@ -418,15 +480,22 @@ export function jsonLdForPath(pathname: string, imageUrl?: string): object[] {
       name: "About Us",
       title: `About ${SITE_NAME} | Industrial Solutions Partner`,
       description:
-        "Learn about Trivantas — over seven years delivering industrial sensors, filtration, handling, and automation solutions for manufacturing and process industries.",
+        "Learn about Trivantas — Pune manufacturing and Gujarat branch support for industrial sensors, filtration, water treatment, and automation across Maharashtra (Pune, Mumbai, Jalgaon), Gujarat, and India.",
       type: "AboutPage",
     },
     "/contact": {
       name: "Contact Us",
       title: `Contact ${SITE_NAME} | Request a Quote`,
       description:
-        "Contact Trivantas for industrial equipment inquiries, quotations, and technical support. Sales and engineering teams ready to assist.",
+        "Contact Trivantas at our Pune plant or Ankleshwar, Gujarat office for B2B quotes, engineering support, and project consultations across Maharashtra, Jalgaon, Gujarat, and India.",
       type: "ContactPage",
+    },
+    "/service-areas": {
+      name: "Service Areas",
+      title: `Service Areas | ${SITE_NAME} | Pune, Mumbai, Jalgaon & Gujarat`,
+      description:
+        "Trivantas plants and service coverage: Pune manufacturing, Ankleshwar Gujarat office, and B2B support for Mumbai, Jalgaon, Maharashtra, Gujarat, and pan-India industrial projects.",
+      type: "WebPage",
     },
     "/schedule": {
       name: "Schedule Meeting",
@@ -473,8 +542,8 @@ export function jsonLdForPath(pathname: string, imageUrl?: string): object[] {
     );
   }
 
-  // 8. Contact page: LocalBusiness structured data (Pune & Gujarat branches)
-  if (path === "/contact") {
+  // 8. Location pages: LocalBusiness structured data (Pune & Gujarat branches)
+  if (path === "/contact" || path === "/service-areas") {
     blocks.push(...localBusinessSchemas());
   }
 
