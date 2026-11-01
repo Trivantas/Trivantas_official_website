@@ -40,6 +40,150 @@ function escapeHtml(value: string): string {
     .replace(/"/g, "&quot;");
 }
 
+const CATEGORY_PRERENDER_LINKS = Object.entries(pageContent).map(([slug, content]) => ({
+  href: `/products/${slug}`,
+  label: content.title.trim(),
+}));
+
+function staticPageShell(breadcrumbCurrent: string, mainInner: string): string {
+  return `
+    <div class="min-h-screen bg-background text-foreground flex flex-col">
+      <header class="border-b border-border/80 bg-background/95 py-3 px-4 sm:px-8">
+        <nav aria-label="Breadcrumb" class="text-xs text-muted-foreground flex items-center gap-2 max-w-7xl mx-auto flex-wrap">
+          <a href="/" class="hover:text-foreground hover:underline">Home</a>
+          <span>/</span>
+          <span class="text-foreground font-medium">${escapeHtml(breadcrumbCurrent)}</span>
+        </nav>
+      </header>
+      <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 flex-grow w-full">
+        ${mainInner}
+      </main>
+    </div>
+  `.trim();
+}
+
+function napBlockHtml(): string {
+  return `
+    <section class="mt-8 pt-6 border-t border-border/60" aria-labelledby="nap-heading">
+      <h2 id="nap-heading" class="text-lg font-bold text-foreground mb-4">Name, address &amp; phone</h2>
+      <div class="space-y-4 text-sm text-muted-foreground">
+        <div>
+          <p class="font-semibold text-foreground">Pune manufacturing plant</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Trivantas,+Kanjane+Nagar,+Ghar+society+Road,+677,+Tal,+Mulshi,+Uravade,+Maharashtra+412115" class="hover:text-primary hover:underline">
+            Trivantas, No. 677, Ghar society Road, Tal Mulshi, Uravade, Pune 412115, Maharashtra, India
+          </a>
+        </div>
+        <div>
+          <p class="font-semibold text-foreground">Ankleshwar, Gujarat office</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=167+%26+168+Aadhya+2,+Andada,+Ankleshwar,+Gujarat+393002" class="hover:text-primary hover:underline">
+            167 &amp; 168 Aadhya 2, Andada, Ankleshwar 393002, Gujarat, India
+          </a>
+        </div>
+        <div>
+          <p class="font-semibold text-foreground">Registered address (Jalgaon)</p>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=01,+Dabhade+Garage,+Parola+Road,+Bhadgaon,+Jalgaon+424105" class="hover:text-primary hover:underline">
+            01, Dabhade Garage, Parola Road, Bhadgaon, Jalgaon 424105, Maharashtra, India
+          </a>
+        </div>
+        <p>
+          <span class="font-semibold text-foreground">Phone:</span>
+          <a href="tel:+917028165428" class="hover:text-primary hover:underline">+91 7028165428</a>
+          ·
+          <span class="font-semibold text-foreground">Email:</span>
+          <a href="mailto:sales@trivantas.com" class="hover:text-primary hover:underline">sales@trivantas.com</a>
+        </p>
+      </div>
+    </section>
+  `.trim();
+}
+
+function categoryLinksNavHtml(): string {
+  return `<nav aria-label="Product categories" class="mt-8 pt-6 border-t border-border/60">
+    <p class="text-sm font-semibold text-foreground mb-3">Industrial product categories</p>
+    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+      ${CATEGORY_PRERENDER_LINKS.map(
+        (c) =>
+          `<li><a href="${c.href}" class="text-primary hover:underline font-medium">${escapeHtml(c.label)}</a></li>`,
+      ).join("")}
+    </ul>
+    <p class="mt-4"><a href="/contact" class="text-primary hover:underline text-sm font-medium">Contact Trivantas for a B2B quote</a></p>
+  </nav>`;
+}
+
+function prerenderAbout(): string {
+  return staticPageShell(
+    "About Us",
+    `
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">About Trivantas</h1>
+      <p class="text-base text-muted-foreground leading-relaxed mb-4">
+        Trivantas is a B2B manufacturer and industrial supplier of smart level sensors, filtration systems,
+        wastewater and effluent treatment plants, material handling equipment, lubrication systems, and special-purpose machinery.
+      </p>
+      <p class="text-base text-muted-foreground leading-relaxed mb-4">
+        Our Pune, Maharashtra manufacturing plant handles fabrication, assembly, and pre-dispatch quality checks.
+        The Ankleshwar, Gujarat office supports chemical and process-industry clients across the state.
+        We also serve Mumbai, Jalgaon, and western India with project engineering, quotations, and site coordination—without separate Mumbai or Jalgaon street offices (registered address in Jalgaon is listed on Contact).
+      </p>
+      <p class="text-base text-muted-foreground leading-relaxed">
+        <a href="/service-areas" class="text-primary hover:underline font-medium">View plants and service areas</a>
+        · <a href="/products" class="text-primary hover:underline font-medium">Browse the product catalog</a>
+      </p>
+      ${napBlockHtml()}
+      ${categoryLinksNavHtml()}
+    `.trim(),
+  );
+}
+
+function prerenderContact(): string {
+  return staticPageShell(
+    "Contact Us",
+    `
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">Contact Trivantas</h1>
+      <p class="text-base text-muted-foreground leading-relaxed mb-4">
+        Request B2B quotes, technical datasheets, and engineering consultations from our Pune plant or Ankleshwar, Gujarat office.
+        Sales and engineering support cover Maharashtra (including Mumbai and Jalgaon), Gujarat, and pan-India industrial projects.
+      </p>
+      ${napBlockHtml()}
+      <p class="mt-6 text-sm text-muted-foreground">
+        Business hours: Monday–Friday 9:00–18:00 IST; Saturday 9:00–13:00 IST.
+      </p>
+      <p class="mt-4">
+        <a href="/service-areas" class="text-primary hover:underline text-sm font-medium">Service areas: Pune, Mumbai, Jalgaon, Ankleshwar &amp; Gujarat</a>
+      </p>
+      ${categoryLinksNavHtml()}
+    `.trim(),
+  );
+}
+
+function prerenderServiceAreas(): string {
+  return staticPageShell(
+    "Service Areas",
+    `
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-foreground mb-4">Plants, offices &amp; service areas</h1>
+      <p class="text-base text-muted-foreground leading-relaxed mb-6">
+        Trivantas delivers industrial equipment and engineering support from Pune (Maharashtra) and Ankleshwar (Gujarat),
+        with B2B project coverage for Mumbai, Jalgaon, Gujarat, and clients across India.
+      </p>
+      <h2 class="text-xl font-bold text-foreground mb-2">Pune manufacturing plant</h2>
+      <p class="text-sm text-muted-foreground mb-6">
+        Primary manufacturing for sensors, filtration, water treatment, conveyors, and custom industrial systems in Maharashtra.
+      </p>
+      <h2 class="text-xl font-bold text-foreground mb-2">Ankleshwar, Gujarat office</h2>
+      <p class="text-sm text-muted-foreground mb-6">
+        Regional coordination for Gujarat process plants and nationwide quote support.
+      </p>
+      <h2 class="text-xl font-bold text-foreground mb-2">Mumbai, Jalgaon &amp; extended coverage</h2>
+      <p class="text-sm text-muted-foreground mb-6">
+        Mumbai, Jalgaon (North Maharashtra), and other metros are served by our Pune and Gujarat teams for quotations,
+        delivery, and aftermarket support. We do not list separate Mumbai or Jalgaon branch street offices; the
+        Jalgaon registered address on Contact matches our published NAP.
+      </p>
+      ${napBlockHtml()}
+      ${categoryLinksNavHtml()}
+    `.trim(),
+  );
+}
+
 export function renderPrerenderBody(routePath: string): string | undefined {
   const normalized = routePath === "" ? "/" : routePath.replace(/\/+$/, "") || "/";
 
@@ -235,8 +379,11 @@ export function renderPrerenderBody(routePath: string): string | undefined {
     `.trim();
   }
 
-  // 4. Static core pages - leave root clean to prevent layout flash before hydration
-  if (normalized === "/" || normalized === "/about" || normalized === "/contact" || normalized === "/products") {
+  // 4. Static core pages — root/products stay empty to limit layout flash; geo pages get crawlable NAP HTML
+  if (normalized === "/about") return prerenderAbout();
+  if (normalized === "/contact") return prerenderContact();
+  if (normalized === "/service-areas") return prerenderServiceAreas();
+  if (normalized === "/" || normalized === "/products") {
     return undefined;
   }
 

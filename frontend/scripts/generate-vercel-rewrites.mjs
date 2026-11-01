@@ -45,6 +45,7 @@ function loadIndexablePaths() {
     "/flipbook",
     "/privacy-policy",
     "/terms-of-service",
+    "/service-areas",
   ]);
 
   for (const cat of categoryKeys) {

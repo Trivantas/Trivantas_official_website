@@ -54,6 +54,7 @@ const BlogDetail = lazyWithRetry(() => import("./pages/BlogDetail"));
 const PrivacyPolicy = lazyWithRetry(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazyWithRetry(() => import("./pages/TermsOfService"));
 const Schedule = lazyWithRetry(() => import("./pages/Schedule"));
+const ServiceAreas = lazyWithRetry(() => import("./pages/ServiceAreas"));
 const Flipbook = lazyWithRetry(() => import("./pages/Flipbook"));
 const AdminLogin = lazyWithRetry(() => import("./pages/AdminLogin"));
 const AdminDashboard = lazyWithRetry(() => import("./pages/AdminDashboard"));
@@ -91,6 +92,7 @@ const App = () => (
                     <Route path="/products/spm/:productname" element={<SpmProductDetail />} />
                     <Route path="/products/:category" element={<ProductDetails />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/service-areas" element={<ServiceAreas />} />
                     <Route path="/blogs" element={<Blogs />} />
                     <Route path="/blogs/:id" element={<BlogDetail />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
